@@ -4,11 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CNDWN — Privacy Policy / Datenschutzerklärung / Política de Privacidad</title>
-<meta name="description" content="Privacy Policy, Datenschutzerklärung and Política de Privacidad for the CNDWN countdown app (GDPR / DSGVO).">
-<meta name="robots" content="index, follow">
+<meta name="description" content="Privacy Policy, Datenschutzerklärung and Política de Privacidad for the CNDWN countdown app (GDPR / DSGVO / RGPD). No ads, no trackers — your countdowns stay in your own iCloud.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://schillan.com/cndwn/privacy/">
+<link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/privacy/">
+<link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/privacy/">
+<link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/privacy/">
+<link rel="icon" type="image/png" href="../img/app-icon.png">
+<link rel="apple-touch-icon" href="../img/app-icon.png">
 <style>
   :root {
     --bg: #f5f5f7;
+    --bg-2: #ffffff;
     --card: #ffffff;
     --text: #1d1d1f;
     --muted: #6e6e73;
@@ -16,18 +26,19 @@
     --accent-2: #9b5bff;
     --border: #e3e3e8;
     --code-bg: #f0f0f4;
-    --maxw: 760px;
+    --maxw: 1080px;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #000000;
-      --card: #1c1c1e;
+      --bg: #0b0b0f;
+      --bg-2: #121218;
+      --card: #17171d;
       --text: #f5f5f7;
-      --muted: #98989d;
+      --muted: #9a9aa2;
       --accent: #7d8bff;
       --accent-2: #b885ff;
-      --border: #2c2c2e;
-      --code-bg: #2a2a2e;
+      --border: #26262e;
+      --code-bg: #22222a;
     }
   }
   * { box-sizing: border-box; }
@@ -40,130 +51,150 @@
     line-height: 1.65;
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
-  header.hero {
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    color: #fff;
-    padding: 64px 20px 56px;
-    text-align: center;
-  }
-  header.hero .logo {
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    font-size: 40px;
-    margin: 0 0 8px;
-  }
-  header.hero p {
-    margin: 0;
-    opacity: 0.92;
-    font-size: 18px;
-  }
-  .lang-switch {
-    display: inline-flex;
-    margin-top: 26px;
-    background: rgba(255,255,255,0.18);
-    border-radius: 999px;
-    padding: 4px;
-    backdrop-filter: blur(8px);
-  }
-  .lang-switch button {
-    border: none;
-    background: transparent;
-    color: #fff;
-    font: inherit;
-    font-weight: 600;
-    padding: 8px 22px;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-  }
-  .lang-switch button.active {
-    background: #fff;
-    color: var(--accent);
-  }
-  main {
-    max-width: var(--maxw);
-    margin: -28px auto 0;
-    padding: 0 20px 80px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 28px 28px 8px;
-    margin-bottom: 22px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
-  .updated {
-    color: var(--muted);
-    font-size: 14px;
-    margin: 0 0 4px;
-  }
-  h1 { font-size: 28px; margin: 6px 0 18px; line-height: 1.25; }
-  h2 {
-    font-size: 21px;
-    margin: 34px 0 10px;
-    padding-top: 6px;
-  }
-  h3 { font-size: 17px; margin: 22px 0 6px; }
-  p, li { color: var(--text); }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+  /* language visibility */
+  body[data-lang="en"] [lang="de"], body[data-lang="en"] [lang="es"] { display: none !important; }
+  body[data-lang="de"] [lang="en"], body[data-lang="de"] [lang="es"] { display: none !important; }
+  body[data-lang="es"] [lang="en"], body[data-lang="es"] [lang="de"] { display: none !important; }
+
+  /* ---------- Nav (shared with landing page) ---------- */
+  nav.site {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: 0.16em; font-size: 21px; color: var(--text); }
+  .brand:hover { text-decoration: none; }
+  .brand .mark { width: 34px; height: 34px; border-radius: 9px; display: inline-block; box-shadow: 0 2px 8px rgba(0,0,0,0.16); object-fit: cover; }
+  .nav-right { display: flex; align-items: center; gap: 22px; }
+  .nav-links { display: flex; align-items: center; gap: 24px; font-size: 15px; }
+  .nav-links a { color: var(--muted); font-weight: 500; }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 760px) { .nav-links { display: none; } }
+  .lang-switch { display: inline-flex; background: color-mix(in srgb, var(--muted) 16%, transparent); border-radius: 999px; padding: 3px; }
+  .lang-switch button {
+    border: none; background: transparent; color: var(--muted); font: inherit; font-weight: 600; font-size: 13px;
+    padding: 5px 12px; border-radius: 999px; cursor: pointer; transition: background 0.2s, color 0.2s; line-height: 1;
+  }
+  .lang-switch button.active { background: var(--accent); color: #fff; }
+
+  /* ---------- Page head ---------- */
+  .page-head { position: relative; text-align: center; padding: 68px 0 30px; overflow: hidden; }
+  .page-head::before {
+    content: ""; position: absolute; inset: -60% -20% auto -20%; height: 460px;
+    background: radial-gradient(55% 60% at 50% 0%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%),
+                radial-gradient(45% 50% at 82% 8%, color-mix(in srgb, var(--accent-2) 26%, transparent), transparent 70%);
+    z-index: 0; pointer-events: none;
+  }
+  .page-head .wrap { position: relative; z-index: 1; }
+  .page-head .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+  }
+  .page-head h1 {
+    font-size: clamp(30px, 5vw, 46px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 800; margin: 0 auto 14px; max-width: 20ch;
+  }
+  .page-head h1 .grad {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .page-head .sub { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); max-width: 52ch; margin: 0 auto 12px; }
+  .page-head .updated { color: var(--muted); font-size: 14px; margin: 0; }
+
+  /* ---------- Content ---------- */
+  main { max-width: 840px; margin: 0 auto; padding: 20px 22px 40px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+    padding: 30px 30px 12px; margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  h2 { font-size: 22px; letter-spacing: -0.01em; margin: 34px 0 10px; padding-top: 6px; }
+  .card > h2:first-child { margin-top: 6px; }
+  h3 { font-size: 17px; margin: 22px 0 6px; }
+  p, li { color: var(--text); }
   ul { padding-left: 22px; }
   li { margin: 6px 0; }
   code {
-    background: var(--code-bg);
-    padding: 2px 6px;
-    border-radius: 6px;
-    font-size: 0.9em;
+    background: var(--code-bg); padding: 2px 6px; border-radius: 6px; font-size: 0.9em;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
   .muted { color: var(--muted); }
+  .lead { font-size: 18px; }
   .placeholder {
-    background: rgba(255,196,0,0.16);
-    border: 1px dashed #d9a300;
-    border-radius: 8px;
-    padding: 2px 6px;
-    font-weight: 600;
+    background: color-mix(in srgb, #ffc400 16%, transparent);
+    border: 1px dashed #d9a300; border-radius: 8px; padding: 2px 6px; font-weight: 600;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 14px 0;
-    font-size: 15px;
-  }
-  th, td {
-    text-align: left;
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border);
-    vertical-align: top;
-  }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
   th { color: var(--muted); font-weight: 600; }
-  .toc { font-size: 15px; }
-  .toc ul { list-style: none; padding-left: 0; }
-  .toc li { margin: 4px 0; }
-  footer {
-    text-align: center;
-    color: var(--muted);
-    font-size: 14px;
-    padding: 0 20px 60px;
+  .toc {
+    font-size: 15px; background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: 14px; padding: 6px 22px 14px; margin-top: 20px;
   }
-  /* language visibility */
-  body[data-lang="en"] [lang="de"], body[data-lang="en"] [lang="es"] { display: none; }
-  body[data-lang="de"] [lang="en"], body[data-lang="de"] [lang="es"] { display: none; }
-  body[data-lang="es"] [lang="en"], body[data-lang="es"] [lang="de"] { display: none; }
+  .toc h3 { margin: 16px 0 8px; }
+  .toc ul { list-style: none; padding-left: 0; columns: 2; column-gap: 28px; }
+  @media (max-width: 560px) { .toc ul { columns: 1; } }
+  .toc li { margin: 5px 0; break-inside: avoid; }
+
+  /* ---------- Footer (shared with landing page) ---------- */
+  footer.site { border-top: 1px solid var(--border); padding: 44px 0; color: var(--muted); font-size: 14.5px; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: center; }
+  footer.site .flinks { display: flex; gap: 22px; flex-wrap: wrap; }
+  footer.site a { color: var(--muted); }
+  footer.site a:hover { color: var(--text); }
+  footer.site .brand { font-size: 16px; }
 </style>
 </head>
 <body data-lang="en">
-<header class="hero">
-  <p class="logo">CNDWN</p>
-  <p lang="en">Privacy Policy</p>
-  <p lang="de">Datenschutzerklärung</p>
-  <p lang="es">Política de Privacidad</p>
-  <div class="lang-switch" role="group" aria-label="Language selector">
-    <button type="button" data-set-lang="en" class="active">English</button>
-    <button type="button" data-set-lang="de">Deutsch</button>
-    <button type="button" data-set-lang="es">Español</button>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="/cndwn/">
+      <img class="mark" src="../img/app-icon.png" width="34" height="34" alt="CNDWN app icon">
+      CNDWN
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/cndwn/#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span></a>
+        <a href="/cndwn/#how"><span lang="en">How it works</span><span lang="de">So geht's</span><span lang="es">Cómo funciona</span></a>
+        <a href="/cndwn/#faq">FAQ</a>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="de">DE</button>
+        <button type="button" data-set-lang="es">ES</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">CNDWN</span>
+    <h1>
+      <span lang="en"><span class="grad">Privacy</span> Policy</span>
+      <span lang="de"><span class="grad">Datenschutz</span>erklärung</span>
+      <span lang="es">Política de <span class="grad">Privacidad</span></span>
+    </h1>
+    <p class="sub">
+      <span lang="en">How CNDWN handles your data — plainly and privately. No ads, no trackers, your countdowns stay in your own iCloud.</span>
+      <span lang="de">Wie CNDWN mit Ihren Daten umgeht — klar und datenschutzfreundlich. Keine Werbung, keine Tracker, Ihre Countdowns bleiben in Ihrer eigenen iCloud.</span>
+      <span lang="es">Cómo trata CNDWN sus datos — de forma clara y privada. Sin anuncios, sin rastreadores; sus cuentas atrás permanecen en su propia iCloud.</span>
+    </p>
+    <p class="updated">
+      <span lang="en">Last updated: 25 June 2026</span>
+      <span lang="de">Zuletzt aktualisiert: 25. Juni 2026</span>
+      <span lang="es">Última actualización: 25 de junio de 2026</span>
+    </p>
   </div>
 </header>
 
@@ -172,11 +203,9 @@
 <!-- ======================= ENGLISH (GDPR) ======================= -->
 <section lang="en">
   <div class="card">
-    <p class="updated">Last updated: 25 June 2026</p>
-    <h1>Privacy Policy for CNDWN</h1>
-    <p>
+    <p class="lead">
       This Privacy Policy explains how your data is handled when you use the <strong>CNDWN</strong>
-      countdown app on iPhone, iPad, Mac, Apple Watch and Apple TV (the “App”). CNDWN is designed to be
+      countdown app on iPhone, iPad, Mac and Apple Watch (the “App”). CNDWN is designed to be
       privacy-friendly: your countdowns stay on your device and in your own iCloud account, and we do not
       sell your data or use advertising trackers.
     </p>
@@ -373,11 +402,9 @@
 <!-- ======================= DEUTSCH (DSGVO) ======================= -->
 <section lang="de">
   <div class="card">
-    <p class="updated">Zuletzt aktualisiert: 25. Juni 2026</p>
-    <h1>Datenschutzerklärung für CNDWN</h1>
-    <p>
+    <p class="lead">
       Diese Datenschutzerklärung erläutert, wie mit Ihren Daten umgegangen wird, wenn Sie die Countdown-App
-      <strong>CNDWN</strong> auf iPhone, iPad, Mac, Apple Watch und Apple TV (die „App“) nutzen. CNDWN ist
+      <strong>CNDWN</strong> auf iPhone, iPad, Mac und Apple Watch (die „App“) nutzen. CNDWN ist
       datenschutzfreundlich gestaltet: Ihre Countdowns verbleiben auf Ihrem Gerät und in Ihrem eigenen
       iCloud-Konto. Wir verkaufen Ihre Daten nicht und setzen keine Werbe-Tracker ein.
     </p>
@@ -576,11 +603,9 @@
 <!-- ======================= ESPAÑOL (RGPD) ======================= -->
 <section lang="es">
   <div class="card">
-    <p class="updated">Última actualización: 25 de junio de 2026</p>
-    <h1>Política de Privacidad de CNDWN</h1>
-    <p>
+    <p class="lead">
       Esta Política de Privacidad explica cómo se tratan sus datos cuando utiliza la app de cuenta regresiva
-      <strong>CNDWN</strong> en iPhone, iPad, Mac, Apple Watch y Apple TV (la «App»). CNDWN está diseñada para
+      <strong>CNDWN</strong> en iPhone, iPad, Mac y Apple Watch (la «App»). CNDWN está diseñada para
       respetar su privacidad: sus cuentas regresivas permanecen en su dispositivo y en su propia cuenta de
       iCloud, y no vendemos sus datos ni utilizamos rastreadores publicitarios.
     </p>
@@ -778,11 +803,23 @@
   </div>
 </section>
 
-<footer>
-  <p>© 2026 CNDWN · Konstantin Schillhahn</p>
-</footer>
-
 </main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="brand">
+      <img class="mark" src="../img/app-icon.png" alt="" style="width:26px;height:26px;border-radius:7px">
+      CNDWN
+    </div>
+    <div class="flinks">
+      <a href="/cndwn/"><span lang="en">Home</span><span lang="de">Startseite</span><span lang="es">Inicio</span></a>
+      <a href="/cndwn/#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span></a>
+      <a href="/cndwn/#faq">FAQ</a>
+      <a href="mailto:cndwn@schillan.com">Contact</a>
+    </div>
+    <div>© 2026 Schillan. CNDWN.</div>
+  </div>
+</footer>
 
 <script>
   (function () {
@@ -795,19 +832,16 @@
       buttons.forEach(function (b) {
         b.classList.toggle('active', b.getAttribute('data-set-lang') === lang);
       });
-      try { localStorage.setItem('cndwn-privacy-lang', lang); } catch (e) {}
+      try { localStorage.setItem('cndwn-lang', lang); } catch (e) {}
     }
 
     buttons.forEach(function (b) {
-      b.addEventListener('click', function () {
-        setLang(b.getAttribute('data-set-lang'));
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang')); });
     });
 
-    // Initial language: saved preference > browser language > English
+    // Shared preference with the landing page: saved > browser language > English
     var saved;
-    try { saved = localStorage.getItem('cndwn-privacy-lang'); } catch (e) {}
+    try { saved = localStorage.getItem('cndwn-lang'); } catch (e) {}
     var nav = (navigator.language || 'en').toLowerCase();
     var detected = nav.indexOf('de') === 0 ? 'de' : (nav.indexOf('es') === 0 ? 'es' : 'en');
     setLang(saved || detected);

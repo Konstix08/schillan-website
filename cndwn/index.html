@@ -252,14 +252,9 @@
     z-index: 0; pointer-events: none;
   }
   .hero .wrap { position: relative; z-index: 1; }
-  .eyebrow {
-    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
-    padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
-  }
   .hero h1 {
     font-size: clamp(38px, 7vw, 64px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 800;
-    margin: 0 auto 20px; max-width: 15ch;
+    margin: 0 auto 20px; max-width: 15ch; padding-top: 8px;
   }
   .hero h1 .grad {
     background: linear-gradient(120deg, var(--accent), var(--accent-2));
@@ -388,11 +383,6 @@
 <!-- ==================== HERO ==================== -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">
-      <span lang="en">Countdowns &amp; countups for Apple devices</span>
-      <span lang="de">Countdowns &amp; Countups für Apple-Geräte</span>
-      <span lang="es">Cuentas atrás y adelante para dispositivos Apple</span>
-    </span>
     <h1>
       <span lang="en">Count down to <span class="grad">what matters</span> most</span>
       <span lang="de">Zähl herunter zu dem, <span class="grad">was zählt</span></span>
@@ -608,7 +598,7 @@
 <footer class="site">
   <div class="wrap">
     <div class="brand" style="font-size:16px">
-      <span class="mark" style="background:linear-gradient(135deg,var(--accent),var(--accent-2))"></span>
+      <img class="mark" src="img/app-icon.png" alt="" style="width:26px;height:26px;border-radius:7px">
       CNDWN
     </div>
     <div class="flinks">
