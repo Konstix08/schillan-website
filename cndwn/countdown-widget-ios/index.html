@@ -1,0 +1,428 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Widgets for iPhone: Home Screen, Lock Screen &amp; StandBy Guide — CNDWN</title>
+<meta name="description" content="A guide to countdown widgets on iOS: Home Screen, Lock Screen and StandBy widgets, Live Activities and the Dynamic Island — and how to set one up with CNDWN, a free countdown app for iPhone.">
+<meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
+<meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://schillan.com/cndwn/countdown-widget-ios/">
+<link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-widget-ios/">
+<link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-widget-ios/">
+<link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-widget-ios/">
+<link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-widget-ios/">
+
+
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CNDWN">
+<meta property="og:title" content="Countdown Widgets for iPhone: Home Screen, Lock Screen &amp; StandBy Guide — CNDWN">
+<meta property="og:description" content="A guide to countdown widgets on iOS: Home Screen, Lock Screen and StandBy widgets, Live Activities and the Dynamic Island — and how to set one up with CNDWN, a free countdown app for iPhone.">
+<meta property="og:url" content="https://schillan.com/cndwn/countdown-widget-ios/">
+<meta property="og:image" content="https://schillan.com/cndwn/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Countdown Widgets for iPhone: Home Screen, Lock Screen &amp; StandBy Guide — CNDWN">
+<meta name="twitter:description" content="A guide to countdown widgets on iOS: Home Screen, Lock Screen and StandBy widgets, Live Activities and the Dynamic Island — and how to set one up with CNDWN, a free countdown app for iPhone.">
+<meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
+
+<link rel="icon" type="image/png" href="/cndwn/img/app-icon.png">
+<link rel="apple-touch-icon" href="/cndwn/img/app-icon.png">
+
+<!-- Structured data for search engines & AI assistants -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Countdown Widgets for iPhone: Home Screen, Lock Screen & StandBy Guide — CNDWN",
+  "description": "A guide to countdown widgets on iOS: Home Screen, Lock Screen and StandBy widgets, Live Activities and the Dynamic Island — and how to set one up with CNDWN, a free countdown app for iPhone.",
+  "url": "https://schillan.com/cndwn/countdown-widget-ios/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "CNDWN",
+    "url": "https://schillan.com/cndwn/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "CNDWN",
+      "item": "https://schillan.com/cndwn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Countdown Widgets for iOS",
+      "item": "https://schillan.com/cndwn/countdown-widget-ios/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does iOS have a built-in countdown widget?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iOS does not include a dedicated countdown widget for arbitrary events out of the box. A countdown app like CNDWN adds Home Screen, Lock Screen and StandBy widgets that count down to any date you choose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a widget and a Live Activity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A widget sits on your Home Screen, Lock Screen or in StandBy and updates periodically. A Live Activity is a real-time, temporary display that appears on the Lock Screen and in the Dynamic Island while an event is actively approaching or in progress."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I put a countdown widget on my iPhone Lock Screen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Since iOS 16, you can add widgets directly to the Lock Screen. Countdown apps like CNDWN support Lock Screen widgets that show the time remaining until your chosen date."
+      }
+    }
+  ]
+}
+</script>
+
+<style id="shared-styles">
+/*
+ * Shared design tokens + components (design vars, nav, language switch,
+ * section shells, footer) reused across CNDWN static pages.
+ *
+ * Injected verbatim into any template's <style id="shared-styles"> block by
+ * tools/build-i18n.mjs at build time. Page-specific styles stay in each
+ * template's own <style> block.
+ */
+:root {
+  --bg: #f5f5f7;
+  --bg-2: #ffffff;
+  --card: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --accent: #5b6cff;
+  --accent-2: #9b5bff;
+  --border: #e3e3e8;
+  --maxw: 1080px;
+  --radius: 22px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0f;
+    --bg-2: #121218;
+    --card: #17171d;
+    --text: #f5f5f7;
+    --muted: #9a9aa2;
+    --accent: #7d8bff;
+    --accent-2: #b885ff;
+    --border: #26262e;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+/* ---------- Language visibility ---------- */
+body[data-lang="en"] [lang="de"], body[data-lang="en"] [lang="es"] { display: none !important; }
+body[data-lang="de"] [lang="en"], body[data-lang="de"] [lang="es"] { display: none !important; }
+body[data-lang="es"] [lang="en"], body[data-lang="es"] [lang="de"] { display: none !important; }
+
+/* ---------- Nav ---------- */
+nav.site {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+nav.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: 0.16em; font-size: 21px; color: var(--text); }
+.brand:hover { text-decoration: none; }
+.brand .mark { width: 34px; height: 34px; border-radius: 9px; display: inline-block; box-shadow: 0 2px 8px rgba(0,0,0,0.16); }
+.brand img.mark { object-fit: cover; }
+.nav-right { display: flex; align-items: center; gap: 22px; }
+.nav-links { display: flex; align-items: center; gap: 24px; font-size: 15px; }
+.nav-links a { color: var(--muted); font-weight: 500; }
+.nav-links a:hover { color: var(--text); text-decoration: none; }
+@media (max-width: 720px) { .nav-links { display: none; } }
+
+/* ---------- Language switch ---------- */
+.lang-switch { display: inline-flex; background: color-mix(in srgb, var(--muted) 16%, transparent); border-radius: 999px; padding: 3px; }
+.lang-switch button, .lang-switch a {
+  border: none; background: transparent; color: var(--muted); font: inherit; font-weight: 600; font-size: 13px;
+  padding: 5px 12px; border-radius: 999px; cursor: pointer; transition: background 0.2s, color 0.2s; line-height: 1;
+  text-decoration: none; display: inline-block;
+}
+.lang-switch button.active, .lang-switch a.active { background: var(--accent); color: #fff; }
+.lang-switch a:hover { text-decoration: none; }
+
+/* ---------- Section shells ---------- */
+section.block { padding: 68px 0; }
+section.alt { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.section-head { text-align: center; max-width: 42ch; margin: 0 auto 46px; }
+.section-head h2 { font-size: clamp(28px, 4.4vw, 40px); letter-spacing: -0.02em; margin: 0 0 14px; line-height: 1.12; }
+.section-head p { color: var(--muted); font-size: 18px; margin: 0; }
+
+/* ---------- FAQ ---------- */
+.faq { max-width: 760px; margin: 0 auto; }
+.faq details {
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+  padding: 4px 22px; margin-bottom: 14px;
+}
+.faq summary {
+  cursor: pointer; list-style: none; font-weight: 600; font-size: 18px; padding: 18px 0;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 26px; color: var(--accent); font-weight: 400; transition: transform 0.2s; line-height: 1; flex: none; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { margin: 0 0 20px; color: var(--muted); font-size: 16px; }
+
+/* ---------- Footer ---------- */
+footer.site { border-top: 1px solid var(--border); padding: 44px 0; color: var(--muted); font-size: 14.5px; }
+footer.site .wrap { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: center; }
+footer.site .flinks { display: flex; gap: 22px; flex-wrap: wrap; }
+footer.site a { color: var(--muted); }
+footer.site a:hover { color: var(--text); }
+</style>
+<style>
+  /* ---------- Page head ---------- */
+  .page-head { position: relative; text-align: center; padding: 68px 0 30px; overflow: hidden; }
+  .page-head::before {
+    content: ""; position: absolute; inset: -60% -20% auto -20%; height: 460px;
+    background: radial-gradient(55% 60% at 50% 0%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%),
+                radial-gradient(45% 50% at 82% 8%, color-mix(in srgb, var(--accent-2) 26%, transparent), transparent 70%);
+    z-index: 0; pointer-events: none;
+  }
+  .page-head .wrap { position: relative; z-index: 1; }
+  .page-head .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+  }
+  .page-head h1 {
+    font-size: clamp(30px, 5vw, 46px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 800; margin: 0 auto 14px; max-width: 22ch;
+  }
+  .page-head h1 .grad {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .page-head .sub { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); max-width: 56ch; margin: 0 auto 28px; }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .badge-link { display: inline-flex; align-items: center; transition: transform 0.18s ease, opacity 0.18s ease; }
+  .badge-link:hover { text-decoration: none; transform: translateY(-1px); opacity: 0.9; }
+  .badge-link img { height: 54px; width: auto; display: block; }
+  .ghost-btn { color: var(--text); background: var(--card); border: 1px solid var(--border); padding: 14px 24px; border-radius: 14px; font-weight: 600; }
+  .ghost-btn:hover { text-decoration: none; border-color: var(--accent); }
+
+  /* ---------- Content ---------- */
+  main { max-width: 780px; margin: 0 auto; padding: 10px 22px 20px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 30px 30px 12px; margin-bottom: 22px; }
+  h2 { font-size: 24px; letter-spacing: -0.01em; margin: 0 0 14px; }
+  p { color: var(--text); }
+  .lead { font-size: 18px; color: var(--muted); }
+
+  /* ---------- Widget type list ---------- */
+  .widget-types { list-style: none; padding: 0; margin: 0 0 8px; }
+  .widget-types li { padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .widget-types li:last-child { border-bottom: none; }
+  .widget-types h3 { margin: 0 0 4px; font-size: 18px; }
+  .widget-types p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  /* ---------- Screenshot gallery ---------- */
+  .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 56px; max-width: 720px; margin: 0 auto; }
+  .gallery figure { margin: 0; width: 236px; max-width: 44vw; text-align: center; }
+  .gallery img { width: 100%; height: auto; display: block; filter: drop-shadow(0 26px 46px rgba(30,30,70,0.34)); }
+  .gallery figcaption { margin-top: 20px; font-weight: 600; font-size: 16px; color: var(--text); }
+  @media (max-width: 520px) { .gallery figure { width: 220px; max-width: 70vw; } }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta { text-align: center; padding: 60px 0 82px; }
+  .final-cta h2 { font-size: clamp(26px, 4.4vw, 38px); letter-spacing: -0.02em; margin: 0 0 16px; }
+  .final-cta p { color: var(--muted); font-size: 18px; margin: 0 auto 28px; max-width: 42ch; }
+</style>
+</head>
+<body>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="/cndwn/">
+      <img class="mark" src="/cndwn/img/app-icon.png" width="34" height="34" alt="CNDWN app icon">
+      CNDWN
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/cndwn/#features"><span lang="en">Features</span></a>
+        <a href="/cndwn/#faq">FAQ</a>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <a href="/cndwn/countdown-widget-ios/" class="active" aria-current="page">EN</a>
+        <a href="/cndwn/de/countdown-widget-ios/">DE</a>
+        <a href="/cndwn/es/countdown-widget-ios/">ES</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">CNDWN</span>
+    <h1>
+      <span lang="en"><span class="grad">Countdown widgets</span> for iPhone, explained</span>
+      
+      
+    </h1>
+    <p class="sub">
+      <span lang="en">Home Screen, Lock Screen, StandBy, Live Activities, Dynamic Island — here's what each one does and how to set one up.</span>
+      
+      
+    </p>
+    <div class="cta-row">
+      <a class="badge-link" href="https://apps.apple.com/app/id6455257754" aria-label="Download CNDWN on the App Store">
+        <img lang="en" src="/cndwn/img/appstore-en.svg" alt="Download on the App Store" width="162" height="54">
+        
+        
+      </a>
+      <a class="ghost-btn" href="/cndwn/"><span lang="en">See CNDWN</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="card">
+    <h2><span lang="en">The four ways to see a countdown without opening the app</span></h2>
+    <ul class="widget-types">
+      <li>
+        <h3><span lang="en">Home Screen widget</span></h3>
+        <p><span lang="en">A small, medium or large tile on your Home Screen showing one or more countdowns at a glance.</span></p>
+      </li>
+      <li>
+        <h3><span lang="en">Lock Screen widget</span></h3>
+        <p><span lang="en">Since iOS 16, widgets can sit right on the Lock Screen, so you see the countdown the moment you raise your phone.</span></p>
+      </li>
+      <li>
+        <h3><span lang="en">StandBy widget</span></h3>
+        <p><span lang="en">When your iPhone is charging and turned sideways, StandBy mode shows a full-screen countdown — perfect as a nightstand clock.</span></p>
+      </li>
+      <li>
+        <h3><span lang="en">Live Activity &amp; Dynamic Island</span></h3>
+        <p><span lang="en">A real-time countdown that appears on the Lock Screen and in the Dynamic Island — great for the final hours before an event.</span></p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span lang="en">See it in action</span></h2>
+    <div class="gallery">
+      <figure>
+        <img loading="lazy" src="/cndwn/img/phone-2.webp" width="660" height="1351" alt="CNDWN widgets on the iPhone Home Screen showing Birthday, Graduation and Holiday countdowns">
+        <figcaption><span lang="en">Home Screen widgets</span></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="/cndwn/img/phone-3.webp" width="660" height="1351" alt="CNDWN countdown list with custom colors for each event">
+        <figcaption><span lang="en">Custom colors</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span lang="en">How to add a countdown widget with CNDWN</span></h2>
+    <p>
+      <span lang="en">Create a countdown in CNDWN, then long-press your Home Screen or Lock Screen, tap Add Widget, search for CNDWN and choose a size. CNDWN's widgets, Live Activities and StandBy support are all </span>
+      
+      <a href="/cndwn/#features"><span lang="en">free, with no ads or trackers</span></a>. <span lang="en">Looking for the right app first? See our </span><a href="/cndwn/best-countdown-app-iphone/"><span lang="en">best countdown app for iPhone guide</span></a>.
+    </p>
+  </div>
+
+  <div style="margin-bottom:22px">
+    <h2><span lang="en">Frequently asked questions</span></h2>
+    <div class="faq">
+      <details open="">
+        <summary><span lang="en">Does iOS have a built-in countdown widget?</span></summary>
+        <p><span lang="en">iOS does not include a dedicated countdown widget for arbitrary events out of the box. A countdown app like CNDWN adds Home Screen, Lock Screen and StandBy widgets that count down to any date you choose.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en">What is the difference between a widget and a Live Activity?</span></summary>
+        <p><span lang="en">A widget sits on your Home Screen, Lock Screen or in StandBy and updates periodically. A Live Activity is a real-time, temporary display that appears on the Lock Screen and in the Dynamic Island while an event is actively approaching or in progress.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en">Can I put a countdown widget on my iPhone Lock Screen?</span></summary>
+        <p><span lang="en">Yes. Since iOS 16, you can add widgets directly to the Lock Screen. Countdown apps like CNDWN support Lock Screen widgets that show the time remaining until your chosen date.</span></p>
+      </details>
+    </div>
+  </div>
+
+</main>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2><span lang="en">Get your first widget in seconds</span></h2>
+    <p><span lang="en">Download CNDWN and pin your first countdown widget today.</span></p>
+    <div class="cta-row">
+      <a class="badge-link" href="https://apps.apple.com/app/id6455257754" aria-label="Download CNDWN on the App Store">
+        <img lang="en" src="/cndwn/img/appstore-en.svg" alt="Download on the App Store" width="162" height="54">
+        
+        
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="brand" style="font-size:16px">
+      <img class="mark" src="/cndwn/img/app-icon.png" alt="" style="width:26px;height:26px;border-radius:7px">
+      CNDWN
+    </div>
+    <div class="flinks">
+      <a href="/cndwn/#features"><span lang="en">Features</span></a>
+      <a href="/cndwn/#faq">FAQ</a>
+      <a href="/cndwn/privacy/"><span lang="en">Privacy Policy</span></a>
+      <a href="mailto:cndwn@schillan.com">Contact</a>
+    </div>
+    <div>© 2026 Schillan. CNDWN.</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

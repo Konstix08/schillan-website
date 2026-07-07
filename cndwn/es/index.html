@@ -149,6 +149,30 @@
     },
     {
       "@type": "Question",
+      "name": "¿Para qué ocasiones puedo usar CNDWN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cualquier cosa con una fecha: cumpleaños, bodas, aniversarios, exámenes, graduaciones, vacaciones, embarazos, lanzamientos de productos, conciertos, hitos de recuperación, día de mudanza o el reencuentro en una relación a distancia. Si tiene fecha, CNDWN puede contarla hacia atrás o hacia adelante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay una buena app de cuenta atrás para vacaciones o viajes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí — CNDWN es una opción popular para la cuenta atrás de vacaciones. Añade la fecha de salida de tu viaje, dale un color personalizado y un emoji, y fíjalo como widget en tu pantalla de inicio o de bloqueo para ver pasar los días hasta la salida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo usar CNDWN para contar los días hasta un examen o una fecha límite?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Importa la fecha directamente desde Calendario o Recordatorios, o añádela manualmente, y usa una barra de progreso para ver cuánto tiempo de estudio o trabajo queda, o una cuenta atrás para ver exactamente cuántos días, horas y minutos faltan."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "¿CNDWN es privado? ¿Recopila mis datos?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -174,6 +198,30 @@
       "position": 2,
       "name": "Política de Privacidad",
       "item": "https://schillan.com/cndwn/es/privacy/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo crear una cuenta atrás en CNDWN",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Añade un evento",
+      "text": "Escribe un título y elige una fecha, o importa un evento desde Calendario o Recordatorios."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Hazlo tuyo",
+      "text": "Añade un emoji, elige un color y decide entre cuenta atrás, adelante o barra de progreso."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Míralo avanzar",
+      "text": "Fija un widget en tu pantalla de inicio o bloqueo y ve pasar cada día — incluso en la Dynamic Island."
     }
   ]
 }
@@ -340,6 +388,16 @@
   .privacy-pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .privacy-pills span { background: rgba(255,255,255,0.18); padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 15px; backdrop-filter: blur(6px); }
 
+  /* ---------- About ---------- */
+  .about-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 32px; max-width: 760px; margin: 0 auto; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; }
+  @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } }
+  .about-grid > div { padding: 18px 0; border-bottom: 1px solid var(--border); }
+  .about-grid > div:nth-last-child(-n+2) { border-bottom: none; }
+  @media (max-width: 640px) { .about-grid > div:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); } .about-grid > div:last-child { border-bottom: none; } }
+  .about-grid dt { margin: 0 0 4px; color: var(--muted); font-size: 13.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .about-grid dd { margin: 0; font-size: 17px; font-weight: 600; }
+
   /* ---------- FAQ ---------- */
   .faq { max-width: 760px; margin: 0 auto; }
   .faq details {
@@ -433,19 +491,19 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v-5M9 6l3-3 3 3"></path><path d="M12 16v5M15 18l-3 3-3-3"></path><path d="M4 12h16"></path></svg></div>
         <h3><span lang="es">Cuenta atrás y adelante</span></h3>
-        <p><span lang="es">Cuenta atrás hacia una fecha futura o adelante desde un momento pasado. Días, horas, minutos — con la precisión que quieras.</span></p>
+        <p><span lang="es">Cuenta atrás hacia cumpleaños, bodas, exámenes, vacaciones o un lanzamiento de producto — o adelante desde un día memorable. Días, horas, minutos, con la precisión que quieras.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M21 3v6h-6"></path></svg></div>
         <h3><span lang="es">Barras de progreso</span></h3>
-        <p><span lang="es">Comprueba tu avance entre una fecha de inicio y fin con un anillo de progreso circular.</span></p>
+        <p><span lang="es">Sigue metas a largo plazo como unas vacaciones, un semestre, un embarazo, un hito de fitness o una fecha límite de proyecto con un anillo de progreso circular.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></div>
         <h3><span lang="es">Widgets de inicio, bloqueo y StandBy</span></h3>
-        <p><span lang="es">Fija tus cuentas atrás en la pantalla de inicio, de bloqueo y StandBy para ver siempre el tiempo restante.</span></p>
+        <p><span lang="es">Fija tu widget de cuenta atrás en la pantalla de inicio, de bloqueo o en modo StandBy para ver siempre los días que faltan, sin abrir la app.</span></p>
       </div>
 
       <div class="feature">
@@ -551,6 +609,28 @@
   </div>
 </section>
 
+<!-- ==================== ABOUT ==================== -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="es">Sobre CNDWN</span></h2>
+      <p><span lang="es">Los datos clave, de un vistazo.</span></p>
+    </div>
+    <div class="about-card">
+      <dl class="about-grid">
+        <div><dt><span lang="es">Desarrollador</span></dt><dd>Schillan</dd></div>
+        <div><dt><span lang="es">Plataforma</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
+        <div><dt><span lang="es">Categoría</span></dt><dd><span lang="es">Estilo de vida / Productividad</span></dd></div>
+        <div><dt><span lang="es">Requiere</span></dt><dd>iOS 18+</dd></div>
+        <div><dt><span lang="es">Precio</span></dt><dd><span lang="es">Gratis — todas las funciones incluidas</span></dd></div>
+        <div><dt><span lang="es">Privacidad</span></dt><dd><span lang="es">Sin anuncios, sin rastreadores, tu propio iCloud</span></dd></div>
+        <div><dt><span lang="es">Idiomas</span></dt><dd>EN, DE, ES, FR, JA, ZH</dd></div>
+        <div><dt><span lang="es">Valoración</span></dt><dd><span lang="es">4,8 / 5 en la App Store</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== FAQ ==================== -->
 <section class="block alt" id="faq">
   <div class="wrap">
@@ -584,6 +664,18 @@
         <p><span lang="es">Sí. Con tu permiso, CNDWN puede leer eventos de Calendario y Recordatorios para convertir cualquier evento en una cuenta atrás con un par de toques. Estos datos se procesan en tu dispositivo y nunca se envían al desarrollador.</span></p>
       </details>
       <details>
+        <summary><span lang="es">¿Para qué ocasiones puedo usar CNDWN?</span></summary>
+        <p><span lang="es">Cualquier cosa con una fecha: cumpleaños, bodas, aniversarios, exámenes, graduaciones, vacaciones, embarazos, lanzamientos de productos, conciertos, hitos de recuperación, día de mudanza o el reencuentro en una relación a distancia. Si tiene fecha, CNDWN puede contarla hacia atrás o hacia adelante.</span></p>
+      </details>
+      <details>
+        <summary><span lang="es">¿Hay una buena app de cuenta atrás para vacaciones o viajes?</span></summary>
+        <p><span lang="es">Sí — CNDWN es una opción popular para la cuenta atrás de vacaciones. Añade la fecha de salida de tu viaje, dale un color personalizado y un emoji, y fíjalo como widget en tu pantalla de inicio o de bloqueo para ver pasar los días hasta la salida.</span></p>
+      </details>
+      <details>
+        <summary><span lang="es">¿Puedo usar CNDWN para contar los días hasta un examen o una fecha límite?</span></summary>
+        <p><span lang="es">Sí. Importa la fecha directamente desde Calendario o Recordatorios, o añádela manualmente, y usa una barra de progreso para ver cuánto tiempo de estudio o trabajo queda, o una cuenta atrás para ver exactamente cuántos días, horas y minutos faltan.</span></p>
+      </details>
+      <details>
         <summary><span lang="es">¿CNDWN es privado? ¿Recopila mis datos?</span></summary>
         <p><span lang="es">Sí, CNDWN prioriza la privacidad. Tus cuentas atrás se guardan en tu dispositivo y, si activas la sincronización, en tu propia cuenta privada de iCloud. CNDWN no tiene anuncios ni rastreadores de terceros y no vende tus datos. El desarrollador no tiene acceso a tus cuentas atrás. Lee la </span><a href="/cndwn/es/privacy/"><span lang="es">Política de Privacidad</span></a>.</p>
       </details>
@@ -615,6 +707,8 @@
     <div class="flinks">
       <a href="#features"><span lang="es">Funciones</span></a>
       <a href="#faq">FAQ</a>
+      <a href="/cndwn/es/best-countdown-app-iphone/"><span lang="es">Guía: mejor app de cuenta atrás</span></a>
+      <a href="/cndwn/es/countdown-widget-ios/"><span lang="es">Guía de widgets</span></a>
       <a href="/cndwn/es/privacy/"><span lang="es">Privacidad</span></a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>

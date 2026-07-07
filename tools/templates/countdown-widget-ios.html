@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Widgets for iPhone: Home Screen, Lock Screen & StandBy Guide — CNDWN</title>
+<meta name="description" content="A guide to countdown widgets on iOS: Home Screen, Lock Screen and StandBy widgets, Live Activities and the Dynamic Island — and how to set one up with CNDWN, a free countdown app for iPhone.">
+<meta name="robots" content="noindex"><!-- template only; generated pages are indexable -->
+<meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://schillan.com/cndwn/countdown-widget-ios/">
+
+<link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-widget-ios/">
+<link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-widget-ios/">
+<link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-widget-ios/">
+<link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-widget-ios/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CNDWN">
+<meta property="og:title" content="Countdown Widgets for iPhone: Home Screen, Lock Screen & StandBy Guide — CNDWN">
+<meta property="og:description" content="Home Screen, Lock Screen and StandBy widgets, Live Activities and the Dynamic Island explained — and how to set one up with CNDWN.">
+<meta property="og:url" content="https://schillan.com/cndwn/countdown-widget-ios/">
+<meta property="og:image" content="https://schillan.com/cndwn/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Countdown Widgets for iPhone: Home Screen, Lock Screen & StandBy Guide — CNDWN">
+<meta name="twitter:description" content="Home Screen, Lock Screen and StandBy countdown widgets, Live Activities and the Dynamic Island explained.">
+<meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
+
+<link rel="icon" type="image/png" href="../img/app-icon.png">
+<link rel="apple-touch-icon" href="../img/app-icon.png">
+
+<!-- Structured data for search engines & AI assistants -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Countdown Widgets for iPhone: Home Screen, Lock Screen & StandBy Guide",
+  "description": "A guide to countdown widgets on iOS: Home Screen, Lock Screen and StandBy widgets, Live Activities and the Dynamic Island.",
+  "url": "https://schillan.com/cndwn/countdown-widget-ios/",
+  "inLanguage": "en",
+  "isPartOf": { "@type": "WebSite", "name": "CNDWN", "url": "https://schillan.com/cndwn/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "CNDWN", "item": "https://schillan.com/cndwn/" },
+    { "@type": "ListItem", "position": 2, "name": "Countdown Widgets for iOS", "item": "https://schillan.com/cndwn/countdown-widget-ios/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does iOS have a built-in countdown widget?",
+      "acceptedAnswer": { "@type": "Answer", "text": "iOS does not include a dedicated countdown widget for arbitrary events out of the box. A countdown app like CNDWN adds Home Screen, Lock Screen and StandBy widgets that count down to any date you choose." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a widget and a Live Activity?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A widget sits on your Home Screen, Lock Screen or in StandBy and updates periodically. A Live Activity is a real-time, temporary display that appears on the Lock Screen and in the Dynamic Island while an event is actively approaching or in progress." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I put a countdown widget on my iPhone Lock Screen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Since iOS 16, you can add widgets directly to the Lock Screen. Countdown apps like CNDWN support Lock Screen widgets that show the time remaining until your chosen date." }
+    }
+  ]
+}
+</script>
+
+<style id="shared-styles"></style>
+<style>
+  /* ---------- Page head ---------- */
+  .page-head { position: relative; text-align: center; padding: 68px 0 30px; overflow: hidden; }
+  .page-head::before {
+    content: ""; position: absolute; inset: -60% -20% auto -20%; height: 460px;
+    background: radial-gradient(55% 60% at 50% 0%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%),
+                radial-gradient(45% 50% at 82% 8%, color-mix(in srgb, var(--accent-2) 26%, transparent), transparent 70%);
+    z-index: 0; pointer-events: none;
+  }
+  .page-head .wrap { position: relative; z-index: 1; }
+  .page-head .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+  }
+  .page-head h1 {
+    font-size: clamp(30px, 5vw, 46px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 800; margin: 0 auto 14px; max-width: 22ch;
+  }
+  .page-head h1 .grad {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .page-head .sub { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); max-width: 56ch; margin: 0 auto 28px; }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .badge-link { display: inline-flex; align-items: center; transition: transform 0.18s ease, opacity 0.18s ease; }
+  .badge-link:hover { text-decoration: none; transform: translateY(-1px); opacity: 0.9; }
+  .badge-link img { height: 54px; width: auto; display: block; }
+  .ghost-btn { color: var(--text); background: var(--card); border: 1px solid var(--border); padding: 14px 24px; border-radius: 14px; font-weight: 600; }
+  .ghost-btn:hover { text-decoration: none; border-color: var(--accent); }
+
+  /* ---------- Content ---------- */
+  main { max-width: 780px; margin: 0 auto; padding: 10px 22px 20px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 30px 30px 12px; margin-bottom: 22px; }
+  h2 { font-size: 24px; letter-spacing: -0.01em; margin: 0 0 14px; }
+  p { color: var(--text); }
+  .lead { font-size: 18px; color: var(--muted); }
+
+  /* ---------- Widget type list ---------- */
+  .widget-types { list-style: none; padding: 0; margin: 0 0 8px; }
+  .widget-types li { padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .widget-types li:last-child { border-bottom: none; }
+  .widget-types h3 { margin: 0 0 4px; font-size: 18px; }
+  .widget-types p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  /* ---------- Screenshot gallery ---------- */
+  .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 56px; max-width: 720px; margin: 0 auto; }
+  .gallery figure { margin: 0; width: 236px; max-width: 44vw; text-align: center; }
+  .gallery img { width: 100%; height: auto; display: block; filter: drop-shadow(0 26px 46px rgba(30,30,70,0.34)); }
+  .gallery figcaption { margin-top: 20px; font-weight: 600; font-size: 16px; color: var(--text); }
+  @media (max-width: 520px) { .gallery figure { width: 220px; max-width: 70vw; } }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta { text-align: center; padding: 60px 0 82px; }
+  .final-cta h2 { font-size: clamp(26px, 4.4vw, 38px); letter-spacing: -0.02em; margin: 0 0 16px; }
+  .final-cta p { color: var(--muted); font-size: 18px; margin: 0 auto 28px; max-width: 42ch; }
+</style>
+</head>
+<body data-lang="en">
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="/cndwn/">
+      <img class="mark" src="../img/app-icon.png" width="34" height="34" alt="CNDWN app icon">
+      CNDWN
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/cndwn/#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span></a>
+        <a href="/cndwn/#faq">FAQ</a>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="de">DE</button>
+        <button type="button" data-set-lang="es">ES</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">CNDWN</span>
+    <h1>
+      <span lang="en"><span class="grad">Countdown widgets</span> for iPhone, explained</span>
+      <span lang="de"><span class="grad">Countdown-Widgets</span> für iPhone erklärt</span>
+      <span lang="es"><span class="grad">Widgets de cuenta atrás</span> para iPhone, explicados</span>
+    </h1>
+    <p class="sub">
+      <span lang="en">Home Screen, Lock Screen, StandBy, Live Activities, Dynamic Island — here's what each one does and how to set one up.</span>
+      <span lang="de">Home-Bildschirm, Sperrbildschirm, StandBy, Live-Aktivitäten, Dynamic Island — hier erfährst du, was jedes davon macht und wie du es einrichtest.</span>
+      <span lang="es">Pantalla de inicio, de bloqueo, StandBy, actividades en vivo, Dynamic Island — esto es lo que hace cada uno y cómo configurarlo.</span>
+    </p>
+    <div class="cta-row">
+      <a class="badge-link" href="https://apps.apple.com/app/id6455257754" aria-label="Download CNDWN on the App Store">
+        <img lang="en" src="../img/appstore-en.svg" alt="Download on the App Store" width="162" height="54">
+        <img lang="de" src="../img/appstore-de.svg" alt="Laden im App Store" width="162" height="54">
+        <img lang="es" src="../img/appstore-es.svg" alt="Consíguelo en el App Store" width="162" height="54">
+      </a>
+      <a class="ghost-btn" href="/cndwn/"><span lang="en">See CNDWN</span><span lang="de">CNDWN ansehen</span><span lang="es">Ver CNDWN</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="card">
+    <h2><span lang="en">The four ways to see a countdown without opening the app</span><span lang="de">Vier Wege, einen Countdown zu sehen, ohne die App zu öffnen</span><span lang="es">Cuatro formas de ver una cuenta atrás sin abrir la app</span></h2>
+    <ul class="widget-types">
+      <li>
+        <h3><span lang="en">Home Screen widget</span><span lang="de">Home-Bildschirm-Widget</span><span lang="es">Widget de pantalla de inicio</span></h3>
+        <p><span lang="en">A small, medium or large tile on your Home Screen showing one or more countdowns at a glance.</span><span lang="de">Eine kleine, mittlere oder große Kachel auf deinem Home-Bildschirm, die einen oder mehrere Countdowns auf einen Blick zeigt.</span><span lang="es">Una ficha pequeña, mediana o grande en tu pantalla de inicio que muestra una o varias cuentas atrás de un vistazo.</span></p>
+      </li>
+      <li>
+        <h3><span lang="en">Lock Screen widget</span><span lang="de">Sperrbildschirm-Widget</span><span lang="es">Widget de pantalla de bloqueo</span></h3>
+        <p><span lang="en">Since iOS 16, widgets can sit right on the Lock Screen, so you see the countdown the moment you raise your phone.</span><span lang="de">Seit iOS 16 können Widgets direkt auf dem Sperrbildschirm liegen, sodass du den Countdown siehst, sobald du dein Handy hochnimmst.</span><span lang="es">Desde iOS 16, los widgets pueden estar en la pantalla de bloqueo, así que ves la cuenta atrás en cuanto levantas el teléfono.</span></p>
+      </li>
+      <li>
+        <h3><span lang="en">StandBy widget</span><span lang="de">StandBy-Widget</span><span lang="es">Widget de StandBy</span></h3>
+        <p><span lang="en">When your iPhone is charging and turned sideways, StandBy mode shows a full-screen countdown — perfect as a nightstand clock.</span><span lang="de">Wenn dein iPhone lädt und quer liegt, zeigt der StandBy-Modus einen Vollbild-Countdown — perfekt als Nachttisch-Uhr.</span><span lang="es">Cuando tu iPhone está cargando y de lado, el modo StandBy muestra una cuenta atrás a pantalla completa — perfecto como reloj de mesita de noche.</span></p>
+      </li>
+      <li>
+        <h3><span lang="en">Live Activity &amp; Dynamic Island</span><span lang="de">Live-Aktivität &amp; Dynamic Island</span><span lang="es">Actividad en vivo y Dynamic Island</span></h3>
+        <p><span lang="en">A real-time countdown that appears on the Lock Screen and in the Dynamic Island — great for the final hours before an event.</span><span lang="de">Ein Countdown in Echtzeit auf dem Sperrbildschirm und in der Dynamic Island — ideal für die letzten Stunden vor einem Ereignis.</span><span lang="es">Una cuenta atrás en tiempo real que aparece en la pantalla de bloqueo y en la Dynamic Island — ideal para las últimas horas antes de un evento.</span></p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span lang="en">See it in action</span><span lang="de">In Aktion sehen</span><span lang="es">Míralo en acción</span></h2>
+    <div class="gallery">
+      <figure>
+        <img loading="lazy" src="../img/phone-2.webp" width="660" height="1351" alt="CNDWN widgets on the iPhone Home Screen showing Birthday, Graduation and Holiday countdowns">
+        <figcaption><span lang="en">Home Screen widgets</span><span lang="de">Home-Bildschirm-Widgets</span><span lang="es">Widgets de pantalla de inicio</span></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="../img/phone-3.webp" width="660" height="1351" alt="CNDWN countdown list with custom colors for each event">
+        <figcaption><span lang="en">Custom colors</span><span lang="de">Eigene Farben</span><span lang="es">Colores personalizados</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span lang="en">How to add a countdown widget with CNDWN</span><span lang="de">So fügst du ein Countdown-Widget mit CNDWN hinzu</span><span lang="es">Cómo añadir un widget de cuenta atrás con CNDWN</span></h2>
+    <p>
+      <span lang="en">Create a countdown in CNDWN, then long-press your Home Screen or Lock Screen, tap Add Widget, search for CNDWN and choose a size. CNDWN's widgets, Live Activities and StandBy support are all </span>
+      <span lang="de">Erstelle einen Countdown in CNDWN, halte dann deinen Home-Bildschirm oder Sperrbildschirm gedrückt, tippe auf Widget hinzufügen, suche nach CNDWN und wähle eine Größe. Die Widgets, Live-Aktivitäten und StandBy-Unterstützung von CNDWN sind alle </span>
+      <span lang="es">Crea una cuenta atrás en CNDWN, luego mantén pulsada tu pantalla de inicio o de bloqueo, toca Añadir widget, busca CNDWN y elige un tamaño. Los widgets, actividades en vivo y soporte de StandBy de CNDWN están todos </span><a href="/cndwn/#features"><span lang="en">free, with no ads or trackers</span><span lang="de">gratis, ohne Werbung oder Tracker</span><span lang="es">gratis, sin anuncios ni rastreadores</span></a>. <span lang="en">Looking for the right app first? See our </span><span lang="de">Suchst du zuerst die richtige App? Sieh dir unseren </span><span lang="es">¿Buscas primero la app adecuada? Consulta nuestra </span><a href="/cndwn/best-countdown-app-iphone/"><span lang="en">best countdown app for iPhone guide</span><span lang="de">Ratgeber zur besten Countdown-App für iPhone</span><span lang="es">guía de la mejor app de cuenta atrás para iPhone</span></a>.
+    </p>
+  </div>
+
+  <div style="margin-bottom:22px">
+    <h2><span lang="en">Frequently asked questions</span><span lang="de">Häufige Fragen</span><span lang="es">Preguntas frecuentes</span></h2>
+    <div class="faq">
+      <details open>
+        <summary><span lang="en">Does iOS have a built-in countdown widget?</span><span lang="de">Hat iOS ein integriertes Countdown-Widget?</span><span lang="es">¿iOS tiene un widget de cuenta atrás integrado?</span></summary>
+        <p><span lang="en">iOS does not include a dedicated countdown widget for arbitrary events out of the box. A countdown app like CNDWN adds Home Screen, Lock Screen and StandBy widgets that count down to any date you choose.</span><span lang="de">iOS bringt von Haus aus kein eigenes Countdown-Widget für beliebige Ereignisse mit. Eine Countdown-App wie CNDWN fügt Home-, Sperrbildschirm- und StandBy-Widgets hinzu, die zu jedem gewählten Datum herunterzählen.</span><span lang="es">iOS no incluye de forma nativa un widget de cuenta atrás para eventos personalizados. Una app de cuenta atrás como CNDWN añade widgets de inicio, bloqueo y StandBy que cuentan hacia cualquier fecha que elijas.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en">What is the difference between a widget and a Live Activity?</span><span lang="de">Was ist der Unterschied zwischen einem Widget und einer Live-Aktivität?</span><span lang="es">¿Cuál es la diferencia entre un widget y una actividad en vivo?</span></summary>
+        <p><span lang="en">A widget sits on your Home Screen, Lock Screen or in StandBy and updates periodically. A Live Activity is a real-time, temporary display that appears on the Lock Screen and in the Dynamic Island while an event is actively approaching or in progress.</span><span lang="de">Ein Widget liegt auf deinem Home-Bildschirm, Sperrbildschirm oder in StandBy und aktualisiert sich regelmäßig. Eine Live-Aktivität ist eine temporäre Echtzeit-Anzeige auf dem Sperrbildschirm und in der Dynamic Island, während ein Ereignis unmittelbar bevorsteht oder läuft.</span><span lang="es">Un widget está en tu pantalla de inicio, de bloqueo o en StandBy y se actualiza periódicamente. Una actividad en vivo es una visualización temporal en tiempo real que aparece en la pantalla de bloqueo y en la Dynamic Island mientras un evento se acerca o está en curso.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en">Can I put a countdown widget on my iPhone Lock Screen?</span><span lang="de">Kann ich ein Countdown-Widget auf meinen iPhone-Sperrbildschirm legen?</span><span lang="es">¿Puedo poner un widget de cuenta atrás en la pantalla de bloqueo de mi iPhone?</span></summary>
+        <p><span lang="en">Yes. Since iOS 16, you can add widgets directly to the Lock Screen. Countdown apps like CNDWN support Lock Screen widgets that show the time remaining until your chosen date.</span><span lang="de">Ja. Seit iOS 16 kannst du Widgets direkt zum Sperrbildschirm hinzufügen. Countdown-Apps wie CNDWN unterstützen Sperrbildschirm-Widgets, die die verbleibende Zeit bis zu deinem gewählten Datum anzeigen.</span><span lang="es">Sí. Desde iOS 16, puedes añadir widgets directamente a la pantalla de bloqueo. Apps de cuenta atrás como CNDWN admiten widgets de pantalla de bloqueo que muestran el tiempo restante hasta la fecha elegida.</span></p>
+      </details>
+    </div>
+  </div>
+
+</main>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2><span lang="en">Get your first widget in seconds</span><span lang="de">Dein erstes Widget in Sekunden</span><span lang="es">Tu primer widget en segundos</span></h2>
+    <p><span lang="en">Download CNDWN and pin your first countdown widget today.</span><span lang="de">Lade CNDWN und hefte noch heute dein erstes Countdown-Widget an.</span><span lang="es">Descarga CNDWN y fija hoy tu primer widget de cuenta atrás.</span></p>
+    <div class="cta-row">
+      <a class="badge-link" href="https://apps.apple.com/app/id6455257754" aria-label="Download CNDWN on the App Store">
+        <img lang="en" src="../img/appstore-en.svg" alt="Download on the App Store" width="162" height="54">
+        <img lang="de" src="../img/appstore-de.svg" alt="Laden im App Store" width="162" height="54">
+        <img lang="es" src="../img/appstore-es.svg" alt="Consíguelo en el App Store" width="162" height="54">
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="brand" style="font-size:16px">
+      <img class="mark" src="../img/app-icon.png" alt="" style="width:26px;height:26px;border-radius:7px">
+      CNDWN
+    </div>
+    <div class="flinks">
+      <a href="/cndwn/#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span></a>
+      <a href="/cndwn/#faq">FAQ</a>
+      <a href="/cndwn/privacy/"><span lang="en">Privacy Policy</span><span lang="de">Datenschutz</span><span lang="es">Privacidad</span></a>
+      <a href="mailto:cndwn@schillan.com">Contact</a>
+    </div>
+    <div>© 2026 Schillan. CNDWN.</div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var body = document.body;
+    var buttons = document.querySelectorAll('[data-set-lang]');
+
+    function setLang(lang) {
+      body.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('lang', lang);
+      buttons.forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-set-lang') === lang);
+      });
+      try { localStorage.setItem('cndwn-lang', lang); } catch (e) {}
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        setLang(b.getAttribute('data-set-lang'));
+      });
+    });
+
+    var saved;
+    try { saved = localStorage.getItem('cndwn-lang'); } catch (e) {}
+    var nav = (navigator.language || 'en').toLowerCase();
+    var detected = nav.indexOf('de') === 0 ? 'de' : (nav.indexOf('es') === 0 ? 'es' : 'en');
+    setLang(saved || detected);
+  })();
+</script>
+</body>
+</html>

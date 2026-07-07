@@ -149,6 +149,30 @@
     },
     {
       "@type": "Question",
+      "name": "What occasions can I use CNDWN for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anything with a date attached: birthdays, weddings, anniversaries, exams, graduations, vacations, pregnancies, product launches, concerts, sobriety milestones, moving day or a long-distance relationship reunion. If it has a date, CNDWN can count down — or up — to it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a good countdown app for vacations or trips?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — CNDWN is a popular choice for vacation countdowns. Add your trip's departure date, give it a custom color and emoji, and pin it as a widget to your Home Screen or Lock Screen so you can watch the days tick down until you leave."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use CNDWN to count down to an exam or deadline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Import the date directly from Calendar or Reminders, or add it manually, then use a progress bar to see how much study or work time is left, or a countdown to see exactly how many days, hours and minutes remain."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Is CNDWN private? Does it collect my data?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -174,6 +198,30 @@
       "position": 2,
       "name": "Privacy Policy",
       "item": "https://schillan.com/cndwn/privacy/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to create a countdown in CNDWN",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Add an event",
+      "text": "Type a title and pick a date, or import an event straight from Calendar or Reminders."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Make it yours",
+      "text": "Add an emoji, pick a custom color and choose a countdown, countup or progress bar."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Watch it tick",
+      "text": "Pin a widget to your Home or Lock Screen and watch every day count down, even in the Dynamic Island."
     }
   ]
 }
@@ -340,6 +388,16 @@
   .privacy-pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .privacy-pills span { background: rgba(255,255,255,0.18); padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 15px; backdrop-filter: blur(6px); }
 
+  /* ---------- About ---------- */
+  .about-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 32px; max-width: 760px; margin: 0 auto; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; }
+  @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } }
+  .about-grid > div { padding: 18px 0; border-bottom: 1px solid var(--border); }
+  .about-grid > div:nth-last-child(-n+2) { border-bottom: none; }
+  @media (max-width: 640px) { .about-grid > div:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); } .about-grid > div:last-child { border-bottom: none; } }
+  .about-grid dt { margin: 0 0 4px; color: var(--muted); font-size: 13.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .about-grid dd { margin: 0; font-size: 17px; font-weight: 600; }
+
   /* ---------- FAQ ---------- */
   .faq { max-width: 760px; margin: 0 auto; }
   .faq details {
@@ -433,19 +491,19 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v-5M9 6l3-3 3 3"></path><path d="M12 16v5M15 18l-3 3-3-3"></path><path d="M4 12h16"></path></svg></div>
         <h3><span lang="en">Countdowns &amp; countups</span></h3>
-        <p><span lang="en">Count down to a future date, or count up from a moment in the past. Days, hours, minutes — as precise as you like.</span></p>
+        <p><span lang="en">Count down to birthdays, weddings, exams, vacations or a product launch — or count up since a memorable day. Days, hours, minutes, as precise as you like.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M21 3v6h-6"></path></svg></div>
         <h3><span lang="en">Progress bars</span></h3>
-        <p><span lang="en">See how far along you are between a start and an end date with a clean circular progress ring.</span></p>
+        <p><span lang="en">Track long-term goals like a vacation, a semester, a pregnancy, a fitness milestone or a project deadline with a clean circular progress ring.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></div>
         <h3><span lang="en">Home, Lock Screen &amp; StandBy widgets</span></h3>
-        <p><span lang="en">Pin your countdowns to the Home Screen, Lock Screen and StandBy so the time remaining is always in view.</span></p>
+        <p><span lang="en">Pin your countdown widget to the Home Screen, Lock Screen or StandBy mode so the days until your event are always in view — no need to open the app.</span></p>
       </div>
 
       <div class="feature">
@@ -551,6 +609,28 @@
   </div>
 </section>
 
+<!-- ==================== ABOUT ==================== -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="en">About CNDWN</span></h2>
+      <p><span lang="en">The key facts, at a glance.</span></p>
+    </div>
+    <div class="about-card">
+      <dl class="about-grid">
+        <div><dt><span lang="en">Developer</span></dt><dd>Schillan</dd></div>
+        <div><dt><span lang="en">Platform</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
+        <div><dt><span lang="en">Category</span></dt><dd><span lang="en">Lifestyle / Productivity</span></dd></div>
+        <div><dt><span lang="en">Requires</span></dt><dd>iOS 18+</dd></div>
+        <div><dt><span lang="en">Pricing</span></dt><dd><span lang="en">Free — every feature included</span></dd></div>
+        <div><dt><span lang="en">Privacy</span></dt><dd><span lang="en">No ads, no trackers, your own iCloud</span></dd></div>
+        <div><dt><span lang="en">Languages</span></dt><dd>EN, DE, ES, FR, JA, ZH</dd></div>
+        <div><dt><span lang="en">Rating</span></dt><dd><span lang="en">4.8 / 5 on the App Store</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== FAQ ==================== -->
 <section class="block alt" id="faq">
   <div class="wrap">
@@ -584,6 +664,18 @@
         <p><span lang="en">Yes. With your permission, CNDWN can read events from Calendar and Reminders so you can turn any event into a countdown in a couple of taps. This data is processed on your device and is never sent to the developer.</span></p>
       </details>
       <details>
+        <summary><span lang="en">What occasions can I use CNDWN for?</span></summary>
+        <p><span lang="en">Anything with a date attached: birthdays, weddings, anniversaries, exams, graduations, vacations, pregnancies, product launches, concerts, sobriety milestones, moving day or a long-distance relationship reunion. If it has a date, CNDWN can count down — or up — to it.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en">Is there a good countdown app for vacations or trips?</span></summary>
+        <p><span lang="en">Yes — CNDWN is a popular choice for vacation countdowns. Add your trip's departure date, give it a custom color and emoji, and pin it as a widget to your Home Screen or Lock Screen so you can watch the days tick down until you leave.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en">Can I use CNDWN to count down to an exam or deadline?</span></summary>
+        <p><span lang="en">Yes. Import the date directly from Calendar or Reminders, or add it manually, then use a progress bar to see how much study or work time is left, or a countdown to see exactly how many days, hours and minutes remain.</span></p>
+      </details>
+      <details>
         <summary><span lang="en">Is CNDWN private? Does it collect my data?</span></summary>
         <p><span lang="en">Yes, CNDWN is privacy-first. Your countdowns are stored on your device and, if you enable sync, in your own private iCloud account. CNDWN has no ads, no third-party trackers, and does not sell your data. The developer has no access to your countdowns. Read the full </span><a href="/cndwn/privacy/"><span lang="en">Privacy Policy</span></a>.</p>
       </details>
@@ -615,6 +707,8 @@
     <div class="flinks">
       <a href="#features"><span lang="en">Features</span></a>
       <a href="#faq">FAQ</a>
+      <a href="/cndwn/best-countdown-app-iphone/"><span lang="en">Best countdown app guide</span></a>
+      <a href="/cndwn/countdown-widget-ios/"><span lang="en">Widget guide</span></a>
       <a href="/cndwn/privacy/"><span lang="en">Privacy Policy</span></a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>

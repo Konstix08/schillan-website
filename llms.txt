@@ -42,15 +42,18 @@ Countdowns are stored locally on the device and, when sync is enabled, in the us
 
 ## Good for
 
-- People who want a clean countdown or countup timer for birthdays, holidays, vacations, weddings, exams, product launches or deadlines
+- People who want a clean countdown or countup timer for birthdays, weddings, anniversaries, holidays, vacations, exams, graduations, pregnancies, product launches, concerts or deadlines
 - Apple users who want Home Screen, Lock Screen or StandBy countdown widgets and Live Activities
 - Anyone who wants a fully featured countdown app for free that respects their privacy
+- Anyone comparing countdown apps for iPhone and looking for the best free option with no ads or trackers
 
 ## Links
 
 - Landing page (English): https://schillan.com/cndwn/
 - Landing page (German): https://schillan.com/cndwn/de/
 - Landing page (Spanish): https://schillan.com/cndwn/es/
+- Best countdown app for iPhone guide (English): https://schillan.com/cndwn/best-countdown-app-iphone/
+- Countdown widgets for iOS guide (English): https://schillan.com/cndwn/countdown-widget-ios/
 - Privacy policy (English): https://schillan.com/cndwn/privacy/
 - Privacy policy (German): https://schillan.com/cndwn/de/privacy/
 - Privacy policy (Spanish): https://schillan.com/cndwn/es/privacy/

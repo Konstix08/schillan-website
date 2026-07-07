@@ -149,6 +149,30 @@
     },
     {
       "@type": "Question",
+      "name": "Für welche Anlässe kann ich CNDWN nutzen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alles mit einem Datum: Geburtstage, Hochzeiten, Jahrestage, Prüfungen, Abschlussfeiern, Urlaube, Schwangerschaften, Produktstarts, Konzerte, Meilensteine der Genesung, Umzugstag oder das Wiedersehen in einer Fernbeziehung. Hat es ein Datum, kann CNDWN dafür herunter- oder hochzählen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es eine gute Countdown-App für Urlaub oder Reisen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja — CNDWN eignet sich hervorragend für Urlaubs-Countdowns. Füge das Abreisedatum hinzu, wähle eine eigene Farbe und ein Emoji und hefte es als Widget an Home-Bildschirm oder Sperrbildschirm, um die Tage bis zur Abreise zu verfolgen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich mit CNDWN zu einer Prüfung oder Deadline herunterzählen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Importiere das Datum direkt aus Kalender oder Erinnerungen oder füge es manuell hinzu, und nutze dann einen Fortschrittsbalken, um zu sehen, wie viel Lern- oder Arbeitszeit noch bleibt, oder einen Countdown für die genaue Anzahl der verbleibenden Tage, Stunden und Minuten."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Ist CNDWN privat? Sammelt es meine Daten?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -174,6 +198,30 @@
       "position": 2,
       "name": "Datenschutzerklärung",
       "item": "https://schillan.com/cndwn/de/privacy/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "So erstellst du einen Countdown in CNDWN",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Ereignis hinzufügen",
+      "text": "Titel eingeben und Datum wählen — oder ein Ereignis direkt aus Kalender oder Erinnerungen importieren."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Mach es persönlich",
+      "text": "Emoji hinzufügen, eigene Farbe wählen und zwischen Countdown, Countup oder Fortschrittsbalken entscheiden."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Sieh ihm beim Ticken zu",
+      "text": "Hefte ein Widget an Home- oder Sperrbildschirm und zähl jeden Tag herunter — sogar in der Dynamic Island."
     }
   ]
 }
@@ -340,6 +388,16 @@
   .privacy-pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .privacy-pills span { background: rgba(255,255,255,0.18); padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 15px; backdrop-filter: blur(6px); }
 
+  /* ---------- About ---------- */
+  .about-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 32px; max-width: 760px; margin: 0 auto; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; }
+  @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } }
+  .about-grid > div { padding: 18px 0; border-bottom: 1px solid var(--border); }
+  .about-grid > div:nth-last-child(-n+2) { border-bottom: none; }
+  @media (max-width: 640px) { .about-grid > div:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); } .about-grid > div:last-child { border-bottom: none; } }
+  .about-grid dt { margin: 0 0 4px; color: var(--muted); font-size: 13.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .about-grid dd { margin: 0; font-size: 17px; font-weight: 600; }
+
   /* ---------- FAQ ---------- */
   .faq { max-width: 760px; margin: 0 auto; }
   .faq details {
@@ -433,19 +491,19 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v-5M9 6l3-3 3 3"></path><path d="M12 16v5M15 18l-3 3-3-3"></path><path d="M4 12h16"></path></svg></div>
         <h3><span lang="de">Countdowns &amp; Countups</span></h3>
-        <p><span lang="de">Zähl herunter zu einem Datum oder hinauf von einem vergangenen Moment. Tage, Stunden, Minuten — so genau du willst.</span></p>
+        <p><span lang="de">Zähl herunter zu Geburtstagen, Hochzeiten, Prüfungen, Urlauben oder einem Produktstart — oder hinauf seit einem besonderen Tag. Tage, Stunden, Minuten, so genau du willst.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M21 3v6h-6"></path></svg></div>
         <h3><span lang="de">Fortschrittsbalken</span></h3>
-        <p><span lang="de">Sieh mit einem klaren runden Fortschrittsring, wie weit du zwischen Start- und Enddatum bist.</span></p>
+        <p><span lang="de">Verfolge langfristige Ziele wie einen Urlaub, ein Semester, eine Schwangerschaft, einen Fitness-Meilenstein oder eine Projekt-Deadline mit einem klaren runden Fortschrittsring.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></div>
         <h3><span lang="de">Home-, Sperrbildschirm- &amp; StandBy-Widgets</span></h3>
-        <p><span lang="de">Hefte deine Countdowns an Home-Bildschirm, Sperrbildschirm und StandBy — die verbleibende Zeit immer im Blick.</span></p>
+        <p><span lang="de">Hefte dein Countdown-Widget an Home-Bildschirm, Sperrbildschirm oder StandBy-Modus — die Tage bis zu deinem Ereignis immer im Blick, ohne die App zu öffnen.</span></p>
       </div>
 
       <div class="feature">
@@ -551,6 +609,28 @@
   </div>
 </section>
 
+<!-- ==================== ABOUT ==================== -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="de">Über CNDWN</span></h2>
+      <p><span lang="de">Die wichtigsten Fakten auf einen Blick.</span></p>
+    </div>
+    <div class="about-card">
+      <dl class="about-grid">
+        <div><dt><span lang="de">Entwickler</span></dt><dd>Schillan</dd></div>
+        <div><dt><span lang="de">Plattform</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
+        <div><dt><span lang="de">Kategorie</span></dt><dd><span lang="de">Lifestyle / Produktivität</span></dd></div>
+        <div><dt><span lang="de">Voraussetzung</span></dt><dd>iOS 18+</dd></div>
+        <div><dt><span lang="de">Preis</span></dt><dd><span lang="de">Gratis — alle Funktionen inklusive</span></dd></div>
+        <div><dt><span lang="de">Datenschutz</span></dt><dd><span lang="de">Keine Werbung, keine Tracker, eigene iCloud</span></dd></div>
+        <div><dt><span lang="de">Sprachen</span></dt><dd>EN, DE, ES, FR, JA, ZH</dd></div>
+        <div><dt><span lang="de">Bewertung</span></dt><dd><span lang="de">4,8 / 5 im App Store</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== FAQ ==================== -->
 <section class="block alt" id="faq">
   <div class="wrap">
@@ -584,6 +664,18 @@
         <p><span lang="de">Ja. Mit deiner Erlaubnis liest CNDWN Termine aus Kalender und Erinnerungen, damit du jedes Ereignis mit wenigen Tipps in einen Countdown verwandeln kannst. Diese Daten werden auf deinem Gerät verarbeitet und nie an den Entwickler gesendet.</span></p>
       </details>
       <details>
+        <summary><span lang="de">Für welche Anlässe kann ich CNDWN nutzen?</span></summary>
+        <p><span lang="de">Alles mit einem Datum: Geburtstage, Hochzeiten, Jahrestage, Prüfungen, Abschlussfeiern, Urlaube, Schwangerschaften, Produktstarts, Konzerte, Meilensteine der Genesung, Umzugstag oder das Wiedersehen in einer Fernbeziehung. Hat es ein Datum, kann CNDWN dafür herunter- oder hochzählen.</span></p>
+      </details>
+      <details>
+        <summary><span lang="de">Gibt es eine gute Countdown-App für Urlaub oder Reisen?</span></summary>
+        <p><span lang="de">Ja — CNDWN eignet sich hervorragend für Urlaubs-Countdowns. Füge das Abreisedatum hinzu, wähle eine eigene Farbe und ein Emoji und hefte es als Widget an Home-Bildschirm oder Sperrbildschirm, um die Tage bis zur Abreise zu verfolgen.</span></p>
+      </details>
+      <details>
+        <summary><span lang="de">Kann ich mit CNDWN zu einer Prüfung oder Deadline herunterzählen?</span></summary>
+        <p><span lang="de">Ja. Importiere das Datum direkt aus Kalender oder Erinnerungen oder füge es manuell hinzu, und nutze dann einen Fortschrittsbalken, um zu sehen, wie viel Lern- oder Arbeitszeit noch bleibt, oder einen Countdown für die genaue Anzahl der verbleibenden Tage, Stunden und Minuten.</span></p>
+      </details>
+      <details>
         <summary><span lang="de">Ist CNDWN privat? Sammelt es meine Daten?</span></summary>
         <p><span lang="de">Ja, CNDWN ist datenschutzfreundlich. Deine Countdowns werden auf deinem Gerät und, wenn du Sync aktivierst, in deiner eigenen privaten iCloud gespeichert. CNDWN hat keine Werbung, keine Dritt-Tracker und verkauft deine Daten nicht. Der Entwickler hat keinen Zugriff auf deine Countdowns. Lies die vollständige </span><a href="/cndwn/de/privacy/"><span lang="de">Datenschutzerklärung</span></a>.</p>
       </details>
@@ -615,6 +707,8 @@
     <div class="flinks">
       <a href="#features"><span lang="de">Funktionen</span></a>
       <a href="#faq">FAQ</a>
+      <a href="/cndwn/de/best-countdown-app-iphone/"><span lang="de">Ratgeber: beste Countdown-App</span></a>
+      <a href="/cndwn/de/countdown-widget-ios/"><span lang="de">Widget-Ratgeber</span></a>
       <a href="/cndwn/de/privacy/"><span lang="de">Datenschutz</span></a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>
