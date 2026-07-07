@@ -278,14 +278,16 @@
   .rating-note { margin-top: 8px; color: var(--muted); font-size: 13.5px; }
   .rating-note .stars { color: #ff9f0a; letter-spacing: 1px; }
 
-  /* Hero — real App Store screenshot */
-  .devices { position: relative; z-index: 1; margin: 50px auto 0; max-width: 320px; }
-  .shot { width: 100%; height: auto; display: block; border-radius: 30px; filter: drop-shadow(0 40px 70px rgba(40,40,90,0.35)); }
+  /* Hero — real, frameless iPhone screenshot */
+  .devices { position: relative; z-index: 1; margin: 48px auto 0; max-width: 288px; }
+  .shot { width: 100%; height: auto; display: block; filter: drop-shadow(0 34px 60px rgba(30,30,70,0.42)); }
 
   /* ---------- Screenshot gallery ---------- */
-  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; max-width: 900px; margin: 0 auto; }
-  @media (max-width: 720px) { .gallery { grid-template-columns: 1fr; max-width: 320px; } }
-  .gallery img { width: 100%; height: auto; display: block; border-radius: 24px; filter: drop-shadow(0 26px 46px rgba(40,40,90,0.28)); }
+  .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 56px; max-width: 720px; margin: 0 auto; }
+  .gallery figure { margin: 0; width: 236px; max-width: 44vw; text-align: center; }
+  .gallery img { width: 100%; height: auto; display: block; filter: drop-shadow(0 26px 46px rgba(30,30,70,0.34)); }
+  .gallery figcaption { margin-top: 20px; font-weight: 600; font-size: 16px; color: var(--text); }
+  @media (max-width: 520px) { .gallery figure { width: 220px; max-width: 70vw; } }
 
   /* ---------- Section shells ---------- */
   section.block { padding: 68px 0; }
@@ -413,9 +415,7 @@
     <p class="rating-note"><span class="stars">★★★★★</span> <span lang="en">4.8 on the App Store · Free</span><span lang="de">4,8 im App Store · Gratis</span><span lang="es">4,8 en la App Store · Gratis</span></p>
 
     <div class="devices">
-      <img class="shot" lang="en" src="img/screen-en-1.png" width="640" height="1386" alt="CNDWN countdown list on iPhone showing Super Bowl, Birthday, Graduation and Holiday countdowns">
-      <img class="shot" lang="de" src="img/screen-de-1.png" width="640" height="1386" alt="CNDWN Countdown-Liste auf dem iPhone mit Super Bowl, Geburtstag, Abschluss und Urlaub">
-      <img class="shot" lang="es" src="img/screen-en-1.png" width="640" height="1386" alt="Lista de cuentas atrás de CNDWN en el iPhone">
+      <img class="shot" src="img/phone-1.webp" width="660" height="1351" alt="CNDWN countdown list on iPhone showing Graduation, Super Bowl, Birthday and Holiday countdowns">
     </div>
   </div>
 </header>
@@ -519,20 +519,17 @@
   <div class="wrap">
     <div class="section-head">
       <h2><span lang="en">See it on your devices</span><span lang="de">Sieh es auf deinen Geräten</span><span lang="es">Míralo en tus dispositivos</span></h2>
-      <p><span lang="en">Widgets, custom colors and Live Activities — straight from the App Store.</span><span lang="de">Widgets, eigene Farben und Live-Aktivitäten — direkt aus dem App Store.</span><span lang="es">Widgets, colores personalizados y actividades en vivo — directo de la App Store.</span></p>
+      <p><span lang="en">Home Screen widgets and custom colors — real screenshots from the App Store.</span><span lang="de">Home-Bildschirm-Widgets und eigene Farben — echte Screenshots aus dem App Store.</span><span lang="es">Widgets de pantalla de inicio y colores personalizados — capturas reales de la App Store.</span></p>
     </div>
     <div class="gallery">
-      <img lang="en" loading="lazy" src="img/screen-en-2.png" width="520" height="1126" alt="CNDWN widgets on the iPhone Home Screen">
-      <img lang="de" loading="lazy" src="img/screen-de-2.png" width="520" height="1126" alt="CNDWN Widgets auf dem iPhone-Home-Bildschirm">
-      <img lang="es" loading="lazy" src="img/screen-en-2.png" width="520" height="1126" alt="Widgets de CNDWN en la pantalla de inicio del iPhone">
-
-      <img lang="en" loading="lazy" src="img/screen-en-3.png" width="520" height="1126" alt="CNDWN countdowns with custom colors">
-      <img lang="de" loading="lazy" src="img/screen-de-3.png" width="520" height="1126" alt="CNDWN Countdowns mit eigenen Farben">
-      <img lang="es" loading="lazy" src="img/screen-en-3.png" width="520" height="1126" alt="Cuentas atrás de CNDWN con colores personalizados">
-
-      <img lang="en" loading="lazy" src="img/screen-en-4.png" width="520" height="1126" alt="CNDWN Live Activity on the iPhone Lock Screen">
-      <img lang="de" loading="lazy" src="img/screen-de-4.png" width="520" height="1126" alt="CNDWN Live-Aktivität auf dem iPhone-Sperrbildschirm">
-      <img lang="es" loading="lazy" src="img/screen-en-4.png" width="520" height="1126" alt="Actividad en vivo de CNDWN en la pantalla de bloqueo del iPhone">
+      <figure>
+        <img loading="lazy" src="img/phone-2.webp" width="660" height="1351" alt="CNDWN widgets on the iPhone Home Screen showing Birthday, Graduation and Holiday countdowns">
+        <figcaption><span lang="en">Home Screen widgets</span><span lang="de">Home-Bildschirm-Widgets</span><span lang="es">Widgets de pantalla de inicio</span></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="img/phone-3.webp" width="660" height="1351" alt="CNDWN countdown list with custom colors for each event">
+        <figcaption><span lang="en">Custom colors</span><span lang="de">Eigene Farben</span><span lang="es">Colores personalizados</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
