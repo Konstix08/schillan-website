@@ -4,3 +4,6 @@
 # Editor / IDE
 .vscode/
 .idea/
+
+# Node (i18n generator dependency, installed locally only)
+node_modules/
