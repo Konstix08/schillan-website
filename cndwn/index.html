@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNDWN — Beautiful Countdown App for iPhone, iPad, Mac, Apple Watch &amp; Apple TV</title>
+<meta name="description" content="CNDWN is a privacy-first countdown app for Apple devices. Count down to birthdays, holidays, trips and deadlines with gorgeous Home Screen &amp; Lock Screen widgets, iCloud sync, calendar import and sharing. No ads, no trackers.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://schillan.com/cndwn/">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="keywords" content="countdown app, countdown widget, iPhone countdown, days until, event countdown, Lock Screen widget, Home Screen widget, iCloud countdown, Apple Watch countdown, birthday countdown, holiday countdown, vacation countdown">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CNDWN">
+<meta property="og:title" content="CNDWN — Beautiful Countdown App for Apple Devices">
+<meta property="og:description" content="Count down to what matters with gorgeous widgets, iCloud sync and total privacy. For iPhone, iPad, Mac, Apple Watch and Apple TV.">
+<meta property="og:url" content="https://schillan.com/cndwn/">
+<meta property="og:image" content="https://schillan.com/cndwn/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CNDWN — Beautiful Countdown App for Apple Devices">
+<meta name="twitter:description" content="Count down to what matters with gorgeous widgets, iCloud sync and total privacy.">
+<meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b6cff'/%3E%3Cstop offset='1' stop-color='%239b5bff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='white' stroke-width='7'/%3E%3Cpath d='M50 30 L50 50 L64 60' fill='none' stroke='white' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Structured data for search engines & AI assistants -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "CNDWN",
+  "alternateName": "CNDWN Countdown",
+  "operatingSystem": "iOS, iPadOS, macOS, watchOS, tvOS",
+  "applicationCategory": "LifestyleApplication",
+  "description": "CNDWN is a privacy-first countdown app for iPhone, iPad, Mac, Apple Watch and Apple TV. Create countdowns for birthdays, holidays, trips and deadlines with Home Screen and Lock Screen widgets, iCloud sync, calendar import and sharing. No ads and no trackers.",
+  "url": "https://schillan.com/cndwn/",
+  "downloadUrl": "https://apps.apple.com/app/cndwn",
+  "featureList": [
+    "Home Screen and Lock Screen widgets",
+    "iCloud sync across all Apple devices",
+    "Import events from your calendar",
+    "Share countdowns with friends and family",
+    "Notifications and reminders",
+    "Works on iPhone, iPad, Mac, Apple Watch and Apple TV",
+    "Privacy-first: no ads, no trackers, data stays on your device"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Schillan",
+    "url": "https://schillan.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Schillan",
+    "url": "https://schillan.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is CNDWN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CNDWN is a countdown app for Apple devices. It lets you count down to birthdays, holidays, trips, deadlines and any other important date, and shows the time remaining right on your Home Screen and Lock Screen with widgets. It runs on iPhone, iPad, Mac, Apple Watch and Apple TV."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which devices does CNDWN work on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CNDWN works on iPhone, iPad, Mac, Apple Watch and Apple TV. Your countdowns sync automatically across all of your Apple devices through your own iCloud account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is CNDWN private? Does it collect my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, CNDWN is privacy-first. Your countdowns are stored locally on your device and, if you enable sync, in your own private iCloud account. CNDWN has no ads, no third-party trackers, and does not sell your data. The developer has no access to your countdowns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CNDWN have Home Screen and Lock Screen widgets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CNDWN includes Home Screen and Lock Screen widgets so you can see the days, hours and minutes remaining until your most important events without opening the app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I create a countdown from a calendar event?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. With your permission, CNDWN can read events from your calendar so you can turn any event into a countdown in a couple of taps. Calendar data is processed on your device and is never sent to the developer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does CNDWN cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CNDWN is available on the Apple App Store. You can download it and start creating countdowns for free."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "CNDWN", "item": "https://schillan.com/cndwn/" },
+    { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://schillan.com/cndwn/privacy/" }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --bg-2: #ffffff;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --muted: #6e6e73;
+    --accent: #5b6cff;
+    --accent-2: #9b5bff;
+    --border: #e3e3e8;
+    --maxw: 1080px;
+    --radius: 22px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0b0f;
+      --bg-2: #121218;
+      --card: #17171d;
+      --text: #f5f5f7;
+      --muted: #9a9aa2;
+      --accent: #7d8bff;
+      --accent-2: #b885ff;
+      --border: #26262e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+  /* ---------- Nav ---------- */
+  nav.site {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.16em; font-size: 19px; color: var(--text); }
+  .brand:hover { text-decoration: none; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; display: inline-block; }
+  .nav-links { display: flex; align-items: center; gap: 26px; font-size: 15px; }
+  .nav-links a { color: var(--muted); font-weight: 500; }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
+  .nav-cta { display: inline-flex !important; color: #fff !important; background: var(--accent); padding: 8px 16px; border-radius: 999px; font-weight: 600; }
+  .nav-cta:hover { text-decoration: none; opacity: 0.92; }
+  @media (max-width: 640px) { .nav-links a:not(.nav-cta) { display: none; } }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; text-align: center; padding: 84px 0 72px; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: -40% -20% auto -20%; height: 620px;
+    background: radial-gradient(60% 60% at 50% 0%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 70%),
+                radial-gradient(50% 50% at 80% 10%, color-mix(in srgb, var(--accent-2) 30%, transparent), transparent 70%);
+    z-index: 0; pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+  .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(38px, 7vw, 66px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 800;
+    margin: 0 auto 20px; max-width: 14ch;
+  }
+  .hero h1 .grad {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero .sub { font-size: clamp(18px, 2.4vw, 22px); color: var(--muted); max-width: 44ch; margin: 0 auto 34px; }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center; }
+
+  /* App Store badge */
+  .appstore {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: #000; color: #fff; padding: 12px 20px 12px 18px; border-radius: 14px;
+    font-weight: 500; border: 1px solid rgba(255,255,255,0.14);
+  }
+  .appstore:hover { text-decoration: none; transform: translateY(-1px); }
+  .appstore svg { width: 26px; height: 26px; flex: none; }
+  .appstore .small { font-size: 11px; opacity: 0.85; line-height: 1; margin-bottom: 3px; }
+  .appstore .big { font-size: 19px; font-weight: 600; line-height: 1; letter-spacing: 0.01em; }
+  @media (prefers-color-scheme: dark) { .appstore { background: #fff; color: #000; border-color: rgba(0,0,0,0.1); } }
+  .ghost-btn { color: var(--text); background: var(--card); border: 1px solid var(--border); padding: 13px 22px; border-radius: 14px; font-weight: 600; }
+  .ghost-btn:hover { text-decoration: none; border-color: var(--accent); }
+  .platform-note { margin-top: 22px; color: var(--muted); font-size: 14px; }
+
+  /* Hero device mockup */
+  .devices { position: relative; z-index: 1; margin: 56px auto 0; max-width: 300px; }
+  .phone {
+    background: var(--card); border: 1px solid var(--border); border-radius: 42px; padding: 12px;
+    box-shadow: 0 40px 80px -30px rgba(40,40,90,0.45); position: relative;
+  }
+  .phone .screen {
+    border-radius: 32px; overflow: hidden; aspect-ratio: 9 / 19.5;
+    background: linear-gradient(160deg, var(--accent), var(--accent-2));
+    display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; padding: 22px;
+  }
+  .phone .notch { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 42%; height: 26px; background: var(--card); border-radius: 0 0 16px 16px; z-index: 2; }
+  .cd-label { font-size: 13px; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.9; margin-bottom: 10px; }
+  .cd-num { font-size: 72px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+  .cd-unit { font-size: 15px; opacity: 0.9; margin-top: 6px; }
+  .cd-event { margin-top: 26px; font-size: 20px; font-weight: 600; }
+  .cd-date { font-size: 14px; opacity: 0.85; margin-top: 2px; }
+
+  /* ---------- Section shells ---------- */
+  section.block { padding: 72px 0; }
+  section.alt { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .section-head { text-align: center; max-width: 40ch; margin: 0 auto 48px; }
+  .section-head h2 { font-size: clamp(28px, 4.4vw, 40px); letter-spacing: -0.02em; margin: 0 0 14px; line-height: 1.12; }
+  .section-head p { color: var(--muted); font-size: 18px; margin: 0; }
+
+  /* ---------- Feature grid ---------- */
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 860px) { .features { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .features { grid-template-columns: 1fr; } }
+  .feature {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 28px 26px; transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .feature:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -24px rgba(40,40,90,0.4); }
+  .feature .ico {
+    width: 48px; height: 48px; border-radius: 13px; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; margin-bottom: 18px;
+  }
+  .feature .ico svg { width: 25px; height: 25px; }
+  .feature h3 { margin: 0 0 8px; font-size: 20px; letter-spacing: -0.01em; }
+  .feature p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  /* ---------- Steps ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: step; }
+  @media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
+  .step { text-align: center; padding: 8px; }
+  .step .n {
+    width: 52px; height: 52px; margin: 0 auto 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 20px; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  }
+  .step h3 { margin: 0 0 6px; font-size: 19px; }
+  .step p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  /* ---------- Privacy banner ---------- */
+  .privacy-banner {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff;
+    border-radius: 28px; padding: 52px 40px; text-align: center;
+  }
+  .privacy-banner h2 { font-size: clamp(26px, 4vw, 36px); margin: 0 0 14px; letter-spacing: -0.02em; }
+  .privacy-banner p { margin: 0 auto 26px; max-width: 52ch; font-size: 18px; opacity: 0.95; }
+  .privacy-pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .privacy-pills span { background: rgba(255,255,255,0.18); padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 15px; backdrop-filter: blur(6px); }
+
+  /* ---------- FAQ ---------- */
+  .faq { max-width: 760px; margin: 0 auto; }
+  .faq details {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 4px 22px; margin-bottom: 14px;
+  }
+  .faq summary {
+    cursor: pointer; list-style: none; font-weight: 600; font-size: 18px; padding: 18px 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-size: 26px; color: var(--accent); font-weight: 400; transition: transform 0.2s; line-height: 1; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { margin: 0 0 20px; color: var(--muted); font-size: 16px; }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta { text-align: center; padding: 84px 0; }
+  .final-cta h2 { font-size: clamp(30px, 5vw, 46px); letter-spacing: -0.02em; margin: 0 0 16px; }
+  .final-cta p { color: var(--muted); font-size: 19px; margin: 0 auto 32px; max-width: 40ch; }
+
+  /* ---------- Footer ---------- */
+  footer.site { border-top: 1px solid var(--border); padding: 46px 0; color: var(--muted); font-size: 14.5px; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: center; }
+  footer.site .flinks { display: flex; gap: 22px; flex-wrap: wrap; }
+  footer.site a { color: var(--muted); }
+  footer.site a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="/cndwn/">
+      <span class="mark" style="background:linear-gradient(135deg,var(--accent),var(--accent-2))"></span>
+      CNDWN
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/cndwn">Download</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Countdown app for Apple devices</span>
+    <h1>Count down to <span class="grad">what matters</span> most</h1>
+    <p class="sub">Beautiful countdowns for birthdays, holidays, trips and deadlines — right on your Home Screen and Lock Screen. Private by design.</p>
+    <div class="cta-row">
+      <a class="appstore" href="https://apps.apple.com/app/cndwn" aria-label="Download CNDWN on the App Store">
+        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        <span><span class="small">Download on the</span><br><span class="big">App Store</span></span>
+      </a>
+      <a class="ghost-btn" href="#features">See features</a>
+    </div>
+    <p class="platform-note">iPhone · iPad · Mac · Apple Watch · Apple TV</p>
+
+    <div class="devices">
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="cd-label">Days until</div>
+          <div class="cd-num">128</div>
+          <div class="cd-unit">days · 14 hrs · 09 min</div>
+          <div class="cd-event">Trip to Japan ✈️</div>
+          <div class="cd-date">14 November 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== FEATURES ==================== -->
+<section class="block" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Everything you need to count down</h2>
+      <p>Simple to set up, gorgeous to look at, and available on every Apple device you own.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3>Home &amp; Lock Screen widgets</h3>
+        <p>See the days, hours and minutes left to your biggest moments without ever opening the app.</p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M21 3v6h-6"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>iCloud sync</h3>
+        <p>Your countdowns follow you across iPhone, iPad, Mac, Apple Watch and Apple TV — automatically.</p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
+        <h3>Import from Calendar</h3>
+        <p>Turn any calendar event into a countdown in a couple of taps — birthdays, flights, meetings and more.</p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></div>
+        <h3>Share with anyone</h3>
+        <p>Count down together. Share an event with friends and family so everyone stays on the same page.</p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+        <h3>Smart reminders</h3>
+        <p>Optional notifications nudge you as the big day approaches, so a countdown never slips by unnoticed.</p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Private by design</h3>
+        <p>No ads, no trackers, no data selling. Your countdowns stay on your device and in your own iCloud.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="block alt" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Your first countdown in seconds</h2>
+      <p>No account, no setup, no clutter. Just pick a date and go.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Add an event</h3>
+        <p>Type a title and pick a date, or import an event straight from your calendar.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>Make it yours</h3>
+        <p>Add an emoji or color so every countdown feels personal and easy to spot.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>Watch it tick</h3>
+        <p>Pin a widget to your Home or Lock Screen and count down every day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRIVACY ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="privacy-banner">
+      <h2>Your countdowns are nobody's business but yours</h2>
+      <p>CNDWN keeps your data on your device and in your personal iCloud account. There are no advertising trackers, no analytics profiles sold to anyone, and the developer can't see your countdowns.</p>
+      <div class="privacy-pills">
+        <span>No ads</span>
+        <span>No trackers</span>
+        <span>No data selling</span>
+        <span>iCloud end-to-end in your account</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="block alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+      <p>Everything you might want to know before you download.</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>What is CNDWN?</summary>
+        <p>CNDWN is a countdown app for Apple devices. It lets you count down to birthdays, holidays, trips, deadlines and any other important date, and shows the time remaining right on your Home Screen and Lock Screen with widgets. It runs on iPhone, iPad, Mac, Apple Watch and Apple TV.</p>
+      </details>
+      <details>
+        <summary>Which devices does CNDWN work on?</summary>
+        <p>CNDWN works on iPhone, iPad, Mac, Apple Watch and Apple TV. Your countdowns sync automatically across all of your Apple devices through your own iCloud account.</p>
+      </details>
+      <details>
+        <summary>Is CNDWN private? Does it collect my data?</summary>
+        <p>Yes, CNDWN is privacy-first. Your countdowns are stored locally on your device and, if you enable sync, in your own private iCloud account. CNDWN has no ads, no third-party trackers, and does not sell your data. The developer has no access to your countdowns. Read the full <a href="/cndwn/privacy/">Privacy Policy</a>.</p>
+      </details>
+      <details>
+        <summary>Does CNDWN have Home Screen and Lock Screen widgets?</summary>
+        <p>Yes. CNDWN includes Home Screen and Lock Screen widgets so you can see the days, hours and minutes remaining until your most important events without opening the app.</p>
+      </details>
+      <details>
+        <summary>Can I create a countdown from a calendar event?</summary>
+        <p>Yes. With your permission, CNDWN can read events from your calendar so you can turn any event into a countdown in a couple of taps. Calendar data is processed on your device and is never sent to the developer.</p>
+      </details>
+      <details>
+        <summary>How much does CNDWN cost?</summary>
+        <p>CNDWN is available on the Apple App Store. You can download it and start creating countdowns for free.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Start counting down today</h2>
+    <p>Download CNDWN and turn every important date into a moment worth waiting for.</p>
+    <div class="cta-row">
+      <a class="appstore" href="https://apps.apple.com/app/cndwn" aria-label="Download CNDWN on the App Store">
+        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        <span><span class="small">Download on the</span><br><span class="big">App Store</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="brand" style="font-size:16px">
+      <span class="mark" style="background:linear-gradient(135deg,var(--accent),var(--accent-2))"></span>
+      CNDWN
+    </div>
+    <div class="flinks">
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="/cndwn/privacy/">Privacy Policy</a>
+      <a href="mailto:cndwn@schillan.com">Contact</a>
+    </div>
+    <div>© 2026 Schillan. CNDWN.</div>
+  </div>
+</footer>
+
+</body>
+</html>

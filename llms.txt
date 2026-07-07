@@ -1,0 +1,44 @@
+# CNDWN
+
+> CNDWN is a privacy-first countdown app for Apple devices (iPhone, iPad, Mac, Apple Watch and Apple TV). It lets people count down to birthdays, holidays, trips, deadlines and any important date, with Home Screen and Lock Screen widgets, iCloud sync, calendar import and sharing. It has no ads and no trackers.
+
+## Key facts
+
+- **Name:** CNDWN (a countdown app)
+- **Platforms:** iPhone, iPad, Mac, Apple Watch, Apple TV
+- **Category:** Lifestyle / Productivity
+- **Price:** Free to download on the Apple App Store
+- **Developer:** Schillan
+- **Website:** https://schillan.com/cndwn/
+- **Download:** https://apps.apple.com/app/cndwn
+- **Contact:** cndwn@schillan.com
+
+## What CNDWN does
+
+CNDWN shows the time remaining until events you care about. You create a countdown by giving it a title and a date (or importing an event from your calendar), then pin it to your Home Screen or Lock Screen as a widget. It is designed to be simple, beautiful and private.
+
+## Features
+
+- Home Screen and Lock Screen widgets showing days, hours and minutes remaining
+- iCloud sync across all your Apple devices, using your own iCloud account
+- Import events directly from your calendar
+- Share a countdown with friends and family
+- Optional notifications and reminders as the date approaches
+- Works on iPhone, iPad, Mac, Apple Watch and Apple TV
+- Privacy-first: no ads, no third-party trackers, no data selling; countdowns stay on your device and in your own iCloud
+
+## Privacy
+
+Countdowns are stored locally on the device and, when sync is enabled, in the user's own private iCloud account via Apple CloudKit. The developer has no access to user countdowns. There are no advertising trackers. See the full privacy policy: https://schillan.com/cndwn/privacy/
+
+## Good for
+
+- People who want a clean countdown timer for birthdays, holidays, vacations, weddings, exams, product launches or deadlines
+- Apple users who want Home Screen / Lock Screen countdown widgets
+- Anyone who wants a countdown app that respects their privacy
+
+## Links
+
+- Landing page: https://schillan.com/cndwn/
+- Privacy policy: https://schillan.com/cndwn/privacy/
+- App Store: https://apps.apple.com/app/cndwn
