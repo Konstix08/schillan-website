@@ -4,7 +4,9 @@ Static website for schillan.
 
 ## Structure
 
-- `cndwn/privacy/index.html` — Privacy Policy / Datenschutzerklärung for the **CNDWN** app, served at `/cndwn/privacy` (bilingual EN/DE, GDPR/DSGVO).
+- `cndwn/index.html` — Landing page for the **CNDWN** countdown app, served at `/cndwn/` (SEO/GEO-optimized: JSON-LD structured data, Open Graph/Twitter cards, FAQ).
+- `cndwn/privacy/index.html` — Privacy Policy / Datenschutzerklärung for the **CNDWN** app, served at `/cndwn/privacy` (trilingual EN/DE/ES, GDPR/DSGVO).
+- `robots.txt`, `sitemap.xml`, `llms.txt` — crawler and AI-assistant discovery files, served from the site root.
 
 ## Local preview
 

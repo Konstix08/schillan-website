@@ -1,0 +1,53 @@
+# CNDWN
+
+> CNDWN is a privacy-first countdown and countup app for Apple devices (iPhone, iPad, Mac and Apple Watch). It lets people count down to birthdays, holidays, trips, deadlines and any important date — or count up since a past moment — with progress bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, iCloud sync, custom colors, calendar and reminders import, Handoff and sharing. It is the first countdown app that offers every feature for free, with no ads and no trackers.
+
+## Key facts
+
+- **Name:** CNDWN — Event Countdown (a countdown & countup app)
+- **Platforms:** iPhone, iPad, Mac, Apple Watch (requires iOS 18.0 or later)
+- **Category:** Lifestyle
+- **Price:** Free — every feature included, no in-app purchases required, no ads
+- **Developer:** Schillan (Alexandra Schillhahn)
+- **Languages:** English, German, Spanish, French, Japanese, Chinese
+- **Rating:** 4.8 / 5 on the Apple App Store
+- **Website:** https://schillan.com/cndwn/
+- **Download:** https://apps.apple.com/app/id6455257754
+- **Contact:** cndwn@schillan.com
+
+## What CNDWN does
+
+CNDWN shows the time remaining until (or elapsed since) events you care about. You create a countdown by giving it a title and a date — or by importing an event from Calendar or Reminders — then pin it to your Home Screen, Lock Screen or StandBy as a widget, or follow it live in the Dynamic Island. Each entry can be a countdown, a countup or a progress bar. It is designed to be simple, beautiful and private.
+
+## Features
+
+- Countdowns to any future date and time
+- Countups since a past date
+- Progress bars showing how much time has elapsed between a start and end date
+- Home Screen, Lock Screen and StandBy widgets
+- Live Activities on the Lock Screen and in the Dynamic Island
+- iCloud sync across all your Apple devices, using your own iCloud account
+- Custom colors for every countdown
+- Dark Mode
+- Import events directly from Calendar and Reminders
+- Notifications and reminders (e.g. an hour, ten minutes or a minute before the end)
+- Handoff between Apple devices
+- Share your countdowns with friends and family
+- Works on iPhone, iPad, Mac and Apple Watch
+- Privacy-first: no ads, no third-party trackers, no data selling; countdowns stay on your device and in your own iCloud
+
+## Privacy
+
+Countdowns are stored locally on the device and, when sync is enabled, in the user's own private iCloud account via Apple CloudKit. The developer has no access to user countdowns. There are no advertising trackers. See the full privacy policy: https://schillan.com/cndwn/privacy/
+
+## Good for
+
+- People who want a clean countdown or countup timer for birthdays, holidays, vacations, weddings, exams, product launches or deadlines
+- Apple users who want Home Screen, Lock Screen or StandBy countdown widgets and Live Activities
+- Anyone who wants a fully featured countdown app for free that respects their privacy
+
+## Links
+
+- Landing page: https://schillan.com/cndwn/
+- Privacy policy: https://schillan.com/cndwn/privacy/
+- App Store: https://apps.apple.com/app/id6455257754
