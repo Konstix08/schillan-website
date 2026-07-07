@@ -37,7 +37,8 @@
 <meta name="twitter:description" content="Count down to what matters with progress bars, gorgeous widgets, Live Activities, iCloud sync and total privacy. Every feature free.">
 <meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b6cff'/%3E%3Cstop offset='1' stop-color='%239b5bff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='white' stroke-width='7'/%3E%3Cpath d='M50 30 L50 50 L64 60' fill='none' stroke='white' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="img/app-icon.png">
+<link rel="apple-touch-icon" href="img/app-icon.png">
 
 <!-- Structured data for search engines & AI assistants -->
 <script type="application/ld+json">
@@ -179,14 +180,6 @@
     --accent: #5b6cff;
     --accent-2: #9b5bff;
     --border: #e3e3e8;
-    /* iOS system palette used inside the app mockup */
-    --ios-bg: #000000;
-    --ios-card: #1c1c1e;
-    --ios-card-2: #2c2c2e;
-    --ios-blue: #0a84ff;
-    --ios-sep: #38383a;
-    --ios-text: #ffffff;
-    --ios-muted: #8e8e93;
     --maxw: 1080px;
     --radius: 22px;
   }
@@ -232,16 +225,15 @@
     border-bottom: 1px solid var(--border);
   }
   nav.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.16em; font-size: 19px; color: var(--text); }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: 0.16em; font-size: 21px; color: var(--text); }
   .brand:hover { text-decoration: none; }
-  .brand .mark { width: 26px; height: 26px; border-radius: 8px; display: inline-block; }
+  .brand .mark { width: 34px; height: 34px; border-radius: 9px; display: inline-block; box-shadow: 0 2px 8px rgba(0,0,0,0.16); }
+  .brand img.mark { object-fit: cover; }
   .nav-right { display: flex; align-items: center; gap: 22px; }
   .nav-links { display: flex; align-items: center; gap: 24px; font-size: 15px; }
   .nav-links a { color: var(--muted); font-weight: 500; }
   .nav-links a:hover { color: var(--text); text-decoration: none; }
-  .nav-cta { display: inline-flex !important; color: #fff !important; background: var(--accent); padding: 8px 16px; border-radius: 999px; font-weight: 600; }
-  .nav-cta:hover { text-decoration: none; opacity: 0.92; }
-  @media (max-width: 720px) { .nav-links a:not(.nav-cta) { display: none; } }
+  @media (max-width: 720px) { .nav-links { display: none; } }
 
   /* ---------- Language switch ---------- */
   .lang-switch { display: inline-flex; background: color-mix(in srgb, var(--muted) 16%, transparent); border-radius: 999px; padding: 3px; }
@@ -276,64 +268,24 @@
   .hero .sub { font-size: clamp(18px, 2.4vw, 22px); color: var(--muted); max-width: 46ch; margin: 0 auto 32px; }
   .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center; }
 
-  /* App Store badge */
-  .appstore {
-    display: inline-flex; align-items: center; gap: 12px;
-    background: #000; color: #fff; padding: 12px 20px 12px 18px; border-radius: 14px;
-    font-weight: 500; border: 1px solid rgba(255,255,255,0.14);
-  }
-  .appstore:hover { text-decoration: none; transform: translateY(-1px); }
-  .appstore svg { width: 26px; height: 26px; flex: none; }
-  .appstore .small { font-size: 11px; opacity: 0.85; line-height: 1; margin-bottom: 3px; }
-  .appstore .big { font-size: 19px; font-weight: 600; line-height: 1; letter-spacing: 0.01em; }
-  @media (prefers-color-scheme: dark) { .appstore { background: #fff; color: #000; border-color: rgba(0,0,0,0.1); } }
-  .ghost-btn { color: var(--text); background: var(--card); border: 1px solid var(--border); padding: 13px 22px; border-radius: 14px; font-weight: 600; }
+  /* Official App Store badge */
+  .badge-link { display: inline-flex; align-items: center; transition: transform 0.18s ease, opacity 0.18s ease; }
+  .badge-link:hover { text-decoration: none; transform: translateY(-1px); opacity: 0.9; }
+  .badge-link img { height: 54px; width: auto; display: block; }
+  .ghost-btn { color: var(--text); background: var(--card); border: 1px solid var(--border); padding: 14px 24px; border-radius: 14px; font-weight: 600; }
   .ghost-btn:hover { text-decoration: none; border-color: var(--accent); }
   .platform-note { margin-top: 20px; color: var(--muted); font-size: 14px; }
   .rating-note { margin-top: 8px; color: var(--muted); font-size: 13.5px; }
   .rating-note .stars { color: #ff9f0a; letter-spacing: 1px; }
 
-  /* Hero device mockup — realistic app UI */
-  .devices { position: relative; z-index: 1; margin: 54px auto 0; max-width: 310px; }
-  .phone {
-    background: #1a1a1c; border: 1px solid #2a2a2e; border-radius: 46px; padding: 11px;
-    box-shadow: 0 44px 90px -34px rgba(40,40,90,0.55), 0 0 0 1px rgba(255,255,255,0.03) inset;
-    position: relative;
-  }
-  .phone .screen {
-    border-radius: 36px; overflow: hidden; aspect-ratio: 9 / 19.5;
-    background: var(--ios-bg); color: var(--ios-text);
-    display: flex; flex-direction: column; padding: 0; position: relative; text-align: left;
-    font-size: 13px;
-  }
-  .phone .dyn-island { position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 34%; height: 22px; background: #000; border-radius: 999px; z-index: 3; }
-  .scr-status { display: flex; justify-content: space-between; align-items: center; padding: 15px 22px 2px; font-size: 12px; font-weight: 600; }
-  .scr-status .r { display: flex; gap: 5px; align-items: center; }
-  .scr-status svg { width: 15px; height: 12px; fill: #fff; }
-  .scr-head { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 4px; }
-  .scr-filter { width: 26px; height: 26px; border-radius: 50%; border: 1.6px solid var(--ios-blue); display: flex; align-items: center; justify-content: center; }
-  .scr-filter svg { width: 13px; height: 13px; stroke: var(--ios-blue); }
-  .scr-create { background: var(--ios-card-2); color: var(--ios-blue); font-weight: 600; font-size: 12px; padding: 5px 11px; border-radius: 999px; display: inline-flex; align-items: center; gap: 4px; }
-  .scr-create .plus { font-size: 13px; }
-  .scr-title { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; padding: 4px 16px 8px; }
-  .scr-search { margin: 0 16px 12px; background: var(--ios-card); color: var(--ios-muted); border-radius: 10px; padding: 7px 10px; font-size: 13px; display: flex; align-items: center; gap: 6px; }
-  .scr-search svg { width: 12px; height: 12px; stroke: var(--ios-muted); }
-  .scr-list { margin: 0 16px; background: var(--ios-card); border-radius: 14px; overflow: hidden; }
-  .cd-row { display: flex; align-items: center; gap: 10px; padding: 11px 12px; border-bottom: 0.5px solid var(--ios-sep); }
-  .cd-row:last-child { border-bottom: none; }
-  .cd-emoji { font-size: 20px; width: 22px; text-align: center; flex: none; }
-  .cd-meta { flex: 1; min-width: 0; }
-  .cd-title { font-weight: 700; font-size: 14px; line-height: 1.2; }
-  .cd-sub { color: var(--ios-muted); font-size: 11px; margin-top: 1px; }
-  .cd-val { text-align: center; flex: none; min-width: 46px; }
-  .cd-big { font-size: 20px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
-  .cd-u { font-size: 10px; color: var(--ios-muted); margin-top: 2px; }
-  .cd-chev { color: var(--ios-muted); font-size: 15px; flex: none; margin-left: 2px; }
-  .ring { width: 30px; height: 30px; flex: none; }
-  .scr-tabs { margin-top: auto; display: flex; border-top: 0.5px solid var(--ios-sep); padding: 8px 0 20px; }
-  .scr-tab { flex: 1; text-align: center; font-size: 10px; color: var(--ios-muted); display: flex; flex-direction: column; align-items: center; gap: 3px; }
-  .scr-tab.active { color: var(--ios-blue); }
-  .scr-tab svg { width: 18px; height: 18px; }
+  /* Hero — real App Store screenshot */
+  .devices { position: relative; z-index: 1; margin: 50px auto 0; max-width: 320px; }
+  .shot { width: 100%; height: auto; display: block; border-radius: 30px; filter: drop-shadow(0 40px 70px rgba(40,40,90,0.35)); }
+
+  /* ---------- Screenshot gallery ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; max-width: 900px; margin: 0 auto; }
+  @media (max-width: 720px) { .gallery { grid-template-columns: 1fr; max-width: 320px; } }
+  .gallery img { width: 100%; height: auto; display: block; border-radius: 24px; filter: drop-shadow(0 26px 46px rgba(40,40,90,0.28)); }
 
   /* ---------- Section shells ---------- */
   section.block { padding: 68px 0; }
@@ -413,7 +365,7 @@
 <nav class="site">
   <div class="wrap">
     <a class="brand" href="/cndwn/">
-      <span class="mark" style="background:linear-gradient(135deg,var(--accent),var(--accent-2))"></span>
+      <img class="mark" src="img/app-icon.png" width="34" height="34" alt="CNDWN app icon">
       CNDWN
     </a>
     <div class="nav-right">
@@ -421,7 +373,6 @@
         <a href="#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span></a>
         <a href="#how"><span lang="en">How it works</span><span lang="de">So geht's</span><span lang="es">Cómo funciona</span></a>
         <a href="#faq">FAQ</a>
-        <a class="nav-cta" href="https://apps.apple.com/app/id6455257754"><span lang="en">Download</span><span lang="de">Laden</span><span lang="es">Descargar</span></a>
       </div>
       <div class="lang-switch" role="group" aria-label="Language">
         <button type="button" data-set-lang="en">EN</button>
@@ -451,9 +402,10 @@
       <span lang="es">Bonitas cuentas atrás, cuentas hacia delante y barras de progreso para cumpleaños, vacaciones, viajes y fechas límite — en tu pantalla de inicio, pantalla de bloqueo y StandBy. La primera app de cuenta atrás con todas las funciones gratis.</span>
     </p>
     <div class="cta-row">
-      <a class="appstore" href="https://apps.apple.com/app/id6455257754" aria-label="Download CNDWN on the App Store">
-        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        <span><span class="small"><span lang="en">Download on the</span><span lang="de">Laden im</span><span lang="es">Disponible en el</span></span><br><span class="big">App Store</span></span>
+      <a class="badge-link" href="https://apps.apple.com/app/id6455257754" aria-label="Download CNDWN on the App Store">
+        <img lang="en" src="img/appstore-en.svg" alt="Download on the App Store" width="162" height="54">
+        <img lang="de" src="img/appstore-de.svg" alt="Laden im App Store" width="162" height="54">
+        <img lang="es" src="img/appstore-es.svg" alt="Consíguelo en el App Store" width="162" height="54">
       </a>
       <a class="ghost-btn" href="#features"><span lang="en">See features</span><span lang="de">Funktionen ansehen</span><span lang="es">Ver funciones</span></a>
     </div>
@@ -461,54 +413,9 @@
     <p class="rating-note"><span class="stars">★★★★★</span> <span lang="en">4.8 on the App Store · Free</span><span lang="de">4,8 im App Store · Gratis</span><span lang="es">4,8 en la App Store · Gratis</span></p>
 
     <div class="devices">
-      <div class="phone">
-        <div class="dyn-island"></div>
-        <div class="screen">
-          <div class="scr-status">
-            <span>9:41</span>
-            <span class="r">
-              <svg viewBox="0 0 20 16" aria-hidden="true"><path d="M1 11h2v4H1zM5 8h2v7H5zM9 5h2v10H9zM13 2h2v13h-2z"/></svg>
-              <svg viewBox="0 0 24 16" aria-hidden="true"><rect x="1" y="3" width="20" height="10" rx="3" fill="none" stroke="#fff" stroke-width="1.4"/><rect x="3" y="5" width="15" height="6" rx="1.5"/><rect x="22" y="6" width="1.6" height="4" rx="1"/></svg>
-            </span>
-          </div>
-          <div class="scr-head">
-            <div class="scr-filter"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M7 12h10M10 17h4"/></svg></div>
-            <span class="scr-create"><span class="plus">+</span> <span lang="en">Create</span><span lang="de">Erstellen</span><span lang="es">Crear</span></span>
-          </div>
-          <div class="scr-title">Countdowns</div>
-          <div class="scr-search"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg> <span lang="en">Search</span><span lang="de">Suchen</span><span lang="es">Buscar</span></div>
-          <div class="scr-list">
-            <div class="cd-row">
-              <span class="cd-emoji">🏈</span>
-              <div class="cd-meta"><div class="cd-title">Super Bowl</div><div class="cd-sub">Feb 8, 2026</div></div>
-              <svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="#3a3a3c" stroke-width="4"/><circle cx="18" cy="18" r="15" fill="none" stroke="#ff9f0a" stroke-width="4" stroke-linecap="round" stroke-dasharray="94.2" stroke-dashoffset="34" transform="rotate(-90 18 18)"/></svg>
-              <span class="cd-chev">›</span>
-            </div>
-            <div class="cd-row">
-              <span class="cd-emoji">🎂</span>
-              <div class="cd-meta"><div class="cd-title"><span lang="en">Birthday</span><span lang="de">Geburtstag</span><span lang="es">Cumpleaños</span></div><div class="cd-sub">Sep 4</div></div>
-              <div class="cd-val"><div class="cd-big" style="color:#ffd60a">4</div><div class="cd-u"><span lang="en">days</span><span lang="de">Tage</span><span lang="es">días</span></div></div>
-              <span class="cd-chev">›</span>
-            </div>
-            <div class="cd-row">
-              <span class="cd-emoji">✈️</span>
-              <div class="cd-meta"><div class="cd-title"><span lang="en">Trip to Japan</span><span lang="de">Reise nach Japan</span><span lang="es">Viaje a Japón</span></div><div class="cd-sub">Nov 14</div></div>
-              <div class="cd-val"><div class="cd-big" style="color:#0a84ff">128</div><div class="cd-u"><span lang="en">days</span><span lang="de">Tage</span><span lang="es">días</span></div></div>
-              <span class="cd-chev">›</span>
-            </div>
-            <div class="cd-row">
-              <span class="cd-emoji">🏝️</span>
-              <div class="cd-meta"><div class="cd-title"><span lang="en">Vacation</span><span lang="de">Urlaub</span><span lang="es">Vacaciones</span></div><div class="cd-sub">Aug 30</div></div>
-              <div class="cd-val"><div class="cd-big" style="color:#30d158">1</div><div class="cd-u"><span lang="en">day</span><span lang="de">Tag</span><span lang="es">día</span></div></div>
-              <span class="cd-chev">›</span>
-            </div>
-          </div>
-          <div class="scr-tabs">
-            <div class="scr-tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span lang="en">Counter</span><span lang="de">Zähler</span><span lang="es">Contador</span></div>
-            <div class="scr-tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-2.9 1.2V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-2.9-1.2l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0-1.2-2.9H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.2-2.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 2.9 1.2l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span lang="en">Settings</span><span lang="de">Einstellungen</span><span lang="es">Ajustes</span></div>
-          </div>
-        </div>
-      </div>
+      <img class="shot" lang="en" src="img/screen-en-1.png" width="640" height="1386" alt="CNDWN countdown list on iPhone showing Super Bowl, Birthday, Graduation and Holiday countdowns">
+      <img class="shot" lang="de" src="img/screen-de-1.png" width="640" height="1386" alt="CNDWN Countdown-Liste auf dem iPhone mit Super Bowl, Geburtstag, Abschluss und Urlaub">
+      <img class="shot" lang="es" src="img/screen-en-1.png" width="640" height="1386" alt="Lista de cuentas atrás de CNDWN en el iPhone">
     </div>
   </div>
 </header>
@@ -607,6 +514,29 @@
   </div>
 </section>
 
+<!-- ==================== SCREENSHOTS ==================== -->
+<section class="block" id="screenshots">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="en">See it on your devices</span><span lang="de">Sieh es auf deinen Geräten</span><span lang="es">Míralo en tus dispositivos</span></h2>
+      <p><span lang="en">Widgets, custom colors and Live Activities — straight from the App Store.</span><span lang="de">Widgets, eigene Farben und Live-Aktivitäten — direkt aus dem App Store.</span><span lang="es">Widgets, colores personalizados y actividades en vivo — directo de la App Store.</span></p>
+    </div>
+    <div class="gallery">
+      <img lang="en" loading="lazy" src="img/screen-en-2.png" width="520" height="1126" alt="CNDWN widgets on the iPhone Home Screen">
+      <img lang="de" loading="lazy" src="img/screen-de-2.png" width="520" height="1126" alt="CNDWN Widgets auf dem iPhone-Home-Bildschirm">
+      <img lang="es" loading="lazy" src="img/screen-en-2.png" width="520" height="1126" alt="Widgets de CNDWN en la pantalla de inicio del iPhone">
+
+      <img lang="en" loading="lazy" src="img/screen-en-3.png" width="520" height="1126" alt="CNDWN countdowns with custom colors">
+      <img lang="de" loading="lazy" src="img/screen-de-3.png" width="520" height="1126" alt="CNDWN Countdowns mit eigenen Farben">
+      <img lang="es" loading="lazy" src="img/screen-en-3.png" width="520" height="1126" alt="Cuentas atrás de CNDWN con colores personalizados">
+
+      <img lang="en" loading="lazy" src="img/screen-en-4.png" width="520" height="1126" alt="CNDWN Live Activity on the iPhone Lock Screen">
+      <img lang="de" loading="lazy" src="img/screen-de-4.png" width="520" height="1126" alt="CNDWN Live-Aktivität auf dem iPhone-Sperrbildschirm">
+      <img lang="es" loading="lazy" src="img/screen-en-4.png" width="520" height="1126" alt="Actividad en vivo de CNDWN en la pantalla de bloqueo del iPhone">
+    </div>
+  </div>
+</section>
+
 <!-- ==================== PRIVACY ==================== -->
 <section class="block">
   <div class="wrap">
@@ -669,9 +599,10 @@
     <h2><span lang="en">Start counting down today</span><span lang="de">Fang heute an, herunterzuzählen</span><span lang="es">Empieza a contar hoy mismo</span></h2>
     <p><span lang="en">Download CNDWN and turn every important date into a moment worth waiting for.</span><span lang="de">Lade CNDWN und mach aus jedem wichtigen Datum einen Moment, auf den sich das Warten lohnt.</span><span lang="es">Descarga CNDWN y convierte cada fecha importante en un momento que merece la espera.</span></p>
     <div class="cta-row">
-      <a class="appstore" href="https://apps.apple.com/app/id6455257754" aria-label="Download CNDWN on the App Store">
-        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        <span><span class="small"><span lang="en">Download on the</span><span lang="de">Laden im</span><span lang="es">Disponible en el</span></span><br><span class="big">App Store</span></span>
+      <a class="badge-link" href="https://apps.apple.com/app/id6455257754" aria-label="Download CNDWN on the App Store">
+        <img lang="en" src="img/appstore-en.svg" alt="Download on the App Store" width="162" height="54">
+        <img lang="de" src="img/appstore-de.svg" alt="Laden im App Store" width="162" height="54">
+        <img lang="es" src="img/appstore-es.svg" alt="Consíguelo en el App Store" width="162" height="54">
       </a>
     </div>
   </div>
