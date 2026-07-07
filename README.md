@@ -13,6 +13,13 @@ URL (proper multilingual SEO with `hreflang` + per-language `canonical`):
 | Landing | `/cndwn/` | `/cndwn/de/` | `/cndwn/es/` |
 | Privacy policy | `/cndwn/privacy/` | `/cndwn/de/privacy/` | `/cndwn/es/privacy/` |
 
+`/cndwn/share/` is a standalone (hand-edited, not generated) redirect page: it
+takes a `?data=…` query param from a share link, forwards it to the app via
+the `cndwn://share?data=…` custom URL scheme, and falls back to an App Store
+badge if the app isn't installed. It replaces the old `cndwn-share.schillan.com`
+subdomain — share links should now point to `https://schillan.com/cndwn/share/?data=…`.
+It's `noindex` and not listed in the sitemap since it has no content of its own.
+
 - `cndwn/img/` — shared assets (app icon, official App Store badges, cropped
   device screenshots), referenced with root-absolute `/cndwn/img/…` paths.
 - `robots.txt`, `sitemap.xml`, `llms.txt` — crawler and AI-assistant discovery
