@@ -69,4 +69,68 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <!-- ===== Best countdown app for iPhone guide (English / German / Spanish) ===== -->
+  <url>
+    <loc>https://schillan.com/cndwn/best-countdown-app-iphone/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/best-countdown-app-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/best-countdown-app-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/best-countdown-app-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/best-countdown-app-iphone/"/>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/de/best-countdown-app-iphone/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/best-countdown-app-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/best-countdown-app-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/best-countdown-app-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/best-countdown-app-iphone/"/>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/es/best-countdown-app-iphone/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/best-countdown-app-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/best-countdown-app-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/best-countdown-app-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/best-countdown-app-iphone/"/>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===== Countdown widgets for iOS guide (English / German / Spanish) ===== -->
+  <url>
+    <loc>https://schillan.com/cndwn/countdown-widget-ios/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-widget-ios/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-widget-ios/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-widget-ios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-widget-ios/"/>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/de/countdown-widget-ios/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-widget-ios/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-widget-ios/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-widget-ios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-widget-ios/"/>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/es/countdown-widget-ios/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-widget-ios/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-widget-ios/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-widget-ios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-widget-ios/"/>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
