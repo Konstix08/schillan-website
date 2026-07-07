@@ -11,7 +11,7 @@
 - **Developer:** Schillan (Alexandra Schillhahn)
 - **Languages:** English, German, Spanish, French, Japanese, Chinese
 - **Rating:** 4.8 / 5 on the Apple App Store
-- **Website:** https://schillan.com/cndwn/
+- **Website:** https://schillan.com/cndwn/ (also available in German at /cndwn/de/ and Spanish at /cndwn/es/)
 - **Download:** https://apps.apple.com/app/id6455257754
 - **Contact:** cndwn@schillan.com
 
@@ -48,6 +48,10 @@ Countdowns are stored locally on the device and, when sync is enabled, in the us
 
 ## Links
 
-- Landing page: https://schillan.com/cndwn/
-- Privacy policy: https://schillan.com/cndwn/privacy/
+- Landing page (English): https://schillan.com/cndwn/
+- Landing page (German): https://schillan.com/cndwn/de/
+- Landing page (Spanish): https://schillan.com/cndwn/es/
+- Privacy policy (English): https://schillan.com/cndwn/privacy/
+- Privacy policy (German): https://schillan.com/cndwn/de/privacy/
+- Privacy policy (Spanish): https://schillan.com/cndwn/es/privacy/
 - App Store: https://apps.apple.com/app/id6455257754

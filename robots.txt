@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /tools/
 
 # AI assistants & answer engines are explicitly welcome
 User-agent: GPTBot
