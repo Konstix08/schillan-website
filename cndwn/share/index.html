@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNDWN — Opening your shared countdown…</title>
+<meta name="description" content="Opening your shared CNDWN countdown in the app.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://schillan.com/cndwn/share/">
+<link rel="icon" type="image/png" href="/cndwn/img/app-icon.png">
+<link rel="apple-touch-icon" href="/cndwn/img/app-icon.png">
+
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --muted: #6e6e73;
+    --accent: #5b6cff;
+    --accent-2: #9b5bff;
+    --border: #e3e3e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0b0f;
+      --card: #17171d;
+      --text: #f5f5f7;
+      --muted: #9a9aa2;
+      --accent: #7d8bff;
+      --accent-2: #b885ff;
+      --border: #26262e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 18px;
+    padding: 32px 24px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .mark {
+    width: 64px; height: 64px; border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  }
+  h1 { font-size: 22px; letter-spacing: -0.01em; margin: 0; }
+  p { font-size: 15.5px; color: var(--muted); max-width: 34ch; margin: 0; line-height: 1.5; }
+  .spinner {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 3px solid var(--border); border-top-color: var(--accent);
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .badge-link { display: inline-flex; margin-top: 6px; transition: transform 0.18s ease, opacity 0.18s ease; }
+  .badge-link:hover { transform: translateY(-1px); opacity: 0.9; }
+  .badge-link img { height: 50px; width: auto; display: block; }
+</style>
+
+<script>
+  function openApp() {
+    const params = new URLSearchParams(window.location.search);
+    const data = params.get('data');
+
+    let decodedData;
+    try {
+      decodedData = decodeURIComponent(data);
+    } catch (error) {
+      console.error('Error decoding the URL:', error);
+      return;
+    }
+
+    const appUrl = `cndwn://share?data=${encodeURIComponent(decodedData)}`;
+    window.location.href = appUrl;
+  }
+
+  window.onload = openApp;
+</script>
+</head>
+<body>
+  <img class="mark" src="/cndwn/img/app-icon.png" width="64" height="64" alt="CNDWN app icon">
+  <div class="spinner" aria-hidden="true"></div>
+  <h1>Opening your countdown…</h1>
+  <p>If CNDWN doesn't open automatically, get it from the App Store below.</p>
+  <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=share&amp;mt=8" target="_blank" rel="noopener" aria-label="Download CNDWN on the App Store">
+    <img src="/cndwn/img/appstore-en.svg" alt="Download on the App Store">
+  </a>
+</body></html>
