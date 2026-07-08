@@ -11,6 +11,7 @@
  *   node tools/build-i18n.mjs  # regenerates the pages below
  *
  * Outputs:
+ *   /                                    /de/                                    /es/
  *   /cndwn/                              /cndwn/de/                              /cndwn/es/
  *   /cndwn/privacy/                      /cndwn/de/privacy/                      /cndwn/es/privacy/
  *   /cndwn/best-countdown-app-iphone/    /cndwn/de/best-countdown-app-iphone/    /cndwn/es/best-countdown-app-iphone/
@@ -30,7 +31,8 @@ const landingPath = { en: '/cndwn/', de: '/cndwn/de/', es: '/cndwn/es/' };
 const privacyPath = { en: '/cndwn/privacy/', de: '/cndwn/de/privacy/', es: '/cndwn/es/privacy/' };
 const bestAppPath = { en: '/cndwn/best-countdown-app-iphone/', de: '/cndwn/de/best-countdown-app-iphone/', es: '/cndwn/es/best-countdown-app-iphone/' };
 const widgetGuidePath = { en: '/cndwn/countdown-widget-ios/', de: '/cndwn/de/countdown-widget-ios/', es: '/cndwn/es/countdown-widget-ios/' };
-const pathFor = { landing: landingPath, privacy: privacyPath, bestApp: bestAppPath, widgetGuide: widgetGuidePath };
+const homePath = { en: '/', de: '/de/', es: '/es/' };
+const pathFor = { landing: landingPath, privacy: privacyPath, bestApp: bestAppPath, widgetGuide: widgetGuidePath, home: homePath };
 
 const META = {
   landing: {
@@ -128,6 +130,26 @@ const META = {
       breadcrumbName: 'Widgets de cuenta atrás para iOS',
     },
   },
+  home: {
+    en: {
+      title: 'Schillan — Indie Apple App Developer (Alexandra Schillhahn) — CNDWN & TerraGuessr',
+      desc: 'Schillan is the one-person studio of Alexandra Schillhahn, building privacy-first apps for iPhone, iPad, Mac and Apple Watch. Maker of CNDWN, a free countdown & countup app, and TerraGuessr, a real-world geography guessing game. No ads, no trackers.',
+      ogTitle: 'Schillan — Indie Apple App Developer (Alexandra Schillhahn)',
+      ogDesc: 'Privacy-first apps for iPhone, iPad, Mac and Apple Watch, built by one person. Maker of CNDWN and TerraGuessr. No ads, no trackers.',
+    },
+    de: {
+      title: 'Schillan — Indie Apple-App-Entwicklerin (Alexandra Schillhahn) — CNDWN & TerraGuessr',
+      desc: 'Schillan ist das Ein-Personen-Studio von Alexandra Schillhahn und entwickelt datenschutzfreundliche Apps für iPhone, iPad, Mac und Apple Watch. Macherin von CNDWN, einer kostenlosen Countdown- & Countup-App, und TerraGuessr, einem Geografie-Ratespiel mit echten Orten. Keine Werbung, keine Tracker.',
+      ogTitle: 'Schillan — Indie Apple-App-Entwicklerin (Alexandra Schillhahn)',
+      ogDesc: 'Datenschutzfreundliche Apps für iPhone, iPad, Mac und Apple Watch, entwickelt von einer Person. Macherin von CNDWN und TerraGuessr. Keine Werbung, keine Tracker.',
+    },
+    es: {
+      title: 'Schillan — Desarrolladora indie de apps para Apple (Alexandra Schillhahn) — CNDWN y TerraGuessr',
+      desc: 'Schillan es el estudio de una sola persona de Alexandra Schillhahn, que crea apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch. Creadora de CNDWN, una app gratuita de cuenta atrás y adelante, y de TerraGuessr, un juego de adivinanza geográfica con lugares reales. Sin anuncios, sin rastreadores.',
+      ogTitle: 'Schillan — Desarrolladora indie de apps para Apple (Alexandra Schillhahn)',
+      ogDesc: 'Apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch, creadas por una sola persona. Creadora de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.',
+    },
+  },
 };
 
 function absUrl(type, lang) { return SITE + pathFor[type][lang]; }
@@ -146,6 +168,7 @@ const TEMPLATE_FILES = {
   privacy: 'privacy.html',
   bestApp: 'best-countdown-app.html',
   widgetGuide: 'countdown-widget-ios.html',
+  home: 'home.html',
 };
 const SHARED_CSS = fs.readFileSync(path.join(ROOT, 'tools', 'templates', 'shared.css'), 'utf8');
 
@@ -276,6 +299,22 @@ function rebuildJsonLd($, type, lang, meta, canonical) {
     } else if (data['@type'] === 'HowTo' && meta.howTo) {
       data.name = meta.howTo.name;
       data.step = meta.howTo.steps.map(s => ({ '@type': 'HowToStep', name: s.name, text: s.text }));
+    } else if (data['@type'] === 'Organization' && type === 'home') {
+      data.url = SITE + '/';
+    } else if (data['@type'] === 'WebSite' && type === 'home') {
+      data.url = canonical;
+      data.inLanguage = lang;
+    } else if (data['@type'] === 'ItemList' && type === 'home') {
+      data.itemListElement = [
+        {
+          '@type': 'ListItem', position: 1,
+          item: { '@type': 'SoftwareApplication', name: 'CNDWN', url: SITE + landingPath[lang], applicationCategory: 'LifestyleApplication' },
+        },
+        {
+          '@type': 'ListItem', position: 2,
+          item: { '@type': 'SoftwareApplication', name: 'TerraGuessr', url: SITE + '/terraguessr/', applicationCategory: 'GameApplication' },
+        },
+      ];
     }
     $(s).text('\n' + JSON.stringify(data, null, 2) + '\n');
   }
@@ -294,6 +333,9 @@ const OUTPUTS = [
   ['widgetGuide', 'en', 'cndwn/countdown-widget-ios/index.html'],
   ['widgetGuide', 'de', 'cndwn/de/countdown-widget-ios/index.html'],
   ['widgetGuide', 'es', 'cndwn/es/countdown-widget-ios/index.html'],
+  ['home', 'en', 'index.html'],
+  ['home', 'de', 'de/index.html'],
+  ['home', 'es', 'es/index.html'],
 ];
 
 for (const [type, lang, out] of OUTPUTS) {
