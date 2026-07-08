@@ -169,6 +169,166 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- ===== How to add a countdown widget guide (English / German / Spanish) ===== -->
+  <url>
+    <loc>https://schillan.com/cndwn/how-to-add-countdown-widget/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/how-to-add-countdown-widget/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/how-to-add-countdown-widget/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/how-to-add-countdown-widget/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/how-to-add-countdown-widget/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/de/how-to-add-countdown-widget/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/how-to-add-countdown-widget/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/how-to-add-countdown-widget/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/how-to-add-countdown-widget/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/how-to-add-countdown-widget/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/es/how-to-add-countdown-widget/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/how-to-add-countdown-widget/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/how-to-add-countdown-widget/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/how-to-add-countdown-widget/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/how-to-add-countdown-widget/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Countdown Live Activities guide (English / German / Spanish) ===== -->
+  <url>
+    <loc>https://schillan.com/cndwn/countdown-live-activities/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-live-activities/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-live-activities/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-live-activities/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-live-activities/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/de/countdown-live-activities/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-live-activities/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-live-activities/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-live-activities/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-live-activities/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/es/countdown-live-activities/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-live-activities/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-live-activities/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-live-activities/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-live-activities/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Vacation & trip countdown guide (English / German / Spanish) ===== -->
+  <url>
+    <loc>https://schillan.com/cndwn/vacation-countdown/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/vacation-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/vacation-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/vacation-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/vacation-countdown/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/de/vacation-countdown/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/vacation-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/vacation-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/vacation-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/vacation-countdown/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/es/vacation-countdown/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/vacation-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/vacation-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/vacation-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/vacation-countdown/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ===== Sync countdowns across devices guide (English / German / Spanish) ===== -->
+  <url>
+    <loc>https://schillan.com/cndwn/countdown-icloud-sync/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-icloud-sync/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-icloud-sync/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-icloud-sync/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-icloud-sync/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/de/countdown-icloud-sync/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-icloud-sync/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-icloud-sync/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-icloud-sync/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-icloud-sync/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/es/countdown-icloud-sync/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-icloud-sync/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-icloud-sync/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-icloud-sync/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-icloud-sync/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ===== Wedding countdown guide (English / German / Spanish) ===== -->
+  <url>
+    <loc>https://schillan.com/cndwn/wedding-countdown/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/wedding-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/wedding-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/wedding-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/wedding-countdown/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/de/wedding-countdown/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/wedding-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/wedding-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/wedding-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/wedding-countdown/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://schillan.com/cndwn/es/wedding-countdown/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/wedding-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/wedding-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/wedding-countdown/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/wedding-countdown/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- ===== TerraGuessr landing page ===== -->
   <url>
     <loc>https://schillan.com/terraguessr/</loc>

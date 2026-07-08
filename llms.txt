@@ -77,6 +77,11 @@ Countdowns are stored locally on the device and, when sync is enabled, in the us
 - Landing page (Spanish): https://schillan.com/cndwn/es/
 - Best countdown app for iPhone guide (English): https://schillan.com/cndwn/best-countdown-app-iphone/
 - Countdown widgets for iOS guide (English): https://schillan.com/cndwn/countdown-widget-ios/
+- How to add a countdown widget guide (English): https://schillan.com/cndwn/how-to-add-countdown-widget/
+- Countdown Live Activities guide (English): https://schillan.com/cndwn/countdown-live-activities/
+- Vacation & trip countdown guide (English): https://schillan.com/cndwn/vacation-countdown/
+- Sync countdowns across devices guide (English): https://schillan.com/cndwn/countdown-icloud-sync/
+- Wedding countdown guide (English): https://schillan.com/cndwn/wedding-countdown/
 - Privacy policy (English): https://schillan.com/cndwn/privacy/
 - Privacy policy (German): https://schillan.com/cndwn/de/privacy/
 - Privacy policy (Spanish): https://schillan.com/cndwn/es/privacy/

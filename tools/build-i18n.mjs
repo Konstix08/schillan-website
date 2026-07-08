@@ -31,8 +31,17 @@ const landingPath = { en: '/cndwn/', de: '/cndwn/de/', es: '/cndwn/es/' };
 const privacyPath = { en: '/cndwn/privacy/', de: '/cndwn/de/privacy/', es: '/cndwn/es/privacy/' };
 const bestAppPath = { en: '/cndwn/best-countdown-app-iphone/', de: '/cndwn/de/best-countdown-app-iphone/', es: '/cndwn/es/best-countdown-app-iphone/' };
 const widgetGuidePath = { en: '/cndwn/countdown-widget-ios/', de: '/cndwn/de/countdown-widget-ios/', es: '/cndwn/es/countdown-widget-ios/' };
+const widgetHowToPath = { en: '/cndwn/how-to-add-countdown-widget/', de: '/cndwn/de/how-to-add-countdown-widget/', es: '/cndwn/es/how-to-add-countdown-widget/' };
+const liveActivitiesPath = { en: '/cndwn/countdown-live-activities/', de: '/cndwn/de/countdown-live-activities/', es: '/cndwn/es/countdown-live-activities/' };
+const vacationCountdownPath = { en: '/cndwn/vacation-countdown/', de: '/cndwn/de/vacation-countdown/', es: '/cndwn/es/vacation-countdown/' };
+const icloudSyncPath = { en: '/cndwn/countdown-icloud-sync/', de: '/cndwn/de/countdown-icloud-sync/', es: '/cndwn/es/countdown-icloud-sync/' };
+const weddingCountdownPath = { en: '/cndwn/wedding-countdown/', de: '/cndwn/de/wedding-countdown/', es: '/cndwn/es/wedding-countdown/' };
 const homePath = { en: '/', de: '/de/', es: '/es/' };
-const pathFor = { landing: landingPath, privacy: privacyPath, bestApp: bestAppPath, widgetGuide: widgetGuidePath, home: homePath };
+const pathFor = {
+  landing: landingPath, privacy: privacyPath, bestApp: bestAppPath, widgetGuide: widgetGuidePath,
+  widgetHowTo: widgetHowToPath, liveActivities: liveActivitiesPath, vacationCountdown: vacationCountdownPath,
+  icloudSync: icloudSyncPath, weddingCountdown: weddingCountdownPath, home: homePath,
+};
 
 const META = {
   landing: {
@@ -130,6 +139,181 @@ const META = {
       breadcrumbName: 'Widgets de cuenta atrás para iOS',
     },
   },
+  widgetHowTo: {
+    en: {
+      title: 'How to Add a Countdown Widget on iPhone (Step by Step) — CNDWN',
+      desc: 'A simple step-by-step guide to adding a countdown widget to your iPhone Home Screen, Lock Screen or StandBy with CNDWN — six steps, no technical skill required.',
+      breadcrumbName: 'How to Add a Countdown Widget',
+      howTo: {
+        name: 'How to add a countdown widget on iPhone',
+        steps: [
+          { name: 'Download CNDWN', text: 'Get CNDWN for free from the App Store and open it.' },
+          { name: 'Create a countdown', text: 'Tap +, add a title and pick a date — or import an event straight from Calendar or Reminders.' },
+          { name: 'Long-press your Home Screen', text: 'Touch and hold any empty area of your Home Screen until the icons start to jiggle.' },
+          { name: 'Tap the + button', text: 'Tap the + in the top corner to open the widget gallery.' },
+          { name: 'Search for CNDWN', text: 'Type "CNDWN" in the search bar and select it from the results.' },
+          { name: 'Choose a size and add it', text: 'Swipe to pick small, medium or large, then tap Add Widget. Tap Done to finish.' },
+        ],
+      },
+    },
+    de: {
+      title: 'So fügst du ein Countdown-Widget auf dem iPhone hinzu (Schritt für Schritt) — CNDWN',
+      desc: 'Eine einfache Schritt-für-Schritt-Anleitung, um ein Countdown-Widget auf deinem iPhone-Home-Bildschirm, Sperrbildschirm oder StandBy mit CNDWN hinzuzufügen — sechs Schritte, keine technischen Kenntnisse nötig.',
+      breadcrumbName: 'Countdown-Widget hinzufügen',
+      howTo: {
+        name: 'So fügst du ein Countdown-Widget auf dem iPhone hinzu',
+        steps: [
+          { name: 'CNDWN herunterladen', text: 'Lade CNDWN kostenlos aus dem App Store und öffne es.' },
+          { name: 'Erstelle einen Countdown', text: 'Tippe auf +, gib einen Titel ein und wähle ein Datum — oder importiere ein Ereignis direkt aus Kalender oder Erinnerungen.' },
+          { name: 'Halte deinen Home-Bildschirm gedrückt', text: 'Berühre und halte eine leere Stelle auf dem Home-Bildschirm, bis die Symbole wackeln.' },
+          { name: 'Tippe auf die Schaltfläche +', text: 'Tippe oben in der Ecke auf +, um die Widget-Galerie zu öffnen.' },
+          { name: 'Suche nach CNDWN', text: 'Gib "CNDWN" in die Suchleiste ein und wähle es aus den Ergebnissen aus.' },
+          { name: 'Wähle eine Größe und füge es hinzu', text: 'Wische, um klein, mittel oder groß zu wählen, und tippe dann auf Widget hinzufügen. Tippe auf Fertig.' },
+        ],
+      },
+    },
+    es: {
+      title: 'Cómo añadir un widget de cuenta atrás en iPhone (paso a paso) — CNDWN',
+      desc: 'Una guía sencilla paso a paso para añadir un widget de cuenta atrás a la pantalla de inicio, de bloqueo o StandBy de tu iPhone con CNDWN — seis pasos, sin conocimientos técnicos.',
+      breadcrumbName: 'Cómo añadir un widget de cuenta atrás',
+      howTo: {
+        name: 'Cómo añadir un widget de cuenta atrás en iPhone',
+        steps: [
+          { name: 'Descarga CNDWN', text: 'Consigue CNDWN gratis en la App Store y ábrelo.' },
+          { name: 'Crea una cuenta atrás', text: 'Toca +, añade un título y elige una fecha — o importa un evento desde Calendario o Recordatorios.' },
+          { name: 'Mantén pulsada tu pantalla de inicio', text: 'Toca y mantén pulsada una zona vacía de tu pantalla de inicio hasta que los iconos empiecen a moverse.' },
+          { name: 'Toca el botón +', text: 'Toca el + en la esquina superior para abrir la galería de widgets.' },
+          { name: 'Busca CNDWN', text: 'Escribe "CNDWN" en la barra de búsqueda y selecciónalo entre los resultados.' },
+          { name: 'Elige un tamaño y añádelo', text: 'Desliza para elegir pequeño, mediano o grande, y toca Añadir widget. Toca Listo.' },
+        ],
+      },
+    },
+  },
+  liveActivities: {
+    en: {
+      title: 'How to Add a Countdown Live Activity on iPhone — CNDWN',
+      desc: 'How to turn on Live Activities and start a real-time countdown on your iPhone Lock Screen and in the Dynamic Island with CNDWN.',
+      breadcrumbName: 'Countdown Live Activities',
+      howTo: {
+        name: 'How to add a countdown Live Activity on iPhone',
+        steps: [
+          { name: 'Check your iOS version', text: 'Make sure your iPhone is running iOS 16.1 or later — Live Activities require it.' },
+          { name: 'Turn on Live Activities for CNDWN', text: 'Open Settings, scroll to CNDWN and make sure Live Activities is switched on.' },
+          { name: 'Open a countdown in CNDWN', text: 'Open the app and select the countdown you want to follow live.' },
+          { name: 'Start the Live Activity', text: 'Tap Start Live Activity on the countdown. It will appear right away.' },
+          { name: 'Lock your phone to see it', text: 'Lock your iPhone to see the live countdown on the Lock Screen, and in the Dynamic Island if your model has one.' },
+        ],
+      },
+    },
+    de: {
+      title: 'So fügst du eine Countdown-Live-Aktivität auf dem iPhone hinzu — CNDWN',
+      desc: 'So schaltest du Live-Aktivitäten ein und startest einen Countdown in Echtzeit auf dem Sperrbildschirm und in der Dynamic Island mit CNDWN.',
+      breadcrumbName: 'Countdown-Live-Aktivitäten',
+      howTo: {
+        name: 'So fügst du eine Countdown-Live-Aktivität auf dem iPhone hinzu',
+        steps: [
+          { name: 'Prüfe deine iOS-Version', text: 'Stelle sicher, dass dein iPhone mit iOS 16.1 oder neuer läuft — das ist Voraussetzung für Live-Aktivitäten.' },
+          { name: 'Aktiviere Live-Aktivitäten für CNDWN', text: 'Öffne Einstellungen, gehe zu CNDWN und stelle sicher, dass Live-Aktivitäten aktiviert ist.' },
+          { name: 'Öffne einen Countdown in CNDWN', text: 'Öffne die App und wähle den Countdown, den du live verfolgen möchtest.' },
+          { name: 'Starte die Live-Aktivität', text: 'Tippe beim Countdown auf Live-Aktivität starten. Sie erscheint sofort.' },
+          { name: 'Sperre dein Handy, um sie zu sehen', text: 'Sperre dein iPhone, um den Live-Countdown auf dem Sperrbildschirm zu sehen — und in der Dynamic Island, falls dein Modell eine hat.' },
+        ],
+      },
+    },
+    es: {
+      title: 'Cómo añadir una actividad en vivo de cuenta atrás en iPhone — CNDWN',
+      desc: 'Cómo activar las actividades en vivo e iniciar una cuenta atrás en tiempo real en la pantalla de bloqueo y la Dynamic Island de tu iPhone con CNDWN.',
+      breadcrumbName: 'Actividades en vivo de cuenta atrás',
+      howTo: {
+        name: 'Cómo añadir una actividad en vivo de cuenta atrás en iPhone',
+        steps: [
+          { name: 'Comprueba tu versión de iOS', text: 'Asegúrate de que tu iPhone tiene iOS 16.1 o posterior — es un requisito para las actividades en vivo.' },
+          { name: 'Activa las actividades en vivo para CNDWN', text: 'Abre Ajustes, ve a CNDWN y comprueba que las actividades en vivo estén activadas.' },
+          { name: 'Abre una cuenta atrás en CNDWN', text: 'Abre la app y elige la cuenta atrás que quieres seguir en vivo.' },
+          { name: 'Inicia la actividad en vivo', text: 'Toca Iniciar actividad en vivo en la cuenta atrás. Aparecerá al instante.' },
+          { name: 'Bloquea tu teléfono para verla', text: 'Bloquea tu iPhone para ver la cuenta atrás en vivo en la pantalla de bloqueo, y en la Dynamic Island si tu modelo la tiene.' },
+        ],
+      },
+    },
+  },
+  vacationCountdown: {
+    en: {
+      title: 'Vacation & Trip Countdown: Count Down to Your Next Trip — CNDWN',
+      desc: 'How to set up a vacation or trip countdown with CNDWN — add your departure date, pin a widget and share it with your travel companions.',
+      breadcrumbName: 'Vacation & Trip Countdown',
+    },
+    de: {
+      title: 'Urlaubs- & Reise-Countdown: Zähl herunter zu deiner nächsten Reise — CNDWN',
+      desc: 'So richtest du einen Urlaubs- oder Reise-Countdown mit CNDWN ein — füge dein Abreisedatum hinzu, hefte ein Widget an und teile es mit deinen Reisebegleitern.',
+      breadcrumbName: 'Urlaubs- & Reise-Countdown',
+    },
+    es: {
+      title: 'Cuenta atrás de vacaciones y viajes: cuenta atrás para tu próximo viaje — CNDWN',
+      desc: 'Cómo configurar una cuenta atrás de vacaciones o viaje con CNDWN — añade tu fecha de salida, fija un widget y compártela con tus compañeros de viaje.',
+      breadcrumbName: 'Cuenta atrás de vacaciones y viajes',
+    },
+  },
+  icloudSync: {
+    en: {
+      title: 'How to Sync Countdowns Across iPhone, iPad, Mac & Apple Watch — CNDWN',
+      desc: 'How to sync your countdowns automatically across iPhone, iPad, Mac and Apple Watch with CNDWN and your own private iCloud account.',
+      breadcrumbName: 'Sync Countdowns Across Devices',
+      howTo: {
+        name: 'How to sync countdowns across iPhone, iPad, Mac and Apple Watch',
+        steps: [
+          { name: 'Turn on iCloud on each device', text: 'Open Settings, tap your name, then iCloud, and make sure iCloud Drive is turned on.' },
+          { name: 'Sign in with the same Apple ID everywhere', text: 'Use the same Apple ID on your iPhone, iPad, Mac and Apple Watch.' },
+          { name: 'Open CNDWN on each device', text: 'Install CNDWN and open it — your countdowns appear automatically, no setup needed.' },
+          { name: 'Use Handoff to pick up where you left off', text: 'Start editing a countdown on your iPhone and continue instantly on your iPad or Mac.' },
+        ],
+      },
+    },
+    de: {
+      title: 'So synchronisierst du Countdowns auf iPhone, iPad, Mac & Apple Watch — CNDWN',
+      desc: 'So synchronisierst du deine Countdowns automatisch auf iPhone, iPad, Mac und Apple Watch mit CNDWN und deiner eigenen privaten iCloud.',
+      breadcrumbName: 'Countdowns geräteübergreifend synchronisieren',
+      howTo: {
+        name: 'So synchronisierst du Countdowns auf iPhone, iPad, Mac und Apple Watch',
+        steps: [
+          { name: 'Aktiviere iCloud auf jedem Gerät', text: 'Öffne Einstellungen, tippe auf deinen Namen und dann auf iCloud, und stelle sicher, dass iCloud-Drive aktiviert ist.' },
+          { name: 'Melde dich überall mit derselben Apple-ID an', text: 'Nutze auf iPhone, iPad, Mac und Apple Watch dieselbe Apple-ID.' },
+          { name: 'Öffne CNDWN auf jedem Gerät', text: 'Installiere CNDWN und öffne es — deine Countdowns erscheinen automatisch, ohne weitere Einrichtung.' },
+          { name: 'Mach mit Handoff nahtlos weiter', text: 'Beginne die Bearbeitung eines Countdowns auf deinem iPhone und mach sofort auf iPad oder Mac weiter.' },
+        ],
+      },
+    },
+    es: {
+      title: 'Cómo sincronizar cuentas atrás en iPhone, iPad, Mac y Apple Watch — CNDWN',
+      desc: 'Cómo sincronizar automáticamente tus cuentas atrás en iPhone, iPad, Mac y Apple Watch con CNDWN y tu propia cuenta privada de iCloud.',
+      breadcrumbName: 'Sincronizar cuentas atrás entre dispositivos',
+      howTo: {
+        name: 'Cómo sincronizar cuentas atrás en iPhone, iPad, Mac y Apple Watch',
+        steps: [
+          { name: 'Activa iCloud en cada dispositivo', text: 'Abre Ajustes, toca tu nombre y luego iCloud, y comprueba que iCloud Drive esté activado.' },
+          { name: 'Inicia sesión con el mismo Apple ID en todos lados', text: 'Usa el mismo Apple ID en tu iPhone, iPad, Mac y Apple Watch.' },
+          { name: 'Abre CNDWN en cada dispositivo', text: 'Instala CNDWN y ábrelo — tus cuentas atrás aparecen automáticamente, sin configuración adicional.' },
+          { name: 'Usa Handoff para continuar donde lo dejaste', text: 'Empieza a editar una cuenta atrás en tu iPhone y continúa al instante en tu iPad o Mac.' },
+        ],
+      },
+    },
+  },
+  weddingCountdown: {
+    en: {
+      title: 'Wedding Countdown: How to Count Down to Your Wedding Day — CNDWN',
+      desc: 'How to set up a wedding countdown with CNDWN — custom colors, a progress bar from engagement to wedding day, and sharing with your partner and wedding party.',
+      breadcrumbName: 'Wedding Countdown',
+    },
+    de: {
+      title: 'Hochzeits-Countdown: So zählst du herunter zu deinem Hochzeitstag — CNDWN',
+      desc: 'So richtest du einen Hochzeits-Countdown mit CNDWN ein — eigene Farben, ein Fortschrittsbalken von der Verlobung bis zur Hochzeit und Teilen mit Partner und Hochzeitsgesellschaft.',
+      breadcrumbName: 'Hochzeits-Countdown',
+    },
+    es: {
+      title: 'Cuenta atrás de boda: cómo contar los días hasta tu boda — CNDWN',
+      desc: 'Cómo configurar una cuenta atrás de boda con CNDWN — colores personalizados, una barra de progreso desde el compromiso hasta la boda, y compartirla con tu pareja y cortejo nupcial.',
+      breadcrumbName: 'Cuenta atrás de boda',
+    },
+  },
   home: {
     en: {
       title: 'Schillan — Indie Apple App Developer (Alexandra Schillhahn) — CNDWN & TerraGuessr',
@@ -168,6 +352,11 @@ const TEMPLATE_FILES = {
   privacy: 'privacy.html',
   bestApp: 'best-countdown-app.html',
   widgetGuide: 'countdown-widget-ios.html',
+  widgetHowTo: 'how-to-add-countdown-widget.html',
+  liveActivities: 'countdown-live-activities.html',
+  vacationCountdown: 'vacation-countdown.html',
+  icloudSync: 'countdown-icloud-sync.html',
+  weddingCountdown: 'wedding-countdown.html',
   home: 'home.html',
 };
 const SHARED_CSS = fs.readFileSync(path.join(ROOT, 'tools', 'templates', 'shared.css'), 'utf8');
@@ -333,6 +522,21 @@ const OUTPUTS = [
   ['widgetGuide', 'en', 'cndwn/countdown-widget-ios/index.html'],
   ['widgetGuide', 'de', 'cndwn/de/countdown-widget-ios/index.html'],
   ['widgetGuide', 'es', 'cndwn/es/countdown-widget-ios/index.html'],
+  ['widgetHowTo', 'en', 'cndwn/how-to-add-countdown-widget/index.html'],
+  ['widgetHowTo', 'de', 'cndwn/de/how-to-add-countdown-widget/index.html'],
+  ['widgetHowTo', 'es', 'cndwn/es/how-to-add-countdown-widget/index.html'],
+  ['liveActivities', 'en', 'cndwn/countdown-live-activities/index.html'],
+  ['liveActivities', 'de', 'cndwn/de/countdown-live-activities/index.html'],
+  ['liveActivities', 'es', 'cndwn/es/countdown-live-activities/index.html'],
+  ['vacationCountdown', 'en', 'cndwn/vacation-countdown/index.html'],
+  ['vacationCountdown', 'de', 'cndwn/de/vacation-countdown/index.html'],
+  ['vacationCountdown', 'es', 'cndwn/es/vacation-countdown/index.html'],
+  ['icloudSync', 'en', 'cndwn/countdown-icloud-sync/index.html'],
+  ['icloudSync', 'de', 'cndwn/de/countdown-icloud-sync/index.html'],
+  ['icloudSync', 'es', 'cndwn/es/countdown-icloud-sync/index.html'],
+  ['weddingCountdown', 'en', 'cndwn/wedding-countdown/index.html'],
+  ['weddingCountdown', 'de', 'cndwn/de/wedding-countdown/index.html'],
+  ['weddingCountdown', 'es', 'cndwn/es/wedding-countdown/index.html'],
   ['home', 'en', 'index.html'],
   ['home', 'de', 'de/index.html'],
   ['home', 'es', 'es/index.html'],
