@@ -58,3 +58,40 @@ Countdowns are stored locally on the device and, when sync is enabled, in the us
 - Privacy policy (German): https://schillan.com/cndwn/de/privacy/
 - Privacy policy (Spanish): https://schillan.com/cndwn/es/privacy/
 - App Store: https://apps.apple.com/app/id6455257754
+
+# TerraGuessr
+
+> TerraGuessr is a real-world geography guessing game for iPhone, currently in development. Each round drops the player into a real, unlabeled location using Apple's Look Around, and they explore for visual clues before placing a guess pin on the map. Modes include a solo Daily Challenge, a real-time 1v1 Duel (closer guesses deal more damage, first to 6,000 wins), real-time 2v2 Squads, and a private Party mode with shareable join codes.
+
+## Key facts
+
+- **Name:** TerraGuessr
+- **Platform:** iPhone (requires iOS 18.0 or later)
+- **Category:** Geography / Trivia game
+- **Status:** In development, not yet released — no App Store listing yet
+- **Developer:** Schillan
+- **Website:** https://schillan.com/terraguessr/
+- **Contact:** terraguessr@schillan.com
+
+## What TerraGuessr does
+
+Players are placed into a real-world location via Apple's Look Around (similar to Street View) with no map or labels, then must study visual clues — road signs, architecture, vegetation, and more — and drop a pin on a world map guessing where they are. Accuracy is scored by distance from the real location.
+
+## Game modes
+
+- **Daily Challenge:** five locations, sixty seconds each, one attempt per day, with streak tracking and a global leaderboard ranked by total distance.
+- **1v1 Duel:** real-time head-to-head where both players see the same location; closer guesses deal more damage to the opponent, and the first to 6,000 damage wins.
+- **2v2 Squads:** real-time team play where two players coordinate guesses against another team.
+- **Party:** a private lobby with a shareable short code so friends can join instantly; friends can also join a friend's active party directly from the friends list.
+
+## Social features
+
+- Friends list with live online/offline presence
+- Real-time matchmaking for Duel and Squads if not playing with friends
+- Post-match round-by-round replay showing every guess against the real answer on a map
+- Game Center sign-in, syncing progress, friends and stats across Apple devices
+- Notifications for friend requests and party invites
+
+## Links
+
+- Landing page: https://schillan.com/terraguessr/
