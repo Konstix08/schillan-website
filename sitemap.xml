@@ -133,4 +133,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- ===== TerraGuessr landing page ===== -->
+  <url>
+    <loc>https://schillan.com/terraguessr/</loc>
+    <image:image><image:loc>https://schillan.com/terraguessr/img/app-icon.jpg</image:loc></image:image>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

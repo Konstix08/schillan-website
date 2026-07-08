@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TerraGuessr — Real-World Geography Guessing Game for iPhone</title>
+<meta name="description" content="TerraGuessr drops you into a real place with Apple Look Around and challenges you to pinpoint it on the map. Play the Daily Challenge, duel a friend 1v1, team up 2v2, or start a private party — all in real time, coming soon to the App Store.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#eef4fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0e16" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://schillan.com/terraguessr/">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="keywords" content="TerraGuessr, geography game, GeoGuessr alternative, iPhone geography game, Look Around game, map guessing game, daily geography challenge, multiplayer geography game, duel game iOS, location guessing game">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TerraGuessr">
+<meta property="og:title" content="TerraGuessr — Real-World Geography Guessing Game for iPhone">
+<meta property="og:description" content="Get dropped into a real place, look around, and guess where in the world you are. Daily Challenge, 1v1 Duels, 2v2 Squads and private Parties — coming soon to the App Store.">
+<meta property="og:url" content="https://schillan.com/terraguessr/">
+<meta property="og:image" content="https://schillan.com/terraguessr/img/app-icon.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TerraGuessr — Real-World Geography Guessing Game for iPhone">
+<meta name="twitter:description" content="Get dropped into a real place, look around, and guess where in the world you are. Daily Challenge, 1v1 Duels, 2v2 Squads and private Parties — coming soon to the App Store.">
+<meta name="twitter:image" content="https://schillan.com/terraguessr/img/app-icon.jpg">
+
+<link rel="icon" type="image/jpeg" href="img/app-icon.jpg">
+<link rel="apple-touch-icon" href="img/app-icon.jpg">
+
+<!-- Structured data for search engines & AI assistants -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TerraGuessr",
+  "operatingSystem": "iOS 18.0 or later",
+  "applicationCategory": "GameApplication",
+  "applicationSubCategory": "Trivia",
+  "description": "TerraGuessr is a real-world geography guessing game for iPhone. You're dropped into a real location using Apple's Look Around, then you explore and guess exactly where you are on the map. Play solo in the Daily Challenge, face a friend 1v1 in a real-time Duel, team up 2v2 in Squads, or start a private Party with a shareable code.",
+  "url": "https://schillan.com/terraguessr/",
+  "author": { "@type": "Organization", "name": "Schillan", "url": "https://schillan.com/" },
+  "publisher": { "@type": "Organization", "name": "Schillan", "url": "https://schillan.com/" },
+  "featureList": [
+    "Real-world locations via Apple Look Around",
+    "Daily Challenge with streaks and a global leaderboard",
+    "Real-time 1v1 Duel mode",
+    "Real-time 2v2 Squads mode",
+    "Private Party mode with shareable codes",
+    "Friends list with online status and join-in-progress",
+    "Game Center sign-in with progress synced across devices"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is TerraGuessr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TerraGuessr is a geography guessing game for iPhone. Each round drops you into a real place using Apple's Look Around, and you explore your surroundings for clues before placing a pin on the map to guess where you are. The closer your guess, the higher you score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does scoring work in a Duel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a 1v1 Duel, both players see the same location at the same time. The closer your guess is to the real spot, the more damage you deal to your opponent. The first player to deal 6000 damage wins the duel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Daily Challenge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Daily Challenge is five locations, sixty seconds each, once per day. Everyone plays the same rounds, so you can compare your total distance against friends and the global leaderboard, and build up a daily streak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I play TerraGuessr with friends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Add friends to see who's online, start a private Party and share a code so they can jump straight in, or join a friend's Party directly from your friends list. Duels and Squads also support matchmaking if you want to play against anyone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need Game Center to play?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Signing in with Game Center is recommended — it saves your progress, friends, and stats and syncs them across your Apple devices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is TerraGuessr coming out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TerraGuessr is currently in development for iPhone. There's no release date yet — check back here or reach out for early access."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #eef4fc;
+    --bg-2: #ffffff;
+    --card: #ffffff;
+    --text: #12161f;
+    --muted: #5c6472;
+    --accent: #2f7de1;
+    --accent-2: #ff8a1e;
+    --border: #dbe4f0;
+    --maxw: 1080px;
+    --radius: 22px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0e16;
+      --bg-2: #10141e;
+      --card: #151a26;
+      --text: #f2f5fb;
+      --muted: #99a2b3;
+      --accent: #5b9bf2;
+      --accent-2: #ffa348;
+      --border: #232a3a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+  /* ---------- Nav ---------- */
+  nav.site {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: 0.14em; font-size: 19px; color: var(--text); }
+  .brand:hover { text-decoration: none; }
+  .brand img.mark { width: 34px; height: 34px; border-radius: 9px; display: inline-block; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.16); }
+  .nav-links { display: flex; align-items: center; gap: 24px; font-size: 15px; }
+  .nav-links a { color: var(--muted); font-weight: 500; }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 640px) { .nav-links { display: none; } }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; text-align: center; padding: 76px 0 60px; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: -40% -20% auto -20%; height: 620px;
+    background: radial-gradient(60% 60% at 50% 0%, color-mix(in srgb, var(--accent) 32%, transparent), transparent 70%),
+                radial-gradient(50% 50% at 80% 10%, color-mix(in srgb, var(--accent-2) 28%, transparent), transparent 70%);
+    z-index: 0; pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero h1 {
+    font-size: clamp(38px, 7vw, 62px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 800;
+    margin: 0 auto 20px; max-width: 16ch;
+  }
+  .hero h1 .grad {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero .sub { font-size: clamp(18px, 2.4vw, 21px); color: var(--muted); max-width: 48ch; margin: 0 auto 32px; }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .ghost-btn { color: var(--text); background: var(--card); border: 1px solid var(--border); padding: 14px 24px; border-radius: 14px; font-weight: 600; }
+  .ghost-btn:hover { text-decoration: none; border-color: var(--accent); }
+  .solid-btn {
+    color: #fff; background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    padding: 14px 26px; border-radius: 14px; font-weight: 700;
+  }
+  .solid-btn:hover { text-decoration: none; opacity: 0.92; }
+  .platform-note { margin-top: 22px; color: var(--muted); font-size: 14px; }
+
+  /* Hero visual */
+  .hero-visual { position: relative; z-index: 1; margin: 52px auto 0; max-width: 340px; }
+  .hero-icon-wrap { position: relative; }
+  .hero-icon {
+    width: 168px; height: 168px; border-radius: 40px; display: block; margin: 0 auto;
+    object-fit: cover; box-shadow: 0 30px 60px -18px rgba(30,60,120,0.45), 0 0 0 1px color-mix(in srgb, var(--border) 80%, transparent);
+  }
+  .float-chip {
+    position: absolute; display: flex; align-items: center; gap: 7px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 9px 13px; font-size: 13.5px; font-weight: 700; box-shadow: 0 14px 30px -14px rgba(20,30,60,0.35);
+    white-space: nowrap;
+  }
+  .float-chip .em { font-size: 15px; }
+  .chip-streak { top: -6px; left: -18px; color: var(--accent-2); }
+  .chip-distance { bottom: 8px; right: -30px; color: #22c07a; }
+  .chip-damage { top: 44%; right: -46px; color: #ff5a5a; }
+  @media (max-width: 480px) {
+    .chip-streak { left: -4px; }
+    .chip-distance { right: -8px; }
+    .chip-damage { right: -10px; }
+  }
+
+  /* ---------- Section shells ---------- */
+  section.block { padding: 68px 0; }
+  section.alt { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .section-head { text-align: center; max-width: 46ch; margin: 0 auto 46px; }
+  .eyebrow { display: block; font-size: 13px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .section-head h2 { font-size: clamp(28px, 4.4vw, 40px); letter-spacing: -0.02em; margin: 0 0 14px; line-height: 1.12; }
+  .section-head p { color: var(--muted); font-size: 18px; margin: 0; }
+
+  /* ---------- Game modes ---------- */
+  .modes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  @media (max-width: 980px) { .modes { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .modes { grid-template-columns: 1fr; } }
+  .mode-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 26px 22px; transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .mode-card:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -24px rgba(30,60,120,0.4); }
+  .mode-card .ico {
+    width: 46px; height: 46px; border-radius: 13px; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; margin-bottom: 16px;
+  }
+  .mode-card .ico svg { width: 24px; height: 24px; }
+  .mode-card h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.01em; }
+  .mode-card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+  /* ---------- Steps ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
+  .step { text-align: center; padding: 8px; }
+  .step .n {
+    width: 52px; height: 52px; margin: 0 auto 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 20px; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  }
+  .step h3 { margin: 0 0 6px; font-size: 19px; }
+  .step p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  /* ---------- Daily banner ---------- */
+  .daily-banner {
+    background: linear-gradient(135deg, var(--accent-2), #ff5a5a); color: #fff;
+    border-radius: 28px; padding: 52px 40px; text-align: center;
+  }
+  .daily-banner h2 { font-size: clamp(26px, 4vw, 36px); margin: 0 0 14px; letter-spacing: -0.02em; }
+  .daily-banner p { margin: 0 auto 26px; max-width: 54ch; font-size: 18px; opacity: 0.95; }
+  .daily-pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .daily-pills span { background: rgba(255,255,255,0.2); padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 15px; backdrop-filter: blur(6px); }
+
+  /* ---------- Friends / social features ---------- */
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  @media (max-width: 860px) { .features { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .features { grid-template-columns: 1fr; } }
+  .feature {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 26px 24px; transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .feature:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -24px rgba(30,60,120,0.4); }
+  .feature .ico {
+    width: 46px; height: 46px; border-radius: 13px; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; margin-bottom: 16px;
+  }
+  .feature .ico svg { width: 24px; height: 24px; }
+  .feature h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: -0.01em; }
+  .feature p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  /* ---------- About ---------- */
+  .about-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 32px; max-width: 760px; margin: 0 auto; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; }
+  @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } }
+  .about-grid > div { padding: 18px 0; border-bottom: 1px solid var(--border); }
+  .about-grid > div:nth-last-child(-n+2) { border-bottom: none; }
+  @media (max-width: 640px) { .about-grid > div:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); } .about-grid > div:last-child { border-bottom: none; } }
+  .about-grid dt { margin: 0 0 4px; color: var(--muted); font-size: 13.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .about-grid dd { margin: 0; font-size: 17px; font-weight: 600; }
+
+  /* ---------- FAQ ---------- */
+  .faq { max-width: 760px; margin: 0 auto; }
+  .faq details {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 4px 22px; margin-bottom: 14px;
+  }
+  .faq summary {
+    cursor: pointer; list-style: none; font-weight: 600; font-size: 18px; padding: 18px 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-size: 26px; color: var(--accent); font-weight: 400; transition: transform 0.2s; line-height: 1; flex: none; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { margin: 0 0 20px; color: var(--muted); font-size: 16px; }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta { text-align: center; padding: 82px 0; }
+  .final-cta h2 { font-size: clamp(30px, 5vw, 46px); letter-spacing: -0.02em; margin: 0 0 16px; }
+  .final-cta p { color: var(--muted); font-size: 19px; margin: 0 auto 28px; max-width: 44ch; }
+  .final-cta .platform-note { margin-top: 26px; }
+
+  /* ---------- Footer ---------- */
+  footer.site { border-top: 1px solid var(--border); padding: 44px 0; color: var(--muted); font-size: 14.5px; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: center; }
+  footer.site .flinks { display: flex; gap: 22px; flex-wrap: wrap; }
+  footer.site a { color: var(--muted); }
+  footer.site a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="/terraguessr/">
+      <img class="mark" src="img/app-icon.jpg" width="34" height="34" alt="TerraGuessr app icon">
+      TERRAGUESSR
+    </a>
+    <div class="nav-links">
+      <a href="#modes">Game Modes</a>
+      <a href="#daily">Daily Challenge</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <div class="wrap">
+    <h1>Explore the world. <span class="grad">Guess the place.</span></h1>
+    <p class="sub">
+      TerraGuessr drops you into a real location with Apple's Look Around and challenges you to pinpoint it on the map. Play solo in the Daily Challenge, duel a friend 1v1, team up 2v2, or start a private party — all in real time.
+    </p>
+    <div class="cta-row">
+      <a class="solid-btn" href="#modes">See the game modes</a>
+      <a class="ghost-btn" href="mailto:terraguessr@schillan.com">Get early access</a>
+    </div>
+    <p class="platform-note">iPhone · Requires iOS 18</p>
+
+    <div class="hero-visual">
+      <div class="hero-icon-wrap">
+        <img class="hero-icon" src="img/app-icon.jpg" width="168" height="168" alt="TerraGuessr app icon — a 3D map with a location pin">
+        <div class="float-chip chip-streak"><span class="em">🔥</span> 12-day streak</div>
+        <div class="float-chip chip-distance"><span class="em">📍</span> 42 m — nailed it</div>
+        <div class="float-chip chip-damage"><span class="em">⚔️</span> +2,400 dmg</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== GAME MODES ==================== -->
+<section class="block" id="modes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Game Modes</span>
+      <h2>Four ways to play</h2>
+      <p>Solo, head-to-head, in a team, or with your whole friend group — TerraGuessr adapts to how you want to play.</p>
+    </div>
+    <div class="modes">
+
+      <div class="mode-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="6"/></svg></div>
+        <h3>Daily Challenge</h3>
+        <p>Five real locations, sixty seconds each, once a day. Build a streak and climb the global leaderboard.</p>
+      </div>
+
+      <div class="mode-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></div>
+        <h3>1v1 Duel</h3>
+        <p>Same location, same clock, one opponent. The closer your guess, the more damage you deal — first to 6,000 wins.</p>
+      </div>
+
+      <div class="mode-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3.4"/><circle cx="17" cy="9" r="3"/><path d="M2 20c0-3.5 2.7-6 6-6s6 2.5 6 6M13.5 20c0-2.8 2-5 4.7-5S22 17.2 22 20"/></svg></div>
+        <h3>2v2 Squads</h3>
+        <p>Grab a teammate and coordinate your guesses. Best combined result across the team wins the round.</p>
+      </div>
+
+      <div class="mode-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l3 15 5-3 5 3 3-15-8 4z"/></svg></div>
+        <h3>Party</h3>
+        <p>Start a private lobby and share the code with friends — or join theirs straight from your friends list.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="block alt" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How a round works</span>
+      <h2>You're there. Where is "there"?</h2>
+      <p>No two rounds feel the same — anywhere on Earth is fair game.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Get dropped in</h3>
+        <p>Each round places you at a real, unlabeled spot using Apple's Look Around — no map, no hints, just the view around you.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>Read the clues</h3>
+        <p>Look around for road signs, architecture, vegetation and anything else that gives away the region — or the exact city.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>Drop your pin</h3>
+        <p>Place your guess on the map before the clock runs out. The closer you are, the more points — or damage — you score.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DAILY CHALLENGE ==================== -->
+<section class="block" id="daily">
+  <div class="wrap">
+    <div class="daily-banner">
+      <h2>One shot a day. Make it count.</h2>
+      <p>Five locations, sixty seconds each, one attempt per day. Your total distance ranks you on the daily leaderboard — and every day you play keeps your streak alive.</p>
+      <div class="daily-pills">
+        <span>🗺️ 5 rounds</span>
+        <span>⏱️ 60 seconds each</span>
+        <span>🔥 Daily streaks</span>
+        <span>🏆 Global leaderboard</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SOCIAL / FRIENDS ==================== -->
+<section class="block alt" id="friends">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Play together</span>
+      <h2>Built to play with friends</h2>
+      <p>TerraGuessr is real-time and social from the ground up.</p>
+    </div>
+    <div class="features">
+
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M15.5 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Friends &amp; presence</h3>
+        <p>Add friends, see who's online right now, and jump into their game or party with one tap.</p>
+      </div>
+
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 8l9-5 9 5M12 12v5"/></svg></div>
+        <h3>Shareable party codes</h3>
+        <p>Start a private lobby and hand out a short code — anyone with it can join instantly, no accounts to hunt down.</p>
+      </div>
+
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+        <h3>Live matchmaking</h3>
+        <p>Don't feel like waiting on friends? Queue into a Duel or Squads match and get paired instantly.</p>
+      </div>
+
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
+        <h3>Round-by-round replay</h3>
+        <p>After a Duel, review every round on the map — see exactly where everyone guessed against the real answer.</p>
+      </div>
+
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 0 0 4-4V6a4 4 0 1 0-8 0v5a4 4 0 0 0 4 4z"/><path d="M19 11a7 7 0 0 1-14 0M12 19v3"/></svg></div>
+        <h3>Game Center sign-in</h3>
+        <p>Sign in with Game Center to keep your progress, friends and stats synced across every Apple device.</p>
+      </div>
+
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+        <h3>Notifications</h3>
+        <p>Get notified about friend requests and party invites so you never miss a chance to play.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ABOUT ==================== -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">At a glance</span>
+      <h2>About TerraGuessr</h2>
+      <p>The key facts, at a glance.</p>
+    </div>
+    <div class="about-card">
+      <dl class="about-grid">
+        <div><dt>Developer</dt><dd>Schillan</dd></div>
+        <div><dt>Platform</dt><dd>iPhone</dd></div>
+        <div><dt>Genre</dt><dd>Geography / Trivia game</dd></div>
+        <div><dt>Requires</dt><dd>iOS 18+</dd></div>
+        <div><dt>Multiplayer</dt><dd>Real-time, cross-device</dd></div>
+        <div><dt>Status</dt><dd>In development — coming soon</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="block alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Questions</span>
+      <h2>Frequently asked questions</h2>
+      <p>Everything you might want to know before launch.</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>What is TerraGuessr?</summary>
+        <p>TerraGuessr is a geography guessing game for iPhone. Each round drops you into a real place using Apple's Look Around, and you explore your surroundings for clues before placing a pin on the map to guess where you are. The closer your guess, the higher you score.</p>
+      </details>
+      <details>
+        <summary>How does scoring work in a Duel?</summary>
+        <p>In a 1v1 Duel, both players see the same location at the same time. The closer your guess is to the real spot, the more damage you deal to your opponent. The first player to deal 6,000 damage wins the duel.</p>
+      </details>
+      <details>
+        <summary>What is the Daily Challenge?</summary>
+        <p>Five locations, sixty seconds each, once per day. Everyone plays the same rounds, so you can compare your total distance against friends and the global leaderboard — and build a daily streak.</p>
+      </details>
+      <details>
+        <summary>Can I play with friends?</summary>
+        <p>Yes. Add friends to see who's online, start a private Party and share a code so they can jump straight in, or join a friend's Party directly from your friends list. Duels and Squads also support matchmaking if you'd rather play against anyone.</p>
+      </details>
+      <details>
+        <summary>Do I need Game Center to play?</summary>
+        <p>Signing in with Game Center is recommended — it saves your progress, friends and stats and syncs them across your Apple devices.</p>
+      </details>
+      <details>
+        <summary>What devices does TerraGuessr support?</summary>
+        <p>TerraGuessr is built for iPhone and requires iOS 18 or later.</p>
+      </details>
+      <details>
+        <summary>When is TerraGuessr coming out?</summary>
+        <p>TerraGuessr is currently in development. There's no release date yet — check back here, or email us for early access, and we'll let you know as soon as it's ready.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Ready to explore?</h2>
+    <p>TerraGuessr is in the works for iPhone. Want to help test it before launch?</p>
+    <div class="cta-row">
+      <a class="solid-btn" href="mailto:terraguessr@schillan.com">Get early access</a>
+    </div>
+    <p class="platform-note">iPhone · Requires iOS 18</p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="brand" style="font-size:16px">
+      <img class="mark" src="img/app-icon.jpg" alt="" style="width:26px;height:26px;border-radius:7px">
+      TerraGuessr
+    </div>
+    <div class="flinks">
+      <a href="#modes">Game Modes</a>
+      <a href="#daily">Daily Challenge</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:terraguessr@schillan.com">Contact</a>
+    </div>
+    <div>© 2026 Schillan. TerraGuessr.</div>
+  </div>
+</footer>
+
+</body>
+</html>
