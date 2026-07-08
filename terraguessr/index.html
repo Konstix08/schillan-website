@@ -180,12 +180,6 @@
     z-index: 0; pointer-events: none;
   }
   .hero .wrap { position: relative; z-index: 1; }
-  .status-pill {
-    display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700;
-    letter-spacing: 0.02em; color: var(--accent-2); background: color-mix(in srgb, var(--accent-2) 14%, transparent);
-    padding: 7px 16px; border-radius: 999px; margin-bottom: 22px;
-  }
-  .status-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-2) 22%, transparent); }
   .hero h1 {
     font-size: clamp(38px, 7vw, 62px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 800;
     margin: 0 auto 20px; max-width: 16ch;
@@ -349,7 +343,6 @@
 <!-- ==================== HERO ==================== -->
 <header class="hero">
   <div class="wrap">
-    <span class="status-pill"><span class="dot"></span> In development — coming to the App Store</span>
     <h1>Explore the world. <span class="grad">Guess the place.</span></h1>
     <p class="sub">
       TerraGuessr drops you into a real location with Apple's Look Around and challenges you to pinpoint it on the map. Play solo in the Daily Challenge, duel a friend 1v1, team up 2v2, or start a private party — all in real time.
