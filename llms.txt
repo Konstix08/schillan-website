@@ -1,3 +1,26 @@
+# Schillan
+
+> Schillan is the one-person indie studio of Alexandra Schillhahn, building privacy-first apps for Apple platforms (iPhone, iPad, Mac, Apple Watch). No ads, no third-party trackers, no data selling. Schillan currently makes two apps: CNDWN, a free countdown & countup app, and TerraGuessr, a real-world geography guessing game in development.
+
+## Key facts
+
+- **Studio:** Schillan
+- **Founder:** Alexandra Schillhahn
+- **Focus:** Native apps for iPhone, iPad, Mac and Apple Watch
+- **Philosophy:** No ads, no trackers, no data selling
+- **Website:** https://schillan.com/ (also available in German at /de/ and Spanish at /es/)
+
+## Apps
+
+- **CNDWN** — a free, privacy-first countdown & countup app for Apple devices. Live on the App Store, rated 4.8/5. See the CNDWN section below.
+- **TerraGuessr** — a real-world geography guessing game for iPhone using Apple's Look Around. In development, not yet released. See the TerraGuessr section below.
+
+## Contact
+
+- General: https://schillan.com/ (contact links per app below)
+- CNDWN: cndwn@schillan.com
+- TerraGuessr: terraguessr@schillan.com
+
 # CNDWN
 
 > CNDWN is a privacy-first countdown and countup app for Apple devices (iPhone, iPad, Mac and Apple Watch). It lets people count down to birthdays, holidays, trips, deadlines and any important date — or count up since a past moment — with progress bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, iCloud sync, custom colors, calendar and reminders import, Handoff and sharing. It is the first countdown app that offers every feature for free, with no ads and no trackers.
