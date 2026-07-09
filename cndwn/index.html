@@ -367,6 +367,23 @@
   .feature h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: -0.01em; }
   .feature p { margin: 0; color: var(--muted); font-size: 15px; }
 
+  /* ---------- Tutorials / guides grid ---------- */
+  .guides { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  @media (max-width: 720px) { .guides { grid-template-columns: 1fr; } }
+  .guide-card {
+    display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 24px 26px; transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .guide-card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: 0 18px 40px -24px rgba(40,40,90,0.4); }
+  .guide-card .tag {
+    display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
+    padding: 4px 11px; border-radius: 999px; margin-bottom: 12px;
+  }
+  .guide-card h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.01em; color: var(--text); }
+  .guide-card p { margin: 0 0 12px; color: var(--muted); font-size: 14.5px; }
+  .guide-card .go { font-size: 14px; font-weight: 700; color: var(--accent); }
+
   /* ---------- Steps ---------- */
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   @media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
@@ -441,6 +458,7 @@
       <div class="nav-links">
         <a href="#features"><span lang="en">Features</span></a>
         <a href="#how"><span lang="en">How it works</span></a>
+        <a href="#tutorials"><span lang="en">Tutorials</span></a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="lang-switch" role="group" aria-label="Language">
@@ -634,6 +652,68 @@
   </div>
 </section>
 
+<!-- ==================== TUTORIALS ==================== -->
+<section class="block" id="tutorials">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="en">Guides &amp; tutorials</span></h2>
+      <p><span lang="en">Everything you need to get the most out of CNDWN — and countdowns in general.</span></p>
+    </div>
+    <div class="guides">
+
+      <a class="guide-card" href="/cndwn/best-countdown-app-iphone/">
+        <span class="tag"><span lang="en">Guide</span></span>
+        <h3><span lang="en">Best countdown app for iPhone</span></h3>
+        <p><span lang="en">What to look for in a countdown app, and why CNDWN checks every box.</span></p>
+        <span class="go"><span lang="en">Read guide →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/countdown-widget-ios/">
+        <span class="tag"><span lang="en">Guide</span></span>
+        <h3><span lang="en">Countdown widgets, explained</span></h3>
+        <p><span lang="en">Home Screen, Lock Screen, StandBy and Live Activities — what each one does.</span></p>
+        <span class="go"><span lang="en">Read guide →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/how-to-add-countdown-widget/">
+        <span class="tag"><span lang="en">How-to</span></span>
+        <h3><span lang="en">How to add a countdown widget</span></h3>
+        <p><span lang="en">Six steps, less than a minute — pin your first widget to the Home Screen.</span></p>
+        <span class="go"><span lang="en">Read guide →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/countdown-live-activities/">
+        <span class="tag"><span lang="en">How-to</span></span>
+        <h3><span lang="en">How to add a countdown Live Activity</span></h3>
+        <p><span lang="en">Follow a countdown in real time on your Lock Screen and Dynamic Island.</span></p>
+        <span class="go"><span lang="en">Read guide →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/vacation-countdown/">
+        <span class="tag"><span lang="en">Use case</span></span>
+        <h3><span lang="en">Vacation &amp; trip countdown</span></h3>
+        <p><span lang="en">Count down to your next trip and share it with your travel companions.</span></p>
+        <span class="go"><span lang="en">Read guide →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/countdown-icloud-sync/">
+        <span class="tag"><span lang="en">How-to</span></span>
+        <h3><span lang="en">Sync countdowns across devices</span></h3>
+        <p><span lang="en">Set up iCloud sync once and follow every countdown on any Apple device.</span></p>
+        <span class="go"><span lang="en">Read guide →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/wedding-countdown/">
+        <span class="tag"><span lang="en">Use case</span></span>
+        <h3><span lang="en">Wedding countdown</span></h3>
+        <p><span lang="en">From "she said yes" to "I do" — count down every day of your engagement.</span></p>
+        <span class="go"><span lang="en">Read guide →</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- ==================== FAQ ==================== -->
 <section class="block alt" id="faq">
   <div class="wrap">
@@ -709,9 +789,8 @@
     </div>
     <div class="flinks">
       <a href="#features"><span lang="en">Features</span></a>
+      <a href="#tutorials"><span lang="en">Tutorials</span></a>
       <a href="#faq">FAQ</a>
-      <a href="/cndwn/best-countdown-app-iphone/"><span lang="en">Best countdown app guide</span></a>
-      <a href="/cndwn/countdown-widget-ios/"><span lang="en">Widget guide</span></a>
       <a href="/cndwn/privacy/"><span lang="en">Privacy Policy</span></a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>
