@@ -10,6 +10,9 @@
 <link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/vacation-countdown/">
 <link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/vacation-countdown/">
 <link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/vacation-countdown/">
+<link rel="alternate" hreflang="fr" href="https://schillan.com/cndwn/fr/vacation-countdown/">
+<link rel="alternate" hreflang="ja" href="https://schillan.com/cndwn/ja/vacation-countdown/">
+<link rel="alternate" hreflang="it" href="https://schillan.com/cndwn/it/vacation-countdown/">
 <link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/vacation-countdown/">
 
 
@@ -27,6 +30,9 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
 
@@ -160,9 +166,12 @@ a:hover { text-decoration: underline; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
 
 /* ---------- Language visibility ---------- */
-body[data-lang="en"] [lang="de"], body[data-lang="en"] [lang="es"] { display: none !important; }
-body[data-lang="de"] [lang="en"], body[data-lang="de"] [lang="es"] { display: none !important; }
-body[data-lang="es"] [lang="en"], body[data-lang="es"] [lang="de"] { display: none !important; }
+body[data-lang="en"] [lang]:not([lang="en"]),
+body[data-lang="de"] [lang]:not([lang="de"]),
+body[data-lang="es"] [lang]:not([lang="es"]),
+body[data-lang="fr"] [lang]:not([lang="fr"]),
+body[data-lang="ja"] [lang]:not([lang="ja"]),
+body[data-lang="it"] [lang]:not([lang="it"]) { display: none !important; }
 
 /* ---------- Nav ---------- */
 nav.site {
@@ -195,12 +204,12 @@ nav.site .wrap { display: flex; align-items: center; justify-content: space-betw
 .lang-switch summary::-webkit-details-marker { display: none; }
 .lang-switch summary::after {
   content: ""; display: block; flex: none;
-  width: 9px; height: 9px;
+  width: 10px; height: 10px;
   background: var(--muted);
-  clip-path: polygon(20% 30%, 50% 70%, 80% 30%, 80% 40%, 50% 60%, 20% 40%);
+  clip-path: polygon(18% 26%, 50% 74%, 82% 26%, 82% 41%, 50% 59%, 18% 41%);
 }
 .lang-switch[open] summary::after {
-  clip-path: polygon(20% 70%, 50% 30%, 80% 70%, 80% 60%, 50% 40%, 20% 60%);
+  clip-path: polygon(18% 74%, 50% 26%, 82% 74%, 82% 59%, 50% 41%, 18% 59%);
 }
 .lang-switch .lang-menu {
   position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
@@ -322,6 +331,9 @@ footer.site a:hover { color: var(--text); }
           <a href="/cndwn/vacation-countdown/" data-lang="en">English</a>
           <a href="/cndwn/de/vacation-countdown/" data-lang="de" class="active" aria-current="page">Deutsch</a>
           <a href="/cndwn/es/vacation-countdown/" data-lang="es">Español</a>
+          <a href="/cndwn/fr/vacation-countdown/" data-lang="fr">Français</a>
+          <a href="/cndwn/ja/vacation-countdown/" data-lang="ja">日本語</a>
+          <a href="/cndwn/it/vacation-countdown/" data-lang="it">Italiano</a>
         </div>
       </details>
     </div>
@@ -335,16 +347,25 @@ footer.site a:hover { color: var(--text); }
       
       <span lang="de">Zähl herunter zu deinem nächsten <span class="grad">Urlaub oder deiner Reise</span></span>
       
+      
+      
+      
     </h1>
     <p class="sub">
       
       <span lang="de">Mach dein Abreisedatum zu einem Widget, auf das du jeden Tag schaust — und teile es mit allen, die mitkommen.</span>
+      
+      
+      
       
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
         
         <img lang="de" src="/cndwn/img/appstore-de.svg" alt="Laden im App Store" width="162" height="54">
+        
+        
+        
         
       </a>
       <a class="ghost-btn" href="/cndwn/de/"><span lang="de">CNDWN ansehen</span></a>
@@ -359,6 +380,9 @@ footer.site a:hover { color: var(--text); }
     <p class="lead">
       
       <span lang="de">Eine Reise macht mehr Spaß, wenn du die Tage herunterzählen siehst. So richtest du es in CNDWN ein.</span>
+      
+      
+      
       
     </p>
     <ul class="checklist">
@@ -412,6 +436,9 @@ footer.site a:hover { color: var(--text); }
     <p>
       
       <span lang="de">Sobald deine Reise beginnt, wandle dasselbe Ereignis in einen Fortschrittsbalken um, um genau zu sehen, wie weit dein Urlaub schon fortgeschritten ist — perfekt, um jeden verbleibenden Tag zu nutzen. Willst du deinen Countdown direkt auf dem Home-Bildschirm? Sieh dir an, wie du </span>
+      
+      
+      
       <a href="/cndwn/de/how-to-add-countdown-widget/"><span lang="de">ein Countdown-Widget hinzufügst</span></a>.
     </p>
   </div>
@@ -444,6 +471,9 @@ footer.site a:hover { color: var(--text); }
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
         
         <img lang="de" src="/cndwn/img/appstore-de.svg" alt="Laden im App Store" width="162" height="54">
+        
+        
+        
         
       </a>
     </div>
@@ -493,7 +523,11 @@ footer.site a:hover { color: var(--text); }
   if (saved) return;
 
   var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var detected = nav.indexOf('de') === 0 ? 'de' : (nav.indexOf('es') === 0 ? 'es' : 'en');
+  var supported = ['de', 'es', 'fr', 'ja', 'it'];
+  var detected = 'en';
+  for (var i = 0; i < supported.length; i++) {
+    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
+  }
   try { localStorage.setItem(KEY, detected); } catch (e) {}
   if (detected === document.documentElement.lang) return;
 

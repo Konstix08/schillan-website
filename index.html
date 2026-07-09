@@ -10,6 +10,9 @@
 <link rel="alternate" hreflang="en" href="https://schillan.com/">
 <link rel="alternate" hreflang="de" href="https://schillan.com/de/">
 <link rel="alternate" hreflang="es" href="https://schillan.com/es/">
+<link rel="alternate" hreflang="fr" href="https://schillan.com/fr/">
+<link rel="alternate" hreflang="ja" href="https://schillan.com/ja/">
+<link rel="alternate" hreflang="it" href="https://schillan.com/it/">
 <link rel="alternate" hreflang="x-default" href="https://schillan.com/">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="keywords" content="Schillan, Alexandra Schillhahn, indie iOS developer, Apple app developer, iPhone app studio, CNDWN, TerraGuessr, privacy-first apps, no ads no trackers">
@@ -30,6 +33,9 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="es_ES">
 <meta property="og:locale:alternate" content="de_DE">
 
@@ -140,9 +146,12 @@
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
 
   /* ---------- Language visibility ---------- */
-  body[data-lang="en"] [lang="de"], body[data-lang="en"] [lang="es"] { display: none !important; }
-  body[data-lang="de"] [lang="en"], body[data-lang="de"] [lang="es"] { display: none !important; }
-  body[data-lang="es"] [lang="en"], body[data-lang="es"] [lang="de"] { display: none !important; }
+  body[data-lang="en"] [lang]:not([lang="en"]),
+  body[data-lang="de"] [lang]:not([lang="de"]),
+  body[data-lang="es"] [lang]:not([lang="es"]),
+  body[data-lang="fr"] [lang]:not([lang="fr"]),
+  body[data-lang="ja"] [lang]:not([lang="ja"]),
+  body[data-lang="it"] [lang]:not([lang="it"]) { display: none !important; }
 
   /* ---------- Nav ---------- */
   nav.site {
@@ -178,12 +187,12 @@
   .lang-switch summary::-webkit-details-marker { display: none; }
   .lang-switch summary::after {
     content: ""; display: block; flex: none;
-    width: 9px; height: 9px;
+    width: 10px; height: 10px;
     background: var(--muted);
-    clip-path: polygon(20% 30%, 50% 70%, 80% 30%, 80% 40%, 50% 60%, 20% 40%);
+    clip-path: polygon(18% 26%, 50% 74%, 82% 26%, 82% 41%, 50% 59%, 18% 41%);
   }
   .lang-switch[open] summary::after {
-    clip-path: polygon(20% 70%, 50% 30%, 80% 70%, 80% 60%, 50% 40%, 20% 60%);
+    clip-path: polygon(18% 74%, 50% 26%, 82% 74%, 82% 59%, 50% 41%, 18% 59%);
   }
   .lang-switch .lang-menu {
     position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
@@ -326,6 +335,9 @@
           <a href="/" data-lang="en" class="active" aria-current="page">English</a>
           <a href="/de/" data-lang="de">Deutsch</a>
           <a href="/es/" data-lang="es">Español</a>
+          <a href="/fr/" data-lang="fr">Français</a>
+          <a href="/ja/" data-lang="ja">日本語</a>
+          <a href="/it/" data-lang="it">Italiano</a>
         </div>
       </details>
     </div>
@@ -339,9 +351,15 @@
       <span lang="en">Privacy-first apps, <span class="grad">built for Apple</span></span>
       
       
+      
+      
+      
     </h1>
     <p class="sub">
       <span lang="en">Schillan is the one-person studio of Alexandra Schillhahn, building free, ad-free apps for iPhone, iPad, Mac and Apple Watch — including CNDWN and TerraGuessr.</span>
+      
+      
+      
       
       
     </p>
@@ -388,6 +406,9 @@
             <img class="badge" lang="en" src="/cndwn/img/appstore-en.svg" alt="Download on the App Store">
             
             
+            
+            
+            
           </a>
         </div>
       </div>
@@ -419,6 +440,9 @@
     </div>
     <p class="about-lede">
       <span lang="en">Schillan is the indie studio of Alexandra Schillhahn, an independent developer building native Apple apps that respect people's privacy and time. Every app ships free of ads and third-party trackers, with data staying on-device or in your own iCloud account wherever possible.</span>
+      
+      
+      
       
       
     </p>
@@ -524,7 +548,11 @@
   if (saved) return;
 
   var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var detected = nav.indexOf('de') === 0 ? 'de' : (nav.indexOf('es') === 0 ? 'es' : 'en');
+  var supported = ['de', 'es', 'fr', 'ja', 'it'];
+  var detected = 'en';
+  for (var i = 0; i < supported.length; i++) {
+    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
+  }
   try { localStorage.setItem(KEY, detected); } catch (e) {}
   if (detected === document.documentElement.lang) return;
 

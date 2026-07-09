@@ -10,6 +10,9 @@
 <link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-icloud-sync/">
 <link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-icloud-sync/">
 <link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-icloud-sync/">
+<link rel="alternate" hreflang="fr" href="https://schillan.com/cndwn/fr/countdown-icloud-sync/">
+<link rel="alternate" hreflang="ja" href="https://schillan.com/cndwn/ja/countdown-icloud-sync/">
+<link rel="alternate" hreflang="it" href="https://schillan.com/cndwn/it/countdown-icloud-sync/">
 <link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-icloud-sync/">
 
 
@@ -27,6 +30,9 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:locale:alternate" content="en_US">
 
@@ -189,9 +195,12 @@ a:hover { text-decoration: underline; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
 
 /* ---------- Language visibility ---------- */
-body[data-lang="en"] [lang="de"], body[data-lang="en"] [lang="es"] { display: none !important; }
-body[data-lang="de"] [lang="en"], body[data-lang="de"] [lang="es"] { display: none !important; }
-body[data-lang="es"] [lang="en"], body[data-lang="es"] [lang="de"] { display: none !important; }
+body[data-lang="en"] [lang]:not([lang="en"]),
+body[data-lang="de"] [lang]:not([lang="de"]),
+body[data-lang="es"] [lang]:not([lang="es"]),
+body[data-lang="fr"] [lang]:not([lang="fr"]),
+body[data-lang="ja"] [lang]:not([lang="ja"]),
+body[data-lang="it"] [lang]:not([lang="it"]) { display: none !important; }
 
 /* ---------- Nav ---------- */
 nav.site {
@@ -224,12 +233,12 @@ nav.site .wrap { display: flex; align-items: center; justify-content: space-betw
 .lang-switch summary::-webkit-details-marker { display: none; }
 .lang-switch summary::after {
   content: ""; display: block; flex: none;
-  width: 9px; height: 9px;
+  width: 10px; height: 10px;
   background: var(--muted);
-  clip-path: polygon(20% 30%, 50% 70%, 80% 30%, 80% 40%, 50% 60%, 20% 40%);
+  clip-path: polygon(18% 26%, 50% 74%, 82% 26%, 82% 41%, 50% 59%, 18% 41%);
 }
 .lang-switch[open] summary::after {
-  clip-path: polygon(20% 70%, 50% 30%, 80% 70%, 80% 60%, 50% 40%, 20% 60%);
+  clip-path: polygon(18% 74%, 50% 26%, 82% 74%, 82% 59%, 50% 41%, 18% 59%);
 }
 .lang-switch .lang-menu {
   position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
@@ -360,6 +369,9 @@ footer.site a:hover { color: var(--text); }
           <a href="/cndwn/countdown-icloud-sync/" data-lang="en">English</a>
           <a href="/cndwn/de/countdown-icloud-sync/" data-lang="de">Deutsch</a>
           <a href="/cndwn/es/countdown-icloud-sync/" data-lang="es" class="active" aria-current="page">Español</a>
+          <a href="/cndwn/fr/countdown-icloud-sync/" data-lang="fr">Français</a>
+          <a href="/cndwn/ja/countdown-icloud-sync/" data-lang="ja">日本語</a>
+          <a href="/cndwn/it/countdown-icloud-sync/" data-lang="it">Italiano</a>
         </div>
       </details>
     </div>
@@ -373,17 +385,26 @@ footer.site a:hover { color: var(--text); }
       
       
       <span lang="es">Sincroniza tus cuentas atrás en <span class="grad">todos tus dispositivos Apple</span></span>
+      
+      
+      
     </h1>
     <p class="sub">
       
       
       <span lang="es">Configúralo una vez y cada cuenta atrás te seguirá de iPhone a iPad, Mac y Apple Watch — automáticamente, con tu propio iCloud.</span>
+      
+      
+      
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
         
         
         <img lang="es" src="/cndwn/img/appstore-es.svg" alt="Consíguelo en el App Store" width="162" height="54">
+        
+        
+        
       </a>
       <a class="ghost-btn" href="/cndwn/es/"><span lang="es">Ver CNDWN</span></a>
     </div>
@@ -398,6 +419,9 @@ footer.site a:hover { color: var(--text); }
       
       
       <span lang="es">No necesitas crear ninguna cuenta — CNDWN usa la cuenta de iCloud que ya tienes en tu dispositivo.</span>
+      
+      
+      
     </p>
     <ul class="howto-steps">
       <li>
@@ -446,7 +470,10 @@ footer.site a:hover { color: var(--text); }
     <p>
       
       
-      <span lang="es">La sincronización se realiza mediante tu propia cuenta privada de iCloud — el desarrollador nunca ve tus cuentas atrás, y no hay anuncios ni rastreadores. Lee la </span><a href="/cndwn/es/privacy/"><span lang="es">Política de Privacidad</span></a>. <span lang="es">¿Quieres tu cuenta atrás sincronizada también en tu pantalla de inicio? Descubre cómo </span><a href="/cndwn/es/how-to-add-countdown-widget/"><span lang="es">añadir un widget de cuenta atrás</span></a>.
+      <span lang="es">La sincronización se realiza mediante tu propia cuenta privada de iCloud — el desarrollador nunca ve tus cuentas atrás, y no hay anuncios ni rastreadores. Lee la </span>
+      
+      
+      <a href="/cndwn/es/privacy/"><span lang="es">Política de Privacidad</span></a>. <span lang="es">¿Quieres tu cuenta atrás sincronizada también en tu pantalla de inicio? Descubre cómo </span><a href="/cndwn/es/how-to-add-countdown-widget/"><span lang="es">añadir un widget de cuenta atrás</span></a>.
     </p>
   </div>
 
@@ -479,6 +506,9 @@ footer.site a:hover { color: var(--text); }
         
         
         <img lang="es" src="/cndwn/img/appstore-es.svg" alt="Consíguelo en el App Store" width="162" height="54">
+        
+        
+        
       </a>
     </div>
   </div>
@@ -527,7 +557,11 @@ footer.site a:hover { color: var(--text); }
   if (saved) return;
 
   var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var detected = nav.indexOf('de') === 0 ? 'de' : (nav.indexOf('es') === 0 ? 'es' : 'en');
+  var supported = ['de', 'es', 'fr', 'ja', 'it'];
+  var detected = 'en';
+  for (var i = 0; i < supported.length; i++) {
+    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
+  }
   try { localStorage.setItem(KEY, detected); } catch (e) {}
   if (detected === document.documentElement.lang) return;
 

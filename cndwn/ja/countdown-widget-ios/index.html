@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iPhoneのカウントダウンウィジェット:ホーム画面・ロック画面・StandByガイド — CNDWN</title>
+<meta name="description" content="iOSのカウントダウンウィジェットガイド:ホーム画面、ロック画面、StandByウィジェット、ライブアクティビティ、Dynamic Islandについて解説し、無料カウントダウンアプリCNDWNでの設定方法を紹介します。">
+<meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
+<meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://schillan.com/cndwn/ja/countdown-widget-ios/">
+<link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/countdown-widget-ios/">
+<link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/countdown-widget-ios/">
+<link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/countdown-widget-ios/">
+<link rel="alternate" hreflang="fr" href="https://schillan.com/cndwn/fr/countdown-widget-ios/">
+<link rel="alternate" hreflang="ja" href="https://schillan.com/cndwn/ja/countdown-widget-ios/">
+<link rel="alternate" hreflang="it" href="https://schillan.com/cndwn/it/countdown-widget-ios/">
+<link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/countdown-widget-ios/">
+
+
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CNDWN">
+<meta property="og:title" content="iPhoneのカウントダウンウィジェット:ホーム画面・ロック画面・StandByガイド — CNDWN">
+<meta property="og:description" content="iOSのカウントダウンウィジェットガイド:ホーム画面、ロック画面、StandByウィジェット、ライブアクティビティ、Dynamic Islandについて解説し、無料カウントダウンアプリCNDWNでの設定方法を紹介します。">
+<meta property="og:url" content="https://schillan.com/cndwn/ja/countdown-widget-ios/">
+<meta property="og:image" content="https://schillan.com/cndwn/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="iPhoneのカウントダウンウィジェット:ホーム画面・ロック画面・StandByガイド — CNDWN">
+<meta name="twitter:description" content="iOSのカウントダウンウィジェットガイド:ホーム画面、ロック画面、StandByウィジェット、ライブアクティビティ、Dynamic Islandについて解説し、無料カウントダウンアプリCNDWNでの設定方法を紹介します。">
+<meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
+
+<link rel="icon" type="image/png" href="/cndwn/img/app-icon.png">
+<link rel="apple-touch-icon" href="/cndwn/img/app-icon.png">
+
+<!-- Structured data for search engines & AI assistants -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "iPhoneのカウントダウンウィジェット:ホーム画面・ロック画面・StandByガイド — CNDWN",
+  "description": "iOSのカウントダウンウィジェットガイド:ホーム画面、ロック画面、StandByウィジェット、ライブアクティビティ、Dynamic Islandについて解説し、無料カウントダウンアプリCNDWNでの設定方法を紹介します。",
+  "url": "https://schillan.com/cndwn/ja/countdown-widget-ios/",
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "CNDWN",
+    "url": "https://schillan.com/cndwn/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "CNDWN",
+      "item": "https://schillan.com/cndwn/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "iOS向けカウントダウンウィジェット",
+      "item": "https://schillan.com/cndwn/ja/countdown-widget-ios/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "iOSに標準のカウントダウンウィジェットはありますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iOSには任意のイベント用のカウントダウンウィジェットは標準搭載されていません。CNDWNのようなカウントダウンアプリを使うと、選んだ日付までカウントダウンするホーム画面、ロック画面、StandByのウィジェットを追加できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ウィジェットとライブアクティビティの違いは何ですか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ウィジェットはホーム画面やロック画面、StandByに表示され、定期的に更新されます。ライブアクティビティは、イベントが差し迫っているか進行中の間、ロック画面とDynamic Islandに表示されるリアルタイムの一時的な表示です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "iPhoneのロック画面にカウントダウンウィジェットを配置できますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。iOS 16以降、ウィジェットをロック画面に直接追加できます。CNDWNのようなカウントダウンアプリは、選択した日付までの残り時間を表示するロック画面ウィジェットに対応しています。"
+      }
+    }
+  ]
+}
+</script>
+
+<style id="shared-styles">
+/*
+ * Shared design tokens + components (design vars, nav, language switch,
+ * section shells, footer) reused across CNDWN static pages.
+ *
+ * Injected verbatim into any template's <style id="shared-styles"> block by
+ * tools/build-i18n.mjs at build time. Page-specific styles stay in each
+ * template's own <style> block.
+ */
+:root {
+  --bg: #f5f5f7;
+  --bg-2: #ffffff;
+  --card: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --accent: #5b6cff;
+  --accent-2: #9b5bff;
+  --border: #e3e3e8;
+  --maxw: 1080px;
+  --radius: 22px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0f;
+    --bg-2: #121218;
+    --card: #17171d;
+    --text: #f5f5f7;
+    --muted: #9a9aa2;
+    --accent: #7d8bff;
+    --accent-2: #b885ff;
+    --border: #26262e;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+/* ---------- Language visibility ---------- */
+body[data-lang="en"] [lang]:not([lang="en"]),
+body[data-lang="de"] [lang]:not([lang="de"]),
+body[data-lang="es"] [lang]:not([lang="es"]),
+body[data-lang="fr"] [lang]:not([lang="fr"]),
+body[data-lang="ja"] [lang]:not([lang="ja"]),
+body[data-lang="it"] [lang]:not([lang="it"]) { display: none !important; }
+
+/* ---------- Nav ---------- */
+nav.site {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+nav.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: 0.16em; font-size: 21px; color: var(--text); }
+.brand:hover { text-decoration: none; }
+.brand .mark { width: 34px; height: 34px; border-radius: 9px; display: inline-block; box-shadow: 0 2px 8px rgba(0,0,0,0.16); }
+.brand img.mark { object-fit: cover; }
+.nav-right { display: flex; align-items: center; gap: 22px; }
+.nav-links { display: flex; align-items: center; gap: 24px; font-size: 15px; }
+.nav-links a { color: var(--muted); font-weight: 500; }
+.nav-links a:hover { color: var(--text); text-decoration: none; }
+@media (max-width: 720px) { .nav-links { display: none; } }
+
+/* ---------- Language switch ---------- */
+.lang-switch { position: relative; }
+.lang-switch summary {
+  list-style: none; cursor: pointer; user-select: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: color-mix(in srgb, var(--muted) 16%, transparent); color: var(--text);
+  font: inherit; font-weight: 600; font-size: 13px;
+  padding: 7px 14px; border-radius: 999px; line-height: 1;
+}
+.lang-switch summary::-webkit-details-marker { display: none; }
+.lang-switch summary::after {
+  content: ""; display: block; flex: none;
+  width: 10px; height: 10px;
+  background: var(--muted);
+  clip-path: polygon(18% 26%, 50% 74%, 82% 26%, 82% 41%, 50% 59%, 18% 41%);
+}
+.lang-switch[open] summary::after {
+  clip-path: polygon(18% 74%, 50% 26%, 82% 74%, 82% 59%, 50% 41%, 18% 59%);
+}
+.lang-switch .lang-menu {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
+  display: flex; flex-direction: column; min-width: 150px; gap: 2px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18); padding: 6px;
+}
+.lang-switch .lang-menu a, .lang-switch .lang-menu button {
+  display: block; width: 100%; text-align: left; border: none; background: transparent; cursor: pointer;
+  color: var(--text); font: inherit; font-size: 14px; font-weight: 500;
+  padding: 9px 12px; border-radius: 9px; text-decoration: none;
+}
+.lang-switch .lang-menu a:hover, .lang-switch .lang-menu button:hover,
+.lang-switch .lang-menu a:focus-visible, .lang-switch .lang-menu button:focus-visible {
+  background: color-mix(in srgb, var(--muted) 14%, transparent); text-decoration: none;
+}
+.lang-switch .lang-menu a.active, .lang-switch .lang-menu button.active { color: var(--accent); font-weight: 700; }
+
+/* ---------- Section shells ---------- */
+section.block { padding: 68px 0; }
+section.alt { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.section-head { text-align: center; max-width: 42ch; margin: 0 auto 46px; }
+.section-head h2 { font-size: clamp(28px, 4.4vw, 40px); letter-spacing: -0.02em; margin: 0 0 14px; line-height: 1.12; }
+.section-head p { color: var(--muted); font-size: 18px; margin: 0; }
+
+/* ---------- FAQ ---------- */
+.faq { max-width: 760px; margin: 0 auto; }
+.faq details {
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+  padding: 4px 22px; margin-bottom: 14px;
+}
+.faq summary {
+  cursor: pointer; list-style: none; font-weight: 600; font-size: 18px; padding: 18px 0;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 26px; color: var(--accent); font-weight: 400; transition: transform 0.2s; line-height: 1; flex: none; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { margin: 0 0 20px; color: var(--muted); font-size: 16px; }
+
+/* ---------- Footer ---------- */
+footer.site { border-top: 1px solid var(--border); padding: 44px 0; color: var(--muted); font-size: 14.5px; }
+footer.site .wrap { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: center; }
+footer.site .flinks { display: flex; gap: 22px; flex-wrap: wrap; }
+footer.site a { color: var(--muted); }
+footer.site a:hover { color: var(--text); }
+</style>
+<style>
+  /* ---------- Page head ---------- */
+  .page-head { position: relative; text-align: center; padding: 68px 0 30px; overflow: hidden; }
+  .page-head::before {
+    content: ""; position: absolute; inset: -60% -20% auto -20%; height: 460px;
+    background: radial-gradient(55% 60% at 50% 0%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%),
+                radial-gradient(45% 50% at 82% 8%, color-mix(in srgb, var(--accent-2) 26%, transparent), transparent 70%);
+    z-index: 0; pointer-events: none;
+  }
+  .page-head .wrap { position: relative; z-index: 1; }
+  .page-head .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+  }
+  .page-head h1 {
+    font-size: clamp(30px, 5vw, 46px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 800; margin: 0 auto 14px; max-width: 22ch;
+  }
+  .page-head h1 .grad {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .page-head .sub { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); max-width: 56ch; margin: 0 auto 28px; }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .badge-link { display: inline-flex; align-items: center; transition: transform 0.18s ease, opacity 0.18s ease; }
+  .badge-link:hover { text-decoration: none; transform: translateY(-1px); opacity: 0.9; }
+  .badge-link img { height: 54px; width: auto; display: block; }
+  .ghost-btn { color: var(--text); background: var(--card); border: 1px solid var(--border); padding: 14px 24px; border-radius: 14px; font-weight: 600; }
+  .ghost-btn:hover { text-decoration: none; border-color: var(--accent); }
+
+  /* ---------- Content ---------- */
+  main { max-width: 780px; margin: 0 auto; padding: 10px 22px 20px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 30px 30px 12px; margin-bottom: 22px; }
+  h2 { font-size: 24px; letter-spacing: -0.01em; margin: 0 0 14px; }
+  p { color: var(--text); }
+  .lead { font-size: 18px; color: var(--muted); }
+
+  /* ---------- Widget type list ---------- */
+  .widget-types { list-style: none; padding: 0; margin: 0 0 8px; }
+  .widget-types li { padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .widget-types li:last-child { border-bottom: none; }
+  .widget-types h3 { margin: 0 0 4px; font-size: 18px; }
+  .widget-types p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  /* ---------- Screenshot gallery ---------- */
+  .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 56px; max-width: 720px; margin: 0 auto; }
+  .gallery figure { margin: 0; width: 236px; max-width: 44vw; text-align: center; }
+  .gallery img { width: 100%; height: auto; display: block; filter: drop-shadow(0 26px 46px rgba(30,30,70,0.34)); }
+  .gallery figcaption { margin-top: 20px; font-weight: 600; font-size: 16px; color: var(--text); }
+  @media (max-width: 520px) { .gallery figure { width: 220px; max-width: 70vw; } }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta { text-align: center; padding: 60px 0 82px; }
+  .final-cta h2 { font-size: clamp(26px, 4.4vw, 38px); letter-spacing: -0.02em; margin: 0 0 16px; }
+  .final-cta p { color: var(--muted); font-size: 18px; margin: 0 auto 28px; max-width: 42ch; }
+</style>
+</head>
+<body>
+
+<nav class="site">
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a class="brand" href="/cndwn/ja/">
+        <img class="mark" src="/cndwn/img/app-icon.png" width="34" height="34" alt="CNDWN app icon">
+        CNDWN
+      </a>
+      <a href="/ja/" style="color:var(--muted);font-size:12px;font-weight:600;white-space:nowrap;">by Schillan</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/cndwn/ja/#features"><span lang="ja">機能</span></a>
+        <a href="/cndwn/ja/#tutorials"><span lang="ja">チュートリアル</span></a>
+        <a href="/cndwn/ja/#faq">FAQ</a>
+      </div>
+      <details class="lang-switch">
+        <summary aria-label="Change language"><span data-lang-label="">JA</span></summary>
+        <div class="lang-menu">
+          <a href="/cndwn/countdown-widget-ios/" data-lang="en">English</a>
+          <a href="/cndwn/de/countdown-widget-ios/" data-lang="de">Deutsch</a>
+          <a href="/cndwn/es/countdown-widget-ios/" data-lang="es">Español</a>
+          <a href="/cndwn/fr/countdown-widget-ios/" data-lang="fr">Français</a>
+          <a href="/cndwn/ja/countdown-widget-ios/" data-lang="ja" class="active" aria-current="page">日本語</a>
+          <a href="/cndwn/it/countdown-widget-ios/" data-lang="it">Italiano</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">CNDWN</span>
+    <h1>
+      
+      
+      
+      
+      <span lang="ja">iPhone向け<span class="grad">カウントダウンウィジェット</span>を徹底解説</span>
+      
+    </h1>
+    <p class="sub">
+      
+      
+      
+      
+      <span lang="ja">ホーム画面、ロック画面、StandBy、ライブアクティビティ、Dynamic Island——それぞれの機能と設定方法を紹介します。</span>
+      
+    </p>
+    <div class="cta-row">
+      <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
+        
+        
+        
+        
+        <img lang="ja" src="/cndwn/img/appstore-ja.svg" alt="App Storeからダウンロード" width="147" height="54">
+        
+      </a>
+      <a class="ghost-btn" href="/cndwn/ja/"><span lang="ja">CNDWNを見る</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="card">
+    <h2><span lang="ja">アプリを開かずにカウントダウンを確認する4つの方法</span></h2>
+    <ul class="widget-types">
+      <li>
+        <h3><span lang="ja">ホーム画面ウィジェット</span></h3>
+        <p><span lang="ja">ホーム画面に表示される小・中・大サイズのタイルで、1つまたは複数のカウントダウンを一目で確認できます。</span></p>
+      </li>
+      <li>
+        <h3><span lang="ja">ロック画面ウィジェット</span></h3>
+        <p><span lang="ja">iOS 16以降、ウィジェットをロック画面に直接配置できるので、iPhoneを持ち上げた瞬間にカウントダウンを確認できます。</span></p>
+      </li>
+      <li>
+        <h3><span lang="ja">StandByウィジェット</span></h3>
+        <p><span lang="ja">iPhoneを充電しながら横向きに置くと、StandByモードが全画面のカウントダウンを表示します——ナイトスタンドの時計として最適です。</span></p>
+      </li>
+      <li>
+        <h3><span lang="ja">ライブアクティビティ&amp;Dynamic Island</span></h3>
+        <p><span lang="ja">ロック画面とDynamic Islandに表示されるリアルタイムのカウントダウンで、イベント直前の数時間に最適です。</span></p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span lang="ja">実際の画面を見る</span></h2>
+    <div class="gallery">
+      <figure>
+        <img loading="lazy" src="/cndwn/img/phone-2.webp" width="660" height="1351" alt="CNDWN widgets on the iPhone Home Screen showing Birthday, Graduation and Holiday countdowns">
+        <figcaption><span lang="ja">ホーム画面ウィジェット</span></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="/cndwn/img/phone-3.webp" width="660" height="1351" alt="CNDWN countdown list with custom colors for each event">
+        <figcaption><span lang="ja">カスタムカラー</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span lang="ja">CNDWNでカウントダウンウィジェットを追加する方法</span></h2>
+    <p>
+      
+      
+      
+      
+      <span lang="ja">CNDWNでカウントダウンを作成したら、ホーム画面またはロック画面を長押しして「ウィジェットを追加」をタップし、CNDWNを検索してサイズを選びます。CNDWNのウィジェット、ライブアクティビティ、StandBy対応はすべて</span>
+      <a href="/cndwn/ja/#features"><span lang="ja">無料で、広告もトラッカーもありません</span></a>. <span lang="ja">先にぴったりのアプリを探したい方は、</span><a href="/cndwn/ja/best-countdown-app-iphone/"><span lang="ja">iPhone向けおすすめカウントダウンアプリガイドをご覧ください</span></a>.
+    </p>
+  </div>
+
+  <div style="margin-bottom:22px">
+    <h2><span lang="ja">よくある質問</span></h2>
+    <div class="faq">
+      <details open="">
+        <summary><span lang="ja">iOSに標準のカウントダウンウィジェットはありますか?</span></summary>
+        <p><span lang="ja">iOSには任意のイベント用のカウントダウンウィジェットは標準搭載されていません。CNDWNのようなカウントダウンアプリを使うと、選んだ日付までカウントダウンするホーム画面、ロック画面、StandByのウィジェットを追加できます。</span></p>
+      </details>
+      <details>
+        <summary><span lang="ja">ウィジェットとライブアクティビティの違いは何ですか?</span></summary>
+        <p><span lang="ja">ウィジェットはホーム画面やロック画面、StandByに表示され、定期的に更新されます。ライブアクティビティは、イベントが差し迫っているか進行中の間、ロック画面とDynamic Islandに表示されるリアルタイムの一時的な表示です。</span></p>
+      </details>
+      <details>
+        <summary><span lang="ja">iPhoneのロック画面にカウントダウンウィジェットを配置できますか?</span></summary>
+        <p><span lang="ja">はい。iOS 16以降、ウィジェットをロック画面に直接追加できます。CNDWNのようなカウントダウンアプリは、選択した日付までの残り時間を表示するロック画面ウィジェットに対応しています。</span></p>
+      </details>
+    </div>
+  </div>
+
+</main>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2><span lang="ja">数秒で最初のウィジェットを手に入れよう</span></h2>
+    <p><span lang="ja">CNDWNをダウンロードして、今日から最初のカウントダウンウィジェットを設置しましょう。</span></p>
+    <div class="cta-row">
+      <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
+        
+        
+        
+        
+        <img lang="ja" src="/cndwn/img/appstore-ja.svg" alt="App Storeからダウンロード" width="147" height="54">
+        
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="brand" style="font-size:16px">
+      <img class="mark" src="/cndwn/img/app-icon.png" alt="" style="width:26px;height:26px;border-radius:7px">
+      CNDWN
+    </div>
+    <div class="flinks">
+      <a href="/cndwn/ja/#features"><span lang="ja">機能</span></a>
+      <a href="/cndwn/ja/#tutorials"><span lang="ja">チュートリアル</span></a>
+      <a href="/cndwn/ja/privacy/"><span lang="ja">プライバシーポリシー</span></a>
+      <a href="mailto:cndwn@schillan.com">Contact</a>
+    </div>
+    <div>© 2026 <a href="/ja/">Schillan</a>. CNDWN.</div>
+  </div>
+</footer>
+
+
+
+
+
+<script>
+(function () {
+  var KEY = 'cndwn-lang';
+  var sw = document.querySelector('.lang-switch');
+  if (!sw) return;
+
+  document.addEventListener('click', function (e) {
+    if (sw.open && !sw.contains(e.target)) sw.open = false;
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') sw.open = false;
+  });
+  sw.querySelectorAll('.lang-menu a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
+    });
+  });
+
+  var saved;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (saved) return;
+
+  var nav = ((navigator.language || 'en') + '').toLowerCase();
+  var supported = ['de', 'es', 'fr', 'ja', 'it'];
+  var detected = 'en';
+  for (var i = 0; i < supported.length; i++) {
+    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
+  }
+  try { localStorage.setItem(KEY, detected); } catch (e) {}
+  if (detected === document.documentElement.lang) return;
+
+  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
+  if (target) location.replace(target.getAttribute('href'));
+})();
+</script></body></html>
