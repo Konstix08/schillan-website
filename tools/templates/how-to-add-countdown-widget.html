@@ -172,11 +172,14 @@
         <a href="/cndwn/#tutorials"><span lang="en">Tutorials</span><span lang="de">Anleitungen</span><span lang="es">Tutoriales</span></a>
         <a href="/cndwn/#faq">FAQ</a>
       </div>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" data-set-lang="en">EN</button>
-        <button type="button" data-set-lang="de">DE</button>
-        <button type="button" data-set-lang="es">ES</button>
-      </div>
+      <details class="lang-switch">
+        <summary aria-label="Change language"><span data-lang-label>EN</span></summary>
+        <div class="lang-menu">
+          <button type="button" data-set-lang="en">English</button>
+          <button type="button" data-set-lang="de">Deutsch</button>
+          <button type="button" data-set-lang="es">Español</button>
+        </div>
+      </details>
     </div>
   </div>
 </nav>
@@ -322,7 +325,9 @@
 <script>
   (function () {
     var body = document.body;
-    var buttons = document.querySelectorAll('[data-set-lang]');
+    var sw = document.querySelector('.lang-switch');
+    var label = sw.querySelector('[data-lang-label]');
+    var buttons = sw.querySelectorAll('[data-set-lang]');
 
     function setLang(lang) {
       body.setAttribute('data-lang', lang);
@@ -330,13 +335,19 @@
       buttons.forEach(function (b) {
         b.classList.toggle('active', b.getAttribute('data-set-lang') === lang);
       });
+      label.textContent = lang.toUpperCase();
       try { localStorage.setItem('cndwn-lang', lang); } catch (e) {}
     }
 
     buttons.forEach(function (b) {
       b.addEventListener('click', function () {
         setLang(b.getAttribute('data-set-lang'));
+        sw.open = false;
       });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (sw.open && !sw.contains(e.target)) sw.open = false;
     });
 
     var saved;
