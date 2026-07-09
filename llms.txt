@@ -8,7 +8,7 @@
 - **Founder:** Alexandra Schillhahn
 - **Focus:** Native apps for iPhone, iPad, Mac and Apple Watch
 - **Philosophy:** No ads, no trackers, no data selling
-- **Website:** https://schillan.com/ (also available in German at /de/ and Spanish at /es/)
+- **Website:** https://schillan.com/ (also available in German at /de/, Spanish at /es/, French at /fr/, Japanese at /ja/ and Italian at /it/)
 
 ## Apps
 
@@ -34,7 +34,7 @@
 - **Developer:** Schillan (Alexandra Schillhahn)
 - **Languages:** English, German, Spanish, French, Japanese, Chinese
 - **Rating:** 4.8 / 5 on the Apple App Store
-- **Website:** https://schillan.com/cndwn/ (also available in German at /cndwn/de/ and Spanish at /cndwn/es/)
+- **Website:** https://schillan.com/cndwn/ (also available in German at /cndwn/de/, Spanish at /cndwn/es/, French at /cndwn/fr/, Japanese at /cndwn/ja/ and Italian at /cndwn/it/)
 - **Download:** https://apps.apple.com/app/id6455257754
 - **Contact:** cndwn@schillan.com
 
@@ -75,16 +75,57 @@ Countdowns are stored locally on the device and, when sync is enabled, in the us
 - Landing page (English): https://schillan.com/cndwn/
 - Landing page (German): https://schillan.com/cndwn/de/
 - Landing page (Spanish): https://schillan.com/cndwn/es/
+- Landing page (French): https://schillan.com/cndwn/fr/
+- Landing page (Japanese): https://schillan.com/cndwn/ja/
+- Landing page (Italian): https://schillan.com/cndwn/it/
 - Best countdown app for iPhone guide (English): https://schillan.com/cndwn/best-countdown-app-iphone/
+- Best countdown app for iPhone guide (German): https://schillan.com/cndwn/de/best-countdown-app-iphone/
+- Best countdown app for iPhone guide (Spanish): https://schillan.com/cndwn/es/best-countdown-app-iphone/
+- Best countdown app for iPhone guide (French): https://schillan.com/cndwn/fr/best-countdown-app-iphone/
+- Best countdown app for iPhone guide (Japanese): https://schillan.com/cndwn/ja/best-countdown-app-iphone/
+- Best countdown app for iPhone guide (Italian): https://schillan.com/cndwn/it/best-countdown-app-iphone/
 - Countdown widgets for iOS guide (English): https://schillan.com/cndwn/countdown-widget-ios/
+- Countdown widgets for iOS guide (German): https://schillan.com/cndwn/de/countdown-widget-ios/
+- Countdown widgets for iOS guide (Spanish): https://schillan.com/cndwn/es/countdown-widget-ios/
+- Countdown widgets for iOS guide (French): https://schillan.com/cndwn/fr/countdown-widget-ios/
+- Countdown widgets for iOS guide (Japanese): https://schillan.com/cndwn/ja/countdown-widget-ios/
+- Countdown widgets for iOS guide (Italian): https://schillan.com/cndwn/it/countdown-widget-ios/
 - How to add a countdown widget guide (English): https://schillan.com/cndwn/how-to-add-countdown-widget/
+- How to add a countdown widget guide (German): https://schillan.com/cndwn/de/how-to-add-countdown-widget/
+- How to add a countdown widget guide (Spanish): https://schillan.com/cndwn/es/how-to-add-countdown-widget/
+- How to add a countdown widget guide (French): https://schillan.com/cndwn/fr/how-to-add-countdown-widget/
+- How to add a countdown widget guide (Japanese): https://schillan.com/cndwn/ja/how-to-add-countdown-widget/
+- How to add a countdown widget guide (Italian): https://schillan.com/cndwn/it/how-to-add-countdown-widget/
 - Countdown Live Activities guide (English): https://schillan.com/cndwn/countdown-live-activities/
+- Countdown Live Activities guide (German): https://schillan.com/cndwn/de/countdown-live-activities/
+- Countdown Live Activities guide (Spanish): https://schillan.com/cndwn/es/countdown-live-activities/
+- Countdown Live Activities guide (French): https://schillan.com/cndwn/fr/countdown-live-activities/
+- Countdown Live Activities guide (Japanese): https://schillan.com/cndwn/ja/countdown-live-activities/
+- Countdown Live Activities guide (Italian): https://schillan.com/cndwn/it/countdown-live-activities/
 - Vacation & trip countdown guide (English): https://schillan.com/cndwn/vacation-countdown/
+- Vacation & trip countdown guide (German): https://schillan.com/cndwn/de/vacation-countdown/
+- Vacation & trip countdown guide (Spanish): https://schillan.com/cndwn/es/vacation-countdown/
+- Vacation & trip countdown guide (French): https://schillan.com/cndwn/fr/vacation-countdown/
+- Vacation & trip countdown guide (Japanese): https://schillan.com/cndwn/ja/vacation-countdown/
+- Vacation & trip countdown guide (Italian): https://schillan.com/cndwn/it/vacation-countdown/
 - Sync countdowns across devices guide (English): https://schillan.com/cndwn/countdown-icloud-sync/
+- Sync countdowns across devices guide (German): https://schillan.com/cndwn/de/countdown-icloud-sync/
+- Sync countdowns across devices guide (Spanish): https://schillan.com/cndwn/es/countdown-icloud-sync/
+- Sync countdowns across devices guide (French): https://schillan.com/cndwn/fr/countdown-icloud-sync/
+- Sync countdowns across devices guide (Japanese): https://schillan.com/cndwn/ja/countdown-icloud-sync/
+- Sync countdowns across devices guide (Italian): https://schillan.com/cndwn/it/countdown-icloud-sync/
 - Wedding countdown guide (English): https://schillan.com/cndwn/wedding-countdown/
+- Wedding countdown guide (German): https://schillan.com/cndwn/de/wedding-countdown/
+- Wedding countdown guide (Spanish): https://schillan.com/cndwn/es/wedding-countdown/
+- Wedding countdown guide (French): https://schillan.com/cndwn/fr/wedding-countdown/
+- Wedding countdown guide (Japanese): https://schillan.com/cndwn/ja/wedding-countdown/
+- Wedding countdown guide (Italian): https://schillan.com/cndwn/it/wedding-countdown/
 - Privacy policy (English): https://schillan.com/cndwn/privacy/
 - Privacy policy (German): https://schillan.com/cndwn/de/privacy/
 - Privacy policy (Spanish): https://schillan.com/cndwn/es/privacy/
+- Privacy policy (French): https://schillan.com/cndwn/fr/privacy/
+- Privacy policy (Japanese): https://schillan.com/cndwn/ja/privacy/
+- Privacy policy (Italian): https://schillan.com/cndwn/it/privacy/
 - App Store: https://apps.apple.com/app/id6455257754
 
 # TerraGuessr

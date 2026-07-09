@@ -58,9 +58,12 @@
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
 
   /* language visibility */
-  body[data-lang="en"] [lang="de"], body[data-lang="en"] [lang="es"] { display: none !important; }
-  body[data-lang="de"] [lang="en"], body[data-lang="de"] [lang="es"] { display: none !important; }
-  body[data-lang="es"] [lang="en"], body[data-lang="es"] [lang="de"] { display: none !important; }
+  body[data-lang="en"] [lang]:not([lang="en"]),
+  body[data-lang="de"] [lang]:not([lang="de"]),
+  body[data-lang="es"] [lang]:not([lang="es"]),
+  body[data-lang="fr"] [lang]:not([lang="fr"]),
+  body[data-lang="ja"] [lang]:not([lang="ja"]),
+  body[data-lang="it"] [lang]:not([lang="it"]) { display: none !important; }
 
   /* ---------- Nav (shared with landing page) ---------- */
   nav.site {
@@ -90,12 +93,12 @@
   .lang-switch summary::-webkit-details-marker { display: none; }
   .lang-switch summary::after {
     content: ""; display: block; flex: none;
-    width: 9px; height: 9px;
+    width: 10px; height: 10px;
     background: var(--muted);
-    clip-path: polygon(20% 30%, 50% 70%, 80% 30%, 80% 40%, 50% 60%, 20% 40%);
+    clip-path: polygon(18% 26%, 50% 74%, 82% 26%, 82% 41%, 50% 59%, 18% 41%);
   }
   .lang-switch[open] summary::after {
-    clip-path: polygon(20% 70%, 50% 30%, 80% 70%, 80% 60%, 50% 40%, 20% 60%);
+    clip-path: polygon(18% 74%, 50% 26%, 82% 74%, 82% 59%, 50% 41%, 18% 59%);
   }
   .lang-switch .lang-menu {
     position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
@@ -195,9 +198,9 @@
     </div>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="/cndwn/#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span></a>
-        <a href="/cndwn/#how"><span lang="en">How it works</span><span lang="de">So geht's</span><span lang="es">Cómo funciona</span></a>
-        <a href="/cndwn/#tutorials"><span lang="en">Tutorials</span><span lang="de">Anleitungen</span><span lang="es">Tutoriales</span></a>
+        <a href="/cndwn/#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span><span lang="fr">Fonctionnalités</span><span lang="ja">機能</span><span lang="it">Funzionalità</span></a>
+        <a href="/cndwn/#how"><span lang="en">How it works</span><span lang="de">So geht's</span><span lang="es">Cómo funciona</span><span lang="fr">Comment ça marche</span><span lang="ja">使い方</span><span lang="it">Come funziona</span></a>
+        <a href="/cndwn/#tutorials"><span lang="en">Tutorials</span><span lang="de">Anleitungen</span><span lang="es">Tutoriales</span><span lang="fr">Tutoriels</span><span lang="ja">チュートリアル</span><span lang="it">Tutorial</span></a>
         <a href="/cndwn/#faq">FAQ</a>
       </div>
       <details class="lang-switch">
@@ -219,16 +222,25 @@
       <span lang="en"><span class="grad">Privacy</span> Policy</span>
       <span lang="de"><span class="grad">Datenschutz</span>erklärung</span>
       <span lang="es">Política de <span class="grad">Privacidad</span></span>
+      <span lang="fr">Politique de <span class="grad">confidentialité</span></span>
+      <span lang="ja"><span class="grad">プライバシー</span>ポリシー</span>
+      <span lang="it"><span class="grad">Informativa</span> sulla privacy</span>
     </h1>
     <p class="sub">
       <span lang="en">How CNDWN handles your data — plainly and privately. No ads, no trackers, your countdowns stay in your own iCloud.</span>
       <span lang="de">Wie CNDWN mit Ihren Daten umgeht — klar und datenschutzfreundlich. Keine Werbung, keine Tracker, Ihre Countdowns bleiben in Ihrer eigenen iCloud.</span>
       <span lang="es">Cómo trata CNDWN sus datos — de forma clara y privada. Sin anuncios, sin rastreadores; sus cuentas atrás permanecen en su propia iCloud.</span>
+      <span lang="fr">Comment CNDWN traite vos données — simplement et en toute confidentialité. Pas de publicités, pas de traqueurs, vos comptes à rebours restent dans votre propre iCloud.</span>
+      <span lang="ja">CNDWNがあなたのデータをどのように扱うか — シンプルかつプライベートに。広告なし、トラッカーなし。あなたのカウントダウンはあなた自身のiCloudに保存されます。</span>
+      <span lang="it">Come CNDWN gestisce i tuoi dati — in modo semplice e riservato. Nessuna pubblicità, nessun tracker: i tuoi conti alla rovescia restano nel tuo iCloud personale.</span>
     </p>
     <p class="updated">
       <span lang="en">Last updated: 25 June 2026</span>
       <span lang="de">Zuletzt aktualisiert: 25. Juni 2026</span>
       <span lang="es">Última actualización: 25 de junio de 2026</span>
+      <span lang="fr">Dernière mise à jour : 25 juin 2026</span>
+      <span lang="ja">最終更新日: 2026年6月25日</span>
+      <span lang="it">Ultimo aggiornamento: 25 giugno 2026</span>
     </p>
   </div>
 </header>
@@ -838,6 +850,581 @@
   </div>
 </section>
 
+<!-- ======================= FRANÇAIS (RGPD) ======================= -->
+<section lang="fr">
+  <div class="card">
+    <p class="lead">
+      Cette politique de confidentialité explique comment vos données sont traitées lorsque vous utilisez
+      l'application de compte à rebours <strong>CNDWN</strong> sur iPhone, iPad, Mac et Apple Watch
+      (l'« Application »). CNDWN est conçue pour respecter votre vie privée : vos comptes à rebours restent
+      sur votre appareil et dans votre propre compte iCloud, et nous ne vendons pas vos données ni n'utilisons
+      de traqueurs publicitaires.
+    </p>
+
+    <div class="toc">
+      <h3>Sommaire</h3>
+      <ul>
+        <li><a href="#fr-controller">1. Qui est responsable</a></li>
+        <li><a href="#fr-overview">2. Aperçu et principes</a></li>
+        <li><a href="#fr-local">3. Données stockées sur votre appareil</a></li>
+        <li><a href="#fr-icloud">4. Synchronisation iCloud et partage</a></li>
+        <li><a href="#fr-notifications">5. Notifications</a></li>
+        <li><a href="#fr-calendar">6. Accès au calendrier</a></li>
+        <li><a href="#fr-analytics">7. Statistiques (TelemetryDeck)</a></li>
+        <li><a href="#fr-legal">8. Bases légales</a></li>
+        <li><a href="#fr-retention">9. Conservation des données</a></li>
+        <li><a href="#fr-rights">10. Vos droits</a></li>
+        <li><a href="#fr-children">11. Enfants</a></li>
+        <li><a href="#fr-changes">12. Modifications</a></li>
+        <li><a href="#fr-contact">13. Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 id="fr-controller">1. Qui est responsable (Responsable du traitement)</h2>
+    <p>Le responsable du traitement des données au sens du Règlement général sur la protection des données (RGPD) de l'UE est :</p>
+    <p>
+      Konstantin Schillhahn<br>
+      <span class="placeholder">[Rue et numéro]</span><br>
+      <span class="placeholder">[Code postal et ville]</span><br>
+      <span class="placeholder">[Pays]</span><br>
+      E-mail : <a href="mailto:cndwn@schillan.com">cndwn@schillan.com</a>
+    </p>
+    <p class="muted">Veuillez remplacer les espaces réservés surlignés par votre adresse postale complète avant de publier cette page.</p>
+
+    <h2 id="fr-overview">2. Aperçu et principes</h2>
+    <p>CNDWN repose sur quelques principes de confidentialité simples :</p>
+    <ul>
+      <li><strong>Aucun compte requis.</strong> Vous n'avez pas besoin de vous inscrire ni de vous connecter pour utiliser l'Application.</li>
+      <li><strong>Votre contenu vous appartient.</strong> Les comptes à rebours que vous créez sont stockés localement sur votre appareil et, si vous l'activez, synchronisés via votre compte iCloud personnel — et non sur nos serveurs.</li>
+      <li><strong>Aucune publicité.</strong> L'Application ne contient ni publicités ni SDK de publicité ou de suivi entre applications.</li>
+      <li><strong>Aucune vente de données.</strong> Nous ne vendons ni ne louons jamais vos données personnelles.</li>
+      <li><strong>Uniquement des statistiques respectueuses de la vie privée.</strong> Nous utilisons des statistiques d'utilisation anonymisées pour améliorer l'Application (voir la section 7).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 id="fr-local">3. Données stockées sur votre appareil</h2>
+    <p>
+      Lorsque vous créez des comptes à rebours, le contenu suivant est stocké localement sur votre appareil à
+      l'aide du framework Core Data d'Apple :
+    </p>
+    <ul>
+      <li>Titres des comptes à rebours, émojis, notes et dates/heures que vous saisissez</li>
+      <li>Couleurs, icônes et préférences d'affichage que vous choisissez</li>
+      <li>Paramètres de l'Application et préférences de notification</li>
+    </ul>
+    <p>
+      Ces données sont traitées uniquement sur votre appareil afin de fournir les fonctionnalités essentielles
+      de l'Application. Elles sont partagées avec les widgets CNDWN (écran d'accueil / écran verrouillé) via un
+      conteneur App Group privé sur le même appareil, et peuvent être indexées dans Spotlight afin que vous
+      puissiez rechercher vos comptes à rebours depuis la recherche système.
+    </p>
+
+    <h2 id="fr-icloud">4. Synchronisation iCloud et partage</h2>
+    <p>
+      Si vous êtes connecté à iCloud et que l'iCloud est activé pour CNDWN, vos comptes à rebours sont
+      synchronisés entre vos propres appareils Apple grâce au service <strong>CloudKit</strong> d'Apple. Ces
+      données sont stockées dans <em>votre</em> compte iCloud privé. Nous n'avons aucun accès à votre base de
+      données iCloud privée, et ces données sont régies par la
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">politique de confidentialité d'Apple</a>.
+      Dans ce contexte, Apple agit en tant que sous-traitant / fournisseur d'infrastructure.
+    </p>
+    <h3>Partage et collaboration</h3>
+    <p>
+      CNDWN vous permet de partager, si vous le souhaitez, un compte à rebours avec d'autres personnes afin de
+      compter ensemble. Lorsque vous partagez un compte à rebours, les données correspondantes sont mises à la
+      disposition des personnes que vous invitez via le mécanisme de partage d'Apple CloudKit. Seules les
+      données que vous choisissez activement de partager sont partagées, et vous pouvez arrêter le partage à
+      tout moment depuis l'Application. Toute personne avec qui vous partagez peut voir le contenu du compte à
+      rebours partagé.
+    </p>
+
+    <h2 id="fr-notifications">5. Notifications</h2>
+    <p>
+      Avec votre autorisation, CNDWN peut vous envoyer des notifications pour vous rappeler vos comptes à
+      rebours. La planification et l'envoi de ces rappels sont gérés par le système d'exploitation de votre
+      appareil ; le contenu du rappel est généré à partir des comptes à rebours que vous avez créés. Vous
+      pouvez révoquer l'autorisation de notification à tout moment dans les réglages de votre appareil.
+    </p>
+
+    <h2 id="fr-calendar">6. Accès au calendrier</h2>
+    <p>
+      CNDWN peut, en option, lire les événements de votre calendrier afin que vous puissiez créer rapidement un
+      compte à rebours à partir d'un événement existant (par exemple un anniversaire ou un jour férié). Cet
+      accès n'est utilisé que lorsque vous choisissez d'importer une date et uniquement avec votre autorisation
+      explicite via la demande d'accès au calendrier du système. Les données du calendrier sont traitées sur
+      votre appareil et ne nous sont pas transmises. Vous pouvez révoquer l'accès au calendrier à tout moment
+      dans les réglages de votre appareil.
+    </p>
+
+    <h2 id="fr-analytics">7. Statistiques (TelemetryDeck)</h2>
+    <p>
+      Afin de comprendre comment l'Application est utilisée et de l'améliorer, CNDWN utilise
+      <strong>TelemetryDeck</strong>, un service de statistiques axé sur la confidentialité fourni par
+      <em>TelemetryDeck GmbH</em>, Brunnenstraße 192, 10119 Berlin, Allemagne. TelemetryDeck est conçu pour être
+      conforme au RGPD et traite les données sur des serveurs situés dans l'Union européenne.
+    </p>
+    <p>Ce que nous recevons via TelemetryDeck est <strong>anonymisé</strong> et peut inclure :</p>
+    <ul>
+      <li>Des signaux d'utilisation anonymes (par exemple, le fait que l'Application a été lancée ou qu'une fonctionnalité a été utilisée)</li>
+      <li>Le type d'appareil, le système d'exploitation et sa version</li>
+      <li>La version de l'Application, ainsi que les paramètres de langue et de région</li>
+    </ul>
+    <p>
+      TelemetryDeck n'utilise <strong>pas</strong> de cookies et ne stocke <strong>pas</strong> d'identifiant
+      publicitaire persistant. Un hachage salé et non réversible est utilisé pour estimer approximativement le
+      nombre d'utilisateurs distincts sans identifier une personne en particulier. Les adresses IP ne sont
+      utilisées que de manière transitoire pour dériver des informations anonymes et approximatives, et ne sont
+      pas stockées par TelemetryDeck. Nous ne pouvons pas utiliser ces données pour vous identifier
+      personnellement.
+    </p>
+    <p>
+      TelemetryDeck agit en tant que sous-traitant pour notre compte dans le cadre d'un contrat de
+      sous-traitance (art. 28 du RGPD). Vous trouverez de plus amples informations dans la
+      <a href="https://telemetrydeck.com/privacy/" target="_blank" rel="noopener">politique de confidentialité de TelemetryDeck</a>.
+    </p>
+    <p>
+      <strong>Opposition :</strong> comme ces statistiques sont anonymisées, elles ne peuvent généralement pas
+      vous être associées. Si vous souhaitez néanmoins vous opposer à ce traitement, veuillez nous contacter en
+      utilisant les coordonnées indiquées à la section 13.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 id="fr-legal">8. Bases légales du traitement</h2>
+    <table>
+      <tr><th>Finalité</th><th>Base légale (RGPD)</th></tr>
+      <tr><td>Fourniture des fonctionnalités essentielles de l'Application (création et affichage des comptes à rebours, widgets)</td><td>Art. 6(1)(b) — exécution d'un contrat / à votre demande</td></tr>
+      <tr><td>Synchronisation iCloud et partage</td><td>Art. 6(1)(b) et votre activation de la fonctionnalité</td></tr>
+      <tr><td>Notifications</td><td>Art. 6(1)(a) — votre consentement (autorisation système)</td></tr>
+      <tr><td>Importation du calendrier</td><td>Art. 6(1)(a) — votre consentement (autorisation système)</td></tr>
+      <tr><td>Statistiques anonymisées pour améliorer l'Application</td><td>Art. 6(1)(f) — notre intérêt légitime à maintenir et améliorer l'Application</td></tr>
+    </table>
+
+    <h2 id="fr-retention">9. Conservation des données</h2>
+    <ul>
+      <li><strong>Les données sur l'appareil</strong> sont conservées jusqu'à ce que vous supprimiez le compte à rebours ou désinstalliez l'Application.</li>
+      <li><strong>Les données iCloud</strong> restent dans votre compte iCloud jusqu'à ce que vous les supprimiez ; elles sont contrôlées par vous et par les paramètres de votre identifiant Apple.</li>
+      <li><strong>Les données statistiques</strong> sont conservées par TelemetryDeck sous forme anonymisée, conformément à sa politique de conservation.</li>
+    </ul>
+
+    <h2 id="fr-rights">10. Vos droits</h2>
+    <p>En vertu du RGPD, vous avez le droit de :</p>
+    <ul>
+      <li>Accéder aux données personnelles que nous détenons à votre sujet (Art. 15)</li>
+      <li>Rectifier des données inexactes (Art. 16)</li>
+      <li>Effacer vos données (« droit à l'oubli », Art. 17)</li>
+      <li>Limiter le traitement (Art. 18)</li>
+      <li>Bénéficier de la portabilité des données (Art. 20)</li>
+      <li>Vous opposer à un traitement fondé sur un intérêt légitime (Art. 21)</li>
+      <li>Retirer votre consentement à tout moment, sans que cela n'affecte le traitement antérieur (Art. 7(3))</li>
+    </ul>
+    <p>
+      Comme la majeure partie de votre contenu est stockée localement et dans votre propre compte iCloud, vous
+      pouvez exercer bon nombre de ces droits directement — par exemple en modifiant ou en supprimant des
+      comptes à rebours dans l'Application, ou en gérant vos données iCloud dans les réglages de votre
+      appareil. Pour exercer un droit à notre égard, contactez-nous en utilisant les coordonnées indiquées à la
+      section 13.
+    </p>
+    <p>
+      Vous avez également le droit d'introduire une réclamation auprès d'une autorité de contrôle de la
+      protection des données, en particulier dans l'État membre de l'UE de votre résidence, de votre lieu de
+      travail ou du lieu où la violation présumée a été commise.
+    </p>
+
+    <h2 id="fr-children">11. Enfants</h2>
+    <p>
+      CNDWN est une application destinée à un public général et ne s'adresse pas aux enfants. Nous ne
+      collectons pas sciemment de données personnelles auprès d'enfants. Si vous pensez qu'un enfant nous a
+      communiqué des données personnelles, veuillez nous contacter afin que nous puissions prendre les mesures
+      appropriées.
+    </p>
+
+    <h2 id="fr-changes">12. Modifications de la présente politique</h2>
+    <p>
+      Nous pouvons mettre à jour cette politique de confidentialité de temps à autre, par exemple pour refléter
+      des changements apportés à l'Application ou aux exigences légales. La version actuelle est toujours
+      disponible sur cette page, et la date « Dernière mise à jour » en haut de page indique la date de la
+      dernière révision.
+    </p>
+
+    <h2 id="fr-contact">13. Contact</h2>
+    <p>
+      Si vous avez des questions concernant cette politique de confidentialité ou vos données, contactez :<br>
+      Konstantin Schillhahn —
+      <a href="mailto:cndwn@schillan.com">cndwn@schillan.com</a>
+    </p>
+  </div>
+</section>
+
+<!-- ======================= 日本語 (GDPR) ======================= -->
+<section lang="ja">
+  <div class="card">
+    <p class="lead">
+      このプライバシーポリシーは、iPhone、iPad、Mac、Apple Watch向けのカウントダウンアプリ<strong>CNDWN</strong>(以下「本アプリ」)をご利用いただく際に、お客様のデータがどのように取り扱われるかを説明するものです。CNDWNはプライバシーに配慮した設計になっています。お客様のカウントダウンはお使いの端末とご自身のiCloudアカウント内にとどまり、当社がお客様のデータを販売したり、広告トラッカーを使用したりすることはありません。
+    </p>
+
+    <div class="toc">
+      <h3>目次</h3>
+      <ul>
+        <li><a href="#ja-controller">1. 管理者について</a></li>
+        <li><a href="#ja-overview">2. 概要と基本方針</a></li>
+        <li><a href="#ja-local">3. 端末に保存されるデータ</a></li>
+        <li><a href="#ja-icloud">4. iCloud同期と共有</a></li>
+        <li><a href="#ja-notifications">5. 通知</a></li>
+        <li><a href="#ja-calendar">6. カレンダーへのアクセス</a></li>
+        <li><a href="#ja-analytics">7. 分析(TelemetryDeck)</a></li>
+        <li><a href="#ja-legal">8. 法的根拠</a></li>
+        <li><a href="#ja-retention">9. データの保持</a></li>
+        <li><a href="#ja-rights">10. お客様の権利</a></li>
+        <li><a href="#ja-children">11. 子どもについて</a></li>
+        <li><a href="#ja-changes">12. 変更</a></li>
+        <li><a href="#ja-contact">13. お問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 id="ja-controller">1. 管理者について(データ管理者)</h2>
+    <p>EU一般データ保護規則(GDPR)に基づくデータ処理の管理者は、以下のとおりです。</p>
+    <p>
+      Konstantin Schillhahn<br>
+      <span class="placeholder">[番地・建物名]</span><br>
+      <span class="placeholder">[郵便番号・市区町村]</span><br>
+      <span class="placeholder">[国名]</span><br>
+      メール: <a href="mailto:cndwn@schillan.com">cndwn@schillan.com</a>
+    </p>
+    <p class="muted">公開前に、ハイライトされたプレースホルダーをご自身の完全な住所に置き換えてください。</p>
+
+    <h2 id="ja-overview">2. 概要と基本方針</h2>
+    <p>CNDWNはいくつかのシンプルなプライバシー原則に基づいて設計されています。</p>
+    <ul>
+      <li><strong>アカウント登録不要。</strong> 本アプリの利用に登録やログインは必要ありません。</li>
+      <li><strong>コンテンツはお客様のものです。</strong> 作成したカウントダウンはお使いの端末にローカル保存され、有効にした場合はご自身の個人的なiCloudアカウントを通じて同期されます。当社のサーバーには保存されません。</li>
+      <li><strong>広告なし。</strong> 本アプリには広告や、アプリをまたいだ広告・トラッキングSDKは含まれていません。</li>
+      <li><strong>データ販売なし。</strong> お客様の個人データを販売または貸与することは一切ありません。</li>
+      <li><strong>プライバシーに配慮した分析のみ。</strong> 本アプリの改善のため、匿名化された分析データを利用します(第7項参照)。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 id="ja-local">3. 端末に保存されるデータ</h2>
+    <p>
+      カウントダウンを作成すると、以下の内容がAppleのCore Dataフレームワークを使用してお使いの端末にローカル保存されます。
+    </p>
+    <ul>
+      <li>入力したカウントダウンのタイトル、絵文字、メモ、日付・時刻</li>
+      <li>選択した色、アイコン、表示設定</li>
+      <li>アプリの設定および通知設定</li>
+    </ul>
+    <p>
+      これらのデータは、本アプリの中核機能を提供するためにお使いの端末上でのみ処理されます。同じ端末上のプライベートなApp Groupコンテナを通じてCNDWNのホーム画面/ロック画面ウィジェットと共有され、システム検索からカウントダウンを検索できるようSpotlightにインデックスされる場合があります。
+    </p>
+
+    <h2 id="ja-icloud">4. iCloud同期と共有</h2>
+    <p>
+      iCloudにサインインし、CNDWNでiCloudが有効になっている場合、Appleの<strong>CloudKit</strong>サービスを使用して、ご自身のApple製デバイス間でカウントダウンが同期されます。このデータは<em>お客様ご自身の</em>プライベートなiCloudアカウントに保存されます。当社はお客様のプライベートなiCloudデータベースにアクセスすることはできず、データは
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Appleのプライバシーポリシー</a>に準拠します。
+      この文脈において、Appleは処理者/インフラプロバイダーとして機能します。
+    </p>
+    <h3>共有とコラボレーション</h3>
+    <p>
+      CNDWNでは、他の人と一緒にカウントダウンできるよう、任意でカウントダウンを共有することができます。カウントダウンを共有すると、該当するカウントダウンのデータがAppleのCloudKit共有機能を通じて、招待した相手が利用できるようになります。共有されるのは、お客様が積極的に共有を選択したデータのみであり、アプリ内からいつでも共有を停止できます。共有相手は、共有されたカウントダウンの内容を閲覧できる場合があります。
+    </p>
+
+    <h2 id="ja-notifications">5. 通知</h2>
+    <p>
+      許可をいただいた場合、CNDWNはカウントダウンを知らせる通知を送信できます。これらのリマインダーのスケジュール設定と配信は、お使いの端末のオペレーティングシステムによって処理され、リマインダーの内容は作成したカウントダウンから生成されます。通知の許可は、端末の設定からいつでも取り消すことができます。
+    </p>
+
+    <h2 id="ja-calendar">6. カレンダーへのアクセス</h2>
+    <p>
+      CNDWNは、既存の予定(誕生日や祝日など)からすばやくカウントダウンを作成できるよう、任意でカレンダーの予定を読み取ることができます。このアクセスは、日付をインポートすることを選択した場合にのみ、かつシステムのカレンダーアクセス許可を通じた明示的な許可がある場合にのみ使用されます。カレンダーデータはお使いの端末上で処理され、当社に送信されることはありません。カレンダーへのアクセスは、端末の設定からいつでも取り消すことができます。
+    </p>
+
+    <h2 id="ja-analytics">7. 分析(TelemetryDeck)</h2>
+    <p>
+      本アプリの利用状況を把握し改善するため、CNDWNは<em>TelemetryDeck GmbH</em>(Brunnenstraße 192, 10119 Berlin, Germany)が提供するプライバシー重視の分析サービス<strong>TelemetryDeck</strong>を使用しています。TelemetryDeckはGDPR準拠を前提に設計されており、欧州連合(EU)内のサーバーでデータを処理します。
+    </p>
+    <p>TelemetryDeckを通じて当社が受け取る情報は<strong>匿名化</strong>されており、以下が含まれる場合があります。</p>
+    <ul>
+      <li>匿名の利用シグナル(例:アプリが起動された、特定の機能が使用されたなど)</li>
+      <li>端末の種類、オペレーティングシステムとそのバージョン</li>
+      <li>アプリのバージョン、言語および地域設定</li>
+    </ul>
+    <p>
+      TelemetryDeckはCookieを使用<strong>せず</strong>、永続的な広告識別子も保存<strong>しません</strong>。個々のユーザーを特定することなく、おおよその一意ユーザー数を推定するために、不可逆でソルト付きのハッシュが使用されます。IPアドレスは、大まかで匿名の情報を導き出すために一時的にのみ使用され、TelemetryDeckによって保存されることはありません。当社はこのデータを用いてお客様個人を特定することはできません。
+    </p>
+    <p>
+      TelemetryDeckは、データ処理契約(GDPR第28条)に基づき、当社に代わって処理者として機能します。詳細については、
+      <a href="https://telemetrydeck.com/privacy/" target="_blank" rel="noopener">TelemetryDeckのプライバシーポリシー</a>をご覧ください。
+    </p>
+    <p>
+      <strong>異議申し立て:</strong> これらの統計データは匿名化されているため、通常はお客様個人と結び付けることはできません。それでもこの処理に異議を申し立てたい場合は、第13項に記載の連絡先までご連絡ください。
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 id="ja-legal">8. 処理の法的根拠</h2>
+    <table>
+      <tr><th>目的</th><th>法的根拠(GDPR)</th></tr>
+      <tr><td>本アプリの中核機能の提供(カウントダウンの作成・表示、ウィジェット)</td><td>Art. 6(1)(b) — 契約の履行/お客様のご依頼</td></tr>
+      <tr><td>iCloud同期と共有</td><td>Art. 6(1)(b)およびお客様による当該機能の有効化</td></tr>
+      <tr><td>通知</td><td>Art. 6(1)(a) — お客様の同意(システムの許可)</td></tr>
+      <tr><td>カレンダーのインポート</td><td>Art. 6(1)(a) — お客様の同意(システムの許可)</td></tr>
+      <tr><td>本アプリの改善のための匿名化された分析データ</td><td>Art. 6(1)(f) — 本アプリの維持・改善に関する当社の正当な利益</td></tr>
+    </table>
+
+    <h2 id="ja-retention">9. データの保持</h2>
+    <ul>
+      <li><strong>端末上のデータ</strong>は、カウントダウンを削除するか本アプリをアンインストールするまで保持されます。</li>
+      <li><strong>iCloudデータ</strong>は、削除するまでお客様のiCloudアカウントに保持され、お客様ご自身とApple IDの設定によって管理されます。</li>
+      <li><strong>分析データ</strong>は、TelemetryDeckの保持ポリシーに従い、匿名化された形式で保持されます。</li>
+    </ul>
+
+    <h2 id="ja-rights">10. お客様の権利</h2>
+    <p>GDPRのもと、お客様には以下の権利があります。</p>
+    <ul>
+      <li>当社が保有するお客様の個人データへのアクセス(Art. 15)</li>
+      <li>不正確なデータの訂正(Art. 16)</li>
+      <li>データの消去(「忘れられる権利」、Art. 17)</li>
+      <li>処理の制限(Art. 18)</li>
+      <li>データポータビリティ(Art. 20)</li>
+      <li>正当な利益に基づく処理への異議申し立て(Art. 21)</li>
+      <li>それまでの処理の適法性に影響を与えることなく、いつでも同意を撤回すること(Art. 7(3))</li>
+    </ul>
+    <p>
+      お客様のコンテンツの大部分はローカルおよびご自身のiCloudアカウントに保存されているため、これらの権利の多くは直接行使することができます。例えば、アプリ内でカウントダウンを編集・削除したり、端末の設定でiCloudデータを管理したりすることができます。当社に対して権利を行使する場合は、第13項に記載の連絡先までご連絡ください。
+    </p>
+    <p>
+      また、特にお客様の居住地、勤務地、または申し立てられた侵害が発生した場所のEU加盟国の監督機関に対して、苦情を申し立てる権利もあります。
+    </p>
+
+    <h2 id="ja-children">11. 子どもについて</h2>
+    <p>
+      CNDWNは一般向けのアプリであり、子どもを対象としたものではありません。当社は子どもの個人データを意図的に収集することはありません。子どもが個人データを提供したと思われる場合は、適切な措置を講じることができるよう、当社までご連絡ください。
+    </p>
+
+    <h2 id="ja-changes">12. 本ポリシーの変更</h2>
+    <p>
+      当社は、本アプリの変更や法的要件を反映するためなど、本プライバシーポリシーを随時更新することがあります。最新版は常にこのページで公開されており、ページ上部の「最終更新日」は最後に改訂された日付を示しています。
+    </p>
+
+    <h2 id="ja-contact">13. お問い合わせ</h2>
+    <p>
+      本プライバシーポリシーまたはお客様のデータについてご質問がある場合は、以下までご連絡ください。<br>
+      Konstantin Schillhahn —
+      <a href="mailto:cndwn@schillan.com">cndwn@schillan.com</a>
+    </p>
+  </div>
+</section>
+
+<!-- ======================= ITALIANO (GDPR) ======================= -->
+<section lang="it">
+  <div class="card">
+    <p class="lead">
+      La presente informativa sulla privacy spiega come vengono trattati i tuoi dati quando utilizzi l'app per
+      il conto alla rovescia <strong>CNDWN</strong> su iPhone, iPad, Mac e Apple Watch (l'"App"). CNDWN è
+      progettata per rispettare la privacy: i tuoi conti alla rovescia restano sul tuo dispositivo e nel tuo
+      account iCloud personale, e non vendiamo i tuoi dati né utilizziamo tracker pubblicitari.
+    </p>
+
+    <div class="toc">
+      <h3>Indice</h3>
+      <ul>
+        <li><a href="#it-controller">1. Chi è responsabile</a></li>
+        <li><a href="#it-overview">2. Panoramica e principi</a></li>
+        <li><a href="#it-local">3. Dati memorizzati sul tuo dispositivo</a></li>
+        <li><a href="#it-icloud">4. Sincronizzazione iCloud e condivisione</a></li>
+        <li><a href="#it-notifications">5. Notifiche</a></li>
+        <li><a href="#it-calendar">6. Accesso al calendario</a></li>
+        <li><a href="#it-analytics">7. Statistiche (TelemetryDeck)</a></li>
+        <li><a href="#it-legal">8. Basi giuridiche</a></li>
+        <li><a href="#it-retention">9. Conservazione dei dati</a></li>
+        <li><a href="#it-rights">10. I tuoi diritti</a></li>
+        <li><a href="#it-children">11. Minori</a></li>
+        <li><a href="#it-changes">12. Modifiche</a></li>
+        <li><a href="#it-contact">13. Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 id="it-controller">1. Chi è responsabile (Titolare del trattamento)</h2>
+    <p>Il titolare del trattamento dei dati ai sensi del Regolamento Generale sulla Protezione dei Dati (GDPR) dell'UE è:</p>
+    <p>
+      Konstantin Schillhahn<br>
+      <span class="placeholder">[Via e numero civico]</span><br>
+      <span class="placeholder">[Codice postale e città]</span><br>
+      <span class="placeholder">[Paese]</span><br>
+      Email: <a href="mailto:cndwn@schillan.com">cndwn@schillan.com</a>
+    </p>
+    <p class="muted">Prima della pubblicazione, sostituisci i segnaposto evidenziati con il tuo indirizzo postale completo.</p>
+
+    <h2 id="it-overview">2. Panoramica e principi</h2>
+    <p>CNDWN si basa su alcuni semplici principi di tutela della privacy:</p>
+    <ul>
+      <li><strong>Nessun account richiesto.</strong> Non è necessario registrarsi o accedere per utilizzare l'App.</li>
+      <li><strong>I tuoi contenuti restano tuoi.</strong> I conti alla rovescia che crei vengono memorizzati localmente sul tuo dispositivo e, se abilitata, sincronizzati tramite il tuo account iCloud personale — non sui nostri server.</li>
+      <li><strong>Nessuna pubblicità.</strong> L'App non contiene pubblicità né SDK pubblicitari o di tracciamento tra app.</li>
+      <li><strong>Nessuna vendita di dati.</strong> Non vendiamo né cediamo mai in locazione i tuoi dati personali.</li>
+      <li><strong>Solo statistiche rispettose della privacy.</strong> Utilizziamo statistiche di utilizzo anonimizzate per migliorare l'App (vedi la sezione 7).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 id="it-local">3. Dati memorizzati sul tuo dispositivo</h2>
+    <p>
+      Quando crei conti alla rovescia, i seguenti contenuti vengono memorizzati localmente sul tuo dispositivo
+      utilizzando il framework Core Data di Apple:
+    </p>
+    <ul>
+      <li>Titoli dei conti alla rovescia, emoji, note e date/orari che inserisci</li>
+      <li>Colori, icone e preferenze di visualizzazione che scegli</li>
+      <li>Impostazioni dell'App e preferenze di notifica</li>
+    </ul>
+    <p>
+      Questi dati vengono elaborati esclusivamente sul tuo dispositivo per fornire le funzionalità principali
+      dell'App. Vengono condivisi con i widget CNDWN (schermata Home / schermata di blocco) tramite un
+      contenitore App Group privato sullo stesso dispositivo e possono essere indicizzati in Spotlight in modo
+      da poter cercare i tuoi conti alla rovescia dalla ricerca di sistema.
+    </p>
+
+    <h2 id="it-icloud">4. Sincronizzazione iCloud e condivisione</h2>
+    <p>
+      Se hai eseguito l'accesso a iCloud e iCloud è abilitato per CNDWN, i tuoi conti alla rovescia vengono
+      sincronizzati tra i tuoi dispositivi Apple tramite il servizio <strong>CloudKit</strong> di Apple. Questi
+      dati vengono memorizzati nel <em>tuo</em> account iCloud privato. Non abbiamo alcun accesso al tuo
+      database iCloud privato e i dati sono disciplinati dalla
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Informativa sulla privacy di Apple</a>.
+      In questo contesto, Apple agisce come responsabile del trattamento / fornitore di infrastruttura.
+    </p>
+    <h3>Condivisione e collaborazione</h3>
+    <p>
+      CNDWN ti consente facoltativamente di condividere un conto alla rovescia con altre persone in modo da
+      fare il conto alla rovescia insieme. Quando condividi un conto alla rovescia, i relativi dati vengono resi
+      disponibili alle persone che inviti tramite il meccanismo di condivisione di Apple CloudKit. Vengono
+      condivisi solo i dati che scegli attivamente di condividere e puoi interrompere la condivisione in
+      qualsiasi momento dall'interno dell'App. Chiunque tu inviti alla condivisione potrà vedere i contenuti del
+      conto alla rovescia condiviso.
+    </p>
+
+    <h2 id="it-notifications">5. Notifiche</h2>
+    <p>
+      Con il tuo permesso, CNDWN può inviarti notifiche per ricordarti i tuoi conti alla rovescia. La
+      pianificazione e la consegna di questi promemoria sono gestite dal sistema operativo del tuo dispositivo;
+      il contenuto del promemoria viene generato a partire dai conti alla rovescia che hai creato. Puoi revocare
+      il permesso per le notifiche in qualsiasi momento nelle Impostazioni del tuo dispositivo.
+    </p>
+
+    <h2 id="it-calendar">6. Accesso al calendario</h2>
+    <p>
+      CNDWN può, facoltativamente, leggere gli eventi dal tuo calendario in modo che tu possa creare
+      rapidamente un conto alla rovescia a partire da un evento esistente (ad esempio un compleanno o una
+      festività). Questo accesso viene utilizzato solo quando scegli di importare una data e solo con il tuo
+      permesso esplicito tramite la richiesta di accesso al calendario del sistema. I dati del calendario
+      vengono elaborati sul tuo dispositivo e non ci vengono trasmessi. Puoi revocare l'accesso al calendario
+      in qualsiasi momento nelle Impostazioni del tuo dispositivo.
+    </p>
+
+    <h2 id="it-analytics">7. Statistiche (TelemetryDeck)</h2>
+    <p>
+      Per capire come viene utilizzata l'App e per migliorarla, CNDWN utilizza
+      <strong>TelemetryDeck</strong>, un servizio di statistiche orientato alla privacy fornito da
+      <em>TelemetryDeck GmbH</em>, Brunnenstraße 192, 10119 Berlin, Germany. TelemetryDeck è progettato per
+      essere conforme al GDPR ed elabora i dati su server situati nell'Unione Europea.
+    </p>
+    <p>Ciò che riceviamo tramite TelemetryDeck è <strong>anonimizzato</strong> e può includere:</p>
+    <ul>
+      <li>Segnali di utilizzo anonimi (ad es. il fatto che l'App sia stata avviata o che sia stata usata una funzione)</li>
+      <li>Tipo di dispositivo, sistema operativo e versione</li>
+      <li>Versione dell'App, lingua e impostazioni regionali</li>
+    </ul>
+    <p>
+      TelemetryDeck <strong>non</strong> utilizza cookie e <strong>non</strong> memorizza un identificatore
+      pubblicitario persistente. Viene utilizzato un hash salato e non reversibile per stimare in modo
+      approssimativo il numero di utenti distinti senza identificare alcuna persona. Gli indirizzi IP vengono
+      utilizzati solo in modo transitorio per derivare informazioni approssimative e anonime e non vengono
+      memorizzati da TelemetryDeck. Non possiamo utilizzare questi dati per identificarti personalmente.
+    </p>
+    <p>
+      TelemetryDeck agisce come responsabile del trattamento per nostro conto in base a un accordo sul
+      trattamento dei dati (Art. 28 GDPR). Ulteriori informazioni sono disponibili nella
+      <a href="https://telemetrydeck.com/privacy/" target="_blank" rel="noopener">Informativa sulla privacy di TelemetryDeck</a>.
+    </p>
+    <p>
+      <strong>Opposizione:</strong> poiché queste statistiche sono anonimizzate, generalmente non possono essere
+      ricondotte a te. Se desideri comunque opporti a questo trattamento, contattaci utilizzando i recapiti
+      indicati nella sezione 13.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 id="it-legal">8. Basi giuridiche del trattamento</h2>
+    <table>
+      <tr><th>Finalità</th><th>Base giuridica (GDPR)</th></tr>
+      <tr><td>Fornitura delle funzionalità principali dell'App (creazione e visualizzazione dei conti alla rovescia, widget)</td><td>Art. 6(1)(b) — esecuzione di un contratto / su tua richiesta</td></tr>
+      <tr><td>Sincronizzazione iCloud e condivisione</td><td>Art. 6(1)(b) e la tua attivazione della funzione</td></tr>
+      <tr><td>Notifiche</td><td>Art. 6(1)(a) — il tuo consenso (autorizzazione di sistema)</td></tr>
+      <tr><td>Importazione del calendario</td><td>Art. 6(1)(a) — il tuo consenso (autorizzazione di sistema)</td></tr>
+      <tr><td>Statistiche anonimizzate per migliorare l'App</td><td>Art. 6(1)(f) — il nostro legittimo interesse a mantenere e migliorare l'App</td></tr>
+    </table>
+
+    <h2 id="it-retention">9. Conservazione dei dati</h2>
+    <ul>
+      <li><strong>I dati sul dispositivo</strong> restano fino a quando non elimini il conto alla rovescia o disinstalli l'App.</li>
+      <li><strong>I dati iCloud</strong> restano nel tuo account iCloud fino a quando non li elimini; sono controllati da te e dalle impostazioni del tuo Apple ID.</li>
+      <li><strong>I dati statistici</strong> vengono conservati da TelemetryDeck in forma anonimizzata secondo la loro politica di conservazione.</li>
+    </ul>
+
+    <h2 id="it-rights">10. I tuoi diritti</h2>
+    <p>Ai sensi del GDPR hai il diritto di:</p>
+    <ul>
+      <li>Accedere ai dati personali che deteniamo su di te (Art. 15)</li>
+      <li>Rettificare dati inesatti (Art. 16)</li>
+      <li>Cancellare i tuoi dati ("diritto all'oblio", Art. 17)</li>
+      <li>Limitare il trattamento (Art. 18)</li>
+      <li>Ottenere la portabilità dei dati (Art. 20)</li>
+      <li>Opporti al trattamento basato su legittimo interesse (Art. 21)</li>
+      <li>Revocare il consenso in qualsiasi momento, senza pregiudicare la liceità del trattamento già effettuato (Art. 7(3))</li>
+    </ul>
+    <p>
+      Poiché la maggior parte dei tuoi contenuti è memorizzata localmente e nel tuo account iCloud personale,
+      puoi esercitare molti di questi diritti direttamente — ad esempio modificando o eliminando conti alla
+      rovescia nell'App, oppure gestendo i tuoi dati iCloud nelle impostazioni del dispositivo. Per esercitare
+      un diritto nei nostri confronti, contattaci utilizzando i recapiti indicati nella sezione 13.
+    </p>
+    <p>
+      Hai inoltre il diritto di presentare un reclamo a un'autorità di controllo per la protezione dei dati, in
+      particolare nello Stato membro dell'UE in cui risiedi, lavori o in cui si è verificata la presunta
+      violazione.
+    </p>
+
+    <h2 id="it-children">11. Minori</h2>
+    <p>
+      CNDWN è un'app per un pubblico generico e non è rivolta ai minori. Non raccogliamo consapevolmente dati
+      personali dei minori. Se ritieni che un minore abbia fornito dati personali, contattaci in modo da poter
+      adottare le misure appropriate.
+    </p>
+
+    <h2 id="it-changes">12. Modifiche alla presente informativa</h2>
+    <p>
+      Potremmo aggiornare periodicamente questa informativa sulla privacy, ad esempio per riflettere modifiche
+      apportate all'App o ai requisiti legali. La versione attuale è sempre disponibile in questa pagina e la
+      data di "Ultimo aggiornamento" in alto indica quando è stata revisionata l'ultima volta.
+    </p>
+
+    <h2 id="it-contact">13. Contatti</h2>
+    <p>
+      Per qualsiasi domanda su questa informativa sulla privacy o sui tuoi dati, contatta:<br>
+      Konstantin Schillhahn —
+      <a href="mailto:cndwn@schillan.com">cndwn@schillan.com</a>
+    </p>
+  </div>
+</section>
+
 </main>
 
 <footer class="site">
@@ -847,9 +1434,9 @@
       CNDWN
     </div>
     <div class="flinks">
-      <a href="/cndwn/"><span lang="en">Home</span><span lang="de">Startseite</span><span lang="es">Inicio</span></a>
-      <a href="/cndwn/#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span></a>
-      <a href="/cndwn/#tutorials"><span lang="en">Tutorials</span><span lang="de">Anleitungen</span><span lang="es">Tutoriales</span></a>
+      <a href="/cndwn/"><span lang="en">Home</span><span lang="de">Startseite</span><span lang="es">Inicio</span><span lang="fr">Accueil</span><span lang="ja">ホーム</span><span lang="it">Home</span></a>
+      <a href="/cndwn/#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span><span lang="fr">Fonctionnalités</span><span lang="ja">機能</span><span lang="it">Funzionalità</span></a>
+      <a href="/cndwn/#tutorials"><span lang="en">Tutorials</span><span lang="de">Anleitungen</span><span lang="es">Tutoriales</span><span lang="fr">Tutoriels</span><span lang="ja">チュートリアル</span><span lang="it">Tutorial</span></a>
       <a href="/cndwn/#faq">FAQ</a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>

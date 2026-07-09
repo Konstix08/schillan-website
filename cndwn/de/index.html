@@ -10,6 +10,9 @@
 <link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/">
 <link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/">
 <link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/">
+<link rel="alternate" hreflang="fr" href="https://schillan.com/cndwn/fr/">
+<link rel="alternate" hreflang="ja" href="https://schillan.com/cndwn/ja/">
+<link rel="alternate" hreflang="it" href="https://schillan.com/cndwn/it/">
 <link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="keywords" content="countdown app, countup app, countdown widget, progress bar, iPhone countdown, days until, event countdown, Lock Screen widget, Home Screen widget, StandBy widget, Live Activity, iCloud countdown, Apple Watch countdown, birthday countdown, holiday countdown, vacation countdown, calendar countdown, reminders countdown">
@@ -30,6 +33,9 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
 
@@ -269,9 +275,12 @@
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
 
   /* ---------- Language visibility ---------- */
-  body[data-lang="en"] [lang="de"], body[data-lang="en"] [lang="es"] { display: none !important; }
-  body[data-lang="de"] [lang="en"], body[data-lang="de"] [lang="es"] { display: none !important; }
-  body[data-lang="es"] [lang="en"], body[data-lang="es"] [lang="de"] { display: none !important; }
+  body[data-lang="en"] [lang]:not([lang="en"]),
+  body[data-lang="de"] [lang]:not([lang="de"]),
+  body[data-lang="es"] [lang]:not([lang="es"]),
+  body[data-lang="fr"] [lang]:not([lang="fr"]),
+  body[data-lang="ja"] [lang]:not([lang="ja"]),
+  body[data-lang="it"] [lang]:not([lang="it"]) { display: none !important; }
 
   /* ---------- Nav ---------- */
   nav.site {
@@ -304,12 +313,12 @@
   .lang-switch summary::-webkit-details-marker { display: none; }
   .lang-switch summary::after {
     content: ""; display: block; flex: none;
-    width: 9px; height: 9px;
+    width: 10px; height: 10px;
     background: var(--muted);
-    clip-path: polygon(20% 30%, 50% 70%, 80% 30%, 80% 40%, 50% 60%, 20% 40%);
+    clip-path: polygon(18% 26%, 50% 74%, 82% 26%, 82% 41%, 50% 59%, 18% 41%);
   }
   .lang-switch[open] summary::after {
-    clip-path: polygon(20% 70%, 50% 30%, 80% 70%, 80% 60%, 50% 40%, 20% 60%);
+    clip-path: polygon(18% 74%, 50% 26%, 82% 74%, 82% 59%, 50% 41%, 18% 59%);
   }
   .lang-switch .lang-menu {
     position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
@@ -493,6 +502,9 @@
           <a href="/cndwn/" data-lang="en">English</a>
           <a href="/cndwn/de/" data-lang="de" class="active" aria-current="page">Deutsch</a>
           <a href="/cndwn/es/" data-lang="es">Español</a>
+          <a href="/cndwn/fr/" data-lang="fr">Français</a>
+          <a href="/cndwn/ja/" data-lang="ja">日本語</a>
+          <a href="/cndwn/it/" data-lang="it">Italiano</a>
         </div>
       </details>
     </div>
@@ -854,7 +866,11 @@
   if (saved) return;
 
   var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var detected = nav.indexOf('de') === 0 ? 'de' : (nav.indexOf('es') === 0 ? 'es' : 'en');
+  var supported = ['de', 'es', 'fr', 'ja', 'it'];
+  var detected = 'en';
+  for (var i = 0; i < supported.length; i++) {
+    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
+  }
   try { localStorage.setItem(KEY, detected); } catch (e) {}
   if (detected === document.documentElement.lang) return;
 

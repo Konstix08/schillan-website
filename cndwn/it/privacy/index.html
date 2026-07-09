@@ -1,0 +1,534 @@
+<!DOCTYPE html><html lang="it"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNDWN — Informativa sulla privacy</title>
+<meta name="description" content="Informativa sulla privacy dell'app di conto alla rovescia CNDWN (GDPR). Nessuna pubblicità, nessun tracciamento: i tuoi conti alla rovescia restano sul tuo dispositivo e nel tuo iCloud personale.">
+<meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
+<meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://schillan.com/cndwn/it/privacy/">
+<link rel="alternate" hreflang="en" href="https://schillan.com/cndwn/privacy/">
+<link rel="alternate" hreflang="de" href="https://schillan.com/cndwn/de/privacy/">
+<link rel="alternate" hreflang="es" href="https://schillan.com/cndwn/es/privacy/">
+<link rel="alternate" hreflang="fr" href="https://schillan.com/cndwn/fr/privacy/">
+<link rel="alternate" hreflang="ja" href="https://schillan.com/cndwn/ja/privacy/">
+<link rel="alternate" hreflang="it" href="https://schillan.com/cndwn/it/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://schillan.com/cndwn/privacy/">
+
+
+
+
+<link rel="icon" type="image/png" href="/cndwn/img/app-icon.png">
+<link rel="apple-touch-icon" href="/cndwn/img/app-icon.png">
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --bg-2: #ffffff;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --muted: #6e6e73;
+    --accent: #5b6cff;
+    --accent-2: #9b5bff;
+    --border: #e3e3e8;
+    --code-bg: #f0f0f4;
+    --maxw: 1080px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0b0f;
+      --bg-2: #121218;
+      --card: #17171d;
+      --text: #f5f5f7;
+      --muted: #9a9aa2;
+      --accent: #7d8bff;
+      --accent-2: #b885ff;
+      --border: #26262e;
+      --code-bg: #22222a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+  /* language visibility */
+  body[data-lang="en"] [lang]:not([lang="en"]),
+  body[data-lang="de"] [lang]:not([lang="de"]),
+  body[data-lang="es"] [lang]:not([lang="es"]),
+  body[data-lang="fr"] [lang]:not([lang="fr"]),
+  body[data-lang="ja"] [lang]:not([lang="ja"]),
+  body[data-lang="it"] [lang]:not([lang="it"]) { display: none !important; }
+
+  /* ---------- Nav (shared with landing page) ---------- */
+  nav.site {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: 0.16em; font-size: 21px; color: var(--text); }
+  .brand:hover { text-decoration: none; }
+  .brand .mark { width: 34px; height: 34px; border-radius: 9px; display: inline-block; box-shadow: 0 2px 8px rgba(0,0,0,0.16); object-fit: cover; }
+  .nav-right { display: flex; align-items: center; gap: 22px; }
+  .nav-links { display: flex; align-items: center; gap: 24px; font-size: 15px; }
+  .nav-links a { color: var(--muted); font-weight: 500; }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 760px) { .nav-links { display: none; } }
+  .lang-switch { position: relative; }
+  .lang-switch summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: inline-flex; align-items: center; gap: 6px;
+    background: color-mix(in srgb, var(--muted) 16%, transparent); color: var(--text);
+    font: inherit; font-weight: 600; font-size: 13px;
+    padding: 7px 14px; border-radius: 999px; line-height: 1;
+  }
+  .lang-switch summary::-webkit-details-marker { display: none; }
+  .lang-switch summary::after {
+    content: ""; display: block; flex: none;
+    width: 10px; height: 10px;
+    background: var(--muted);
+    clip-path: polygon(18% 26%, 50% 74%, 82% 26%, 82% 41%, 50% 59%, 18% 41%);
+  }
+  .lang-switch[open] summary::after {
+    clip-path: polygon(18% 74%, 50% 26%, 82% 74%, 82% 59%, 50% 41%, 18% 59%);
+  }
+  .lang-switch .lang-menu {
+    position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
+    display: flex; flex-direction: column; min-width: 150px; gap: 2px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18); padding: 6px;
+  }
+  .lang-switch .lang-menu a, .lang-switch .lang-menu button {
+    display: block; width: 100%; text-align: left; border: none; background: transparent; cursor: pointer;
+    color: var(--text); font: inherit; font-size: 14px; font-weight: 500;
+    padding: 9px 12px; border-radius: 9px; text-decoration: none;
+  }
+  .lang-switch .lang-menu a:hover, .lang-switch .lang-menu button:hover,
+  .lang-switch .lang-menu a:focus-visible, .lang-switch .lang-menu button:focus-visible {
+    background: color-mix(in srgb, var(--muted) 14%, transparent); text-decoration: none;
+  }
+  .lang-switch .lang-menu a.active, .lang-switch .lang-menu button.active { color: var(--accent); font-weight: 700; }
+
+  /* ---------- Page head ---------- */
+  .page-head { position: relative; text-align: center; padding: 68px 0 30px; overflow: hidden; }
+  .page-head::before {
+    content: ""; position: absolute; inset: -60% -20% auto -20%; height: 460px;
+    background: radial-gradient(55% 60% at 50% 0%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%),
+                radial-gradient(45% 50% at 82% 8%, color-mix(in srgb, var(--accent-2) 26%, transparent), transparent 70%);
+    z-index: 0; pointer-events: none;
+  }
+  .page-head .wrap { position: relative; z-index: 1; }
+  .page-head .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+  }
+  .page-head h1 {
+    font-size: clamp(30px, 5vw, 46px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 800; margin: 0 auto 14px; max-width: 20ch;
+  }
+  .page-head h1 .grad {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .page-head .sub { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); max-width: 52ch; margin: 0 auto 12px; }
+  .page-head .updated { color: var(--muted); font-size: 14px; margin: 0; }
+
+  /* ---------- Content ---------- */
+  main { max-width: 840px; margin: 0 auto; padding: 20px 22px 40px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+    padding: 30px 30px 12px; margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  h2 { font-size: 22px; letter-spacing: -0.01em; margin: 34px 0 10px; padding-top: 6px; }
+  .card > h2:first-child { margin-top: 6px; }
+  h3 { font-size: 17px; margin: 22px 0 6px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  code {
+    background: var(--code-bg); padding: 2px 6px; border-radius: 6px; font-size: 0.9em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .muted { color: var(--muted); }
+  .lead { font-size: 18px; }
+  .placeholder {
+    background: color-mix(in srgb, #ffc400 16%, transparent);
+    border: 1px dashed #d9a300; border-radius: 8px; padding: 2px 6px; font-weight: 600;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  .toc {
+    font-size: 15px; background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: 14px; padding: 6px 22px 14px; margin-top: 20px;
+  }
+  .toc h3 { margin: 16px 0 8px; }
+  .toc ul { list-style: none; padding-left: 0; columns: 2; column-gap: 28px; }
+  @media (max-width: 560px) { .toc ul { columns: 1; } }
+  .toc li { margin: 5px 0; break-inside: avoid; }
+
+  /* ---------- Footer (shared with landing page) ---------- */
+  footer.site { border-top: 1px solid var(--border); padding: 44px 0; color: var(--muted); font-size: 14.5px; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: center; }
+  footer.site .flinks { display: flex; gap: 22px; flex-wrap: wrap; }
+  footer.site a { color: var(--muted); }
+  footer.site a:hover { color: var(--text); }
+  footer.site .brand { font-size: 16px; }
+</style>
+</head>
+<body>
+
+<nav class="site">
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a class="brand" href="/cndwn/it/">
+        <img class="mark" src="/cndwn/img/app-icon.png" width="34" height="34" alt="CNDWN app icon">
+        CNDWN
+      </a>
+      <a href="/it/" style="color:var(--muted);font-size:12px;font-weight:600;white-space:nowrap;">by Schillan</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/cndwn/it/#features"><span lang="it">Funzionalità</span></a>
+        <a href="/cndwn/it/#how"><span lang="it">Come funziona</span></a>
+        <a href="/cndwn/it/#tutorials"><span lang="it">Tutorial</span></a>
+        <a href="/cndwn/it/#faq">FAQ</a>
+      </div>
+      <details class="lang-switch">
+        <summary aria-label="Change language"><span data-lang-label="">IT</span></summary>
+        <div class="lang-menu">
+          <a href="/cndwn/privacy/" data-lang="en">English</a>
+          <a href="/cndwn/de/privacy/" data-lang="de">Deutsch</a>
+          <a href="/cndwn/es/privacy/" data-lang="es">Español</a>
+          <a href="/cndwn/fr/privacy/" data-lang="fr">Français</a>
+          <a href="/cndwn/ja/privacy/" data-lang="ja">日本語</a>
+          <a href="/cndwn/it/privacy/" data-lang="it" class="active" aria-current="page">Italiano</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">CNDWN</span>
+    <h1>
+      
+      
+      
+      
+      
+      <span lang="it"><span class="grad">Informativa</span> sulla privacy</span>
+    </h1>
+    <p class="sub">
+      
+      
+      
+      
+      
+      <span lang="it">Come CNDWN gestisce i tuoi dati — in modo semplice e riservato. Nessuna pubblicità, nessun tracker: i tuoi conti alla rovescia restano nel tuo iCloud personale.</span>
+    </p>
+    <p class="updated">
+      
+      
+      
+      
+      
+      <span lang="it">Ultimo aggiornamento: 25 giugno 2026</span>
+    </p>
+  </div>
+</header>
+
+<main>
+
+<!-- ======================= ENGLISH (GDPR) ======================= -->
+
+
+<!-- ======================= DEUTSCH (DSGVO) ======================= -->
+
+
+<!-- ======================= ESPAÑOL (RGPD) ======================= -->
+
+
+<!-- ======================= FRANÇAIS (RGPD) ======================= -->
+
+
+<!-- ======================= 日本語 (GDPR) ======================= -->
+
+
+<!-- ======================= ITALIANO (GDPR) ======================= -->
+<section lang="it">
+  <div class="card">
+    <p class="lead">
+      La presente informativa sulla privacy spiega come vengono trattati i tuoi dati quando utilizzi l'app per
+      il conto alla rovescia <strong>CNDWN</strong> su iPhone, iPad, Mac e Apple Watch (l'"App"). CNDWN è
+      progettata per rispettare la privacy: i tuoi conti alla rovescia restano sul tuo dispositivo e nel tuo
+      account iCloud personale, e non vendiamo i tuoi dati né utilizziamo tracker pubblicitari.
+    </p>
+
+    <div class="toc">
+      <h3>Indice</h3>
+      <ul>
+        <li><a href="#it-controller">1. Chi è responsabile</a></li>
+        <li><a href="#it-overview">2. Panoramica e principi</a></li>
+        <li><a href="#it-local">3. Dati memorizzati sul tuo dispositivo</a></li>
+        <li><a href="#it-icloud">4. Sincronizzazione iCloud e condivisione</a></li>
+        <li><a href="#it-notifications">5. Notifiche</a></li>
+        <li><a href="#it-calendar">6. Accesso al calendario</a></li>
+        <li><a href="#it-analytics">7. Statistiche (TelemetryDeck)</a></li>
+        <li><a href="#it-legal">8. Basi giuridiche</a></li>
+        <li><a href="#it-retention">9. Conservazione dei dati</a></li>
+        <li><a href="#it-rights">10. I tuoi diritti</a></li>
+        <li><a href="#it-children">11. Minori</a></li>
+        <li><a href="#it-changes">12. Modifiche</a></li>
+        <li><a href="#it-contact">13. Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 id="it-controller">1. Chi è responsabile (Titolare del trattamento)</h2>
+    <p>Il titolare del trattamento dei dati ai sensi del Regolamento Generale sulla Protezione dei Dati (GDPR) dell'UE è:</p>
+    <p>
+      Konstantin Schillhahn<br>
+      <span class="placeholder">[Via e numero civico]</span><br>
+      <span class="placeholder">[Codice postale e città]</span><br>
+      <span class="placeholder">[Paese]</span><br>
+      Email: <a href="mailto:cndwn@schillan.com">cndwn@schillan.com</a>
+    </p>
+    <p class="muted">Prima della pubblicazione, sostituisci i segnaposto evidenziati con il tuo indirizzo postale completo.</p>
+
+    <h2 id="it-overview">2. Panoramica e principi</h2>
+    <p>CNDWN si basa su alcuni semplici principi di tutela della privacy:</p>
+    <ul>
+      <li><strong>Nessun account richiesto.</strong> Non è necessario registrarsi o accedere per utilizzare l'App.</li>
+      <li><strong>I tuoi contenuti restano tuoi.</strong> I conti alla rovescia che crei vengono memorizzati localmente sul tuo dispositivo e, se abilitata, sincronizzati tramite il tuo account iCloud personale — non sui nostri server.</li>
+      <li><strong>Nessuna pubblicità.</strong> L'App non contiene pubblicità né SDK pubblicitari o di tracciamento tra app.</li>
+      <li><strong>Nessuna vendita di dati.</strong> Non vendiamo né cediamo mai in locazione i tuoi dati personali.</li>
+      <li><strong>Solo statistiche rispettose della privacy.</strong> Utilizziamo statistiche di utilizzo anonimizzate per migliorare l'App (vedi la sezione 7).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 id="it-local">3. Dati memorizzati sul tuo dispositivo</h2>
+    <p>
+      Quando crei conti alla rovescia, i seguenti contenuti vengono memorizzati localmente sul tuo dispositivo
+      utilizzando il framework Core Data di Apple:
+    </p>
+    <ul>
+      <li>Titoli dei conti alla rovescia, emoji, note e date/orari che inserisci</li>
+      <li>Colori, icone e preferenze di visualizzazione che scegli</li>
+      <li>Impostazioni dell'App e preferenze di notifica</li>
+    </ul>
+    <p>
+      Questi dati vengono elaborati esclusivamente sul tuo dispositivo per fornire le funzionalità principali
+      dell'App. Vengono condivisi con i widget CNDWN (schermata Home / schermata di blocco) tramite un
+      contenitore App Group privato sullo stesso dispositivo e possono essere indicizzati in Spotlight in modo
+      da poter cercare i tuoi conti alla rovescia dalla ricerca di sistema.
+    </p>
+
+    <h2 id="it-icloud">4. Sincronizzazione iCloud e condivisione</h2>
+    <p>
+      Se hai eseguito l'accesso a iCloud e iCloud è abilitato per CNDWN, i tuoi conti alla rovescia vengono
+      sincronizzati tra i tuoi dispositivi Apple tramite il servizio <strong>CloudKit</strong> di Apple. Questi
+      dati vengono memorizzati nel <em>tuo</em> account iCloud privato. Non abbiamo alcun accesso al tuo
+      database iCloud privato e i dati sono disciplinati dalla
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Informativa sulla privacy di Apple</a>.
+      In questo contesto, Apple agisce come responsabile del trattamento / fornitore di infrastruttura.
+    </p>
+    <h3>Condivisione e collaborazione</h3>
+    <p>
+      CNDWN ti consente facoltativamente di condividere un conto alla rovescia con altre persone in modo da
+      fare il conto alla rovescia insieme. Quando condividi un conto alla rovescia, i relativi dati vengono resi
+      disponibili alle persone che inviti tramite il meccanismo di condivisione di Apple CloudKit. Vengono
+      condivisi solo i dati che scegli attivamente di condividere e puoi interrompere la condivisione in
+      qualsiasi momento dall'interno dell'App. Chiunque tu inviti alla condivisione potrà vedere i contenuti del
+      conto alla rovescia condiviso.
+    </p>
+
+    <h2 id="it-notifications">5. Notifiche</h2>
+    <p>
+      Con il tuo permesso, CNDWN può inviarti notifiche per ricordarti i tuoi conti alla rovescia. La
+      pianificazione e la consegna di questi promemoria sono gestite dal sistema operativo del tuo dispositivo;
+      il contenuto del promemoria viene generato a partire dai conti alla rovescia che hai creato. Puoi revocare
+      il permesso per le notifiche in qualsiasi momento nelle Impostazioni del tuo dispositivo.
+    </p>
+
+    <h2 id="it-calendar">6. Accesso al calendario</h2>
+    <p>
+      CNDWN può, facoltativamente, leggere gli eventi dal tuo calendario in modo che tu possa creare
+      rapidamente un conto alla rovescia a partire da un evento esistente (ad esempio un compleanno o una
+      festività). Questo accesso viene utilizzato solo quando scegli di importare una data e solo con il tuo
+      permesso esplicito tramite la richiesta di accesso al calendario del sistema. I dati del calendario
+      vengono elaborati sul tuo dispositivo e non ci vengono trasmessi. Puoi revocare l'accesso al calendario
+      in qualsiasi momento nelle Impostazioni del tuo dispositivo.
+    </p>
+
+    <h2 id="it-analytics">7. Statistiche (TelemetryDeck)</h2>
+    <p>
+      Per capire come viene utilizzata l'App e per migliorarla, CNDWN utilizza
+      <strong>TelemetryDeck</strong>, un servizio di statistiche orientato alla privacy fornito da
+      <em>TelemetryDeck GmbH</em>, Brunnenstraße 192, 10119 Berlin, Germany. TelemetryDeck è progettato per
+      essere conforme al GDPR ed elabora i dati su server situati nell'Unione Europea.
+    </p>
+    <p>Ciò che riceviamo tramite TelemetryDeck è <strong>anonimizzato</strong> e può includere:</p>
+    <ul>
+      <li>Segnali di utilizzo anonimi (ad es. il fatto che l'App sia stata avviata o che sia stata usata una funzione)</li>
+      <li>Tipo di dispositivo, sistema operativo e versione</li>
+      <li>Versione dell'App, lingua e impostazioni regionali</li>
+    </ul>
+    <p>
+      TelemetryDeck <strong>non</strong> utilizza cookie e <strong>non</strong> memorizza un identificatore
+      pubblicitario persistente. Viene utilizzato un hash salato e non reversibile per stimare in modo
+      approssimativo il numero di utenti distinti senza identificare alcuna persona. Gli indirizzi IP vengono
+      utilizzati solo in modo transitorio per derivare informazioni approssimative e anonime e non vengono
+      memorizzati da TelemetryDeck. Non possiamo utilizzare questi dati per identificarti personalmente.
+    </p>
+    <p>
+      TelemetryDeck agisce come responsabile del trattamento per nostro conto in base a un accordo sul
+      trattamento dei dati (Art. 28 GDPR). Ulteriori informazioni sono disponibili nella
+      <a href="https://telemetrydeck.com/privacy/" target="_blank" rel="noopener">Informativa sulla privacy di TelemetryDeck</a>.
+    </p>
+    <p>
+      <strong>Opposizione:</strong> poiché queste statistiche sono anonimizzate, generalmente non possono essere
+      ricondotte a te. Se desideri comunque opporti a questo trattamento, contattaci utilizzando i recapiti
+      indicati nella sezione 13.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 id="it-legal">8. Basi giuridiche del trattamento</h2>
+    <table>
+      <tbody><tr><th>Finalità</th><th>Base giuridica (GDPR)</th></tr>
+      <tr><td>Fornitura delle funzionalità principali dell'App (creazione e visualizzazione dei conti alla rovescia, widget)</td><td>Art. 6(1)(b) — esecuzione di un contratto / su tua richiesta</td></tr>
+      <tr><td>Sincronizzazione iCloud e condivisione</td><td>Art. 6(1)(b) e la tua attivazione della funzione</td></tr>
+      <tr><td>Notifiche</td><td>Art. 6(1)(a) — il tuo consenso (autorizzazione di sistema)</td></tr>
+      <tr><td>Importazione del calendario</td><td>Art. 6(1)(a) — il tuo consenso (autorizzazione di sistema)</td></tr>
+      <tr><td>Statistiche anonimizzate per migliorare l'App</td><td>Art. 6(1)(f) — il nostro legittimo interesse a mantenere e migliorare l'App</td></tr>
+    </tbody></table>
+
+    <h2 id="it-retention">9. Conservazione dei dati</h2>
+    <ul>
+      <li><strong>I dati sul dispositivo</strong> restano fino a quando non elimini il conto alla rovescia o disinstalli l'App.</li>
+      <li><strong>I dati iCloud</strong> restano nel tuo account iCloud fino a quando non li elimini; sono controllati da te e dalle impostazioni del tuo Apple ID.</li>
+      <li><strong>I dati statistici</strong> vengono conservati da TelemetryDeck in forma anonimizzata secondo la loro politica di conservazione.</li>
+    </ul>
+
+    <h2 id="it-rights">10. I tuoi diritti</h2>
+    <p>Ai sensi del GDPR hai il diritto di:</p>
+    <ul>
+      <li>Accedere ai dati personali che deteniamo su di te (Art. 15)</li>
+      <li>Rettificare dati inesatti (Art. 16)</li>
+      <li>Cancellare i tuoi dati ("diritto all'oblio", Art. 17)</li>
+      <li>Limitare il trattamento (Art. 18)</li>
+      <li>Ottenere la portabilità dei dati (Art. 20)</li>
+      <li>Opporti al trattamento basato su legittimo interesse (Art. 21)</li>
+      <li>Revocare il consenso in qualsiasi momento, senza pregiudicare la liceità del trattamento già effettuato (Art. 7(3))</li>
+    </ul>
+    <p>
+      Poiché la maggior parte dei tuoi contenuti è memorizzata localmente e nel tuo account iCloud personale,
+      puoi esercitare molti di questi diritti direttamente — ad esempio modificando o eliminando conti alla
+      rovescia nell'App, oppure gestendo i tuoi dati iCloud nelle impostazioni del dispositivo. Per esercitare
+      un diritto nei nostri confronti, contattaci utilizzando i recapiti indicati nella sezione 13.
+    </p>
+    <p>
+      Hai inoltre il diritto di presentare un reclamo a un'autorità di controllo per la protezione dei dati, in
+      particolare nello Stato membro dell'UE in cui risiedi, lavori o in cui si è verificata la presunta
+      violazione.
+    </p>
+
+    <h2 id="it-children">11. Minori</h2>
+    <p>
+      CNDWN è un'app per un pubblico generico e non è rivolta ai minori. Non raccogliamo consapevolmente dati
+      personali dei minori. Se ritieni che un minore abbia fornito dati personali, contattaci in modo da poter
+      adottare le misure appropriate.
+    </p>
+
+    <h2 id="it-changes">12. Modifiche alla presente informativa</h2>
+    <p>
+      Potremmo aggiornare periodicamente questa informativa sulla privacy, ad esempio per riflettere modifiche
+      apportate all'App o ai requisiti legali. La versione attuale è sempre disponibile in questa pagina e la
+      data di "Ultimo aggiornamento" in alto indica quando è stata revisionata l'ultima volta.
+    </p>
+
+    <h2 id="it-contact">13. Contatti</h2>
+    <p>
+      Per qualsiasi domanda su questa informativa sulla privacy o sui tuoi dati, contatta:<br>
+      Konstantin Schillhahn —
+      <a href="mailto:cndwn@schillan.com">cndwn@schillan.com</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="brand">
+      <img class="mark" src="/cndwn/img/app-icon.png" alt="" style="width:26px;height:26px;border-radius:7px">
+      CNDWN
+    </div>
+    <div class="flinks">
+      <a href="/cndwn/it/"><span lang="it">Home</span></a>
+      <a href="/cndwn/it/#features"><span lang="it">Funzionalità</span></a>
+      <a href="/cndwn/it/#tutorials"><span lang="it">Tutorial</span></a>
+      <a href="/cndwn/it/#faq">FAQ</a>
+      <a href="mailto:cndwn@schillan.com">Contact</a>
+    </div>
+    <div>© 2026 <a href="/it/">Schillan</a>. CNDWN.</div>
+  </div>
+</footer>
+
+
+
+
+
+<script>
+(function () {
+  var KEY = 'cndwn-lang';
+  var sw = document.querySelector('.lang-switch');
+  if (!sw) return;
+
+  document.addEventListener('click', function (e) {
+    if (sw.open && !sw.contains(e.target)) sw.open = false;
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') sw.open = false;
+  });
+  sw.querySelectorAll('.lang-menu a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
+    });
+  });
+
+  var saved;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (saved) return;
+
+  var nav = ((navigator.language || 'en') + '').toLowerCase();
+  var supported = ['de', 'es', 'fr', 'ja', 'it'];
+  var detected = 'en';
+  for (var i = 0; i < supported.length; i++) {
+    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
+  }
+  try { localStorage.setItem(KEY, detected); } catch (e) {}
+  if (detected === document.documentElement.lang) return;
+
+  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
+  if (target) location.replace(target.getAttribute('href'));
+})();
+</script></body></html>

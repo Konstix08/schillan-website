@@ -133,9 +133,12 @@
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
 
   /* ---------- Language visibility ---------- */
-  body[data-lang="en"] [lang="de"], body[data-lang="en"] [lang="es"] { display: none !important; }
-  body[data-lang="de"] [lang="en"], body[data-lang="de"] [lang="es"] { display: none !important; }
-  body[data-lang="es"] [lang="en"], body[data-lang="es"] [lang="de"] { display: none !important; }
+  body[data-lang="en"] [lang]:not([lang="en"]),
+  body[data-lang="de"] [lang]:not([lang="de"]),
+  body[data-lang="es"] [lang]:not([lang="es"]),
+  body[data-lang="fr"] [lang]:not([lang="fr"]),
+  body[data-lang="ja"] [lang]:not([lang="ja"]),
+  body[data-lang="it"] [lang]:not([lang="it"]) { display: none !important; }
 
   /* ---------- Nav ---------- */
   nav.site {
@@ -171,12 +174,12 @@
   .lang-switch summary::-webkit-details-marker { display: none; }
   .lang-switch summary::after {
     content: ""; display: block; flex: none;
-    width: 9px; height: 9px;
+    width: 10px; height: 10px;
     background: var(--muted);
-    clip-path: polygon(20% 30%, 50% 70%, 80% 30%, 80% 40%, 50% 60%, 20% 40%);
+    clip-path: polygon(18% 26%, 50% 74%, 82% 26%, 82% 41%, 50% 59%, 18% 41%);
   }
   .lang-switch[open] summary::after {
-    clip-path: polygon(20% 70%, 50% 30%, 80% 70%, 80% 60%, 50% 40%, 20% 60%);
+    clip-path: polygon(18% 74%, 50% 26%, 82% 74%, 82% 59%, 50% 41%, 18% 59%);
   }
   .lang-switch .lang-menu {
     position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
@@ -309,9 +312,9 @@
     </a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="#apps"><span lang="en">Apps</span><span lang="de">Apps</span><span lang="es">Apps</span></a>
-        <a href="#about"><span lang="en">About</span><span lang="de">Über uns</span><span lang="es">Acerca de</span></a>
-        <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span><span lang="es">Contacto</span></a>
+        <a href="#apps"><span lang="en">Apps</span><span lang="de">Apps</span><span lang="es">Apps</span><span lang="fr">Applications</span><span lang="ja">アプリ</span><span lang="it">App</span></a>
+        <a href="#about"><span lang="en">About</span><span lang="de">Über uns</span><span lang="es">Acerca de</span><span lang="fr">À propos</span><span lang="ja">概要</span><span lang="it">Chi siamo</span></a>
+        <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span><span lang="es">Contacto</span><span lang="fr">Contact</span><span lang="ja">お問い合わせ</span><span lang="it">Contatti</span></a>
       </div>
       <details class="lang-switch">
         <summary aria-label="Change language"><span data-lang-label>EN</span></summary>
@@ -332,15 +335,21 @@
       <span lang="en">Privacy-first apps, <span class="grad">built for Apple</span></span>
       <span lang="de">Datenschutzfreundliche Apps, <span class="grad">gebaut für Apple</span></span>
       <span lang="es">Apps que respetan tu privacidad, <span class="grad">creadas para Apple</span></span>
+      <span lang="fr">Des apps respectueuses de la vie privée, <span class="grad">conçues pour Apple</span></span>
+      <span lang="ja">プライバシー重視のアプリを、<span class="grad">Appleのために。</span></span>
+      <span lang="it">App orientate alla privacy, <span class="grad">create per Apple</span></span>
     </h1>
     <p class="sub">
       <span lang="en">Schillan is the one-person studio of Alexandra Schillhahn, building free, ad-free apps for iPhone, iPad, Mac and Apple Watch — including CNDWN and TerraGuessr.</span>
       <span lang="de">Schillan ist das Ein-Personen-Studio von Alexandra Schillhahn und entwickelt kostenlose, werbefreie Apps für iPhone, iPad, Mac und Apple Watch — darunter CNDWN und TerraGuessr.</span>
       <span lang="es">Schillan es el estudio de una sola persona de Alexandra Schillhahn, que crea apps gratuitas y sin publicidad para iPhone, iPad, Mac y Apple Watch — entre ellas CNDWN y TerraGuessr.</span>
+      <span lang="fr">Schillan est le studio d'une seule personne d'Alexandra Schillhahn, qui conçoit des apps gratuites et sans publicité pour iPhone, iPad, Mac et Apple Watch — dont CNDWN et TerraGuessr.</span>
+      <span lang="ja">Schillanは、Alexandra Schillhahnによる一人スタジオ。iPhone、iPad、Mac、Apple Watch向けに、無料で広告のないアプリ——CNDWNやTerraGuessrなど——を作っています。</span>
+      <span lang="it">Schillan è lo studio individuale di Alexandra Schillhahn, che crea app gratuite e senza pubblicità per iPhone, iPad, Mac e Apple Watch, tra cui CNDWN e TerraGuessr.</span>
     </p>
     <div class="cta-row">
-      <a class="solid-btn" href="#apps"><span lang="en">Explore the apps</span><span lang="de">Apps entdecken</span><span lang="es">Explorar las apps</span></a>
-      <a class="ghost-btn" href="#about"><span lang="en">About Schillan</span><span lang="de">Über Schillan</span><span lang="es">Sobre Schillan</span></a>
+      <a class="solid-btn" href="#apps"><span lang="en">Explore the apps</span><span lang="de">Apps entdecken</span><span lang="es">Explorar las apps</span><span lang="fr">Découvrir les apps</span><span lang="ja">アプリを見る</span><span lang="it">Scopri le app</span></a>
+      <a class="ghost-btn" href="#about"><span lang="en">About Schillan</span><span lang="de">Über Schillan</span><span lang="es">Sobre Schillan</span><span lang="fr">À propos de Schillan</span><span lang="ja">Schillanについて</span><span lang="it">Info su Schillan</span></a>
     </div>
 
     <div class="hero-icons">
@@ -360,8 +369,8 @@
 <section class="block" id="apps">
   <div class="wrap">
     <div class="section-head">
-      <h2><span lang="en">Two apps. One studio.</span><span lang="de">Zwei Apps. Ein Studio.</span><span lang="es">Dos apps. Un estudio.</span></h2>
-      <p><span lang="en">Everything Schillan makes is free of ads and trackers, and built natively for Apple platforms.</span><span lang="de">Alles, was Schillan macht, ist frei von Werbung und Trackern — nativ gebaut für Apple-Plattformen.</span><span lang="es">Todo lo que crea Schillan está libre de anuncios y rastreadores, y hecho de forma nativa para plataformas Apple.</span></p>
+      <h2><span lang="en">Two apps. One studio.</span><span lang="de">Zwei Apps. Ein Studio.</span><span lang="es">Dos apps. Un estudio.</span><span lang="fr">Deux apps. Un seul studio.</span><span lang="ja">2つのアプリ。1つのスタジオ。</span><span lang="it">Due app. Uno studio.</span></h2>
+      <p><span lang="en">Everything Schillan makes is free of ads and trackers, and built natively for Apple platforms.</span><span lang="de">Alles, was Schillan macht, ist frei von Werbung und Trackern — nativ gebaut für Apple-Plattformen.</span><span lang="es">Todo lo que crea Schillan está libre de anuncios y rastreadores, y hecho de forma nativa para plataformas Apple.</span><span lang="fr">Tout ce que crée Schillan est sans publicité ni tracker, et conçu nativement pour les plateformes Apple.</span><span lang="ja">Schillanが作るものはすべて、広告もトラッカーもなく、Appleのプラットフォーム向けにネイティブに開発されています。</span><span lang="it">Tutto ciò che crea Schillan è privo di pubblicità e tracciamenti, e sviluppato in modo nativo per le piattaforme Apple.</span></p>
     </div>
     <div class="apps-grid">
 
@@ -370,17 +379,20 @@
           <img src="/cndwn/img/app-icon.png" alt="CNDWN app icon">
           <div>
             <h3>CNDWN</h3>
-            <span class="status-pill live"><span lang="en">Live on the App Store</span><span lang="de">Im App Store erhältlich</span><span lang="es">Disponible en la App Store</span></span>
+            <span class="status-pill live"><span lang="en">Live on the App Store</span><span lang="de">Im App Store erhältlich</span><span lang="es">Disponible en la App Store</span><span lang="fr">Disponible sur l'App Store</span><span lang="ja">App Storeで公開中</span><span lang="it">Disponibile su App Store</span></span>
           </div>
         </div>
-        <p class="desc"><span lang="en">A privacy-first countdown &amp; countup app for iPhone, iPad, Mac and Apple Watch — with widgets, Live Activities, iCloud sync and every feature free.</span><span lang="de">Eine datenschutzfreundliche Countdown- &amp; Countup-App für iPhone, iPad, Mac und Apple Watch — mit Widgets, Live-Aktivitäten, iCloud-Sync und allen Funktionen gratis.</span><span lang="es">Una app de cuenta atrás y adelante centrada en la privacidad para iPhone, iPad, Mac y Apple Watch — con widgets, actividades en vivo, sincronización con iCloud y todas las funciones gratis.</span></p>
-        <p class="rating-note"><span class="stars">★★★★★</span> <span lang="en">4.8 on the App Store · Free</span><span lang="de">4,8 im App Store · Gratis</span><span lang="es">4,8 en la App Store · Gratis</span></p>
+        <p class="desc"><span lang="en">A privacy-first countdown &amp; countup app for iPhone, iPad, Mac and Apple Watch — with widgets, Live Activities, iCloud sync and every feature free.</span><span lang="de">Eine datenschutzfreundliche Countdown- &amp; Countup-App für iPhone, iPad, Mac und Apple Watch — mit Widgets, Live-Aktivitäten, iCloud-Sync und allen Funktionen gratis.</span><span lang="es">Una app de cuenta atrás y adelante centrada en la privacidad para iPhone, iPad, Mac y Apple Watch — con widgets, actividades en vivo, sincronización con iCloud y todas las funciones gratis.</span><span lang="fr">Une app de compte à rebours &amp; compteur de jours respectueuse de la vie privée pour iPhone, iPad, Mac et Apple Watch — avec widgets, Live Activities, synchronisation iCloud et toutes les fonctionnalités gratuites.</span><span lang="ja">iPhone、iPad、Mac、Apple Watch向けのプライバシー重視のカウントダウン&amp;カウントアップアプリ——ウィジェット、ライブアクティビティ、iCloud同期など、すべての機能を無料で。</span><span lang="it">Un'app di conto alla rovescia &amp; conteggio crescente orientata alla privacy per iPhone, iPad, Mac e Apple Watch, con widget, Live Activities, sincronizzazione iCloud e tutte le funzioni gratuite.</span></p>
+        <p class="rating-note"><span class="stars">★★★★★</span> <span lang="en">4.8 on the App Store · Free</span><span lang="de">4,8 im App Store · Gratis</span><span lang="es">4,8 en la App Store · Gratis</span><span lang="fr">4,8 sur l'App Store · Gratuit</span><span lang="ja">App Storeで4.8 ・ 無料</span><span lang="it">4,8 su App Store · Gratuito</span></p>
         <div class="app-cta">
-          <a class="ghost-btn" href="/cndwn/"><span lang="en">Visit CNDWN</span><span lang="de">Zu CNDWN</span><span lang="es">Ir a CNDWN</span></a>
+          <a class="ghost-btn" href="/cndwn/"><span lang="en">Visit CNDWN</span><span lang="de">Zu CNDWN</span><span lang="es">Ir a CNDWN</span><span lang="fr">Découvrir CNDWN</span><span lang="ja">CNDWNを見る</span><span lang="it">Scopri CNDWN</span></a>
           <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website-home&amp;mt=8" aria-label="Download CNDWN on the App Store">
             <img class="badge" lang="en" src="/cndwn/img/appstore-en.svg" alt="Download on the App Store">
             <img class="badge" lang="de" src="/cndwn/img/appstore-de.svg" alt="Laden im App Store">
             <img class="badge" lang="es" src="/cndwn/img/appstore-es.svg" alt="Consíguelo en el App Store">
+            <img class="badge" lang="fr" src="/cndwn/img/appstore-fr.svg" alt="Télécharger dans l'App Store" width="171" height="54">
+            <img class="badge" lang="ja" src="/cndwn/img/appstore-ja.svg" alt="App Storeからダウンロード" width="147" height="54">
+            <img class="badge" lang="it" src="/cndwn/img/appstore-it.svg" alt="Scarica su App Store" width="162" height="54">
           </a>
         </div>
       </div>
@@ -390,13 +402,13 @@
           <img src="/terraguessr/img/app-icon.jpg" alt="TerraGuessr app icon">
           <div>
             <h3>TerraGuessr</h3>
-            <span class="status-pill dev"><span lang="en">In development · Coming soon</span><span lang="de">In Entwicklung · Bald verfügbar</span><span lang="es">En desarrollo · Próximamente</span></span>
+            <span class="status-pill dev"><span lang="en">In development · Coming soon</span><span lang="de">In Entwicklung · Bald verfügbar</span><span lang="es">En desarrollo · Próximamente</span><span lang="fr">En développement · Bientôt disponible</span><span lang="ja">開発中・近日公開</span><span lang="it">In sviluppo · Prossimamente</span></span>
           </div>
         </div>
-        <p class="desc"><span lang="en">A real-world geography guessing game for iPhone. Get dropped into a real place with Apple's Look Around and guess where in the world you are — solo, in a 1v1 Duel, 2v2 Squads or a private Party.</span><span lang="de">Ein Geografie-Ratespiel mit echten Orten für iPhone. Du wirst mit Apples Look Around an einen realen Ort versetzt und rätst, wo auf der Welt du bist — solo, im 1v1-Duell, 2v2-Squad oder in einer privaten Party.</span><span lang="es">Un juego de adivinanza geográfica con lugares reales para iPhone. Apple Look Around te sitúa en un lugar real y tienes que adivinar dónde estás — en solitario, en un Duelo 1v1, en Escuadras 2v2 o en una Fiesta privada.</span></p>
+        <p class="desc"><span lang="en">A real-world geography guessing game for iPhone. Get dropped into a real place with Apple's Look Around and guess where in the world you are — solo, in a 1v1 Duel, 2v2 Squads or a private Party.</span><span lang="de">Ein Geografie-Ratespiel mit echten Orten für iPhone. Du wirst mit Apples Look Around an einen realen Ort versetzt und rätst, wo auf der Welt du bist — solo, im 1v1-Duell, 2v2-Squad oder in einer privaten Party.</span><span lang="es">Un juego de adivinanza geográfica con lugares reales para iPhone. Apple Look Around te sitúa en un lugar real y tienes que adivinar dónde estás — en solitario, en un Duelo 1v1, en Escuadras 2v2 o en una Fiesta privada.</span><span lang="fr">Un jeu de devinettes géographiques dans des lieux réels, pour iPhone. Vous êtes déposé dans un endroit réel grâce à Look Around d'Apple et devez deviner où vous êtes dans le monde — en solo, en Duel 1v1, en Escouades 2v2 ou en Soirée privée.</span><span lang="ja">iPhone向けの、実在の場所を舞台にした地理当てゲーム。AppleのLook Aroundで実際の場所に降り立ち、世界のどこにいるかを推理します——ソロプレイ、1対1のデュエル、2対2のスクワッド、またはプライベートパーティーで。</span><span lang="it">Un gioco di indovinelli geografici ambientato in luoghi reali, per iPhone. Vieni catapultato in un luogo reale grazie a Look Around di Apple e devi indovinare dove ti trovi nel mondo — in solitaria, in un Duello 1v1, in Squadre 2v2 o in una Festa privata.</span></p>
         <div class="app-cta">
-          <a class="ghost-btn" href="/terraguessr/"><span lang="en">Visit TerraGuessr</span><span lang="de">Zu TerraGuessr</span><span lang="es">Ir a TerraGuessr</span></a>
-          <a class="ghost-btn" href="mailto:terraguessr@schillan.com"><span lang="en">Get early access</span><span lang="de">Frühzugang sichern</span><span lang="es">Acceso anticipado</span></a>
+          <a class="ghost-btn" href="/terraguessr/"><span lang="en">Visit TerraGuessr</span><span lang="de">Zu TerraGuessr</span><span lang="es">Ir a TerraGuessr</span><span lang="fr">Découvrir TerraGuessr</span><span lang="ja">TerraGuessrを見る</span><span lang="it">Scopri TerraGuessr</span></a>
+          <a class="ghost-btn" href="mailto:terraguessr@schillan.com"><span lang="en">Get early access</span><span lang="de">Frühzugang sichern</span><span lang="es">Acceso anticipado</span><span lang="fr">Accès anticipé</span><span lang="ja">早期アクセスを申し込む</span><span lang="it">Accesso anticipato</span></a>
         </div>
       </div>
 
@@ -408,19 +420,22 @@
 <section class="block alt" id="about">
   <div class="wrap">
     <div class="section-head">
-      <h2><span lang="en">About Schillan</span><span lang="de">Über Schillan</span><span lang="es">Sobre Schillan</span></h2>
+      <h2><span lang="en">About Schillan</span><span lang="de">Über Schillan</span><span lang="es">Sobre Schillan</span><span lang="fr">À propos de Schillan</span><span lang="ja">Schillanについて</span><span lang="it">Info su Schillan</span></h2>
     </div>
     <p class="about-lede">
       <span lang="en">Schillan is the indie studio of Alexandra Schillhahn, an independent developer building native Apple apps that respect people's privacy and time. Every app ships free of ads and third-party trackers, with data staying on-device or in your own iCloud account wherever possible.</span>
       <span lang="de">Schillan ist das Indie-Studio von Alexandra Schillhahn, einer unabhängigen Entwicklerin, die native Apple-Apps baut, die die Privatsphäre und Zeit der Menschen respektieren. Jede App kommt ohne Werbung und Dritt-Tracker aus — Daten bleiben, wo immer möglich, auf dem Gerät oder in deiner eigenen iCloud.</span>
       <span lang="es">Schillan es el estudio indie de Alexandra Schillhahn, una desarrolladora independiente que crea apps nativas para Apple que respetan la privacidad y el tiempo de las personas. Cada app llega sin anuncios ni rastreadores de terceros, con los datos guardados en el dispositivo o en tu propia iCloud siempre que sea posible.</span>
+      <span lang="fr">Schillan est le studio indépendant d'Alexandra Schillhahn, une développeuse indépendante qui conçoit des apps natives Apple respectueuses de la vie privée et du temps de chacun. Chaque app est livrée sans publicité ni tracker tiers, et les données restent sur l'appareil ou dans votre propre iCloud dans la mesure du possible.</span>
+      <span lang="ja">Schillanは、Alexandra Schillhahnによるインディースタジオです。彼女は独立系デベロッパーとして、人々のプライバシーと時間を尊重するApple向けネイティブアプリを開発しています。どのアプリも広告やサードパーティのトラッカーを含まず、可能な限りデータは端末内、またはあなた自身のiCloudアカウント内にとどまります。</span>
+      <span lang="it">Schillan è lo studio indipendente di Alexandra Schillhahn, una sviluppatrice indipendente che crea app native per Apple nel rispetto della privacy e del tempo delle persone. Ogni app è priva di pubblicità e tracciamenti di terze parti, con i dati che restano sul dispositivo o nel tuo account iCloud personale ove possibile.</span>
     </p>
     <div class="about-card">
       <dl class="about-grid">
-        <div><dt><span lang="en">Founder</span><span lang="de">Gründerin</span><span lang="es">Fundadora</span></dt><dd>Alexandra Schillhahn</dd></div>
-        <div><dt><span lang="en">Focus</span><span lang="de">Schwerpunkt</span><span lang="es">Enfoque</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
-        <div><dt><span lang="en">Apps</span><span lang="de">Apps</span><span lang="es">Apps</span></dt><dd>CNDWN, TerraGuessr</dd></div>
-        <div><dt><span lang="en">Philosophy</span><span lang="de">Philosophie</span><span lang="es">Filosofía</span></dt><dd><span lang="en">No ads, no trackers, no data selling</span><span lang="de">Keine Werbung, keine Tracker, kein Datenverkauf</span><span lang="es">Sin anuncios, sin rastreadores, sin venta de datos</span></dd></div>
+        <div><dt><span lang="en">Founder</span><span lang="de">Gründerin</span><span lang="es">Fundadora</span><span lang="fr">Fondatrice</span><span lang="ja">創業者</span><span lang="it">Fondatrice</span></dt><dd>Alexandra Schillhahn</dd></div>
+        <div><dt><span lang="en">Focus</span><span lang="de">Schwerpunkt</span><span lang="es">Enfoque</span><span lang="fr">Domaine</span><span lang="ja">対象</span><span lang="it">Ambito</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
+        <div><dt><span lang="en">Apps</span><span lang="de">Apps</span><span lang="es">Apps</span><span lang="fr">Apps</span><span lang="ja">アプリ</span><span lang="it">App</span></dt><dd>CNDWN, TerraGuessr</dd></div>
+        <div><dt><span lang="en">Philosophy</span><span lang="de">Philosophie</span><span lang="es">Filosofía</span><span lang="fr">Philosophie</span><span lang="ja">理念</span><span lang="it">Filosofia</span></dt><dd><span lang="en">No ads, no trackers, no data selling</span><span lang="de">Keine Werbung, keine Tracker, kein Datenverkauf</span><span lang="es">Sin anuncios, sin rastreadores, sin venta de datos</span><span lang="fr">Aucune publicité, aucun tracker, aucune vente de données</span><span lang="ja">広告なし、トラッキングなし、データ販売なし</span><span lang="it">Nessuna pubblicità, nessun tracciamento, nessuna vendita di dati</span></dd></div>
       </dl>
     </div>
   </div>
@@ -430,23 +445,23 @@
 <section class="block">
   <div class="wrap">
     <div class="section-head">
-      <h2><span lang="en">Why Schillan</span><span lang="de">Warum Schillan</span><span lang="es">Por qué Schillan</span></h2>
+      <h2><span lang="en">Why Schillan</span><span lang="de">Warum Schillan</span><span lang="es">Por qué Schillan</span><span lang="fr">Pourquoi Schillan</span><span lang="ja">Schillanが選ばれる理由</span><span lang="it">Perché Schillan</span></h2>
     </div>
     <div class="features">
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6z"/></svg></div>
-        <h3><span lang="en">Privacy by default</span><span lang="de">Datenschutz von Anfang an</span><span lang="es">Privacidad por defecto</span></h3>
-        <p><span lang="en">No ads, no third-party trackers, no data selling. Your data stays on your device or in your own iCloud.</span><span lang="de">Keine Werbung, keine Dritt-Tracker, kein Datenverkauf. Deine Daten bleiben auf deinem Gerät oder in deiner eigenen iCloud.</span><span lang="es">Sin anuncios, sin rastreadores de terceros, sin venta de datos. Tus datos permanecen en tu dispositivo o en tu propia iCloud.</span></p>
+        <h3><span lang="en">Privacy by default</span><span lang="de">Datenschutz von Anfang an</span><span lang="es">Privacidad por defecto</span><span lang="fr">Confidentialité par défaut</span><span lang="ja">デフォルトでプライバシーを守る</span><span lang="it">Privacy per impostazione predefinita</span></h3>
+        <p><span lang="en">No ads, no third-party trackers, no data selling. Your data stays on your device or in your own iCloud.</span><span lang="de">Keine Werbung, keine Dritt-Tracker, kein Datenverkauf. Deine Daten bleiben auf deinem Gerät oder in deiner eigenen iCloud.</span><span lang="es">Sin anuncios, sin rastreadores de terceros, sin venta de datos. Tus datos permanecen en tu dispositivo o en tu propia iCloud.</span><span lang="fr">Aucune publicité, aucun tracker tiers, aucune vente de données. Vos données restent sur votre appareil ou dans votre propre iCloud.</span><span lang="ja">広告なし、サードパーティのトラッカーなし、データ販売なし。あなたのデータはあなたの端末か、あなた自身のiCloudにとどまります。</span><span lang="it">Nessuna pubblicità, nessun tracciamento di terze parti, nessuna vendita di dati. I tuoi dati restano sul tuo dispositivo o nel tuo iCloud personale.</span></p>
       </div>
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg></div>
-        <h3><span lang="en">Truly free</span><span lang="de">Wirklich kostenlos</span><span lang="es">Realmente gratis</span></h3>
-        <p><span lang="en">CNDWN ships every feature for free. Fair pricing, no paywalls hiding the basics.</span><span lang="de">CNDWN bietet alle Funktionen gratis. Faire Preise, keine Bezahlschranken für Grundfunktionen.</span><span lang="es">CNDWN incluye todas las funciones gratis. Precios justos, sin muros de pago para lo básico.</span></p>
+        <h3><span lang="en">Truly free</span><span lang="de">Wirklich kostenlos</span><span lang="es">Realmente gratis</span><span lang="fr">Vraiment gratuit</span><span lang="ja">本当に無料</span><span lang="it">Davvero gratuito</span></h3>
+        <p><span lang="en">CNDWN ships every feature for free. Fair pricing, no paywalls hiding the basics.</span><span lang="de">CNDWN bietet alle Funktionen gratis. Faire Preise, keine Bezahlschranken für Grundfunktionen.</span><span lang="es">CNDWN incluye todas las funciones gratis. Precios justos, sin muros de pago para lo básico.</span><span lang="fr">CNDWN propose toutes ses fonctionnalités gratuitement. Des prix justes, sans mur payant pour les fonctions de base.</span><span lang="ja">CNDWNはすべての機能を無料で提供しています。公正な価格設定で、基本機能を有料の壁で隠すことはありません。</span><span lang="it">CNDWN offre tutte le funzionalità gratuitamente. Prezzi equi, senza paywall che nascondono le funzioni di base.</span></p>
       </div>
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M10 18h4"/></svg></div>
-        <h3><span lang="en">Built natively for Apple</span><span lang="de">Nativ für Apple entwickelt</span><span lang="es">Creado de forma nativa para Apple</span></h3>
-        <p><span lang="en">Every app is designed and coded specifically for iPhone, iPad, Mac and Apple Watch — not a cross-platform port.</span><span lang="de">Jede App ist gezielt für iPhone, iPad, Mac und Apple Watch entwickelt — kein plattformübergreifender Port.</span><span lang="es">Cada app está diseñada y programada específicamente para iPhone, iPad, Mac y Apple Watch — no es un port multiplataforma.</span></p>
+        <h3><span lang="en">Built natively for Apple</span><span lang="de">Nativ für Apple entwickelt</span><span lang="es">Creado de forma nativa para Apple</span><span lang="fr">Conçu nativement pour Apple</span><span lang="ja">Apple向けにネイティブ開発</span><span lang="it">Sviluppata in modo nativo per Apple</span></h3>
+        <p><span lang="en">Every app is designed and coded specifically for iPhone, iPad, Mac and Apple Watch — not a cross-platform port.</span><span lang="de">Jede App ist gezielt für iPhone, iPad, Mac und Apple Watch entwickelt — kein plattformübergreifender Port.</span><span lang="es">Cada app está diseñada y programada específicamente para iPhone, iPad, Mac y Apple Watch — no es un port multiplataforma.</span><span lang="fr">Chaque app est conçue et développée spécifiquement pour iPhone, iPad, Mac et Apple Watch — pas un simple portage multiplateforme.</span><span lang="ja">どのアプリもiPhone、iPad、Mac、Apple Watch向けに専用設計・開発されています——クロスプラットフォームの移植版ではありません。</span><span lang="it">Ogni app è progettata e sviluppata appositamente per iPhone, iPad, Mac e Apple Watch — non è un porting multipiattaforma.</span></p>
       </div>
     </div>
   </div>
@@ -456,18 +471,18 @@
 <section class="block alt" id="contact">
   <div class="wrap">
     <div class="section-head">
-      <h2><span lang="en">Get in touch</span><span lang="de">Kontakt aufnehmen</span><span lang="es">Ponte en contacto</span></h2>
-      <p><span lang="en">Questions about a specific app? Reach the right inbox directly.</span><span lang="de">Fragen zu einer bestimmten App? Schreib direkt an das passende Postfach.</span><span lang="es">¿Preguntas sobre una app en concreto? Escribe directamente al buzón correspondiente.</span></p>
+      <h2><span lang="en">Get in touch</span><span lang="de">Kontakt aufnehmen</span><span lang="es">Ponte en contacto</span><span lang="fr">Nous contacter</span><span lang="ja">お問い合わせ</span><span lang="it">Mettiti in contatto</span></h2>
+      <p><span lang="en">Questions about a specific app? Reach the right inbox directly.</span><span lang="de">Fragen zu einer bestimmten App? Schreib direkt an das passende Postfach.</span><span lang="es">¿Preguntas sobre una app en concreto? Escribe directamente al buzón correspondiente.</span><span lang="fr">Des questions sur une app en particulier ? Écrivez directement à la bonne adresse.</span><span lang="ja">特定のアプリについて質問がありますか？適切な窓口に直接ご連絡ください。</span><span lang="it">Domande su un'app specifica? Scrivi direttamente all'indirizzo giusto.</span></p>
     </div>
     <div class="contact-grid">
       <div class="contact-card">
         <h3>CNDWN</h3>
-        <p><span lang="en">Countdown &amp; countup app</span><span lang="de">Countdown- &amp; Countup-App</span><span lang="es">App de cuenta atrás y adelante</span></p>
+        <p><span lang="en">Countdown &amp; countup app</span><span lang="de">Countdown- &amp; Countup-App</span><span lang="es">App de cuenta atrás y adelante</span><span lang="fr">App de compte à rebours &amp; compteur de jours</span><span lang="ja">カウントダウン&amp;カウントアップアプリ</span><span lang="it">App di conto alla rovescia &amp; conteggio crescente</span></p>
         <a class="ghost-btn" href="mailto:cndwn@schillan.com">cndwn@schillan.com</a>
       </div>
       <div class="contact-card">
         <h3>TerraGuessr</h3>
-        <p><span lang="en">Geography guessing game</span><span lang="de">Geografie-Ratespiel</span><span lang="es">Juego de adivinanza geográfica</span></p>
+        <p><span lang="en">Geography guessing game</span><span lang="de">Geografie-Ratespiel</span><span lang="es">Juego de adivinanza geográfica</span><span lang="fr">Jeu de devinettes géographiques</span><span lang="ja">地理当てゲーム</span><span lang="it">Gioco di indovinelli geografici</span></p>
         <a class="ghost-btn" href="mailto:terraguessr@schillan.com">terraguessr@schillan.com</a>
       </div>
     </div>
@@ -481,10 +496,10 @@
       SCHILLAN
     </div>
     <div class="flinks">
-      <a href="#apps"><span lang="en">Apps</span><span lang="de">Apps</span><span lang="es">Apps</span></a>
-      <a href="#about"><span lang="en">About</span><span lang="de">Über uns</span><span lang="es">Acerca de</span></a>
-      <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span><span lang="es">Contacto</span></a>
-      <a href="/cndwn/privacy/"><span lang="en">CNDWN Privacy Policy</span><span lang="de">CNDWN Datenschutz</span><span lang="es">Privacidad de CNDWN</span></a>
+      <a href="#apps"><span lang="en">Apps</span><span lang="de">Apps</span><span lang="es">Apps</span><span lang="fr">Applications</span><span lang="ja">アプリ</span><span lang="it">App</span></a>
+      <a href="#about"><span lang="en">About</span><span lang="de">Über uns</span><span lang="es">Acerca de</span><span lang="fr">À propos</span><span lang="ja">概要</span><span lang="it">Chi siamo</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span><span lang="es">Contacto</span><span lang="fr">Contact</span><span lang="ja">お問い合わせ</span><span lang="it">Contatti</span></a>
+      <a href="/cndwn/privacy/"><span lang="en">CNDWN Privacy Policy</span><span lang="de">CNDWN Datenschutz</span><span lang="es">Privacidad de CNDWN</span><span lang="fr">Politique de confidentialité CNDWN</span><span lang="ja">CNDWNプライバシーポリシー</span><span lang="it">Informativa sulla privacy di CNDWN</span></a>
     </div>
     <div>© 2026 Schillan.</div>
   </div>
