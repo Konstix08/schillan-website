@@ -167,14 +167,33 @@
   @media (max-width: 720px) { .nav-links { display: none; } }
 
   /* ---------- Language switch ---------- */
-  .lang-switch { display: inline-flex; background: color-mix(in srgb, var(--muted) 16%, transparent); border-radius: 999px; padding: 3px; }
-  .lang-switch button, .lang-switch a {
-    border: none; background: transparent; color: var(--muted); font: inherit; font-weight: 600; font-size: 13px;
-    padding: 5px 12px; border-radius: 999px; cursor: pointer; transition: background 0.2s, color 0.2s; line-height: 1;
-    text-decoration: none; display: inline-block;
+  .lang-switch { position: relative; }
+  .lang-switch summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: inline-flex; align-items: center; gap: 6px;
+    background: color-mix(in srgb, var(--muted) 16%, transparent); color: var(--text);
+    font: inherit; font-weight: 600; font-size: 13px;
+    padding: 7px 14px; border-radius: 999px; line-height: 1;
   }
-  .lang-switch button.active, .lang-switch a.active { background: var(--accent); color: #fff; }
-  .lang-switch a:hover { text-decoration: none; }
+  .lang-switch summary::-webkit-details-marker { display: none; }
+  .lang-switch summary::after { content: "⌄"; font-size: 12px; color: var(--muted); transition: transform 0.2s; }
+  .lang-switch[open] summary::after { transform: rotate(180deg); }
+  .lang-switch .lang-menu {
+    position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
+    display: flex; flex-direction: column; min-width: 150px; gap: 2px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18); padding: 6px;
+  }
+  .lang-switch .lang-menu a, .lang-switch .lang-menu button {
+    display: block; width: 100%; text-align: left; border: none; background: transparent; cursor: pointer;
+    color: var(--text); font: inherit; font-size: 14px; font-weight: 500;
+    padding: 9px 12px; border-radius: 9px; text-decoration: none;
+  }
+  .lang-switch .lang-menu a:hover, .lang-switch .lang-menu button:hover,
+  .lang-switch .lang-menu a:focus-visible, .lang-switch .lang-menu button:focus-visible {
+    background: color-mix(in srgb, var(--muted) 14%, transparent); text-decoration: none;
+  }
+  .lang-switch .lang-menu a.active, .lang-switch .lang-menu button.active { color: var(--accent); font-weight: 700; }
 
   /* ---------- Hero ---------- */
   .hero { position: relative; text-align: center; padding: 76px 0 64px; overflow: hidden; }
@@ -294,11 +313,14 @@
         <a href="#about"><span lang="es">Acerca de</span></a>
         <a href="#contact"><span lang="es">Contacto</span></a>
       </div>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <a href="/">EN</a>
-        <a href="/de/">DE</a>
-        <a href="/es/" class="active" aria-current="page">ES</a>
-      </div>
+      <details class="lang-switch">
+        <summary aria-label="Change language"><span data-lang-label="">ES</span></summary>
+        <div class="lang-menu">
+          <a href="/" data-lang="en">English</a>
+          <a href="/de/" data-lang="de">Deutsch</a>
+          <a href="/es/" data-lang="es" class="active" aria-current="page">Español</a>
+        </div>
+      </details>
     </div>
   </div>
 </nav>
@@ -471,4 +493,35 @@
 
 
 
-</body></html>
+
+<script>
+(function () {
+  var KEY = 'schillan-lang';
+  var sw = document.querySelector('.lang-switch');
+  if (!sw) return;
+
+  document.addEventListener('click', function (e) {
+    if (sw.open && !sw.contains(e.target)) sw.open = false;
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') sw.open = false;
+  });
+  sw.querySelectorAll('.lang-menu a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
+    });
+  });
+
+  var saved;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (saved) return;
+
+  var nav = ((navigator.language || 'en') + '').toLowerCase();
+  var detected = nav.indexOf('de') === 0 ? 'de' : (nav.indexOf('es') === 0 ? 'es' : 'en');
+  try { localStorage.setItem(KEY, detected); } catch (e) {}
+  if (detected === document.documentElement.lang) return;
+
+  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
+  if (target) location.replace(target.getAttribute('href'));
+})();
+</script></body></html>

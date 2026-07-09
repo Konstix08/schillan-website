@@ -26,6 +26,11 @@ const ROOT = path.resolve(fileURLToPath(import.meta.url), '..', '..');
 const SITE = 'https://schillan.com';
 const LANGS = ['en', 'de', 'es'];
 const OG_LOCALE = { en: 'en_US', de: 'de_DE', es: 'es_ES' };
+const AUTONYM = { en: 'English', de: 'Deutsch', es: 'Español' };
+// The homepage and the CNDWN section are separate products sharing one
+// domain, so each remembers its own language preference.
+const STORAGE_KEY = { home: 'schillan-lang' };
+const DEFAULT_STORAGE_KEY = 'cndwn-lang';
 
 const landingPath = { en: '/cndwn/', de: '/cndwn/de/', es: '/cndwn/es/' };
 const privacyPath = { en: '/cndwn/privacy/', de: '/cndwn/de/privacy/', es: '/cndwn/es/privacy/' };
@@ -347,6 +352,41 @@ function rewriteAssetAttr(val) {
 
 function normText(s) { return (s || '').replace(/\s+/g, ' ').trim(); }
 
+function langSwitchScript(storageKey) {
+  return `
+<script>
+(function () {
+  var KEY = '${storageKey}';
+  var sw = document.querySelector('.lang-switch');
+  if (!sw) return;
+
+  document.addEventListener('click', function (e) {
+    if (sw.open && !sw.contains(e.target)) sw.open = false;
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') sw.open = false;
+  });
+  sw.querySelectorAll('.lang-menu a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
+    });
+  });
+
+  var saved;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (saved) return;
+
+  var nav = ((navigator.language || 'en') + '').toLowerCase();
+  var detected = nav.indexOf('de') === 0 ? 'de' : (nav.indexOf('es') === 0 ? 'es' : 'en');
+  try { localStorage.setItem(KEY, detected); } catch (e) {}
+  if (detected === document.documentElement.lang) return;
+
+  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
+  if (target) location.replace(target.getAttribute('href'));
+})();
+</script>`;
+}
+
 const TEMPLATE_FILES = {
   landing: 'landing.html',
   privacy: 'privacy.html',
@@ -401,12 +441,15 @@ function build(type, lang) {
     if (h && (h.startsWith('img/') || h.startsWith('../img/'))) $(el).attr('href', rewriteAssetAttr(h));
   });
 
-  // 6. static language switcher (real links) — built AFTER link rewrites so
+  // 6. language switcher dropdown (real links) — built AFTER link rewrites so
   //    its absolute /cndwn/… targets are not themselves rewritten
-  const links = LANGS.map(l =>
-    `<a href="${targets[l]}"${l === lang ? ' class="active" aria-current="page"' : ''}>${l.toUpperCase()}</a>`
-  ).join('\n        ');
-  $('.lang-switch').attr('role', 'group').attr('aria-label', 'Language').html('\n        ' + links + '\n      ');
+  const menuLinks = LANGS.map(l =>
+    `<a href="${targets[l]}" data-lang="${l}"${l === lang ? ' class="active" aria-current="page"' : ''}>${AUTONYM[l]}</a>`
+  ).join('\n          ');
+  $('.lang-switch').html(
+    `\n        <summary aria-label="Change language"><span data-lang-label>${lang.toUpperCase()}</span></summary>\n` +
+    `        <div class="lang-menu">\n          ${menuLinks}\n        </div>\n      `
+  );
 
   // 7. head: title, description, robots, canonical, hreflang, Open Graph
   $('title').text(meta.title);
@@ -433,6 +476,11 @@ function build(type, lang) {
 
   // 8. JSON-LD rebuilt in the page language from the stripped DOM
   rebuildJsonLd($, type, lang, meta, canonical);
+
+  // 9. language-switch behavior: closes the dropdown on outside click/Escape,
+  //    remembers an explicit pick, and — on a first visit with no stored
+  //    preference — redirects once to the language matching the device.
+  if ($('.lang-switch').length) $('body').append(langSwitchScript(STORAGE_KEY[type] || DEFAULT_STORAGE_KEY));
 
   let html = $.html();
   if (!/^<!doctype/i.test(html.trimStart())) html = '<!DOCTYPE html>\n' + html;
