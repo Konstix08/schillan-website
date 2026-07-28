@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CNDWN — Beautiful Countdown &amp; Countup App for iPhone, iPad, Mac &amp; Apple Watch</title>
-<meta name="description" content="CNDWN is a privacy-first countdown and countup app for Apple devices. Count down to birthdays, holidays, trips and deadlines with progress bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, iCloud sync, custom colors, calendar &amp; reminders import and sharing. The first countdown app with every feature free. No ads, no trackers.">
+<title>CNDWN — Countdown &amp; Countup App for iPhone &amp; Mac</title>
+<meta name="description" content="Track birthdays, trips and deadlines with widgets, Live Activities and iCloud sync. Every feature free — no ads, no trackers.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
@@ -59,7 +59,7 @@
   "alternateName": "CNDWN - Event Countdown",
   "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS",
   "applicationCategory": "LifestyleApplication",
-  "description": "CNDWN is a privacy-first countdown and countup app for Apple devices. Count down to birthdays, holidays, trips and deadlines with progress bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, iCloud sync, custom colors, calendar & reminders import and sharing. The first countdown app with every feature free. No ads, no trackers.",
+  "description": "Track birthdays, trips and deadlines with widgets, Live Activities and iCloud sync. Every feature free — no ads, no trackers.",
   "url": "https://schillan.com/cndwn/",
   "downloadUrl": "https://apps.apple.com/app/id6455257754",
   "installUrl": "https://apps.apple.com/app/id6455257754",
@@ -860,21 +860,5 @@
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

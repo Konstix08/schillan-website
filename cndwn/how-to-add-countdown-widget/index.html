@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Add a Countdown Widget on iPhone (Step by Step) — CNDWN</title>
-<meta name="description" content="A simple step-by-step guide to adding a countdown widget to your iPhone Home Screen, Lock Screen or StandBy with CNDWN — six steps, no technical skill required.">
+<title>How to Add a Countdown Widget on iPhone — CNDWN</title>
+<meta name="description" content="A simple step-by-step guide to adding a CNDWN countdown widget to your iPhone Home Screen, Lock Screen or StandBy.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
@@ -23,8 +23,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="CNDWN">
-<meta property="og:title" content="How to Add a Countdown Widget on iPhone (Step by Step) — CNDWN">
-<meta property="og:description" content="A simple step-by-step guide to adding a countdown widget to your iPhone Home Screen, Lock Screen or StandBy with CNDWN — six steps, no technical skill required.">
+<meta property="og:title" content="How to Add a Countdown Widget on iPhone — CNDWN">
+<meta property="og:description" content="A simple step-by-step guide to adding a CNDWN countdown widget to your iPhone Home Screen, Lock Screen or StandBy.">
 <meta property="og:url" content="https://schillan.com/cndwn/how-to-add-countdown-widget/">
 <meta property="og:image" content="https://schillan.com/cndwn/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -40,8 +40,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to Add a Countdown Widget on iPhone (Step by Step) — CNDWN">
-<meta name="twitter:description" content="A simple step-by-step guide to adding a countdown widget to your iPhone Home Screen, Lock Screen or StandBy with CNDWN — six steps, no technical skill required.">
+<meta name="twitter:title" content="How to Add a Countdown Widget on iPhone — CNDWN">
+<meta name="twitter:description" content="A simple step-by-step guide to adding a CNDWN countdown widget to your iPhone Home Screen, Lock Screen or StandBy.">
 <meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
 
 <link rel="icon" type="image/png" href="/cndwn/img/app-icon.png">
@@ -52,8 +52,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "How to Add a Countdown Widget on iPhone (Step by Step) — CNDWN",
-  "description": "A simple step-by-step guide to adding a countdown widget to your iPhone Home Screen, Lock Screen or StandBy with CNDWN — six steps, no technical skill required.",
+  "name": "How to Add a Countdown Widget on iPhone — CNDWN",
+  "description": "A simple step-by-step guide to adding a CNDWN countdown widget to your iPhone Home Screen, Lock Screen or StandBy.",
   "url": "https://schillan.com/cndwn/how-to-add-countdown-widget/",
   "inLanguage": "en",
   "isPartOf": {
@@ -566,21 +566,5 @@ footer.site a:hover { color: var(--text); }
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

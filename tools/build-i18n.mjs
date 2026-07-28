@@ -51,8 +51,8 @@ const pathFor = {
 const META = {
   landing: {
     en: {
-      title: 'CNDWN — Beautiful Countdown & Countup App for iPhone, iPad, Mac & Apple Watch',
-      desc: 'CNDWN is a privacy-first countdown and countup app for Apple devices. Count down to birthdays, holidays, trips and deadlines with progress bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, iCloud sync, custom colors, calendar & reminders import and sharing. The first countdown app with every feature free. No ads, no trackers.',
+      title: "CNDWN — Countdown & Countup App for iPhone & Mac",
+      desc: "Track birthdays, trips and deadlines with widgets, Live Activities and iCloud sync. Every feature free — no ads, no trackers.",
       ogTitle: 'CNDWN — Beautiful Countdown & Countup App for Apple Devices',
       ogDesc: 'Count down (and up) to what matters with progress bars, gorgeous widgets, Live Activities, iCloud sync and total privacy. For iPhone, iPad, Mac and Apple Watch. Every feature free.',
       breadcrumbPrivacy: 'Privacy Policy',
@@ -66,8 +66,8 @@ const META = {
       },
     },
     de: {
-      title: 'CNDWN — Schöne Countdown- & Countup-App für iPhone, iPad, Mac & Apple Watch',
-      desc: 'CNDWN ist eine datenschutzfreundliche Countdown- und Countup-App für Apple-Geräte. Zähle herunter zu Geburtstagen, Feiertagen, Reisen und Deadlines – mit Fortschrittsbalken, Home-, Sperrbildschirm- und StandBy-Widgets, Live-Aktivitäten, iCloud-Sync, eigenen Farben, Kalender- und Erinnerungen-Import und Teilen. Die erste Countdown-App mit allen Funktionen gratis. Keine Werbung, keine Tracker.',
+      title: "CNDWN — Countdown-App für iPhone, iPad & Mac",
+      desc: "Zähle herunter zu Geburtstagen und Reisen — mit Widgets, Live-Aktivitäten und iCloud-Sync. Alle Funktionen gratis, keine Werbung.",
       ogTitle: 'CNDWN — Schöne Countdown- & Countup-App für Apple-Geräte',
       ogDesc: 'Zähle herunter (und hinauf) zu allem, was zählt – mit Fortschrittsbalken, schönen Widgets, Live-Aktivitäten, iCloud-Sync und voller Privatsphäre. Für iPhone, iPad, Mac und Apple Watch. Alle Funktionen gratis.',
       breadcrumbPrivacy: 'Datenschutzerklärung',
@@ -81,8 +81,8 @@ const META = {
       },
     },
     es: {
-      title: 'CNDWN — Bonita app de cuenta atrás y adelante para iPhone, iPad, Mac y Apple Watch',
-      desc: 'CNDWN es una app de cuenta atrás y adelante centrada en la privacidad para dispositivos Apple. Cuenta atrás hacia cumpleaños, vacaciones, viajes y fechas límite con barras de progreso, widgets de pantalla de inicio, bloqueo y StandBy, actividades en vivo, sincronización con iCloud, colores personalizados, importación de Calendario y Recordatorios, y opción de compartir. La primera app de cuenta atrás con todas las funciones gratis. Sin anuncios ni rastreadores.',
+      title: "CNDWN — App de cuenta atrás para iPhone y Mac",
+      desc: "Cuenta atrás hacia cumpleaños y viajes con widgets, actividades en vivo y sincronización iCloud. Todo gratis, sin anuncios.",
       ogTitle: 'CNDWN — Bonita app de cuenta atrás y adelante para dispositivos Apple',
       ogDesc: 'Cuenta atrás (y adelante) hacia lo que importa: barras de progreso, bonitos widgets, actividades en vivo, sincronización con iCloud y total privacidad. Para iPhone, iPad, Mac y Apple Watch. Todo gratis.',
       breadcrumbPrivacy: 'Política de Privacidad',
@@ -96,8 +96,8 @@ const META = {
       },
     },
     fr: {
-      title: "CNDWN — Belle app de compte à rebours et compteur de jours pour iPhone, iPad, Mac et Apple Watch",
-      desc: "CNDWN est une application de compte à rebours et de compteur de jours respectueuse de la vie privée pour les appareils Apple. Compte à rebours vers anniversaires, vacances, voyages et échéances avec barres de progression, widgets d'écran d'accueil, d'écran verrouillé et StandBy, Activités en direct, synchronisation iCloud, couleurs personnalisées, import Calendrier et Rappels, et partage. La première app de compte à rebours dont toutes les fonctions sont gratuites. Aucune publicité, aucun tracker.",
+      title: "CNDWN — App de compte à rebours pour iPhone et Mac",
+      desc: "Comptez les jours avant anniversaires et voyages avec widgets, Activités en direct et iCloud. Toutes les fonctions gratuites.",
       ogTitle: "CNDWN — Belle app de compte à rebours pour appareils Apple",
       ogDesc: "Compte à rebours (et compteur de jours) vers ce qui compte, avec barres de progression, superbes widgets, Activités en direct, synchronisation iCloud et confidentialité totale. Pour iPhone, iPad, Mac et Apple Watch. Toutes les fonctions gratuites.",
       breadcrumbPrivacy: "Politique de confidentialité",
@@ -111,8 +111,8 @@ const META = {
       },
     },
     ja: {
-      title: "CNDWN — iPhone・iPad・Mac・Apple Watch対応の美しいカウントダウン&カウントアップアプリ",
-      desc: "CNDWNはApple製デバイス向けのプライバシー重視のカウントダウン&カウントアップアプリです。誕生日、休日、旅行、締め切りまでの日数を、プログレスバー、ホーム画面・ロック画面・StandByウィジェット、ライブアクティビティ、iCloud同期、カスタムカラー、カレンダー&リマインダーのインポート、共有機能とともにカウントダウン。すべての機能が無料の初めてのカウントダウンアプリ。広告なし、トラッキングなし。",
+      title: "CNDWN — カウントダウンアプリ",
+      desc: "誕生日や旅行までをウィジェットとライブアクティビティでカウントダウン。全機能無料、広告なし。",
       ogTitle: "CNDWN — Apple製デバイス向けの美しいカウントダウンアプリ",
       ogDesc: "プログレスバー、美しいウィジェット、ライブアクティビティ、iCloud同期、完全なプライバシーで大切な瞬間までカウントダウン(&カウントアップ)。iPhone・iPad・Mac・Apple Watch対応。すべての機能が無料。",
       breadcrumbPrivacy: "プライバシーポリシー",
@@ -126,8 +126,8 @@ const META = {
       },
     },
     it: {
-      title: "CNDWN — Bella app di conto alla rovescia e conteggio giorni per iPhone, iPad, Mac e Apple Watch",
-      desc: "CNDWN è un'app di conto alla rovescia e conteggio giorni orientata alla privacy per i dispositivi Apple. Conto alla rovescia per compleanni, vacanze, viaggi e scadenze con barre di progresso, widget per schermata Home, Blocco e StandBy, Attività Live, sincronizzazione iCloud, colori personalizzati, importazione da Calendario e Promemoria, e condivisione. La prima app di conto alla rovescia con tutte le funzioni gratuite. Nessuna pubblicità, nessun tracciamento.",
+      title: "CNDWN — App di conto alla rovescia per iPhone e Mac",
+      desc: "Conto alla rovescia per compleanni e viaggi con widget, Attività Live e sync iCloud. Tutte le funzioni gratuite, senza pubblicità.",
       ogTitle: "CNDWN — Bella app di conto alla rovescia per dispositivi Apple",
       ogDesc: "Conto alla rovescia (e in avanti) verso ciò che conta, con barre di progresso, widget bellissimi, Attività Live, sincronizzazione iCloud e privacy totale. Per iPhone, iPad, Mac e Apple Watch. Tutte le funzioni gratuite.",
       breadcrumbPrivacy: "Informativa sulla privacy",
@@ -143,20 +143,20 @@ const META = {
   },
   privacy: {
     en: {
-      title: 'CNDWN — Privacy Policy',
-      desc: 'Privacy Policy for the CNDWN countdown app (GDPR). No ads, no trackers — your countdowns stay on your device and in your own iCloud.',
+      title: "CNDWN — Privacy Policy",
+      desc: "Privacy Policy for the CNDWN countdown app (GDPR). No ads, no trackers — your countdowns stay on your device and in your own iCloud.",
     },
     de: {
-      title: 'CNDWN — Datenschutzerklärung',
-      desc: 'Datenschutzerklärung der Countdown-App CNDWN (DSGVO). Keine Werbung, keine Tracker – deine Countdowns bleiben auf deinem Gerät und in deiner eigenen iCloud.',
+      title: "CNDWN — Datenschutzerklärung",
+      desc: "Datenschutzerklärung der Countdown-App CNDWN (DSGVO). Keine Werbung, keine Tracker – deine Countdowns bleiben auf deinem Gerät und in deiner iCloud.",
     },
     es: {
-      title: 'CNDWN — Política de Privacidad',
-      desc: 'Política de Privacidad de la app de cuenta atrás CNDWN (RGPD). Sin anuncios, sin rastreadores: tus cuentas atrás permanecen en tu dispositivo y en tu propia iCloud.',
+      title: "CNDWN — Política de Privacidad",
+      desc: "Política de privacidad de CNDWN (RGPD). Sin anuncios ni rastreadores: tus cuentas atrás quedan en tu dispositivo y tu iCloud.",
     },
     fr: {
       title: "CNDWN — Politique de confidentialité",
-      desc: "Politique de confidentialité de l'application de compte à rebours CNDWN (RGPD). Aucune publicité, aucun tracker — vos comptes à rebours restent sur votre appareil et dans votre propre iCloud.",
+      desc: "Politique de confidentialité de CNDWN (RGPD). Aucune publicité ni tracker : vos comptes à rebours restent sur votre appareil et votre iCloud.",
     },
     ja: {
       title: "CNDWN — プライバシーポリシー",
@@ -164,77 +164,77 @@ const META = {
     },
     it: {
       title: "CNDWN — Informativa sulla privacy",
-      desc: "Informativa sulla privacy dell'app di conto alla rovescia CNDWN (GDPR). Nessuna pubblicità, nessun tracciamento: i tuoi conti alla rovescia restano sul tuo dispositivo e nel tuo iCloud personale.",
+      desc: "Informativa sulla privacy di CNDWN (GDPR). Nessuna pubblicità né tracciamento: i tuoi conti restano sul dispositivo e nel tuo iCloud.",
     },
   },
   bestApp: {
     en: {
-      title: 'Best Free Countdown App for iPhone (2026 Guide) — CNDWN',
-      desc: 'Looking for the best countdown app for iPhone? Here is what to look for — privacy, widgets, Live Activities, iCloud sync — and why CNDWN is a free countdown app with every feature included, no ads and no trackers.',
+      title: "Best Free Countdown App for iPhone (2026 Guide) — CNDWN",
+      desc: "What to look for in the best iPhone countdown app — privacy, widgets, Live Activities, iCloud sync — and why CNDWN includes every feature free.",
       breadcrumbName: 'Best Countdown App for iPhone',
     },
     de: {
-      title: 'Die beste kostenlose Countdown-App für iPhone (Ratgeber 2026) — CNDWN',
-      desc: 'Auf der Suche nach der besten Countdown-App für iPhone? So erkennst du eine gute App — Datenschutz, Widgets, Live-Aktivitäten, iCloud-Sync — und warum CNDWN alle Funktionen kostenlos bietet, ohne Werbung und Tracker.',
+      title: "Beste kostenlose Countdown-App fürs iPhone (2026) — CNDWN",
+      desc: "Worauf es bei der besten Countdown-App fürs iPhone ankommt — Datenschutz, Widgets, Live-Aktivitäten, iCloud-Sync — und warum CNDWN alles gratis bietet.",
       breadcrumbName: 'Beste Countdown-App für iPhone',
     },
     es: {
-      title: 'La mejor app de cuenta atrás gratis para iPhone (Guía 2026) — CNDWN',
-      desc: '¿Buscas la mejor app de cuenta atrás para iPhone? Esto es lo que debes buscar — privacidad, widgets, actividades en vivo, sincronización con iCloud — y por qué CNDWN incluye todas las funciones gratis, sin anuncios ni rastreadores.',
+      title: "Mejor app de cuenta atrás gratis para iPhone (2026) — CNDWN",
+      desc: "Qué buscar en la mejor app de cuenta atrás para iPhone — privacidad, widgets, actividades en vivo, iCloud — y por qué CNDWN lo ofrece todo gratis.",
       breadcrumbName: 'Mejor app de cuenta atrás para iPhone',
     },
     fr: {
-      title: "Meilleure app de compte à rebours gratuite pour iPhone (Guide 2026) — CNDWN",
-      desc: "Vous cherchez la meilleure app de compte à rebours pour iPhone ? Voici les critères à surveiller — confidentialité, widgets, Activités en direct, synchronisation iCloud — et pourquoi CNDWN offre toutes ses fonctions gratuitement, sans publicité ni tracker.",
+      title: "Meilleure app de compte à rebours gratuite (2026) — CNDWN",
+      desc: "Ce qu'il faut chercher dans la meilleure app de compte à rebours iPhone — confidentialité, widgets, Activités en direct — et pourquoi CNDWN est gratuite.",
       breadcrumbName: "Meilleure app de compte à rebours pour iPhone",
     },
     ja: {
-      title: "iPhone向けの最高の無料カウントダウンアプリ(2026年版ガイド)— CNDWN",
-      desc: "iPhone向けの最高のカウントダウンアプリをお探しですか?プライバシー、ウィジェット、ライブアクティビティ、iCloud同期など注目すべきポイントと、CNDWNがすべての機能を無料で、広告もトラッキングもなしで提供している理由を解説します。",
+      title: "iPhone最強の無料カウントダウンアプリ — CNDWN",
+      desc: "プライバシー、ウィジェット、ライブアクティビティ、iCloud同期など、iPhone向けカウントダウンアプリの選び方とCNDWNが無料な理由。",
       breadcrumbName: "iPhone向け最高のカウントダウンアプリ",
     },
     it: {
-      title: "La migliore app di conto alla rovescia gratuita per iPhone (Guida 2026) — CNDWN",
-      desc: "Cerchi la migliore app di conto alla rovescia per iPhone? Ecco cosa cercare — privacy, widget, Attività Live, sincronizzazione iCloud — e perché CNDWN offre tutte le funzioni gratis, senza pubblicità né tracciamento.",
+      title: "Migliore app di conto alla rovescia gratis (2026) — CNDWN",
+      desc: "Cosa cercare nella migliore app di conto alla rovescia per iPhone — privacy, widget, Attività Live — e perché CNDWN è gratis al 100%.",
       breadcrumbName: "Migliore app di conto alla rovescia per iPhone",
     },
   },
   widgetGuide: {
     en: {
-      title: 'Countdown Widgets for iPhone: Home Screen, Lock Screen & StandBy Guide — CNDWN',
-      desc: 'A guide to countdown widgets on iOS: Home Screen, Lock Screen and StandBy widgets, Live Activities and the Dynamic Island — and how to set one up with CNDWN, a free countdown app for iPhone.',
+      title: "Countdown Widgets for iPhone: Home, Lock & StandBy — CNDWN",
+      desc: "A guide to iOS countdown widgets — Home Screen, Lock Screen, StandBy and Live Activities — and how to set one up with CNDWN, free for iPhone.",
       breadcrumbName: 'Countdown Widgets for iOS',
     },
     de: {
-      title: 'Countdown-Widgets für iPhone: Home-Bildschirm, Sperrbildschirm & StandBy — CNDWN',
-      desc: 'Ein Leitfaden zu Countdown-Widgets unter iOS: Home-Bildschirm-, Sperrbildschirm- und StandBy-Widgets, Live-Aktivitäten und die Dynamic Island — und wie du eins mit CNDWN einrichtest, einer kostenlosen Countdown-App für iPhone.',
+      title: "Countdown-Widgets fürs iPhone: Home & StandBy — CNDWN",
+      desc: "Ein Leitfaden zu Countdown-Widgets unter iOS: Home-, Sperrbildschirm und StandBy, Live-Aktivitäten und Dynamic Island — mit CNDWN einrichten.",
       breadcrumbName: 'Countdown-Widgets für iOS',
     },
     es: {
-      title: 'Widgets de cuenta atrás para iPhone: pantalla de inicio, bloqueo y StandBy — CNDWN',
-      desc: 'Una guía sobre los widgets de cuenta atrás en iOS: widgets de pantalla de inicio, de bloqueo y StandBy, actividades en vivo y la Dynamic Island — y cómo configurar uno con CNDWN, una app de cuenta atrás gratis para iPhone.',
+      title: "Widgets de cuenta atrás para iPhone: inicio y StandBy — CNDWN",
+      desc: "Guía de widgets de cuenta atrás en iOS: inicio, bloqueo, StandBy, actividades en vivo y Dynamic Island — cómo configurarlos con CNDWN.",
       breadcrumbName: 'Widgets de cuenta atrás para iOS',
     },
     fr: {
-      title: "Widgets de compte à rebours pour iPhone : écran d'accueil, verrouillé et StandBy — CNDWN",
-      desc: "Un guide des widgets de compte à rebours sous iOS : widgets d'écran d'accueil, d'écran verrouillé et StandBy, Activités en direct et Dynamic Island — et comment en configurer un avec CNDWN, une app de compte à rebours gratuite pour iPhone.",
+      title: "Widgets de compte à rebours : accueil et StandBy — CNDWN",
+      desc: "Guide des widgets de compte à rebours iOS : accueil, verrouillé, StandBy, Activités en direct et Dynamic Island — avec CNDWN.",
       breadcrumbName: "Widgets de compte à rebours pour iOS",
     },
     ja: {
-      title: "iPhoneのカウントダウンウィジェット:ホーム画面・ロック画面・StandByガイド — CNDWN",
-      desc: "iOSのカウントダウンウィジェットガイド:ホーム画面、ロック画面、StandByウィジェット、ライブアクティビティ、Dynamic Islandについて解説し、無料カウントダウンアプリCNDWNでの設定方法を紹介します。",
+      title: "iPhoneカウントダウンウィジェットガイド — CNDWN",
+      desc: "ホーム画面・ロック画面・StandByウィジェットとライブアクティビティの使い方、CNDWNでの設定方法。",
       breadcrumbName: "iOS向けカウントダウンウィジェット",
     },
     it: {
-      title: "Widget conto alla rovescia per iPhone: schermata Home, Blocco e StandBy — CNDWN",
-      desc: "Una guida ai widget di conto alla rovescia su iOS: widget per schermata Home, Blocco e StandBy, Attività Live e Dynamic Island — e come configurarne uno con CNDWN, un'app di conto alla rovescia gratuita per iPhone.",
+      title: "Widget di conto alla rovescia iPhone: Home e StandBy — CNDWN",
+      desc: "Guida ai widget di conto alla rovescia su iOS: Home, Blocco, StandBy, Attività Live e Dynamic Island — come configurarli con CNDWN.",
       breadcrumbName: "Widget di conto alla rovescia per iOS",
     },
   },
   widgetHowTo: {
     en: {
-      title: 'How to Add a Countdown Widget on iPhone (Step by Step) — CNDWN',
-      desc: 'A simple step-by-step guide to adding a countdown widget to your iPhone Home Screen, Lock Screen or StandBy with CNDWN — six steps, no technical skill required.',
+      title: "How to Add a Countdown Widget on iPhone — CNDWN",
+      desc: "A simple step-by-step guide to adding a CNDWN countdown widget to your iPhone Home Screen, Lock Screen or StandBy.",
       breadcrumbName: 'How to Add a Countdown Widget',
       howTo: {
         name: 'How to add a countdown widget on iPhone',
@@ -249,8 +249,8 @@ const META = {
       },
     },
     de: {
-      title: 'So fügst du ein Countdown-Widget auf dem iPhone hinzu (Schritt für Schritt) — CNDWN',
-      desc: 'Eine einfache Schritt-für-Schritt-Anleitung, um ein Countdown-Widget auf deinem iPhone-Home-Bildschirm, Sperrbildschirm oder StandBy mit CNDWN hinzuzufügen — sechs Schritte, keine technischen Kenntnisse nötig.',
+      title: "So fügst du ein Countdown-Widget aufs iPhone hinzu — CNDWN",
+      desc: "Schritt-für-Schritt-Anleitung: Countdown-Widget von CNDWN auf Home-Bildschirm, Sperrbildschirm oder StandBy hinzufügen.",
       breadcrumbName: 'Countdown-Widget hinzufügen',
       howTo: {
         name: 'So fügst du ein Countdown-Widget auf dem iPhone hinzu',
@@ -265,8 +265,8 @@ const META = {
       },
     },
     es: {
-      title: 'Cómo añadir un widget de cuenta atrás en iPhone (paso a paso) — CNDWN',
-      desc: 'Una guía sencilla paso a paso para añadir un widget de cuenta atrás a la pantalla de inicio, de bloqueo o StandBy de tu iPhone con CNDWN — seis pasos, sin conocimientos técnicos.',
+      title: "Cómo añadir un widget de cuenta atrás en iPhone — CNDWN",
+      desc: "Guía paso a paso para añadir un widget de cuenta atrás de CNDWN a tu pantalla de inicio, bloqueo o StandBy.",
       breadcrumbName: 'Cómo añadir un widget de cuenta atrás',
       howTo: {
         name: 'Cómo añadir un widget de cuenta atrás en iPhone',
@@ -281,8 +281,8 @@ const META = {
       },
     },
     fr: {
-      title: "Comment ajouter un widget de compte à rebours sur iPhone (étape par étape) — CNDWN",
-      desc: "Un guide simple, étape par étape, pour ajouter un widget de compte à rebours à l'écran d'accueil, à l'écran verrouillé ou à StandBy de votre iPhone avec CNDWN — six étapes, aucune compétence technique requise.",
+      title: "Comment ajouter un widget de compte à rebours iPhone — CNDWN",
+      desc: "Guide étape par étape pour ajouter un widget de compte à rebours CNDWN à l'écran d'accueil, verrouillé ou StandBy.",
       breadcrumbName: "Comment ajouter un widget de compte à rebours",
       howTo: {
         name: "Comment ajouter un widget de compte à rebours sur iPhone",
@@ -297,8 +297,8 @@ const META = {
       },
     },
     ja: {
-      title: "iPhoneでカウントダウンウィジェットを追加する方法(手順解説) — CNDWN",
-      desc: "CNDWNを使ってiPhoneのホーム画面、ロック画面、StandByにカウントダウンウィジェットを追加する簡単な手順ガイド — 6ステップ、専門知識は不要です。",
+      title: "iPhoneにカウントダウンウィジェットを追加 — CNDWN",
+      desc: "CNDWNのカウントダウンウィジェットをホーム画面・ロック画面・StandByに追加する手順。",
       breadcrumbName: "カウントダウンウィジェットの追加方法",
       howTo: {
         name: "iPhoneでカウントダウンウィジェットを追加する方法",
@@ -313,8 +313,8 @@ const META = {
       },
     },
     it: {
-      title: "Come aggiungere un widget di conto alla rovescia su iPhone (passo dopo passo) — CNDWN",
-      desc: "Una semplice guida passo dopo passo per aggiungere un widget di conto alla rovescia alla schermata Home, Blocco o StandBy del tuo iPhone con CNDWN — sei passaggi, nessuna competenza tecnica richiesta.",
+      title: "Come aggiungere un widget di conto alla rovescia — CNDWN",
+      desc: "Guida passo dopo passo per aggiungere un widget di conto alla rovescia CNDWN su Home, Blocco o StandBy.",
       breadcrumbName: "Come aggiungere un widget di conto alla rovescia",
       howTo: {
         name: "Come aggiungere un widget di conto alla rovescia su iPhone",
@@ -331,8 +331,8 @@ const META = {
   },
   liveActivities: {
     en: {
-      title: 'How to Add a Countdown Live Activity on iPhone — CNDWN',
-      desc: 'How to turn on Live Activities and start a real-time countdown on your iPhone Lock Screen and in the Dynamic Island with CNDWN.',
+      title: "How to Add a Countdown Live Activity on iPhone — CNDWN",
+      desc: "How to turn on Live Activities and start a real-time countdown on your iPhone Lock Screen and in the Dynamic Island with CNDWN.",
       breadcrumbName: 'Countdown Live Activities',
       howTo: {
         name: 'How to add a countdown Live Activity on iPhone',
@@ -346,8 +346,8 @@ const META = {
       },
     },
     de: {
-      title: 'So fügst du eine Countdown-Live-Aktivität auf dem iPhone hinzu — CNDWN',
-      desc: 'So schaltest du Live-Aktivitäten ein und startest einen Countdown in Echtzeit auf dem Sperrbildschirm und in der Dynamic Island mit CNDWN.',
+      title: "Countdown-Live-Aktivität aufs iPhone hinzufügen — CNDWN",
+      desc: "So schaltest du Live-Aktivitäten ein und startest einen Countdown in Echtzeit auf dem Sperrbildschirm und in der Dynamic Island mit CNDWN.",
       breadcrumbName: 'Countdown-Live-Aktivitäten',
       howTo: {
         name: 'So fügst du eine Countdown-Live-Aktivität auf dem iPhone hinzu',
@@ -361,8 +361,8 @@ const META = {
       },
     },
     es: {
-      title: 'Cómo añadir una actividad en vivo de cuenta atrás en iPhone — CNDWN',
-      desc: 'Cómo activar las actividades en vivo e iniciar una cuenta atrás en tiempo real en la pantalla de bloqueo y la Dynamic Island de tu iPhone con CNDWN.',
+      title: "Actividad en vivo de cuenta atrás en iPhone — CNDWN",
+      desc: "Cómo activar las actividades en vivo e iniciar una cuenta atrás en tiempo real en la pantalla de bloqueo y la Dynamic Island de tu iPhone con CNDWN.",
       breadcrumbName: 'Actividades en vivo de cuenta atrás',
       howTo: {
         name: 'Cómo añadir una actividad en vivo de cuenta atrás en iPhone',
@@ -376,8 +376,8 @@ const META = {
       },
     },
     fr: {
-      title: "Comment ajouter une Activité en direct de compte à rebours sur iPhone — CNDWN",
-      desc: "Comment activer les Activités en direct et démarrer un compte à rebours en temps réel sur l'écran verrouillé et la Dynamic Island de votre iPhone avec CNDWN.",
+      title: "Activité en direct de compte à rebours iPhone — CNDWN",
+      desc: "Comment activer les Activités en direct et démarrer un compte à rebours en temps réel avec CNDWN.",
       breadcrumbName: "Activités en direct de compte à rebours",
       howTo: {
         name: "Comment ajouter une Activité en direct de compte à rebours sur iPhone",
@@ -391,7 +391,7 @@ const META = {
       },
     },
     ja: {
-      title: "iPhoneでカウントダウンのライブアクティビティを追加する方法 — CNDWN",
+      title: "iPhoneでライブアクティビティを追加 — CNDWN",
       desc: "CNDWNを使ってライブアクティビティをオンにし、iPhoneのロック画面とDynamic Islandでリアルタイムのカウントダウンを開始する方法。",
       breadcrumbName: "カウントダウンのライブアクティビティ",
       howTo: {
@@ -406,7 +406,7 @@ const META = {
       },
     },
     it: {
-      title: "Come aggiungere un'Attività Live di conto alla rovescia su iPhone — CNDWN",
+      title: "Attività Live di conto alla rovescia su iPhone — CNDWN",
       desc: "Come attivare le Attività Live e avviare un conto alla rovescia in tempo reale sulla schermata di Blocco e nella Dynamic Island del tuo iPhone con CNDWN.",
       breadcrumbName: "Attività Live di conto alla rovescia",
       howTo: {
@@ -423,40 +423,40 @@ const META = {
   },
   vacationCountdown: {
     en: {
-      title: 'Vacation & Trip Countdown: Count Down to Your Next Trip — CNDWN',
-      desc: 'How to set up a vacation or trip countdown with CNDWN — add your departure date, pin a widget and share it with your travel companions.',
+      title: "Vacation Countdown: Count Down to Your Next Trip — CNDWN",
+      desc: "How to set up a vacation or trip countdown with CNDWN — add your departure date, pin a widget and share it with your travel companions.",
       breadcrumbName: 'Vacation & Trip Countdown',
     },
     de: {
-      title: 'Urlaubs- & Reise-Countdown: Zähl herunter zu deiner nächsten Reise — CNDWN',
-      desc: 'So richtest du einen Urlaubs- oder Reise-Countdown mit CNDWN ein — füge dein Abreisedatum hinzu, hefte ein Widget an und teile es mit deinen Reisebegleitern.',
+      title: "Urlaubs-Countdown: Zähl herunter zu deiner Reise — CNDWN",
+      desc: "So richtest du einen Urlaubs-Countdown mit CNDWN ein — Abreisedatum hinzufügen, Widget anheften, mit Reisebegleitern teilen.",
       breadcrumbName: 'Urlaubs- & Reise-Countdown',
     },
     es: {
-      title: 'Cuenta atrás de vacaciones y viajes: cuenta atrás para tu próximo viaje — CNDWN',
-      desc: 'Cómo configurar una cuenta atrás de vacaciones o viaje con CNDWN — añade tu fecha de salida, fija un widget y compártela con tus compañeros de viaje.',
+      title: "Cuenta atrás de vacaciones: tu próximo viaje — CNDWN",
+      desc: "Cómo configurar una cuenta atrás de vacaciones o viaje con CNDWN — añade tu fecha de salida, fija un widget y compártela con tus compañeros de viaje.",
       breadcrumbName: 'Cuenta atrás de vacaciones y viajes',
     },
     fr: {
-      title: "Compte à rebours de vacances et de voyage : comptez les jours avant votre prochain départ — CNDWN",
-      desc: "Comment configurer un compte à rebours de vacances ou de voyage avec CNDWN — ajoutez votre date de départ, épinglez un widget et partagez-le avec vos compagnons de voyage.",
+      title: "Compte à rebours de vacances : votre prochain voyage — CNDWN",
+      desc: "Comment configurer un compte à rebours de vacances avec CNDWN — date de départ, widget et partage avec vos compagnons de voyage.",
       breadcrumbName: "Compte à rebours de vacances et de voyage",
     },
     ja: {
-      title: "旅行・休暇カウントダウン:次の旅行までの日数を数える — CNDWN",
+      title: "旅行カウントダウン — CNDWN",
       desc: "CNDWNで旅行や休暇のカウントダウンを設定する方法 — 出発日を追加し、ウィジェットを配置して、旅の仲間と共有しましょう。",
       breadcrumbName: "旅行・休暇カウントダウン",
     },
     it: {
-      title: "Conto alla rovescia per vacanze e viaggi: i giorni che mancano al tuo prossimo viaggio — CNDWN",
-      desc: "Come impostare un conto alla rovescia per vacanze o viaggi con CNDWN — aggiungi la data di partenza, fissa un widget e condividilo con i tuoi compagni di viaggio.",
+      title: "Conto alla rovescia per vacanze: prossimo viaggio — CNDWN",
+      desc: "Come impostare un conto alla rovescia per le vacanze con CNDWN — data di partenza, widget e condivisione con i compagni di viaggio.",
       breadcrumbName: "Conto alla rovescia per vacanze e viaggi",
     },
   },
   icloudSync: {
     en: {
-      title: 'How to Sync Countdowns Across iPhone, iPad, Mac & Apple Watch — CNDWN',
-      desc: 'How to sync your countdowns automatically across iPhone, iPad, Mac and Apple Watch with CNDWN and your own private iCloud account.',
+      title: "Sync Countdowns Across iPhone, iPad, Mac & Watch — CNDWN",
+      desc: "How to sync your countdowns automatically across iPhone, iPad, Mac and Apple Watch with CNDWN and your own private iCloud account.",
       breadcrumbName: 'Sync Countdowns Across Devices',
       howTo: {
         name: 'How to sync countdowns across iPhone, iPad, Mac and Apple Watch',
@@ -469,8 +469,8 @@ const META = {
       },
     },
     de: {
-      title: 'So synchronisierst du Countdowns auf iPhone, iPad, Mac & Apple Watch — CNDWN',
-      desc: 'So synchronisierst du deine Countdowns automatisch auf iPhone, iPad, Mac und Apple Watch mit CNDWN und deiner eigenen privaten iCloud.',
+      title: "Countdowns auf iPhone, iPad, Mac & Watch syncen — CNDWN",
+      desc: "So synchronisierst du deine Countdowns automatisch auf iPhone, iPad, Mac und Apple Watch mit CNDWN und deiner eigenen privaten iCloud.",
       breadcrumbName: 'Countdowns geräteübergreifend synchronisieren',
       howTo: {
         name: 'So synchronisierst du Countdowns auf iPhone, iPad, Mac und Apple Watch',
@@ -483,8 +483,8 @@ const META = {
       },
     },
     es: {
-      title: 'Cómo sincronizar cuentas atrás en iPhone, iPad, Mac y Apple Watch — CNDWN',
-      desc: 'Cómo sincronizar automáticamente tus cuentas atrás en iPhone, iPad, Mac y Apple Watch con CNDWN y tu propia cuenta privada de iCloud.',
+      title: "Sincroniza cuentas atrás en iPhone, iPad, Mac y Watch — CNDWN",
+      desc: "Cómo sincronizar automáticamente tus cuentas atrás en iPhone, iPad, Mac y Apple Watch con CNDWN y tu propia cuenta privada de iCloud.",
       breadcrumbName: 'Sincronizar cuentas atrás entre dispositivos',
       howTo: {
         name: 'Cómo sincronizar cuentas atrás en iPhone, iPad, Mac y Apple Watch',
@@ -497,7 +497,7 @@ const META = {
       },
     },
     fr: {
-      title: "Comment synchroniser vos comptes à rebours sur iPhone, iPad, Mac et Apple Watch — CNDWN",
+      title: "Synchroniser les comptes à rebours entre appareils — CNDWN",
       desc: "Comment synchroniser automatiquement vos comptes à rebours sur iPhone, iPad, Mac et Apple Watch avec CNDWN et votre propre compte iCloud privé.",
       breadcrumbName: "Synchroniser les comptes à rebours entre appareils",
       howTo: {
@@ -511,7 +511,7 @@ const META = {
       },
     },
     ja: {
-      title: "iPhone・iPad・Mac・Apple Watchでカウントダウンを同期する方法 — CNDWN",
+      title: "デバイス間でカウントダウンを同期 — CNDWN",
       desc: "CNDWNとあなた自身のプライベートなiCloudアカウントを使って、iPhone、iPad、Mac、Apple Watch間でカウントダウンを自動的に同期する方法。",
       breadcrumbName: "デバイス間でカウントダウンを同期",
       howTo: {
@@ -525,7 +525,7 @@ const META = {
       },
     },
     it: {
-      title: "Come sincronizzare i conti alla rovescia su iPhone, iPad, Mac e Apple Watch — CNDWN",
+      title: "Sincronizzare i conti alla rovescia tra i dispositivi — CNDWN",
       desc: "Come sincronizzare automaticamente i tuoi conti alla rovescia su iPhone, iPad, Mac e Apple Watch con CNDWN e il tuo account iCloud personale.",
       breadcrumbName: "Sincronizzare i conti alla rovescia tra dispositivi",
       howTo: {
@@ -541,70 +541,70 @@ const META = {
   },
   weddingCountdown: {
     en: {
-      title: 'Wedding Countdown: How to Count Down to Your Wedding Day — CNDWN',
-      desc: 'How to set up a wedding countdown with CNDWN — custom colors, a progress bar from engagement to wedding day, and sharing with your partner and wedding party.',
+      title: "Wedding Countdown: Count Down to Your Big Day — CNDWN",
+      desc: "How to set up a wedding countdown with CNDWN — custom colors, a progress bar and sharing with your partner and wedding party.",
       breadcrumbName: 'Wedding Countdown',
     },
     de: {
-      title: 'Hochzeits-Countdown: So zählst du herunter zu deinem Hochzeitstag — CNDWN',
-      desc: 'So richtest du einen Hochzeits-Countdown mit CNDWN ein — eigene Farben, ein Fortschrittsbalken von der Verlobung bis zur Hochzeit und Teilen mit Partner und Hochzeitsgesellschaft.',
+      title: "Hochzeits-Countdown: Zähl herunter zur Hochzeit — CNDWN",
+      desc: "So richtest du einen Hochzeits-Countdown mit CNDWN ein — eigene Farben, Fortschrittsbalken und Teilen mit Partner und Gästen.",
       breadcrumbName: 'Hochzeits-Countdown',
     },
     es: {
-      title: 'Cuenta atrás de boda: cómo contar los días hasta tu boda — CNDWN',
-      desc: 'Cómo configurar una cuenta atrás de boda con CNDWN — colores personalizados, una barra de progreso desde el compromiso hasta la boda, y compartirla con tu pareja y cortejo nupcial.',
+      title: "Cuenta atrás de boda: los días hasta tu boda — CNDWN",
+      desc: "Cómo configurar una cuenta atrás de boda con CNDWN — colores personalizados, barra de progreso y compartir con tu pareja e invitados.",
       breadcrumbName: 'Cuenta atrás de boda',
     },
     fr: {
-      title: "Compte à rebours de mariage : comment compter les jours avant le grand jour — CNDWN",
-      desc: "Comment configurer un compte à rebours de mariage avec CNDWN — couleurs personnalisées, barre de progression des fiançailles au mariage, et partage avec votre partenaire et vos témoins.",
+      title: "Compte à rebours de mariage : votre grand jour — CNDWN",
+      desc: "Comment configurer un compte à rebours de mariage avec CNDWN — couleurs personnalisées, barre de progression et partage avec vos proches.",
       breadcrumbName: "Compte à rebours de mariage",
     },
     ja: {
-      title: "結婚式カウントダウン:結婚式当日までの日数を数える方法 — CNDWN",
+      title: "結婚式カウントダウン — CNDWN",
       desc: "CNDWNで結婚式のカウントダウンを設定する方法 — カスタムカラー、婚約から結婚式までのプログレスバー、パートナーや友人との共有機能。",
       breadcrumbName: "結婚式カウントダウン",
     },
     it: {
-      title: "Conto alla rovescia per il matrimonio: come contare i giorni al grande giorno — CNDWN",
-      desc: "Come impostare un conto alla rovescia per il matrimonio con CNDWN — colori personalizzati, una barra di progresso dal fidanzamento al matrimonio, e condivisione con il partner e il corteo nuziale.",
+      title: "Conto alla rovescia per il matrimonio — CNDWN",
+      desc: "Come impostare un conto alla rovescia per il matrimonio con CNDWN — colori personalizzati, barra di progresso e condivisione con partner e invitati.",
       breadcrumbName: "Conto alla rovescia per il matrimonio",
     },
   },
   home: {
     en: {
-      title: 'Schillan — Indie Apple App Developer (Alexandra Schillhahn) — CNDWN & TerraGuessr',
-      desc: 'Schillan is the one-person studio of Alexandra Schillhahn, building privacy-first apps for iPhone, iPad, Mac and Apple Watch. Maker of CNDWN, a free countdown & countup app, and TerraGuessr, a real-world geography guessing game. No ads, no trackers.',
+      title: "Schillan — Indie Apple App Studio (Alexandra Schillhahn)",
+      desc: "One-person studio making privacy-first Apple apps: CNDWN countdown app and TerraGuessr geography game. No ads, no trackers.",
       ogTitle: 'Schillan — Indie Apple App Developer (Alexandra Schillhahn)',
       ogDesc: 'Privacy-first apps for iPhone, iPad, Mac and Apple Watch, built by one person. Maker of CNDWN and TerraGuessr. No ads, no trackers.',
     },
     de: {
-      title: 'Schillan — Indie Apple-App-Entwicklerin (Alexandra Schillhahn) — CNDWN & TerraGuessr',
-      desc: 'Schillan ist das Ein-Personen-Studio von Alexandra Schillhahn und entwickelt datenschutzfreundliche Apps für iPhone, iPad, Mac und Apple Watch. Macherin von CNDWN, einer kostenlosen Countdown- & Countup-App, und TerraGuessr, einem Geografie-Ratespiel mit echten Orten. Keine Werbung, keine Tracker.',
+      title: "Schillan — Indie-App-Studio von Alexandra Schillhahn",
+      desc: "Ein-Personen-Studio für datenschutzfreundliche Apple-Apps: die Countdown-App CNDWN und das Geografie-Spiel TerraGuessr. Keine Werbung, keine Tracker.",
       ogTitle: 'Schillan — Indie Apple-App-Entwicklerin (Alexandra Schillhahn)',
       ogDesc: 'Datenschutzfreundliche Apps für iPhone, iPad, Mac und Apple Watch, entwickelt von einer Person. Macherin von CNDWN und TerraGuessr. Keine Werbung, keine Tracker.',
     },
     es: {
-      title: 'Schillan — Desarrolladora indie de apps para Apple (Alexandra Schillhahn) — CNDWN y TerraGuessr',
-      desc: 'Schillan es el estudio de una sola persona de Alexandra Schillhahn, que crea apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch. Creadora de CNDWN, una app gratuita de cuenta atrás y adelante, y de TerraGuessr, un juego de adivinanza geográfica con lugares reales. Sin anuncios, sin rastreadores.',
+      title: "Schillan — Estudio indie de apps para Apple",
+      desc: "Estudio de una persona: apps para Apple centradas en la privacidad. Creadora de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.",
       ogTitle: 'Schillan — Desarrolladora indie de apps para Apple (Alexandra Schillhahn)',
       ogDesc: 'Apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch, creadas por una sola persona. Creadora de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.',
     },
     fr: {
-      title: "Schillan — Développeuse indépendante d'apps Apple (Alexandra Schillhahn) — CNDWN & TerraGuessr",
-      desc: "Schillan est le studio d'une seule personne, Alexandra Schillhahn, qui conçoit des applications respectueuses de la vie privée pour iPhone, iPad, Mac et Apple Watch. Créatrice de CNDWN, une app gratuite de compte à rebours, et de TerraGuessr, un jeu de géographie grandeur nature. Aucune publicité, aucun tracker.",
+      title: "Schillan — Studio indie d'apps Apple",
+      desc: "Studio d'une seule personne : applications Apple respectueuses de la vie privée. Créatrice de CNDWN et TerraGuessr. Aucune publicité, aucun tracker.",
       ogTitle: "Schillan — Développeuse indépendante d'apps Apple (Alexandra Schillhahn)",
       ogDesc: "Des applications respectueuses de la vie privée pour iPhone, iPad, Mac et Apple Watch, conçues par une seule personne. Créatrice de CNDWN et TerraGuessr. Aucune publicité, aucun tracker.",
     },
     ja: {
-      title: "Schillan — インディーApple開発者(Alexandra Schillhahn)— CNDWN & TerraGuessr",
-      desc: "SchillanはAlexandra Schillhahnによる一人スタジオで、iPhone、iPad、Mac、Apple Watch向けのプライバシー重視のアプリを開発しています。無料のカウントダウン&カウントアップアプリ「CNDWN」と、実在の場所を使った地理当てゲーム「TerraGuessr」の開発者。広告なし、トラッキングなし。",
+      title: "Schillan — Apple向けアプリ開発者",
+      desc: "個人開発者によるプライバシー重視のAppleアプリ。CNDWNとTerraGuessrを開発。広告なし、トラッキングなし。",
       ogTitle: "Schillan — インディーApple開発者(Alexandra Schillhahn)",
       ogDesc: "一人で開発する、iPhone、iPad、Mac、Apple Watch向けのプライバシー重視のアプリ。CNDWNとTerraGuessrの開発者。広告なし、トラッキングなし。",
     },
     it: {
-      title: "Schillan — Sviluppatrice indie di app Apple (Alexandra Schillhahn) — CNDWN e TerraGuessr",
-      desc: "Schillan è lo studio individuale di Alexandra Schillhahn, che crea app orientate alla privacy per iPhone, iPad, Mac e Apple Watch. Creatrice di CNDWN, un'app gratuita di conto alla rovescia, e di TerraGuessr, un gioco di geografia con luoghi reali. Nessuna pubblicità, nessun tracciamento.",
+      title: "Schillan — Studio indie di app Apple",
+      desc: "Studio individuale di app Apple orientate alla privacy. Creatrice di CNDWN e TerraGuessr. Nessuna pubblicità, nessun tracciamento.",
       ogTitle: "Schillan — Sviluppatrice indie di app Apple (Alexandra Schillhahn)",
       ogDesc: "App orientate alla privacy per iPhone, iPad, Mac e Apple Watch, create da una sola persona. Creatrice di CNDWN e TerraGuessr. Nessuna pubblicità, nessun tracciamento.",
     },
@@ -623,6 +623,12 @@ function rewriteAssetAttr(val) {
 function normText(s) { return (s || '').replace(/\s+/g, ' ').trim(); }
 
 function langSwitchScript(storageKey) {
+  // Deliberately does NOT auto-redirect based on navigator.language: search
+  // engines render pages statelessly (no persisted localStorage across
+  // crawls), so a first-load redirect-by-detected-language fires on every
+  // single crawl of every non-English URL and gets that URL classified as
+  // "page with redirect" instead of indexed. Each URL must stand on its own;
+  // hreflang already tells search engines which URL matches which language.
   return `
 <script>
 (function () {
@@ -641,22 +647,6 @@ function langSwitchScript(storageKey) {
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script>`;
 }

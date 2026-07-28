@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wedding Countdown: How to Count Down to Your Wedding Day — CNDWN</title>
-<meta name="description" content="How to set up a wedding countdown with CNDWN — custom colors, a progress bar from engagement to wedding day, and sharing with your partner and wedding party.">
+<title>Wedding Countdown: Count Down to Your Big Day — CNDWN</title>
+<meta name="description" content="How to set up a wedding countdown with CNDWN — custom colors, a progress bar and sharing with your partner and wedding party.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
@@ -23,8 +23,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="CNDWN">
-<meta property="og:title" content="Wedding Countdown: How to Count Down to Your Wedding Day — CNDWN">
-<meta property="og:description" content="How to set up a wedding countdown with CNDWN — custom colors, a progress bar from engagement to wedding day, and sharing with your partner and wedding party.">
+<meta property="og:title" content="Wedding Countdown: Count Down to Your Big Day — CNDWN">
+<meta property="og:description" content="How to set up a wedding countdown with CNDWN — custom colors, a progress bar and sharing with your partner and wedding party.">
 <meta property="og:url" content="https://schillan.com/cndwn/wedding-countdown/">
 <meta property="og:image" content="https://schillan.com/cndwn/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -40,8 +40,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wedding Countdown: How to Count Down to Your Wedding Day — CNDWN">
-<meta name="twitter:description" content="How to set up a wedding countdown with CNDWN — custom colors, a progress bar from engagement to wedding day, and sharing with your partner and wedding party.">
+<meta name="twitter:title" content="Wedding Countdown: Count Down to Your Big Day — CNDWN">
+<meta name="twitter:description" content="How to set up a wedding countdown with CNDWN — custom colors, a progress bar and sharing with your partner and wedding party.">
 <meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
 
 <link rel="icon" type="image/png" href="/cndwn/img/app-icon.png">
@@ -52,8 +52,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Wedding Countdown: How to Count Down to Your Wedding Day — CNDWN",
-  "description": "How to set up a wedding countdown with CNDWN — custom colors, a progress bar from engagement to wedding day, and sharing with your partner and wedding party.",
+  "name": "Wedding Countdown: Count Down to Your Big Day — CNDWN",
+  "description": "How to set up a wedding countdown with CNDWN — custom colors, a progress bar and sharing with your partner and wedding party.",
   "url": "https://schillan.com/cndwn/wedding-countdown/",
   "inLanguage": "en",
   "isPartOf": {
@@ -515,21 +515,5 @@ footer.site a:hover { color: var(--text); }
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

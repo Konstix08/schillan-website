@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cómo añadir un widget de cuenta atrás en iPhone (paso a paso) — CNDWN</title>
-<meta name="description" content="Una guía sencilla paso a paso para añadir un widget de cuenta atrás a la pantalla de inicio, de bloqueo o StandBy de tu iPhone con CNDWN — seis pasos, sin conocimientos técnicos.">
+<title>Cómo añadir un widget de cuenta atrás en iPhone — CNDWN</title>
+<meta name="description" content="Guía paso a paso para añadir un widget de cuenta atrás de CNDWN a tu pantalla de inicio, bloqueo o StandBy.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
@@ -23,8 +23,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="CNDWN">
-<meta property="og:title" content="Cómo añadir un widget de cuenta atrás en iPhone (paso a paso) — CNDWN">
-<meta property="og:description" content="Una guía sencilla paso a paso para añadir un widget de cuenta atrás a la pantalla de inicio, de bloqueo o StandBy de tu iPhone con CNDWN — seis pasos, sin conocimientos técnicos.">
+<meta property="og:title" content="Cómo añadir un widget de cuenta atrás en iPhone — CNDWN">
+<meta property="og:description" content="Guía paso a paso para añadir un widget de cuenta atrás de CNDWN a tu pantalla de inicio, bloqueo o StandBy.">
 <meta property="og:url" content="https://schillan.com/cndwn/es/how-to-add-countdown-widget/">
 <meta property="og:image" content="https://schillan.com/cndwn/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -40,8 +40,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cómo añadir un widget de cuenta atrás en iPhone (paso a paso) — CNDWN">
-<meta name="twitter:description" content="Una guía sencilla paso a paso para añadir un widget de cuenta atrás a la pantalla de inicio, de bloqueo o StandBy de tu iPhone con CNDWN — seis pasos, sin conocimientos técnicos.">
+<meta name="twitter:title" content="Cómo añadir un widget de cuenta atrás en iPhone — CNDWN">
+<meta name="twitter:description" content="Guía paso a paso para añadir un widget de cuenta atrás de CNDWN a tu pantalla de inicio, bloqueo o StandBy.">
 <meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
 
 <link rel="icon" type="image/png" href="/cndwn/img/app-icon.png">
@@ -52,8 +52,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Cómo añadir un widget de cuenta atrás en iPhone (paso a paso) — CNDWN",
-  "description": "Una guía sencilla paso a paso para añadir un widget de cuenta atrás a la pantalla de inicio, de bloqueo o StandBy de tu iPhone con CNDWN — seis pasos, sin conocimientos técnicos.",
+  "name": "Cómo añadir un widget de cuenta atrás en iPhone — CNDWN",
+  "description": "Guía paso a paso para añadir un widget de cuenta atrás de CNDWN a tu pantalla de inicio, bloqueo o StandBy.",
   "url": "https://schillan.com/cndwn/es/how-to-add-countdown-widget/",
   "inLanguage": "es",
   "isPartOf": {
@@ -566,21 +566,5 @@ footer.site a:hover { color: var(--text); }
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

@@ -2,7 +2,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CNDWN — Informativa sulla privacy</title>
-<meta name="description" content="Informativa sulla privacy dell'app di conto alla rovescia CNDWN (GDPR). Nessuna pubblicità, nessun tracciamento: i tuoi conti alla rovescia restano sul tuo dispositivo e nel tuo iCloud personale.">
+<meta name="description" content="Informativa sulla privacy di CNDWN (GDPR). Nessuna pubblicità né tracciamento: i tuoi conti restano sul dispositivo e nel tuo iCloud.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
@@ -514,21 +514,5 @@
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

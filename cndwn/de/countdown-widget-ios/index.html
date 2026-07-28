@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="de"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Countdown-Widgets für iPhone: Home-Bildschirm, Sperrbildschirm &amp; StandBy — CNDWN</title>
-<meta name="description" content="Ein Leitfaden zu Countdown-Widgets unter iOS: Home-Bildschirm-, Sperrbildschirm- und StandBy-Widgets, Live-Aktivitäten und die Dynamic Island — und wie du eins mit CNDWN einrichtest, einer kostenlosen Countdown-App für iPhone.">
+<title>Countdown-Widgets fürs iPhone: Home &amp; StandBy — CNDWN</title>
+<meta name="description" content="Ein Leitfaden zu Countdown-Widgets unter iOS: Home-, Sperrbildschirm und StandBy, Live-Aktivitäten und Dynamic Island — mit CNDWN einrichten.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
@@ -23,8 +23,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="CNDWN">
-<meta property="og:title" content="Countdown-Widgets für iPhone: Home-Bildschirm, Sperrbildschirm &amp; StandBy — CNDWN">
-<meta property="og:description" content="Ein Leitfaden zu Countdown-Widgets unter iOS: Home-Bildschirm-, Sperrbildschirm- und StandBy-Widgets, Live-Aktivitäten und die Dynamic Island — und wie du eins mit CNDWN einrichtest, einer kostenlosen Countdown-App für iPhone.">
+<meta property="og:title" content="Countdown-Widgets fürs iPhone: Home &amp; StandBy — CNDWN">
+<meta property="og:description" content="Ein Leitfaden zu Countdown-Widgets unter iOS: Home-, Sperrbildschirm und StandBy, Live-Aktivitäten und Dynamic Island — mit CNDWN einrichten.">
 <meta property="og:url" content="https://schillan.com/cndwn/de/countdown-widget-ios/">
 <meta property="og:image" content="https://schillan.com/cndwn/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -40,8 +40,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Countdown-Widgets für iPhone: Home-Bildschirm, Sperrbildschirm &amp; StandBy — CNDWN">
-<meta name="twitter:description" content="Ein Leitfaden zu Countdown-Widgets unter iOS: Home-Bildschirm-, Sperrbildschirm- und StandBy-Widgets, Live-Aktivitäten und die Dynamic Island — und wie du eins mit CNDWN einrichtest, einer kostenlosen Countdown-App für iPhone.">
+<meta name="twitter:title" content="Countdown-Widgets fürs iPhone: Home &amp; StandBy — CNDWN">
+<meta name="twitter:description" content="Ein Leitfaden zu Countdown-Widgets unter iOS: Home-, Sperrbildschirm und StandBy, Live-Aktivitäten und Dynamic Island — mit CNDWN einrichten.">
 <meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
 
 <link rel="icon" type="image/png" href="/cndwn/img/app-icon.png">
@@ -52,8 +52,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Countdown-Widgets für iPhone: Home-Bildschirm, Sperrbildschirm & StandBy — CNDWN",
-  "description": "Ein Leitfaden zu Countdown-Widgets unter iOS: Home-Bildschirm-, Sperrbildschirm- und StandBy-Widgets, Live-Aktivitäten und die Dynamic Island — und wie du eins mit CNDWN einrichtest, einer kostenlosen Countdown-App für iPhone.",
+  "name": "Countdown-Widgets fürs iPhone: Home & StandBy — CNDWN",
+  "description": "Ein Leitfaden zu Countdown-Widgets unter iOS: Home-, Sperrbildschirm und StandBy, Live-Aktivitäten und Dynamic Island — mit CNDWN einrichten.",
   "url": "https://schillan.com/cndwn/de/countdown-widget-ios/",
   "inLanguage": "de",
   "isPartOf": {
@@ -503,21 +503,5 @@ footer.site a:hover { color: var(--text); }
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

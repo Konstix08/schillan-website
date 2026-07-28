@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cuenta atrás de vacaciones y viajes: cuenta atrás para tu próximo viaje — CNDWN</title>
+<title>Cuenta atrás de vacaciones: tu próximo viaje — CNDWN</title>
 <meta name="description" content="Cómo configurar una cuenta atrás de vacaciones o viaje con CNDWN — añade tu fecha de salida, fija un widget y compártela con tus compañeros de viaje.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
@@ -23,7 +23,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="CNDWN">
-<meta property="og:title" content="Cuenta atrás de vacaciones y viajes: cuenta atrás para tu próximo viaje — CNDWN">
+<meta property="og:title" content="Cuenta atrás de vacaciones: tu próximo viaje — CNDWN">
 <meta property="og:description" content="Cómo configurar una cuenta atrás de vacaciones o viaje con CNDWN — añade tu fecha de salida, fija un widget y compártela con tus compañeros de viaje.">
 <meta property="og:url" content="https://schillan.com/cndwn/es/vacation-countdown/">
 <meta property="og:image" content="https://schillan.com/cndwn/og-image.png">
@@ -40,7 +40,7 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cuenta atrás de vacaciones y viajes: cuenta atrás para tu próximo viaje — CNDWN">
+<meta name="twitter:title" content="Cuenta atrás de vacaciones: tu próximo viaje — CNDWN">
 <meta name="twitter:description" content="Cómo configurar una cuenta atrás de vacaciones o viaje con CNDWN — añade tu fecha de salida, fija un widget y compártela con tus compañeros de viaje.">
 <meta name="twitter:image" content="https://schillan.com/cndwn/og-image.png">
 
@@ -52,7 +52,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Cuenta atrás de vacaciones y viajes: cuenta atrás para tu próximo viaje — CNDWN",
+  "name": "Cuenta atrás de vacaciones: tu próximo viaje — CNDWN",
   "description": "Cómo configurar una cuenta atrás de vacaciones o viaje con CNDWN — añade tu fecha de salida, fija un widget y compártela con tus compañeros de viaje.",
   "url": "https://schillan.com/cndwn/es/vacation-countdown/",
   "inLanguage": "es",
@@ -517,21 +517,5 @@ footer.site a:hover { color: var(--text); }
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

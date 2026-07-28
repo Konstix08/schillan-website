@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="ja"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CNDWN — iPhone・iPad・Mac・Apple Watch対応の美しいカウントダウン&amp;カウントアップアプリ</title>
-<meta name="description" content="CNDWNはApple製デバイス向けのプライバシー重視のカウントダウン&amp;カウントアップアプリです。誕生日、休日、旅行、締め切りまでの日数を、プログレスバー、ホーム画面・ロック画面・StandByウィジェット、ライブアクティビティ、iCloud同期、カスタムカラー、カレンダー&amp;リマインダーのインポート、共有機能とともにカウントダウン。すべての機能が無料の初めてのカウントダウンアプリ。広告なし、トラッキングなし。">
+<title>CNDWN — カウントダウンアプリ</title>
+<meta name="description" content="誕生日や旅行までをウィジェットとライブアクティビティでカウントダウン。全機能無料、広告なし。">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
@@ -59,7 +59,7 @@
   "alternateName": "CNDWN - Event Countdown",
   "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS",
   "applicationCategory": "LifestyleApplication",
-  "description": "CNDWNはApple製デバイス向けのプライバシー重視のカウントダウン&カウントアップアプリです。誕生日、休日、旅行、締め切りまでの日数を、プログレスバー、ホーム画面・ロック画面・StandByウィジェット、ライブアクティビティ、iCloud同期、カスタムカラー、カレンダー&リマインダーのインポート、共有機能とともにカウントダウン。すべての機能が無料の初めてのカウントダウンアプリ。広告なし、トラッキングなし。",
+  "description": "誕生日や旅行までをウィジェットとライブアクティビティでカウントダウン。全機能無料、広告なし。",
   "url": "https://schillan.com/cndwn/ja/",
   "downloadUrl": "https://apps.apple.com/app/id6455257754",
   "installUrl": "https://apps.apple.com/app/id6455257754",
@@ -860,21 +860,5 @@
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

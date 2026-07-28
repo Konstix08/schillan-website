@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="it"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CNDWN — Bella app di conto alla rovescia e conteggio giorni per iPhone, iPad, Mac e Apple Watch</title>
-<meta name="description" content="CNDWN è un'app di conto alla rovescia e conteggio giorni orientata alla privacy per i dispositivi Apple. Conto alla rovescia per compleanni, vacanze, viaggi e scadenze con barre di progresso, widget per schermata Home, Blocco e StandBy, Attività Live, sincronizzazione iCloud, colori personalizzati, importazione da Calendario e Promemoria, e condivisione. La prima app di conto alla rovescia con tutte le funzioni gratuite. Nessuna pubblicità, nessun tracciamento.">
+<title>CNDWN — App di conto alla rovescia per iPhone e Mac</title>
+<meta name="description" content="Conto alla rovescia per compleanni e viaggi con widget, Attività Live e sync iCloud. Tutte le funzioni gratuite, senza pubblicità.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
@@ -59,7 +59,7 @@
   "alternateName": "CNDWN - Event Countdown",
   "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS",
   "applicationCategory": "LifestyleApplication",
-  "description": "CNDWN è un'app di conto alla rovescia e conteggio giorni orientata alla privacy per i dispositivi Apple. Conto alla rovescia per compleanni, vacanze, viaggi e scadenze con barre di progresso, widget per schermata Home, Blocco e StandBy, Attività Live, sincronizzazione iCloud, colori personalizzati, importazione da Calendario e Promemoria, e condivisione. La prima app di conto alla rovescia con tutte le funzioni gratuite. Nessuna pubblicità, nessun tracciamento.",
+  "description": "Conto alla rovescia per compleanni e viaggi con widget, Attività Live e sync iCloud. Tutte le funzioni gratuite, senza pubblicità.",
   "url": "https://schillan.com/cndwn/it/",
   "downloadUrl": "https://apps.apple.com/app/id6455257754",
   "installUrl": "https://apps.apple.com/app/id6455257754",
@@ -860,21 +860,5 @@
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

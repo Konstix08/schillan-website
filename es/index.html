@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Schillan — Desarrolladora indie de apps para Apple (Alexandra Schillhahn) — CNDWN y TerraGuessr</title>
-<meta name="description" content="Schillan es el estudio de una sola persona de Alexandra Schillhahn, que crea apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch. Creadora de CNDWN, una app gratuita de cuenta atrás y adelante, y de TerraGuessr, un juego de adivinanza geográfica con lugares reales. Sin anuncios, sin rastreadores.">
+<title>Schillan — Estudio indie de apps para Apple</title>
+<meta name="description" content="Estudio de una persona: apps para Apple centradas en la privacidad. Creadora de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0c0c10" media="(prefers-color-scheme: dark)">
@@ -542,21 +542,5 @@
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>
