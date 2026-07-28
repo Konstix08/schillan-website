@@ -513,21 +513,5 @@
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script></body></html>

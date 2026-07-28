@@ -623,6 +623,12 @@ function rewriteAssetAttr(val) {
 function normText(s) { return (s || '').replace(/\s+/g, ' ').trim(); }
 
 function langSwitchScript(storageKey) {
+  // Deliberately does NOT auto-redirect based on navigator.language: search
+  // engines render pages statelessly (no persisted localStorage across
+  // crawls), so a first-load redirect-by-detected-language fires on every
+  // single crawl of every non-English URL and gets that URL classified as
+  // "page with redirect" instead of indexed. Each URL must stand on its own;
+  // hreflang already tells search engines which URL matches which language.
   return `
 <script>
 (function () {
@@ -641,22 +647,6 @@ function langSwitchScript(storageKey) {
       try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {}
     });
   });
-
-  var saved;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  if (saved) return;
-
-  var nav = ((navigator.language || 'en') + '').toLowerCase();
-  var supported = ['de', 'es', 'fr', 'ja', 'it'];
-  var detected = 'en';
-  for (var i = 0; i < supported.length; i++) {
-    if (nav.indexOf(supported[i]) === 0) { detected = supported[i]; break; }
-  }
-  try { localStorage.setItem(KEY, detected); } catch (e) {}
-  if (detected === document.documentElement.lang) return;
-
-  var target = sw.querySelector('.lang-menu a[data-lang="' + detected + '"]');
-  if (target) location.replace(target.getAttribute('href'));
 })();
 </script>`;
 }
