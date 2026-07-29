@@ -2,20 +2,22 @@
 /*
  * CNDWN i18n static-site generator.
  *
- * Reads the trilingual templates in tools/templates/ and emits one clean
+ * Reads the multilingual templates in tools/templates/ and emits one clean
  * single-language HTML page per language, each at its own URL with correct
  * canonical + hreflang tags (proper multilingual SEO). Run after editing a
  * template:
  *
  *   npm install cheerio        # once
- *   node tools/build-i18n.mjs  # regenerates the pages below
+ *   node tools/build-i18n.mjs  # regenerates every page below, plus sitemap.xml
  *
- * Outputs:
- *   /                                    /de/                                    /es/
- *   /cndwn/                              /cndwn/de/                              /cndwn/es/
- *   /cndwn/privacy/                      /cndwn/de/privacy/                      /cndwn/es/privacy/
- *   /cndwn/best-countdown-app-iphone/    /cndwn/de/best-countdown-app-iphone/    /cndwn/es/best-countdown-app-iphone/
- *   /cndwn/countdown-widget-ios/         /cndwn/de/countdown-widget-ios/         /cndwn/es/countdown-widget-ios/
+ * Outputs one page per (page type, language) pair — the language sets live in
+ * LANGS and the URL for each pair in the *Path maps below:
+ *
+ *   languages:  en (at the bare path) + de, es, fr, ja, it, pt (under /<lang>/)
+ *   page types: home, landing, privacy, bestApp, widgetGuide, widgetHowTo,
+ *               liveActivities, vacationCountdown, icloudSync, weddingCountdown
+ *
+ *   e.g. /  /de/  /pt/ … and /cndwn/privacy/  /cndwn/de/privacy/  /cndwn/pt/privacy/ …
  */
 import * as cheerio from 'cheerio';
 import fs from 'fs';
@@ -24,24 +26,24 @@ import { fileURLToPath } from 'url';
 
 const ROOT = path.resolve(fileURLToPath(import.meta.url), '..', '..');
 const SITE = 'https://schillan.com';
-const LANGS = ['en', 'de', 'es', 'fr', 'ja', 'it'];
-const OG_LOCALE = { en: 'en_US', de: 'de_DE', es: 'es_ES', fr: 'fr_FR', ja: 'ja_JP', it: 'it_IT' };
-const AUTONYM = { en: 'English', de: 'Deutsch', es: 'Español', fr: 'Français', ja: '日本語', it: 'Italiano' };
+const LANGS = ['en', 'de', 'es', 'fr', 'ja', 'it', 'pt'];
+const OG_LOCALE = { en: 'en_US', de: 'de_DE', es: 'es_ES', fr: 'fr_FR', ja: 'ja_JP', it: 'it_IT', pt: 'pt_PT' };
+const AUTONYM = { en: 'English', de: 'Deutsch', es: 'Español', fr: 'Français', ja: '日本語', it: 'Italiano', pt: 'Português' };
 // The homepage and the CNDWN section are separate products sharing one
 // domain, so each remembers its own language preference.
 const STORAGE_KEY = { home: 'schillan-lang' };
 const DEFAULT_STORAGE_KEY = 'cndwn-lang';
 
-const landingPath = { en: '/cndwn/', de: '/cndwn/de/', es: '/cndwn/es/', fr: '/cndwn/fr/', ja: '/cndwn/ja/', it: '/cndwn/it/' };
-const privacyPath = { en: '/cndwn/privacy/', de: '/cndwn/de/privacy/', es: '/cndwn/es/privacy/', fr: '/cndwn/fr/privacy/', ja: '/cndwn/ja/privacy/', it: '/cndwn/it/privacy/' };
-const bestAppPath = { en: '/cndwn/best-countdown-app-iphone/', de: '/cndwn/de/best-countdown-app-iphone/', es: '/cndwn/es/best-countdown-app-iphone/', fr: '/cndwn/fr/best-countdown-app-iphone/', ja: '/cndwn/ja/best-countdown-app-iphone/', it: '/cndwn/it/best-countdown-app-iphone/' };
-const widgetGuidePath = { en: '/cndwn/countdown-widget-ios/', de: '/cndwn/de/countdown-widget-ios/', es: '/cndwn/es/countdown-widget-ios/', fr: '/cndwn/fr/countdown-widget-ios/', ja: '/cndwn/ja/countdown-widget-ios/', it: '/cndwn/it/countdown-widget-ios/' };
-const widgetHowToPath = { en: '/cndwn/how-to-add-countdown-widget/', de: '/cndwn/de/how-to-add-countdown-widget/', es: '/cndwn/es/how-to-add-countdown-widget/', fr: '/cndwn/fr/how-to-add-countdown-widget/', ja: '/cndwn/ja/how-to-add-countdown-widget/', it: '/cndwn/it/how-to-add-countdown-widget/' };
-const liveActivitiesPath = { en: '/cndwn/countdown-live-activities/', de: '/cndwn/de/countdown-live-activities/', es: '/cndwn/es/countdown-live-activities/', fr: '/cndwn/fr/countdown-live-activities/', ja: '/cndwn/ja/countdown-live-activities/', it: '/cndwn/it/countdown-live-activities/' };
-const vacationCountdownPath = { en: '/cndwn/vacation-countdown/', de: '/cndwn/de/vacation-countdown/', es: '/cndwn/es/vacation-countdown/', fr: '/cndwn/fr/vacation-countdown/', ja: '/cndwn/ja/vacation-countdown/', it: '/cndwn/it/vacation-countdown/' };
-const icloudSyncPath = { en: '/cndwn/countdown-icloud-sync/', de: '/cndwn/de/countdown-icloud-sync/', es: '/cndwn/es/countdown-icloud-sync/', fr: '/cndwn/fr/countdown-icloud-sync/', ja: '/cndwn/ja/countdown-icloud-sync/', it: '/cndwn/it/countdown-icloud-sync/' };
-const weddingCountdownPath = { en: '/cndwn/wedding-countdown/', de: '/cndwn/de/wedding-countdown/', es: '/cndwn/es/wedding-countdown/', fr: '/cndwn/fr/wedding-countdown/', ja: '/cndwn/ja/wedding-countdown/', it: '/cndwn/it/wedding-countdown/' };
-const homePath = { en: '/', de: '/de/', es: '/es/', fr: '/fr/', ja: '/ja/', it: '/it/' };
+const landingPath = { en: '/cndwn/', de: '/cndwn/de/', es: '/cndwn/es/', fr: '/cndwn/fr/', ja: '/cndwn/ja/', it: '/cndwn/it/', pt: '/cndwn/pt/' };
+const privacyPath = { en: '/cndwn/privacy/', de: '/cndwn/de/privacy/', es: '/cndwn/es/privacy/', fr: '/cndwn/fr/privacy/', ja: '/cndwn/ja/privacy/', it: '/cndwn/it/privacy/', pt: '/cndwn/pt/privacy/' };
+const bestAppPath = { en: '/cndwn/best-countdown-app-iphone/', de: '/cndwn/de/best-countdown-app-iphone/', es: '/cndwn/es/best-countdown-app-iphone/', fr: '/cndwn/fr/best-countdown-app-iphone/', ja: '/cndwn/ja/best-countdown-app-iphone/', it: '/cndwn/it/best-countdown-app-iphone/', pt: '/cndwn/pt/best-countdown-app-iphone/' };
+const widgetGuidePath = { en: '/cndwn/countdown-widget-ios/', de: '/cndwn/de/countdown-widget-ios/', es: '/cndwn/es/countdown-widget-ios/', fr: '/cndwn/fr/countdown-widget-ios/', ja: '/cndwn/ja/countdown-widget-ios/', it: '/cndwn/it/countdown-widget-ios/', pt: '/cndwn/pt/countdown-widget-ios/' };
+const widgetHowToPath = { en: '/cndwn/how-to-add-countdown-widget/', de: '/cndwn/de/how-to-add-countdown-widget/', es: '/cndwn/es/how-to-add-countdown-widget/', fr: '/cndwn/fr/how-to-add-countdown-widget/', ja: '/cndwn/ja/how-to-add-countdown-widget/', it: '/cndwn/it/how-to-add-countdown-widget/', pt: '/cndwn/pt/how-to-add-countdown-widget/' };
+const liveActivitiesPath = { en: '/cndwn/countdown-live-activities/', de: '/cndwn/de/countdown-live-activities/', es: '/cndwn/es/countdown-live-activities/', fr: '/cndwn/fr/countdown-live-activities/', ja: '/cndwn/ja/countdown-live-activities/', it: '/cndwn/it/countdown-live-activities/', pt: '/cndwn/pt/countdown-live-activities/' };
+const vacationCountdownPath = { en: '/cndwn/vacation-countdown/', de: '/cndwn/de/vacation-countdown/', es: '/cndwn/es/vacation-countdown/', fr: '/cndwn/fr/vacation-countdown/', ja: '/cndwn/ja/vacation-countdown/', it: '/cndwn/it/vacation-countdown/', pt: '/cndwn/pt/vacation-countdown/' };
+const icloudSyncPath = { en: '/cndwn/countdown-icloud-sync/', de: '/cndwn/de/countdown-icloud-sync/', es: '/cndwn/es/countdown-icloud-sync/', fr: '/cndwn/fr/countdown-icloud-sync/', ja: '/cndwn/ja/countdown-icloud-sync/', it: '/cndwn/it/countdown-icloud-sync/', pt: '/cndwn/pt/countdown-icloud-sync/' };
+const weddingCountdownPath = { en: '/cndwn/wedding-countdown/', de: '/cndwn/de/wedding-countdown/', es: '/cndwn/es/wedding-countdown/', fr: '/cndwn/fr/wedding-countdown/', ja: '/cndwn/ja/wedding-countdown/', it: '/cndwn/it/wedding-countdown/', pt: '/cndwn/pt/wedding-countdown/' };
+const homePath = { en: '/', de: '/de/', es: '/es/', fr: '/fr/', ja: '/ja/', it: '/it/', pt: '/pt/' };
 const pathFor = {
   landing: landingPath, privacy: privacyPath, bestApp: bestAppPath, widgetGuide: widgetGuidePath,
   widgetHowTo: widgetHowToPath, liveActivities: liveActivitiesPath, vacationCountdown: vacationCountdownPath,
@@ -140,6 +142,21 @@ const META = {
         ],
       },
     },
+    pt: {
+      title: "CNDWN — App de contagem decrescente para iPhone e Mac",
+      desc: "Contagem decrescente para aniversários e viagens com widgets, Atividades em Direto e sincronização iCloud. Tudo gratuito, sem publicidade.",
+      ogTitle: "CNDWN — Bela app de contagem decrescente para dispositivos Apple",
+      ogDesc: "Conta o tempo até (e desde) o que importa, com barras de progresso, widgets bonitos, Atividades em Direto, sincronização iCloud e privacidade total. Para iPhone, iPad, Mac e Apple Watch. Todas as funcionalidades gratuitas.",
+      breadcrumbPrivacy: "Política de Privacidade",
+      howTo: {
+        name: "Como criar uma contagem decrescente no CNDWN",
+        steps: [
+          { name: "Adiciona um evento", text: "Escreve um título e escolhe uma data, ou importa um evento diretamente do Calendário ou dos Lembretes." },
+          { name: "Torna-a tua", text: "Adiciona um emoji, escolhe uma cor personalizada e opta por contagem decrescente, crescente ou barra de progresso." },
+          { name: "Vê-a a avançar", text: "Fixa um widget no ecrã principal ou bloqueado e vê os dias a passar — até na Dynamic Island." },
+        ],
+      },
+    },
   },
   privacy: {
     en: {
@@ -165,6 +182,10 @@ const META = {
     it: {
       title: "CNDWN — Informativa sulla privacy",
       desc: "Informativa sulla privacy di CNDWN (GDPR). Nessuna pubblicità né tracciamento: i tuoi conti restano sul dispositivo e nel tuo iCloud.",
+    },
+    pt: {
+      title: "CNDWN — Política de Privacidade",
+      desc: "Política de Privacidade do CNDWN (RGPD). Sem publicidade nem rastreadores: as tuas contagens ficam no teu dispositivo e na tua iCloud.",
     },
   },
   bestApp: {
@@ -198,6 +219,11 @@ const META = {
       desc: "Cosa cercare nella migliore app di conto alla rovescia per iPhone — privacy, widget, Attività Live — e perché CNDWN è gratis al 100%.",
       breadcrumbName: "Migliore app di conto alla rovescia per iPhone",
     },
+    pt: {
+      title: "Melhor app de contagem decrescente grátis (2026) — CNDWN",
+      desc: "O que procurar na melhor app de contagem decrescente para iPhone — privacidade, widgets, Atividades em Direto — e porque o CNDWN é grátis a 100%.",
+      breadcrumbName: "Melhor app de contagem decrescente para iPhone",
+    },
   },
   widgetGuide: {
     en: {
@@ -229,6 +255,11 @@ const META = {
       title: "Widget di conto alla rovescia iPhone: Home e StandBy — CNDWN",
       desc: "Guida ai widget di conto alla rovescia su iOS: Home, Blocco, StandBy, Attività Live e Dynamic Island — come configurarli con CNDWN.",
       breadcrumbName: "Widget di conto alla rovescia per iOS",
+    },
+    pt: {
+      title: "Widgets de contagem decrescente iPhone: ecrã e StandBy — CNDWN",
+      desc: "Guia dos widgets de contagem decrescente no iOS: ecrã principal, ecrã bloqueado, StandBy, Atividades em Direto e Dynamic Island — como configurá-los com o CNDWN.",
+      breadcrumbName: "Widgets de contagem decrescente para iOS",
     },
   },
   widgetHowTo: {
@@ -328,6 +359,22 @@ const META = {
         ],
       },
     },
+    pt: {
+      title: "Como adicionar um widget de contagem no iPhone — CNDWN",
+      desc: "Guia passo a passo para adicionar um widget de contagem decrescente do CNDWN ao ecrã principal, ao ecrã bloqueado ou ao StandBy.",
+      breadcrumbName: "Como adicionar um widget de contagem decrescente",
+      howTo: {
+        name: "Como adicionar um widget de contagem decrescente no iPhone",
+        steps: [
+          { name: "Descarrega o CNDWN", text: "Obtém o CNDWN gratuitamente na App Store e abre-o." },
+          { name: "Cria uma contagem decrescente", text: "Toca em +, adiciona um título e escolhe uma data — ou importa um evento diretamente do Calendário ou dos Lembretes." },
+          { name: "Toca e mantém premido o ecrã principal", text: "Toca e mantém premida uma zona vazia do teu ecrã principal até os ícones começarem a tremer." },
+          { name: "Toca no botão +", text: "Toca no + no canto superior para abrir a galeria de widgets." },
+          { name: "Procura CNDWN", text: "Escreve \"CNDWN\" na barra de pesquisa e seleciona-o nos resultados." },
+          { name: "Escolhe um tamanho e adiciona-o", text: "Desliza para escolher pequeno, médio ou grande e toca em Adicionar widget. Toca em Concluído." },
+        ],
+      },
+    },
   },
   liveActivities: {
     en: {
@@ -420,6 +467,21 @@ const META = {
         ],
       },
     },
+    pt: {
+      title: "Atividade em Direto de contagem no iPhone — CNDWN",
+      desc: "Como ativar as Atividades em Direto e iniciar uma contagem decrescente em tempo real no ecrã bloqueado e na Dynamic Island do teu iPhone com o CNDWN.",
+      breadcrumbName: "Atividades em Direto de contagem decrescente",
+      howTo: {
+        name: "Como adicionar uma Atividade em Direto de contagem decrescente no iPhone",
+        steps: [
+          { name: "Verifica a tua versão do iOS", text: "Certifica-te de que o teu iPhone tem o iOS 16.1 ou posterior — é necessário para as Atividades em Direto." },
+          { name: "Ativa as Atividades em Direto para o CNDWN", text: "Abre as Definições, desce até CNDWN e certifica-te de que as Atividades em Direto estão ativadas." },
+          { name: "Abre uma contagem decrescente no CNDWN", text: "Abre a app e seleciona a contagem decrescente que queres seguir em direto." },
+          { name: "Inicia a Atividade em Direto", text: "Toca em Iniciar Atividade em Direto na contagem decrescente. Aparece de imediato." },
+          { name: "Bloqueia o telefone para a ver", text: "Bloqueia o teu iPhone para ver a contagem em direto no ecrã bloqueado e, se o teu modelo a tiver, na Dynamic Island." },
+        ],
+      },
+    },
   },
   vacationCountdown: {
     en: {
@@ -451,6 +513,11 @@ const META = {
       title: "Conto alla rovescia per vacanze: prossimo viaggio — CNDWN",
       desc: "Come impostare un conto alla rovescia per le vacanze con CNDWN — data di partenza, widget e condivisione con i compagni di viaggio.",
       breadcrumbName: "Conto alla rovescia per vacanze e viaggi",
+    },
+    pt: {
+      title: "Contagem decrescente de férias: a próxima viagem — CNDWN",
+      desc: "Como configurar uma contagem decrescente de férias ou viagem com o CNDWN — data de partida, widget e partilha com os companheiros de viagem.",
+      breadcrumbName: "Contagem decrescente de férias e viagens",
     },
   },
   icloudSync: {
@@ -538,6 +605,20 @@ const META = {
         ],
       },
     },
+    pt: {
+      title: "Sincronizar contagens entre os teus dispositivos — CNDWN",
+      desc: "Como sincronizar automaticamente as tuas contagens em iPhone, iPad, Mac e Apple Watch com o CNDWN e a tua própria conta iCloud privada.",
+      breadcrumbName: "Sincronizar contagens entre dispositivos",
+      howTo: {
+        name: "Como sincronizar contagens decrescentes em iPhone, iPad, Mac e Apple Watch",
+        steps: [
+          { name: "Ativa a iCloud em cada dispositivo", text: "Abre as Definições, toca no teu nome, depois em iCloud, e certifica-te de que o iCloud Drive está ativado." },
+          { name: "Inicia sessão com o mesmo Apple ID em todos", text: "Usa o mesmo Apple ID no teu iPhone, iPad, Mac e Apple Watch." },
+          { name: "Abre o CNDWN em cada dispositivo", text: "Instala o CNDWN e abre-o — as tuas contagens aparecem automaticamente, sem qualquer configuração." },
+          { name: "Usa o Handoff para continuar onde ficaste", text: "Começa a editar uma contagem no teu iPhone e continua de imediato no iPad ou no Mac." },
+        ],
+      },
+    },
   },
   weddingCountdown: {
     en: {
@@ -569,6 +650,11 @@ const META = {
       title: "Conto alla rovescia per il matrimonio — CNDWN",
       desc: "Come impostare un conto alla rovescia per il matrimonio con CNDWN — colori personalizzati, barra di progresso e condivisione con partner e invitati.",
       breadcrumbName: "Conto alla rovescia per il matrimonio",
+    },
+    pt: {
+      title: "Contagem decrescente para o casamento — CNDWN",
+      desc: "Como configurar uma contagem decrescente para o casamento com o CNDWN — cores personalizadas, barra de progresso e partilha com o par e os convidados.",
+      breadcrumbName: "Contagem decrescente para o casamento",
     },
   },
   home: {
@@ -607,6 +693,12 @@ const META = {
       desc: "Studio individuale di app Apple orientate alla privacy. Creatrice di CNDWN e TerraGuessr. Nessuna pubblicità, nessun tracciamento.",
       ogTitle: "Schillan — Sviluppatrice indie di app Apple (Alexandra Schillhahn)",
       ogDesc: "App orientate alla privacy per iPhone, iPad, Mac e Apple Watch, create da una sola persona. Creatrice di CNDWN e TerraGuessr. Nessuna pubblicità, nessun tracciamento.",
+    },
+    pt: {
+      title: "Schillan — Estúdio indie de apps Apple",
+      desc: "Estúdio individual de apps Apple que respeitam a privacidade. Criadora do CNDWN e do TerraGuessr. Sem publicidade, sem rastreadores.",
+      ogTitle: "Schillan — Desenvolvedora indie de apps Apple (Alexandra Schillhahn)",
+      ogDesc: "Apps que respeitam a privacidade para iPhone, iPad, Mac e Apple Watch, criadas por uma só pessoa. Criadora do CNDWN e do TerraGuessr. Sem publicidade, sem rastreadores.",
     },
   },
 };
