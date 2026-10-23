@@ -23,12 +23,12 @@
 
 # CNDWN
 
-> CNDWN is a privacy-first countdown and countup app for Apple devices (iPhone, iPad, Mac and Apple Watch). It lets people count down to birthdays, holidays, trips, deadlines and any important date — or count up since a past moment — with progress bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, iCloud sync, custom colors, calendar and reminders import, Handoff and sharing. Every feature is free — including iCloud sync, Live Activities and all widgets — with no in-app purchases, no subscription, no ads and no trackers.
+> CNDWN is a privacy-first countdown and countup app for Apple devices (iPhone, iPad, Mac, Apple Watch, Apple TV and Apple Vision Pro). It lets people count down to birthdays, holidays, trips, deadlines and any important date — or count up since a past moment — with progress rings and bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, an Apple Watch app with complications, an Apple TV app, iCloud sync, colors, gradients and photo backgrounds, repeating countdowns, Siri and Shortcuts, calendar and reminders import, Handoff and sharing via link, QR code, image or Instagram. Every feature is free — including iCloud sync, Live Activities and all widgets — with no in-app purchases, no subscription, no ads and no trackers.
 
 ## Key facts
 
 - **Name:** CNDWN (App Store title: "CNDWN – Countdown Timer Widget"; localized as "CNDWN – Cuenta Regresiva", "CNDWN – Compte à rebours", "CNDWN – Conto alla Rovescia" and "CNDWN – Contagem Regressiva") — a countdown & countup app
-- **Platforms:** iPhone, iPad, Mac, Apple Watch (requires iOS 18.0 or later)
+- **Platforms:** iPhone, iPad, Mac, Apple Watch (app and complications), Apple TV and Apple Vision Pro (requires iOS 18.0 or later)
 - **Category:** Lifestyle
 - **Price:** Free — every feature included (also iCloud sync, Live Activities and all widgets); no in-app purchases at all, no subscription, no ads
 - **Developer:** Konstantin Schillhahn (Schillan) — the seller name on the App Store
@@ -46,17 +46,21 @@ CNDWN shows the time remaining until (or elapsed since) events you care about. Y
 
 - Countdowns to any future date and time
 - Countups since a past date
-- Progress bars showing how much time has elapsed between a start and end date
+- Progress shown as a ring or a bar, for how much time has elapsed between a start and end date
+- Repeating countdowns: birthdays, anniversaries and other recurring events start over automatically
+- Several display styles for countdowns, count-ups and progress
 - Home Screen, Lock Screen and StandBy widgets
 - Live Activities on the Lock Screen and in the Dynamic Island
 - iCloud sync across all your Apple devices, using your own iCloud account
-- Custom colors for every countdown
-- Dark Mode
+- Backgrounds for every countdown: a color, a gradient or your own photo
+- Large emoji collection and Dark Mode
 - Import events directly from Calendar and Reminders
-- Notifications and reminders (e.g. an hour, ten minutes or a minute before the end)
+- Customizable notifications (e.g. an hour, ten minutes or a minute before the end)
+- Archive finished countdowns; reset a count-up with one tap (e.g. to restart a streak)
+- Siri and Shortcuts (App Intents) and Spotlight search
 - Handoff between Apple devices
-- Share your countdowns with friends and family
-- Works on iPhone, iPad, Mac and Apple Watch
+- Share countdowns via link or QR code, save them as a designed image, or post them straight to Instagram; shared links show a live preview on the web
+- Works on iPhone, iPad, Mac, Apple Watch (with complications), Apple TV and Apple Vision Pro
 - Privacy-first: no ads, no third-party trackers, no data selling; countdowns stay on your device and in your own iCloud
 
 ## Countdowns and days calculator
@@ -77,8 +81,8 @@ Live "How many days until …?" pages for the holidays and seasons, each with th
 
 Checked against each app's US App Store listing in October 2026 (full table: https://schillan.com/cndwn/countdown-app-comparison/):
 
-- **CNDWN:** no in-app purchases, no ads; Home Screen and Lock Screen widgets, iCloud sync and Live Activities all free
-- **NanoCount:** no ads; widgets free; iCloud sync requires NanoCount Pro ($5.99 one-time)
+- **CNDWN:** no in-app purchases, no ads; Home Screen and Lock Screen widgets, iCloud sync, Live Activities, photo backgrounds and repeating countdowns all free
+- **NanoCount:** no ads; widgets free; iCloud sync and photo backgrounds require NanoCount Pro ($5.99 one-time)
 - **Countdown (Find Appiness):** shows ads; Home Screen, Lock Screen and StandBy widgets are Premium ($7.99–13.99, also removes ads); iCloud sync free
 - **Countdown Star:** shows ads unless you buy Remove Ads ($1.99); widgets and iCloud sync free
 

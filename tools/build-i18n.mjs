@@ -791,7 +791,7 @@ function entityGraph(type, lang, meta, canonical) {
   if (type !== 'home' && type !== 'landing') {
     graph.push({
       '@type': 'SoftwareApplication', '@id': APP_ID, name: 'CNDWN', alternateName: APP_STORE_NAME[lang],
-      applicationCategory: 'LifestyleApplication', operatingSystem: 'iOS 18.0 or later, iPadOS, macOS, watchOS',
+      applicationCategory: 'LifestyleApplication', operatingSystem: 'iOS 18.0 or later, iPadOS, macOS, watchOS, tvOS, visionOS',
       url: SITE + landingPath[lang], sameAs: [APP_STORE_URL],
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
       author: { '@id': FOUNDER_ID }, publisher: { '@id': ORG_ID },
