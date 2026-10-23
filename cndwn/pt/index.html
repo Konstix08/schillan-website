@@ -415,6 +415,10 @@
   /* ---------- Tutorials / guides grid ---------- */
   .guides { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
   @media (max-width: 720px) { .guides { grid-template-columns: 1fr; } }
+  .popular { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 0; margin: 0 auto; max-width: 860px; }
+  .popular a { display: inline-flex; gap: 8px; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 10px 16px; color: var(--text); font-weight: 600; font-size: 15px; }
+  .popular a:hover { text-decoration: none; border-color: var(--accent); }
+  .popular-more { text-align: center; margin: 22px 0 0; font-weight: 600; }
   .guide-card {
     display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
     padding: 24px 26px; transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -552,6 +556,7 @@
     <div class="nav-right">
       <div class="nav-links">
         <a href="#features"><span lang="pt">Funcionalidades</span></a>
+        <a href="/cndwn/pt/countdowns/"><span lang="pt">Contagens</span></a>
         <a href="#how"><span lang="pt">Como funciona</span></a>
         <a href="#tutorials"><span lang="pt">Tutoriais</span></a>
         <a href="#faq">FAQ</a>
@@ -861,6 +866,32 @@
   </div>
 </section>
 
+<!-- ==================== POPULAR COUNTDOWNS ==================== -->
+<section class="block" id="countdowns">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="pt">Contagens populares</span></h2>
+      <p><span lang="pt">Quantos dias faltam para as próximas festas? Contagens em direto com as datas exatas.</span></p>
+    </div>
+    <!-- filled per language by tools/build-i18n.mjs with the next upcoming countdown pages -->
+    <ul class="popular" id="popular-countdowns">
+      <li><a href="/cndwn/pt/dias-para-o-halloween/"><span aria-hidden="true">🎃</span>Halloween</a></li>
+      <li><a href="/cndwn/pt/dias-para-a-black-friday/"><span aria-hidden="true">🛍️</span>Black Friday</a></li>
+      <li><a href="/cndwn/pt/dias-para-o-inverno/"><span aria-hidden="true">❄️</span>Início do inverno</a></li>
+      <li><a href="/cndwn/pt/dias-para-a-vespera-de-natal/"><span aria-hidden="true">🎁</span>Véspera de Natal</a></li>
+      <li><a href="/cndwn/pt/dias-para-o-natal/"><span aria-hidden="true">🎄</span>Natal</a></li>
+      <li><a href="/cndwn/pt/dias-para-a-passagem-de-ano/"><span aria-hidden="true">🎆</span>Passagem de Ano</a></li>
+      <li><a href="/cndwn/pt/dias-para-o-ano-novo/"><span aria-hidden="true">🥂</span>Ano Novo</a></li>
+      <li><a href="/cndwn/pt/dias-para-o-dia-de-reis/"><span aria-hidden="true">👑</span>Dia de Reis</a></li>
+      <li><a href="/cndwn/pt/dias-para-o-carnaval/"><span aria-hidden="true">🎭</span>Carnaval</a></li>
+      <li><a href="/cndwn/pt/dias-para-o-dia-dos-namorados/"><span aria-hidden="true">💘</span>Dia dos Namorados</a></li>
+      <li><a href="/cndwn/pt/dias-para-o-dia-do-pai/"><span aria-hidden="true">👔</span>Dia do Pai</a></li>
+      <li><a href="/cndwn/pt/dias-para-a-primavera/"><span aria-hidden="true">🌷</span>Início da primavera</a></li>
+    </ul>
+    <p class="popular-more"><a href="/cndwn/pt/countdowns/"><span lang="pt">Todas as contagens →</span></a> · <a href="/cndwn/pt/calculadora-de-dias/"><span lang="pt">Calculadora de dias</span></a> · <a href="/cndwn/pt/countdown-app-comparison/"><span lang="pt">Comparação</span></a></p>
+  </div>
+</section>
+
 <!-- ==================== FAQ ==================== -->
 <section class="block alt" id="faq">
   <div class="wrap">
@@ -942,6 +973,9 @@
       <a href="#features"><span lang="pt">Funcionalidades</span></a>
       <a href="#tutorials"><span lang="pt">Tutoriais</span></a>
       <a href="#faq">FAQ</a>
+      <a href="/cndwn/pt/countdowns/"><span lang="pt">Contagens</span></a>
+      <a href="/cndwn/pt/calculadora-de-dias/"><span lang="pt">Calculadora de dias</span></a>
+      <a href="/cndwn/pt/countdown-app-comparison/"><span lang="pt">Comparação</span></a>
       <a href="/cndwn/pt/privacy/"><span lang="pt">Privacidade</span></a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>

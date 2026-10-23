@@ -24,8 +24,8 @@ import * as cheerio from 'cheerio';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { buildCountdownPages } from './countdown-pages.mjs';
-import { HUB_PATH } from './countdowns-data.mjs';
+import { buildCountdownPages, nextCountdowns } from './countdown-pages.mjs';
+import { HUB_PATH, CALC_PATH } from './countdowns-data.mjs';
 
 const ROOT = path.resolve(fileURLToPath(import.meta.url), '..', '..');
 const SITE = 'https://schillan.com';
@@ -898,6 +898,9 @@ function build(type, lang) {
     $(`a[href="${pathFor[t].en}"]`).attr('href', pathFor[t][lang]);
   }
   $(`a[href="${HUB_PATH.en}"]`).attr('href', HUB_PATH[lang]);
+  $(`a[href="${CALC_PATH.en}"]`).attr('href', CALC_PATH[lang]);
+  $('#popular-countdowns').html(nextCountdowns(lang, 12).map(c =>
+    `\n      <li><a href="${c.href}"><span aria-hidden="true">${c.emoji}</span>${c.name}</a></li>`).join('') + '\n    ');
   $('a[href^="/cndwn/#"]').each((_, el) => {
     const h = $(el).attr('href');
     $(el).attr('href', landingPath[lang] + h.slice('/cndwn/'.length));

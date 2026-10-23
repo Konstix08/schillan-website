@@ -415,6 +415,10 @@
   /* ---------- Tutorials / guides grid ---------- */
   .guides { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
   @media (max-width: 720px) { .guides { grid-template-columns: 1fr; } }
+  .popular { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 0; margin: 0 auto; max-width: 860px; }
+  .popular a { display: inline-flex; gap: 8px; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 10px 16px; color: var(--text); font-weight: 600; font-size: 15px; }
+  .popular a:hover { text-decoration: none; border-color: var(--accent); }
+  .popular-more { text-align: center; margin: 22px 0 0; font-weight: 600; }
   .guide-card {
     display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
     padding: 24px 26px; transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -552,6 +556,7 @@
     <div class="nav-right">
       <div class="nav-links">
         <a href="#features"><span lang="en">Features</span></a>
+        <a href="/cndwn/countdowns/"><span lang="en">Countdowns</span></a>
         <a href="#how"><span lang="en">How it works</span></a>
         <a href="#tutorials"><span lang="en">Tutorials</span></a>
         <a href="#faq">FAQ</a>
@@ -861,6 +866,32 @@
   </div>
 </section>
 
+<!-- ==================== POPULAR COUNTDOWNS ==================== -->
+<section class="block" id="countdowns">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="en">Popular countdowns</span></h2>
+      <p><span lang="en">How many days until the next holidays? Live countdowns with the exact dates.</span></p>
+    </div>
+    <!-- filled per language by tools/build-i18n.mjs with the next upcoming countdown pages -->
+    <ul class="popular" id="popular-countdowns">
+      <li><a href="/cndwn/days-until-halloween/"><span aria-hidden="true">🎃</span>Halloween</a></li>
+      <li><a href="/cndwn/days-until-thanksgiving/"><span aria-hidden="true">🦃</span>Thanksgiving</a></li>
+      <li><a href="/cndwn/days-until-black-friday/"><span aria-hidden="true">🛍️</span>Black Friday</a></li>
+      <li><a href="/cndwn/days-until-winter/"><span aria-hidden="true">❄️</span>First day of winter</a></li>
+      <li><a href="/cndwn/days-until-christmas-eve/"><span aria-hidden="true">🎁</span>Christmas Eve</a></li>
+      <li><a href="/cndwn/days-until-christmas/"><span aria-hidden="true">🎄</span>Christmas</a></li>
+      <li><a href="/cndwn/days-until-new-years-eve/"><span aria-hidden="true">🎆</span>New Year's Eve</a></li>
+      <li><a href="/cndwn/days-until-new-year/"><span aria-hidden="true">🥂</span>New Year's Day</a></li>
+      <li><a href="/cndwn/days-until-valentines-day/"><span aria-hidden="true">💘</span>Valentine's Day</a></li>
+      <li><a href="/cndwn/days-until-st-patricks-day/"><span aria-hidden="true">☘️</span>St. Patrick's Day</a></li>
+      <li><a href="/cndwn/days-until-spring/"><span aria-hidden="true">🌷</span>First day of spring</a></li>
+      <li><a href="/cndwn/days-until-easter/"><span aria-hidden="true">🐣</span>Easter</a></li>
+    </ul>
+    <p class="popular-more"><a href="/cndwn/countdowns/"><span lang="en">All countdowns →</span></a> · <a href="/cndwn/days-calculator/"><span lang="en">Days calculator</span></a> · <a href="/cndwn/countdown-app-comparison/"><span lang="en">Comparison</span></a></p>
+  </div>
+</section>
+
 <!-- ==================== FAQ ==================== -->
 <section class="block alt" id="faq">
   <div class="wrap">
@@ -942,6 +973,9 @@
       <a href="#features"><span lang="en">Features</span></a>
       <a href="#tutorials"><span lang="en">Tutorials</span></a>
       <a href="#faq">FAQ</a>
+      <a href="/cndwn/countdowns/"><span lang="en">Countdowns</span></a>
+      <a href="/cndwn/days-calculator/"><span lang="en">Days calculator</span></a>
+      <a href="/cndwn/countdown-app-comparison/"><span lang="en">Comparison</span></a>
       <a href="/cndwn/privacy/"><span lang="en">Privacy Policy</span></a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>
