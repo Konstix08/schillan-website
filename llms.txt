@@ -59,6 +59,20 @@ CNDWN shows the time remaining until (or elapsed since) events you care about. Y
 - Works on iPhone, iPad, Mac and Apple Watch
 - Privacy-first: no ads, no third-party trackers, no data selling; countdowns stay on your device and in your own iCloud
 
+## Countdowns and days calculator
+
+Live "How many days until …?" pages for the holidays and seasons, each with the exact dates for the coming years, in every site language plus local holidays per country. A days calculator counts the days until a date or between two dates. Every countdown can be embedded on other websites.
+
+- All countdowns (English): https://schillan.com/cndwn/countdowns/
+- All countdowns (German): https://schillan.com/cndwn/de/countdowns/
+- All countdowns (Spanish): https://schillan.com/cndwn/es/countdowns/
+- All countdowns (French): https://schillan.com/cndwn/fr/countdowns/
+- All countdowns (Japanese): https://schillan.com/cndwn/ja/countdowns/
+- All countdowns (Italian): https://schillan.com/cndwn/it/countdowns/
+- All countdowns (Portuguese): https://schillan.com/cndwn/pt/countdowns/
+- Days calculator: https://schillan.com/cndwn/days-calculator/ (German: https://schillan.com/cndwn/de/tage-rechner/)
+- Examples: https://schillan.com/cndwn/days-until-christmas/ · https://schillan.com/cndwn/de/tage-bis-weihnachten/ · https://schillan.com/cndwn/days-until-easter/
+
 ## How CNDWN compares
 
 Checked against each app's US App Store listing in October 2026 (full table: https://schillan.com/cndwn/countdown-app-comparison/):

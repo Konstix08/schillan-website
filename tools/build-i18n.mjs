@@ -24,6 +24,8 @@ import * as cheerio from 'cheerio';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { buildCountdownPages } from './countdown-pages.mjs';
+import { HUB_PATH } from './countdowns-data.mjs';
 
 const ROOT = path.resolve(fileURLToPath(import.meta.url), '..', '..');
 const SITE = 'https://schillan.com';
@@ -759,6 +761,10 @@ const SITEMAP_META = {
   icloudSync: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
   weddingCountdown: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
   comparison: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.8, prioritySecondary: 0.7 },
+  // countdown pages, overview and days calculator (tools/countdown-pages.mjs)
+  countdown: { lastmod: '2026-10-23', changefreq: 'monthly' },
+  countdownHub: { lastmod: '2026-10-23', changefreq: 'weekly' },
+  daysCalculator: { lastmod: '2026-10-23', changefreq: 'monthly' },
 };
 
 // One entity graph shared by every page: the same @ids for the studio, its
@@ -891,6 +897,7 @@ function build(type, lang) {
   for (const t of Object.keys(pathFor)) {
     $(`a[href="${pathFor[t].en}"]`).attr('href', pathFor[t][lang]);
   }
+  $(`a[href="${HUB_PATH.en}"]`).attr('href', HUB_PATH[lang]);
   $('a[href^="/cndwn/#"]').each((_, el) => {
     const h = $(el).attr('href');
     $(el).attr('href', landingPath[lang] + h.slice('/cndwn/'.length));
@@ -1041,6 +1048,17 @@ for (const [type, lang, out] of OUTPUTS) {
 }
 console.log(`Done. Regenerated ${OUTPUTS.length} pages from tools/templates/.`);
 
+// ---- countdown pages, overview, days calculator and embed widget ----
+const countdowns = buildCountdownPages({ SITE, SHARED_CSS, OG_LOCALE, entityGraph, langSwitchScript });
+for (const p of countdowns.pages) {
+  const dest = path.join(ROOT, p.path.replace(/^\//, ''), 'index.html');
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.writeFileSync(dest, p.html, 'utf8');
+}
+fs.mkdirSync(path.join(ROOT, 'cndwn', 'embed'), { recursive: true });
+fs.writeFileSync(path.join(ROOT, 'cndwn', 'embed', 'index.html'), countdowns.embedHtml, 'utf8');
+console.log(`✓ ${countdowns.pages.length} countdown pages + cndwn/embed/index.html`);
+
 // ---- sitemap.xml: generated from the same pathFor/LANGS data so every URL
 // cluster always lists a full, reciprocal set of hreflang alternates. ----
 
@@ -1057,6 +1075,14 @@ function sitemapUrlBlock(type, lang) {
 const sitemapUrls = [];
 for (const type of Object.keys(TEMPLATE_FILES)) {
   for (const lang of LANGS) sitemapUrls.push(sitemapUrlBlock(type, lang));
+}
+for (const p of countdowns.pages) {
+  const type = p.type;
+  const alts = Object.entries(p.alternates);
+  const links = alts.length > 1
+    ? [...alts, ['x-default', p.alternates.en || alts[0][1]]].map(([hl, href]) => `    <xhtml:link rel="alternate" hreflang="${hl}" href="${SITE}${href}"/>`).join('\n') + '\n'
+    : '';
+  sitemapUrls.push(`  <url>\n    <loc>${SITE}${p.path}</loc>\n${links}    <lastmod>${SITEMAP_META[type].lastmod}</lastmod>\n    <changefreq>${SITEMAP_META[type].changefreq}</changefreq>\n    <priority>${p.priority.toFixed(1)}</priority>\n  </url>`);
 }
 // TerraGuessr is a separate product outside this i18n system — kept as a single static entry.
 sitemapUrls.push(
