@@ -37,10 +37,12 @@ them to the sitemap. Each page states the next date in its HTML; the day count
 runs live in the browser via the hand-written `/cndwn/js/countdown.js`. Rebuild
 after an occasion has passed so its "next date" moves on to the following year.
 
-`/cndwn/share/` is a standalone (hand-edited, not generated) redirect page: it
-takes a `?data=…` query param from a share link, forwards it to the app via
-the `cndwn://share?data=…` custom URL scheme, and falls back to an App Store
-badge if the app isn't installed. It replaces the old `cndwn-share.schillan.com`
+`/cndwn/share/` is a standalone (hand-edited, not generated) page: it takes a
+`?data=…` query param from a share link (the countdown as URL-encoded JSON),
+shows a live preview of it (countdown, count-up, progress ring or bar, in the
+countdown's color, in the visitor's language), forwards it to the app via the
+`cndwn://share?data=…` custom URL scheme, and offers the App Store badge for
+anyone who doesn't have the app yet. It replaces the old `cndwn-share.schillan.com`
 subdomain — share links should now point to `https://schillan.com/cndwn/share/?data=…`.
 It's `noindex` and not listed in the sitemap since it has no content of its own.
 
