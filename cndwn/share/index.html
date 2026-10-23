@@ -142,6 +142,17 @@
   $('store-img').alt = t.alt;
   $('home').href = lang === 'en' ? '/cndwn/' : '/cndwn/' + lang + '/';
 
+  // Hand the value to the app exactly as it appears in the query string: it is
+  // already encoded the way the app expects, and re-encoding would corrupt
+  // names containing "%" or "+". Try it on load (as before); the button and
+  // the preview stay as the fallback.
+  var dataMatch = /[?&]data=([^&]*)/.exec(location.search);
+  if (dataMatch) {
+    $('open').href = 'cndwn://share?data=' + dataMatch[1];
+    $('open').hidden = false;
+    window.addEventListener('load', function () { location.href = $('open').href; });
+  }
+
   // The app double-encodes the JSON; decode until it parses.
   var raw = new URLSearchParams(location.search).get('data') || '';
   var item = null;
@@ -157,9 +168,6 @@
     return;
   }
 
-  var json = JSON.stringify(item);
-  $('open').href = 'cndwn://share?data=' + encodeURIComponent(json);
-  $('open').hidden = false;
 
   var start = new Date(item.startDate);
   var color = /^[0-9a-f]{6}$/i.test(item.color || '') ? '#' + item.color : null;
@@ -202,8 +210,6 @@
   tick();
   setInterval(tick, 1000);
 
-  // Hand the countdown to the app if it is installed (as before); the preview stays as fallback.
-  window.addEventListener('load', function () { location.href = $('open').href; });
 })();
 </script>
 </body></html>
