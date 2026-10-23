@@ -59,6 +59,12 @@ multilingual templates and regenerate:
    node tools/build-i18n.mjs
    ```
 
+The App Store rating shown on the site (`{{RATING}}`, `{{RATING_COUNT}}`,
+`{{RATING_DATE}}` in the templates) is the worldwide total from `APP_RATING` in
+`tools/build-i18n.mjs`. Refresh it with `node tools/app-store-rating.mjs`, paste
+the printed line into `tools/build-i18n.mjs`, update the numbers in `llms.txt`
+and rebuild.
+
 The generator strips each page down to a single language, sets `<html lang>`,
 localizes the `<title>`/description/Open Graph/JSON-LD, wires up per-language
 `canonical` + `hreflang`, and turns the language switcher into crawlable links.

@@ -1,18 +1,18 @@
 # Schillan
 
-> Schillan is the one-person indie studio of Alexandra Schillhahn, building privacy-first apps for Apple platforms (iPhone, iPad, Mac, Apple Watch). No ads, no third-party trackers, no data selling. Schillan currently makes two apps: CNDWN, a free countdown & countup app, and TerraGuessr, a real-world geography guessing game in development.
+> Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms (iPhone, iPad, Mac, Apple Watch). No ads, no third-party trackers, no data selling. Schillan currently makes two apps: CNDWN, a free countdown & countup app, and TerraGuessr, a real-world geography guessing game in development.
 
 ## Key facts
 
 - **Studio:** Schillan
-- **Founder:** Alexandra Schillhahn
+- **Founder:** Konstantin Schillhahn
 - **Focus:** Native apps for iPhone, iPad, Mac and Apple Watch
 - **Philosophy:** No ads, no trackers, no data selling
 - **Website:** https://schillan.com/ (also available in German at /de/, Spanish at /es/, French at /fr/, Japanese at /ja/, Italian at /it/ and Portuguese at /pt/)
 
 ## Apps
 
-- **CNDWN** — a free, privacy-first countdown & countup app for Apple devices. Live on the App Store, rated 4.8/5. See the CNDWN section below.
+- **CNDWN** — a free, privacy-first countdown & countup app for Apple devices. Live on the App Store, rated 4.6/5 from 63 ratings worldwide (October 2026). See the CNDWN section below.
 - **TerraGuessr** — a real-world geography guessing game for iPhone using Apple's Look Around. In development, not yet released. See the TerraGuessr section below.
 
 ## Contact
@@ -27,13 +27,13 @@
 
 ## Key facts
 
-- **Name:** CNDWN — Event Countdown (a countdown & countup app)
+- **Name:** CNDWN (App Store title: "CNDWN – Countdown Timer Widget"; localized as "CNDWN – Cuenta Regresiva", "CNDWN – Compte à rebours", "CNDWN – Conto alla Rovescia" and "CNDWN – Contagem Regressiva") — a countdown & countup app
 - **Platforms:** iPhone, iPad, Mac, Apple Watch (requires iOS 18.0 or later)
 - **Category:** Lifestyle
 - **Price:** Free — every feature included, no in-app purchases required, no ads
-- **Developer:** Schillan (Alexandra Schillhahn)
-- **Languages:** English, German, Spanish, French, Japanese, Chinese
-- **Rating:** 4.8 / 5 on the Apple App Store
+- **Developer:** Konstantin Schillhahn (Schillan) — the seller name on the App Store
+- **Languages:** English, German, Spanish, French, Italian, Japanese, Portuguese, Chinese (Simplified)
+- **Rating:** 4.6 / 5 average from 63 ratings across all App Store countries (October 2026); ratings are shown per country on the App Store, e.g. 4.7 from 25 ratings in Germany and 4.3 from 12 in the United States
 - **Website:** https://schillan.com/cndwn/ (also available in German at /cndwn/de/, Spanish at /cndwn/es/, French at /cndwn/fr/, Japanese at /cndwn/ja/, Italian at /cndwn/it/ and Portuguese at /cndwn/pt/)
 - **Download:** https://apps.apple.com/app/id6455257754
 - **Contact:** cndwn@schillan.com

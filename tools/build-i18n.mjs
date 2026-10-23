@@ -43,6 +43,17 @@ const liveActivitiesPath = { en: '/cndwn/countdown-live-activities/', de: '/cndw
 const vacationCountdownPath = { en: '/cndwn/vacation-countdown/', de: '/cndwn/de/vacation-countdown/', es: '/cndwn/es/vacation-countdown/', fr: '/cndwn/fr/vacation-countdown/', ja: '/cndwn/ja/vacation-countdown/', it: '/cndwn/it/vacation-countdown/', pt: '/cndwn/pt/vacation-countdown/' };
 const icloudSyncPath = { en: '/cndwn/countdown-icloud-sync/', de: '/cndwn/de/countdown-icloud-sync/', es: '/cndwn/es/countdown-icloud-sync/', fr: '/cndwn/fr/countdown-icloud-sync/', ja: '/cndwn/ja/countdown-icloud-sync/', it: '/cndwn/it/countdown-icloud-sync/', pt: '/cndwn/pt/countdown-icloud-sync/' };
 const weddingCountdownPath = { en: '/cndwn/wedding-countdown/', de: '/cndwn/de/wedding-countdown/', es: '/cndwn/es/wedding-countdown/', fr: '/cndwn/fr/wedding-countdown/', ja: '/cndwn/ja/wedding-countdown/', it: '/cndwn/it/wedding-countdown/', pt: '/cndwn/pt/wedding-countdown/' };
+// The app's localized App Store titles (apps.apple.com/<country>/app/id6455257754),
+// used as the SoftwareApplication alternateName so it matches the store listing.
+const APP_STORE_NAME = {
+  en: 'CNDWN – Countdown Timer Widget', de: 'CNDWN – Countdown Timer Widget', es: 'CNDWN – Cuenta Regresiva',
+  fr: 'CNDWN – Compte à rebours', ja: 'CNDWN – Countdown Timer Widget', it: 'CNDWN – Conto alla Rovescia',
+  pt: 'CNDWN – Contagem Regressiva',
+};
+// App Store rating summed over every App Store country (refresh with
+// `node tools/app-store-rating.mjs`). Templates show it via the {{RATING}},
+// {{RATING_COUNT}} and {{RATING_DATE}} tokens, formatted per language.
+const APP_RATING = { value: 4.6, count: 63, asOf: '2026-10' };
 const homePath = { en: '/', de: '/de/', es: '/es/', fr: '/fr/', ja: '/ja/', it: '/it/', pt: '/pt/' };
 const pathFor = {
   landing: landingPath, privacy: privacyPath, bestApp: bestAppPath, widgetGuide: widgetGuidePath,
@@ -57,7 +68,6 @@ const META = {
       desc: "Track birthdays, trips and deadlines with widgets, Live Activities and iCloud sync. Every feature free — no ads, no trackers.",
       ogTitle: 'CNDWN — Beautiful Countdown & Countup App for Apple Devices',
       ogDesc: 'Count down (and up) to what matters with progress bars, gorgeous widgets, Live Activities, iCloud sync and total privacy. For iPhone, iPad, Mac and Apple Watch. Every feature free.',
-      breadcrumbPrivacy: 'Privacy Policy',
       howTo: {
         name: 'How to create a countdown in CNDWN',
         steps: [
@@ -72,7 +82,6 @@ const META = {
       desc: "Zähle herunter zu Geburtstagen und Reisen — mit Widgets, Live-Aktivitäten und iCloud-Sync. Alle Funktionen gratis, keine Werbung.",
       ogTitle: 'CNDWN — Schöne Countdown- & Countup-App für Apple-Geräte',
       ogDesc: 'Zähle herunter (und hinauf) zu allem, was zählt – mit Fortschrittsbalken, schönen Widgets, Live-Aktivitäten, iCloud-Sync und voller Privatsphäre. Für iPhone, iPad, Mac und Apple Watch. Alle Funktionen gratis.',
-      breadcrumbPrivacy: 'Datenschutzerklärung',
       howTo: {
         name: 'So erstellst du einen Countdown in CNDWN',
         steps: [
@@ -87,7 +96,6 @@ const META = {
       desc: "Cuenta atrás hacia cumpleaños y viajes con widgets, actividades en vivo y sincronización iCloud. Todo gratis, sin anuncios.",
       ogTitle: 'CNDWN — Bonita app de cuenta atrás y adelante para dispositivos Apple',
       ogDesc: 'Cuenta atrás (y adelante) hacia lo que importa: barras de progreso, bonitos widgets, actividades en vivo, sincronización con iCloud y total privacidad. Para iPhone, iPad, Mac y Apple Watch. Todo gratis.',
-      breadcrumbPrivacy: 'Política de Privacidad',
       howTo: {
         name: 'Cómo crear una cuenta atrás en CNDWN',
         steps: [
@@ -102,7 +110,6 @@ const META = {
       desc: "Comptez les jours avant anniversaires et voyages avec widgets, Activités en direct et iCloud. Toutes les fonctions gratuites.",
       ogTitle: "CNDWN — Belle app de compte à rebours pour appareils Apple",
       ogDesc: "Compte à rebours (et compteur de jours) vers ce qui compte, avec barres de progression, superbes widgets, Activités en direct, synchronisation iCloud et confidentialité totale. Pour iPhone, iPad, Mac et Apple Watch. Toutes les fonctions gratuites.",
-      breadcrumbPrivacy: "Politique de confidentialité",
       howTo: {
         name: "Comment créer un compte à rebours dans CNDWN",
         steps: [
@@ -117,7 +124,6 @@ const META = {
       desc: "誕生日や旅行までをウィジェットとライブアクティビティでカウントダウン。全機能無料、広告なし。",
       ogTitle: "CNDWN — Apple製デバイス向けの美しいカウントダウンアプリ",
       ogDesc: "プログレスバー、美しいウィジェット、ライブアクティビティ、iCloud同期、完全なプライバシーで大切な瞬間までカウントダウン(&カウントアップ)。iPhone・iPad・Mac・Apple Watch対応。すべての機能が無料。",
-      breadcrumbPrivacy: "プライバシーポリシー",
       howTo: {
         name: "CNDWNでカウントダウンを作成する方法",
         steps: [
@@ -132,7 +138,6 @@ const META = {
       desc: "Conto alla rovescia per compleanni e viaggi con widget, Attività Live e sync iCloud. Tutte le funzioni gratuite, senza pubblicità.",
       ogTitle: "CNDWN — Bella app di conto alla rovescia per dispositivi Apple",
       ogDesc: "Conto alla rovescia (e in avanti) verso ciò che conta, con barre di progresso, widget bellissimi, Attività Live, sincronizzazione iCloud e privacy totale. Per iPhone, iPad, Mac e Apple Watch. Tutte le funzioni gratuite.",
-      breadcrumbPrivacy: "Informativa sulla privacy",
       howTo: {
         name: "Come creare un conto alla rovescia in CNDWN",
         steps: [
@@ -147,7 +152,6 @@ const META = {
       desc: "Contagem decrescente para aniversários e viagens com widgets, Atividades em Direto e sincronização iCloud. Tudo gratuito, sem publicidade.",
       ogTitle: "CNDWN — Bela app de contagem decrescente para dispositivos Apple",
       ogDesc: "Conta o tempo até (e desde) o que importa, com barras de progresso, widgets bonitos, Atividades em Direto, sincronização iCloud e privacidade total. Para iPhone, iPad, Mac e Apple Watch. Todas as funcionalidades gratuitas.",
-      breadcrumbPrivacy: "Política de Privacidade",
       howTo: {
         name: "Como criar uma contagem decrescente no CNDWN",
         steps: [
@@ -659,46 +663,46 @@ const META = {
   },
   home: {
     en: {
-      title: "Schillan — Indie Apple App Studio (Alexandra Schillhahn)",
+      title: "Schillan — Indie Apple App Studio (Konstantin Schillhahn)",
       desc: "One-person studio making privacy-first Apple apps: CNDWN countdown app and TerraGuessr geography game. No ads, no trackers.",
-      ogTitle: 'Schillan — Indie Apple App Developer (Alexandra Schillhahn)',
+      ogTitle: 'Schillan — Indie Apple App Developer (Konstantin Schillhahn)',
       ogDesc: 'Privacy-first apps for iPhone, iPad, Mac and Apple Watch, built by one person. Maker of CNDWN and TerraGuessr. No ads, no trackers.',
     },
     de: {
-      title: "Schillan — Indie-App-Studio von Alexandra Schillhahn",
+      title: "Schillan — Indie-App-Studio von Konstantin Schillhahn",
       desc: "Ein-Personen-Studio für datenschutzfreundliche Apple-Apps: die Countdown-App CNDWN und das Geografie-Spiel TerraGuessr. Keine Werbung, keine Tracker.",
-      ogTitle: 'Schillan — Indie Apple-App-Entwicklerin (Alexandra Schillhahn)',
-      ogDesc: 'Datenschutzfreundliche Apps für iPhone, iPad, Mac und Apple Watch, entwickelt von einer Person. Macherin von CNDWN und TerraGuessr. Keine Werbung, keine Tracker.',
+      ogTitle: 'Schillan — Indie Apple-App-Entwickler (Konstantin Schillhahn)',
+      ogDesc: 'Datenschutzfreundliche Apps für iPhone, iPad, Mac und Apple Watch, entwickelt von einer Person. Macher von CNDWN und TerraGuessr. Keine Werbung, keine Tracker.',
     },
     es: {
       title: "Schillan — Estudio indie de apps para Apple",
-      desc: "Estudio de una persona: apps para Apple centradas en la privacidad. Creadora de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.",
-      ogTitle: 'Schillan — Desarrolladora indie de apps para Apple (Alexandra Schillhahn)',
-      ogDesc: 'Apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch, creadas por una sola persona. Creadora de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.',
+      desc: "Estudio de una persona: apps para Apple centradas en la privacidad. Creador de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.",
+      ogTitle: 'Schillan — Desarrollador indie de apps para Apple (Konstantin Schillhahn)',
+      ogDesc: 'Apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch, creadas por una sola persona. Creador de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.',
     },
     fr: {
       title: "Schillan — Studio indie d'apps Apple",
-      desc: "Studio d'une seule personne : applications Apple respectueuses de la vie privée. Créatrice de CNDWN et TerraGuessr. Aucune publicité, aucun tracker.",
-      ogTitle: "Schillan — Développeuse indépendante d'apps Apple (Alexandra Schillhahn)",
-      ogDesc: "Des applications respectueuses de la vie privée pour iPhone, iPad, Mac et Apple Watch, conçues par une seule personne. Créatrice de CNDWN et TerraGuessr. Aucune publicité, aucun tracker.",
+      desc: "Studio d'une seule personne : applications Apple respectueuses de la vie privée. Créateur de CNDWN et TerraGuessr. Aucune publicité, aucun tracker.",
+      ogTitle: "Schillan — Développeur indépendant d'apps Apple (Konstantin Schillhahn)",
+      ogDesc: "Des applications respectueuses de la vie privée pour iPhone, iPad, Mac et Apple Watch, conçues par une seule personne. Créateur de CNDWN et TerraGuessr. Aucune publicité, aucun tracker.",
     },
     ja: {
       title: "Schillan — Apple向けアプリ開発者",
       desc: "個人開発者によるプライバシー重視のAppleアプリ。CNDWNとTerraGuessrを開発。広告なし、トラッキングなし。",
-      ogTitle: "Schillan — インディーApple開発者(Alexandra Schillhahn)",
+      ogTitle: "Schillan — インディーApple開発者(Konstantin Schillhahn)",
       ogDesc: "一人で開発する、iPhone、iPad、Mac、Apple Watch向けのプライバシー重視のアプリ。CNDWNとTerraGuessrの開発者。広告なし、トラッキングなし。",
     },
     it: {
       title: "Schillan — Studio indie di app Apple",
-      desc: "Studio individuale di app Apple orientate alla privacy. Creatrice di CNDWN e TerraGuessr. Nessuna pubblicità, nessun tracciamento.",
-      ogTitle: "Schillan — Sviluppatrice indie di app Apple (Alexandra Schillhahn)",
-      ogDesc: "App orientate alla privacy per iPhone, iPad, Mac e Apple Watch, create da una sola persona. Creatrice di CNDWN e TerraGuessr. Nessuna pubblicità, nessun tracciamento.",
+      desc: "Studio individuale di app Apple orientate alla privacy. Creatore di CNDWN e TerraGuessr. Nessuna pubblicità, nessun tracciamento.",
+      ogTitle: "Schillan — Sviluppatore indie di app Apple (Konstantin Schillhahn)",
+      ogDesc: "App orientate alla privacy per iPhone, iPad, Mac e Apple Watch, create da una sola persona. Creatore di CNDWN e TerraGuessr. Nessuna pubblicità, nessun tracciamento.",
     },
     pt: {
       title: "Schillan — Estúdio indie de apps Apple",
-      desc: "Estúdio individual de apps Apple que respeitam a privacidade. Criadora do CNDWN e do TerraGuessr. Sem publicidade, sem rastreadores.",
-      ogTitle: "Schillan — Desenvolvedora indie de apps Apple (Alexandra Schillhahn)",
-      ogDesc: "Apps que respeitam a privacidade para iPhone, iPad, Mac e Apple Watch, criadas por uma só pessoa. Criadora do CNDWN e do TerraGuessr. Sem publicidade, sem rastreadores.",
+      desc: "Estúdio individual de apps Apple que respeitam a privacidade. Criador do CNDWN e do TerraGuessr. Sem publicidade, sem rastreadores.",
+      ogTitle: "Schillan — Desenvolvedor indie de apps Apple (Konstantin Schillhahn)",
+      ogDesc: "Apps que respeitam a privacidade para iPhone, iPad, Mac e Apple Watch, criadas por uma só pessoa. Criador do CNDWN e do TerraGuessr. Sem publicidade, sem rastreadores.",
     },
   },
 };
@@ -713,6 +717,15 @@ function rewriteAssetAttr(val) {
 }
 
 function normText(s) { return (s || '').replace(/\s+/g, ' ').trim(); }
+
+function fillTokens(html, lang) {
+  const value = new Intl.NumberFormat(lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(APP_RATING.value);
+  const date = new Intl.DateTimeFormat(lang, { month: 'long', year: 'numeric', timeZone: 'UTC' })
+    .format(new Date(APP_RATING.asOf + '-01T00:00:00Z'));
+  return html.replaceAll('{{RATING}}', value)
+    .replaceAll('{{RATING_COUNT}}', String(APP_RATING.count))
+    .replaceAll('{{RATING_DATE}}', date);
+}
 
 function langSwitchScript(storageKey) {
   // Deliberately does NOT auto-redirect based on navigator.language: search
@@ -759,7 +772,7 @@ const SHARED_CSS = fs.readFileSync(path.join(ROOT, 'tools', 'templates', 'shared
 
 function build(type, lang) {
   const tplFile = path.join(ROOT, 'tools', 'templates', TEMPLATE_FILES[type]);
-  const $ = cheerio.load(fs.readFileSync(tplFile, 'utf8'), { decodeEntities: false });
+  const $ = cheerio.load(fillTokens(fs.readFileSync(tplFile, 'utf8'), lang), { decodeEntities: false });
   const meta = META[type][lang];
   const canonical = absUrl(type, lang);
   const targets = pathFor[type];
@@ -859,12 +872,12 @@ function rebuildJsonLd($, type, lang, meta, canonical) {
     q: normText($(el).find('summary').text()),
     a: normText($(el).find('p').text()),
   })).get();
-  const privacyUrl = SITE + privacyPath[lang];
 
   for (const s of scripts) {
     let data;
     try { data = JSON.parse($(s).text()); } catch { continue; }
     if (data['@type'] === 'SoftwareApplication') {
+      data.alternateName = APP_STORE_NAME[lang];
       data.description = meta.desc;
       data.url = canonical;
       data.inLanguage = lang;
@@ -882,8 +895,8 @@ function rebuildJsonLd($, type, lang, meta, canonical) {
     } else if (data['@type'] === 'BreadcrumbList') {
       data.itemListElement = type === 'landing'
         ? [
-          { '@type': 'ListItem', position: 1, name: 'CNDWN', item: canonical },
-          { '@type': 'ListItem', position: 2, name: meta.breadcrumbPrivacy, item: privacyUrl },
+          { '@type': 'ListItem', position: 1, name: 'Schillan', item: SITE + homePath[lang] },
+          { '@type': 'ListItem', position: 2, name: 'CNDWN', item: canonical },
         ]
         : [
           { '@type': 'ListItem', position: 1, name: 'CNDWN', item: SITE + landingPath[lang] },
@@ -936,15 +949,15 @@ console.log(`Done. Regenerated ${OUTPUTS.length} pages from tools/templates/.`);
 // ---- sitemap.xml: generated from the same pathFor/LANGS data so every URL
 // cluster always lists a full, reciprocal set of hreflang alternates. ----
 const SITEMAP_META = {
-  home: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 1.0, prioritySecondary: 0.9, image: 'https://schillan.com/og-image.png' },
-  landing: { lastmod: '2026-07-07', changefreq: 'monthly', priority: 0.9, prioritySecondary: 0.8, image: 'https://schillan.com/cndwn/og-image.png' },
+  home: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 1.0, prioritySecondary: 0.9, image: 'https://schillan.com/og-image.png' },
+  landing: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.9, prioritySecondary: 0.8, image: 'https://schillan.com/cndwn/og-image.png' },
   privacy: { lastmod: '2026-06-25', changefreq: 'yearly', priority: 0.5, prioritySecondary: 0.5 },
   bestApp: { lastmod: '2026-07-07', changefreq: 'monthly', priority: 0.8, prioritySecondary: 0.7 },
   widgetGuide: { lastmod: '2026-07-07', changefreq: 'monthly', priority: 0.8, prioritySecondary: 0.7 },
   widgetHowTo: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.7, prioritySecondary: 0.6 },
   liveActivities: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.7, prioritySecondary: 0.6 },
   vacationCountdown: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
-  icloudSync: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
+  icloudSync: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
   weddingCountdown: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
 };
 
