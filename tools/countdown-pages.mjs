@@ -19,6 +19,7 @@ const NAV = {
   fr: ['Comptes à rebours', 'Calculateur', 'App'], ja: ['カウントダウン', '日数計算', 'アプリ'], it: ['Conti alla rovescia', 'Calcolatore', 'App'],
   pt: ['Contagens', 'Calculadora', 'App'],
 };
+const COMPARE = { en: 'Comparison', de: 'Vergleich', es: 'Comparativa', fr: 'Comparatif', ja: '比較', it: 'Confronto', pt: 'Comparação' };
 const FOOT = {
   en: ['Features', 'Privacy Policy'], de: ['Funktionen', 'Datenschutz'], es: ['Funciones', 'Privacidad'], fr: ['Fonctionnalités', 'Politique de confidentialité'],
   ja: ['機能', 'プライバシーポリシー'], it: ['Funzionalità', 'Informativa sulla privacy'], pt: ['Funcionalidades', 'Política de Privacidade'],
@@ -254,6 +255,7 @@ function footer(lang) {
       <a href="${landing}#features">${features}</a>
       <a href="${HUB_PATH[lang]}">${NAV[lang][0]}</a>
       <a href="${CALC_PATH[lang]}">${NAV[lang][1]}</a>
+      <a href="${landing}countdown-app-comparison/">${COMPARE[lang]}</a>
       <a href="${landing}privacy/">${privacy}</a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>
@@ -654,6 +656,16 @@ export function buildCountdownPages(ctx, now = new Date()) {
     pages.push(calcPage(ctx, lang));
   }
   return { pages, embedHtml: embedPage(all) };
+}
+
+// The next `count` occasions in a language, soonest first, for linking from other pages.
+export function nextCountdowns(lang, count, now = new Date()) {
+  return EVENTS.filter(e => e.langs[lang])
+    .map(e => ({ e, occ: upcoming(e, lang, now)[0] }))
+    .sort((a, b) => (a.occ.day ? Date.UTC(a.occ.day.y, a.occ.day.m - 1, a.occ.day.d) : +a.occ.instant)
+      - (b.occ.day ? Date.UTC(b.occ.day.y, b.occ.day.m - 1, b.occ.day.d) : +b.occ.instant))
+    .slice(0, count)
+    .map(({ e }) => ({ href: pathOf(lang, e.langs[lang].slug), emoji: e.emoji, name: e.langs[lang].name }));
 }
 
 export { upcoming, seasonInstant, easter, occurrence };

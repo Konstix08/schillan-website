@@ -415,6 +415,10 @@
   /* ---------- Tutorials / guides grid ---------- */
   .guides { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
   @media (max-width: 720px) { .guides { grid-template-columns: 1fr; } }
+  .popular { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 0; margin: 0 auto; max-width: 860px; }
+  .popular a { display: inline-flex; gap: 8px; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 10px 16px; color: var(--text); font-weight: 600; font-size: 15px; }
+  .popular a:hover { text-decoration: none; border-color: var(--accent); }
+  .popular-more { text-align: center; margin: 22px 0 0; font-weight: 600; }
   .guide-card {
     display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
     padding: 24px 26px; transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -552,6 +556,7 @@
     <div class="nav-right">
       <div class="nav-links">
         <a href="#features"><span lang="it">Funzionalità</span></a>
+        <a href="/cndwn/it/countdowns/"><span lang="it">Conti alla rovescia</span></a>
         <a href="#how"><span lang="it">Come funziona</span></a>
         <a href="#tutorials"><span lang="it">Tutorial</span></a>
         <a href="#faq">FAQ</a>
@@ -861,6 +866,32 @@
   </div>
 </section>
 
+<!-- ==================== POPULAR COUNTDOWNS ==================== -->
+<section class="block" id="countdowns">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="it">Conti alla rovescia popolari</span></h2>
+      <p><span lang="it">Quanti giorni mancano alle prossime feste? Conti alla rovescia in diretta con le date esatte.</span></p>
+    </div>
+    <!-- filled per language by tools/build-i18n.mjs with the next upcoming countdown pages -->
+    <ul class="popular" id="popular-countdowns">
+      <li><a href="/cndwn/it/giorni-ad-halloween/"><span aria-hidden="true">🎃</span>Halloween</a></li>
+      <li><a href="/cndwn/it/giorni-al-black-friday/"><span aria-hidden="true">🛍️</span>Black Friday</a></li>
+      <li><a href="/cndwn/it/giorni-all-inverno/"><span aria-hidden="true">❄️</span>Inizio dell'inverno</a></li>
+      <li><a href="/cndwn/it/giorni-alla-vigilia-di-natale/"><span aria-hidden="true">🎁</span>Vigilia di Natale</a></li>
+      <li><a href="/cndwn/it/giorni-a-natale/"><span aria-hidden="true">🎄</span>Natale</a></li>
+      <li><a href="/cndwn/it/giorni-a-san-silvestro/"><span aria-hidden="true">🎆</span>San Silvestro</a></li>
+      <li><a href="/cndwn/it/giorni-a-capodanno/"><span aria-hidden="true">🥂</span>Capodanno</a></li>
+      <li><a href="/cndwn/it/giorni-alla-befana/"><span aria-hidden="true">🧹</span>Befana</a></li>
+      <li><a href="/cndwn/it/giorni-a-carnevale/"><span aria-hidden="true">🎭</span>Carnevale</a></li>
+      <li><a href="/cndwn/it/giorni-a-san-valentino/"><span aria-hidden="true">💘</span>San Valentino</a></li>
+      <li><a href="/cndwn/it/giorni-alla-festa-del-papa/"><span aria-hidden="true">👔</span>Festa del papà</a></li>
+      <li><a href="/cndwn/it/giorni-alla-primavera/"><span aria-hidden="true">🌷</span>Inizio della primavera</a></li>
+    </ul>
+    <p class="popular-more"><a href="/cndwn/it/countdowns/"><span lang="it">Tutti i conti alla rovescia →</span></a> · <a href="/cndwn/it/calcolatore-di-giorni/"><span lang="it">Calcolatore di giorni</span></a> · <a href="/cndwn/it/countdown-app-comparison/"><span lang="it">Confronto</span></a></p>
+  </div>
+</section>
+
 <!-- ==================== FAQ ==================== -->
 <section class="block alt" id="faq">
   <div class="wrap">
@@ -942,6 +973,9 @@
       <a href="#features"><span lang="it">Funzionalità</span></a>
       <a href="#tutorials"><span lang="it">Tutorial</span></a>
       <a href="#faq">FAQ</a>
+      <a href="/cndwn/it/countdowns/"><span lang="it">Conti alla rovescia</span></a>
+      <a href="/cndwn/it/calcolatore-di-giorni/"><span lang="it">Calcolatore di giorni</span></a>
+      <a href="/cndwn/it/countdown-app-comparison/"><span lang="it">Confronto</span></a>
       <a href="/cndwn/it/privacy/"><span lang="it">Privacy</span></a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>

@@ -348,6 +348,10 @@
   /* ---------- Tutorials / guides grid ---------- */
   .guides { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
   @media (max-width: 720px) { .guides { grid-template-columns: 1fr; } }
+  .popular { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 0; margin: 0 auto; max-width: 860px; }
+  .popular a { display: inline-flex; gap: 8px; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 10px 16px; color: var(--text); font-weight: 600; font-size: 15px; }
+  .popular a:hover { text-decoration: none; border-color: var(--accent); }
+  .popular-more { text-align: center; margin: 22px 0 0; font-weight: 600; }
   .guide-card {
     display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
     padding: 24px 26px; transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -435,6 +439,7 @@
     <div class="nav-right">
       <div class="nav-links">
         <a href="#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span><span lang="fr">Fonctionnalités</span><span lang="ja">機能</span><span lang="it">Funzionalità</span><span lang="pt">Funcionalidades</span></a>
+        <a href="/cndwn/countdowns/"><span lang="en">Countdowns</span><span lang="de">Countdowns</span><span lang="es">Cuentas atrás</span><span lang="fr">Comptes à rebours</span><span lang="ja">カウントダウン</span><span lang="it">Conti alla rovescia</span><span lang="pt">Contagens</span></a>
         <a href="#how"><span lang="en">How it works</span><span lang="de">So geht's</span><span lang="es">Cómo funciona</span><span lang="fr">Comment ça marche</span><span lang="ja">使い方</span><span lang="it">Come funziona</span><span lang="pt">Como funciona</span></a>
         <a href="#tutorials"><span lang="en">Tutorials</span><span lang="de">Anleitungen</span><span lang="es">Tutoriales</span><span lang="fr">Tutoriels</span><span lang="ja">チュートリアル</span><span lang="it">Tutorial</span><span lang="pt">Tutoriais</span></a>
         <a href="#faq">FAQ</a>
@@ -740,6 +745,19 @@
   </div>
 </section>
 
+<!-- ==================== POPULAR COUNTDOWNS ==================== -->
+<section class="block" id="countdowns">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="en">Popular countdowns</span><span lang="de">Beliebte Countdowns</span><span lang="es">Cuentas atrás populares</span><span lang="fr">Comptes à rebours populaires</span><span lang="ja">人気のカウントダウン</span><span lang="it">Conti alla rovescia popolari</span><span lang="pt">Contagens populares</span></h2>
+      <p><span lang="en">How many days until the next holidays? Live countdowns with the exact dates.</span><span lang="de">Wie viele Tage bis zu den nächsten Feiertagen? Live-Countdowns mit den genauen Terminen.</span><span lang="es">¿Cuántos días faltan para las próximas fiestas? Cuentas atrás en directo con las fechas exactas.</span><span lang="fr">Combien de jours avant les prochaines fêtes ? Des comptes à rebours en direct avec les dates exactes.</span><span lang="ja">次の行事まであと何日?正確な日付つきのライブカウントダウン。</span><span lang="it">Quanti giorni mancano alle prossime feste? Conti alla rovescia in diretta con le date esatte.</span><span lang="pt">Quantos dias faltam para as próximas festas? Contagens em direto com as datas exatas.</span></p>
+    </div>
+    <!-- filled per language by tools/build-i18n.mjs with the next upcoming countdown pages -->
+    <ul class="popular" id="popular-countdowns"></ul>
+    <p class="popular-more"><a href="/cndwn/countdowns/"><span lang="en">All countdowns →</span><span lang="de">Alle Countdowns →</span><span lang="es">Todas las cuentas atrás →</span><span lang="fr">Tous les comptes à rebours →</span><span lang="ja">すべてのカウントダウン →</span><span lang="it">Tutti i conti alla rovescia →</span><span lang="pt">Todas as contagens →</span></a> · <a href="/cndwn/days-calculator/"><span lang="en">Days calculator</span><span lang="de">Tage-Rechner</span><span lang="es">Calculadora de días</span><span lang="fr">Calculateur de jours</span><span lang="ja">日数計算</span><span lang="it">Calcolatore di giorni</span><span lang="pt">Calculadora de dias</span></a> · <a href="/cndwn/countdown-app-comparison/"><span lang="en">Comparison</span><span lang="de">Vergleich</span><span lang="es">Comparativa</span><span lang="fr">Comparatif</span><span lang="ja">比較</span><span lang="it">Confronto</span><span lang="pt">Comparação</span></a></p>
+  </div>
+</section>
+
 <!-- ==================== FAQ ==================== -->
 <section class="block alt" id="faq">
   <div class="wrap">
@@ -821,6 +839,9 @@
       <a href="#features"><span lang="en">Features</span><span lang="de">Funktionen</span><span lang="es">Funciones</span><span lang="fr">Fonctionnalités</span><span lang="ja">機能</span><span lang="it">Funzionalità</span><span lang="pt">Funcionalidades</span></a>
       <a href="#tutorials"><span lang="en">Tutorials</span><span lang="de">Anleitungen</span><span lang="es">Tutoriales</span><span lang="fr">Tutoriels</span><span lang="ja">チュートリアル</span><span lang="it">Tutorial</span><span lang="pt">Tutoriais</span></a>
       <a href="#faq">FAQ</a>
+      <a href="/cndwn/countdowns/"><span lang="en">Countdowns</span><span lang="de">Countdowns</span><span lang="es">Cuentas atrás</span><span lang="fr">Comptes à rebours</span><span lang="ja">カウントダウン</span><span lang="it">Conti alla rovescia</span><span lang="pt">Contagens</span></a>
+      <a href="/cndwn/days-calculator/"><span lang="en">Days calculator</span><span lang="de">Tage-Rechner</span><span lang="es">Calculadora de días</span><span lang="fr">Calculateur de jours</span><span lang="ja">日数計算</span><span lang="it">Calcolatore di giorni</span><span lang="pt">Calculadora de dias</span></a>
+      <a href="/cndwn/countdown-app-comparison/"><span lang="en">Comparison</span><span lang="de">Vergleich</span><span lang="es">Comparativa</span><span lang="fr">Comparatif</span><span lang="ja">比較</span><span lang="it">Confronto</span><span lang="pt">Comparação</span></a>
       <a href="/cndwn/privacy/"><span lang="en">Privacy Policy</span><span lang="de">Datenschutz</span><span lang="es">Privacidad</span><span lang="fr">Confidentialité</span><span lang="ja">プライバシー</span><span lang="it">Privacy</span><span lang="pt">Privacidade</span></a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>

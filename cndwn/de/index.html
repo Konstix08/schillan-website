@@ -415,6 +415,10 @@
   /* ---------- Tutorials / guides grid ---------- */
   .guides { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
   @media (max-width: 720px) { .guides { grid-template-columns: 1fr; } }
+  .popular { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 0; margin: 0 auto; max-width: 860px; }
+  .popular a { display: inline-flex; gap: 8px; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 10px 16px; color: var(--text); font-weight: 600; font-size: 15px; }
+  .popular a:hover { text-decoration: none; border-color: var(--accent); }
+  .popular-more { text-align: center; margin: 22px 0 0; font-weight: 600; }
   .guide-card {
     display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
     padding: 24px 26px; transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -552,6 +556,7 @@
     <div class="nav-right">
       <div class="nav-links">
         <a href="#features"><span lang="de">Funktionen</span></a>
+        <a href="/cndwn/de/countdowns/"><span lang="de">Countdowns</span></a>
         <a href="#how"><span lang="de">So geht's</span></a>
         <a href="#tutorials"><span lang="de">Anleitungen</span></a>
         <a href="#faq">FAQ</a>
@@ -861,6 +866,32 @@
   </div>
 </section>
 
+<!-- ==================== POPULAR COUNTDOWNS ==================== -->
+<section class="block" id="countdowns">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span lang="de">Beliebte Countdowns</span></h2>
+      <p><span lang="de">Wie viele Tage bis zu den nächsten Feiertagen? Live-Countdowns mit den genauen Terminen.</span></p>
+    </div>
+    <!-- filled per language by tools/build-i18n.mjs with the next upcoming countdown pages -->
+    <ul class="popular" id="popular-countdowns">
+      <li><a href="/cndwn/de/tage-bis-halloween/"><span aria-hidden="true">🎃</span>Halloween</a></li>
+      <li><a href="/cndwn/de/tage-bis-sankt-martin/"><span aria-hidden="true">🏮</span>Sankt Martin</a></li>
+      <li><a href="/cndwn/de/tage-bis-black-friday/"><span aria-hidden="true">🛍️</span>Black Friday</a></li>
+      <li><a href="/cndwn/de/tage-bis-zum-ersten-advent/"><span aria-hidden="true">🕯️</span>1. Advent</a></li>
+      <li><a href="/cndwn/de/tage-bis-nikolaus/"><span aria-hidden="true">🥾</span>Nikolaus</a></li>
+      <li><a href="/cndwn/de/tage-bis-winter/"><span aria-hidden="true">❄️</span>Winteranfang</a></li>
+      <li><a href="/cndwn/de/tage-bis-heiligabend/"><span aria-hidden="true">🎁</span>Heiligabend</a></li>
+      <li><a href="/cndwn/de/tage-bis-weihnachten/"><span aria-hidden="true">🎄</span>Weihnachten</a></li>
+      <li><a href="/cndwn/de/tage-bis-silvester/"><span aria-hidden="true">🎆</span>Silvester</a></li>
+      <li><a href="/cndwn/de/tage-bis-neujahr/"><span aria-hidden="true">🥂</span>Neujahr</a></li>
+      <li><a href="/cndwn/de/tage-bis-rosenmontag/"><span aria-hidden="true">🎭</span>Rosenmontag</a></li>
+      <li><a href="/cndwn/de/tage-bis-valentinstag/"><span aria-hidden="true">💘</span>Valentinstag</a></li>
+    </ul>
+    <p class="popular-more"><a href="/cndwn/de/countdowns/"><span lang="de">Alle Countdowns →</span></a> · <a href="/cndwn/de/tage-rechner/"><span lang="de">Tage-Rechner</span></a> · <a href="/cndwn/de/countdown-app-comparison/"><span lang="de">Vergleich</span></a></p>
+  </div>
+</section>
+
 <!-- ==================== FAQ ==================== -->
 <section class="block alt" id="faq">
   <div class="wrap">
@@ -942,6 +973,9 @@
       <a href="#features"><span lang="de">Funktionen</span></a>
       <a href="#tutorials"><span lang="de">Anleitungen</span></a>
       <a href="#faq">FAQ</a>
+      <a href="/cndwn/de/countdowns/"><span lang="de">Countdowns</span></a>
+      <a href="/cndwn/de/tage-rechner/"><span lang="de">Tage-Rechner</span></a>
+      <a href="/cndwn/de/countdown-app-comparison/"><span lang="de">Vergleich</span></a>
       <a href="/cndwn/de/privacy/"><span lang="de">Datenschutz</span></a>
       <a href="mailto:cndwn@schillan.com">Contact</a>
     </div>
