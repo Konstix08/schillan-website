@@ -31,7 +31,7 @@
 - **Platforms:** iPhone, iPad, Mac, Apple Watch (app and complications), Apple TV and Apple Vision Pro (requires iOS 18.0 or later)
 - **Category:** Lifestyle
 - **Price:** Free — every feature included (also iCloud sync, Live Activities and all widgets); no in-app purchases at all, no subscription, no ads
-- **Developer:** Konstantin Schillhahn (Schillan) — the seller name on the App Store
+- **Developer:** Konstantin Schillhahn (the seller name on the App Store)
 - **Languages:** English, German, Spanish, French, Italian, Japanese, Portuguese, Chinese (Simplified)
 - **Rating:** 4.6 / 5 average from 63 ratings across all App Store countries (October 2026); ratings are shown per country on the App Store, e.g. 4.7 from 25 ratings in Germany and 4.3 from 12 in the United States
 - **Website:** https://schillan.com/cndwn/ (also available in German at /cndwn/de/, Spanish at /cndwn/es/, French at /cndwn/fr/, Japanese at /cndwn/ja/, Italian at /cndwn/it/ and Portuguese at /cndwn/pt/)

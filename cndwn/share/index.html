@@ -114,7 +114,8 @@
 /*
  * Share links from the app look like /cndwn/share/?data=<url-encoded JSON>:
  *   { name, emoji, color: "EB512E", startDate, endDate (ISO), countup,
- *     showAsProgressView, preferredView (11 = bar, otherwise ring), invertedProgress }
+ *     showAsProgressView, preferredView (11 = bar, otherwise ring),
+ *     invertedProgress (true = share of time elapsed, false = share remaining) }
  * The page shows a live preview of that countdown or progress, tries to open
  * it in the app (cndwn://share?data=…) and offers the App Store otherwise.
  */
@@ -191,7 +192,7 @@
     var now = new Date();
     if (progress) {
       var p = Math.min(1, Math.max(0, (now - start) / (end - start)));
-      if (item.invertedProgress) p = 1 - p;
+      if (!item.invertedProgress) p = 1 - p;
       var label = (Math.floor(p * 1000) / 10).toLocaleString(lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
       if (bar) { $('bar-fill').style.width = (p * 100) + '%'; $('bar-pct').textContent = label; }
       else { $('ring-arc').setAttribute('stroke-dashoffset', String(326.73 * (1 - p))); $('ring-pct').textContent = label; }
