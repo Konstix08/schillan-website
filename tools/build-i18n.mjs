@@ -707,6 +707,58 @@ const META = {
   },
 };
 
+// Per page type: sitemap fields, and lastmod doubles as the page's dateModified.
+const SITEMAP_META = {
+  home: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 1.0, prioritySecondary: 0.9, image: 'https://schillan.com/og-image.png' },
+  landing: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.9, prioritySecondary: 0.8, image: 'https://schillan.com/cndwn/og-image.png' },
+  privacy: { lastmod: '2026-06-25', changefreq: 'yearly', priority: 0.5, prioritySecondary: 0.5 },
+  bestApp: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.8, prioritySecondary: 0.7 },
+  widgetGuide: { lastmod: '2026-07-07', changefreq: 'monthly', priority: 0.8, prioritySecondary: 0.7 },
+  widgetHowTo: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.7, prioritySecondary: 0.6 },
+  liveActivities: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.7, prioritySecondary: 0.6 },
+  vacationCountdown: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
+  icloudSync: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
+  weddingCountdown: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
+};
+
+// One entity graph shared by every page: the same @ids for the studio, its
+// founder, the website and the app, so search engines and AI assistants see
+// one consistent set of facts no matter which page they read.
+const ORG_ID = SITE + '/#organization';
+const FOUNDER_ID = SITE + '/#founder';
+const WEBSITE_ID = SITE + '/#website';
+const APP_ID = SITE + '/cndwn/#app';
+const APP_STORE_URL = 'https://apps.apple.com/app/id6455257754';
+const DEVELOPER_URL = 'https://apps.apple.com/developer/konstantin-schillhahn/id1672847616';
+
+function entityGraph(type, lang, meta, canonical) {
+  const graph = [
+    {
+      '@type': 'Organization', '@id': ORG_ID, name: 'Schillan', url: SITE + '/',
+      description: 'Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.',
+      founder: { '@id': FOUNDER_ID },
+    },
+    { '@type': 'Person', '@id': FOUNDER_ID, name: 'Konstantin Schillhahn', url: SITE + '/', sameAs: [DEVELOPER_URL] },
+    { '@type': 'WebSite', '@id': WEBSITE_ID, name: 'Schillan', url: SITE + '/', publisher: { '@id': ORG_ID } },
+  ];
+  // the landing page carries the full SoftwareApplication; other CNDWN pages reference a compact copy
+  if (type !== 'home' && type !== 'landing') {
+    graph.push({
+      '@type': 'SoftwareApplication', '@id': APP_ID, name: 'CNDWN', alternateName: APP_STORE_NAME[lang],
+      applicationCategory: 'LifestyleApplication', operatingSystem: 'iOS 18.0 or later, iPadOS, macOS, watchOS',
+      url: SITE + landingPath[lang], sameAs: [APP_STORE_URL],
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      author: { '@id': FOUNDER_ID }, publisher: { '@id': ORG_ID },
+    });
+  }
+  graph.push({
+    '@type': 'WebPage', '@id': canonical + '#webpage', url: canonical, name: meta.title, description: meta.desc,
+    inLanguage: lang, dateModified: SITEMAP_META[type].lastmod, isPartOf: { '@id': WEBSITE_ID },
+    ...(type === 'home' ? { about: { '@id': ORG_ID } } : { about: { '@id': APP_ID } }),
+  });
+  return { '@context': 'https://schema.org', '@graph': graph };
+}
+
 function absUrl(type, lang) { return SITE + pathFor[type][lang]; }
 
 function rewriteAssetAttr(val) {
@@ -877,7 +929,11 @@ function rebuildJsonLd($, type, lang, meta, canonical) {
     let data;
     try { data = JSON.parse($(s).text()); } catch { continue; }
     if (data['@type'] === 'SoftwareApplication') {
+      data['@id'] = APP_ID;
       data.alternateName = APP_STORE_NAME[lang];
+      data.sameAs = [APP_STORE_URL];
+      data.author = { '@id': FOUNDER_ID };
+      data.publisher = { '@id': ORG_ID };
       data.description = meta.desc;
       data.url = canonical;
       data.inLanguage = lang;
@@ -887,11 +943,11 @@ function rebuildJsonLd($, type, lang, meta, canonical) {
         '@type': 'Question', name: f.q,
         acceptedAnswer: { '@type': 'Answer', text: f.a },
       }));
-    } else if (data['@type'] === 'WebPage') {
-      data.name = meta.title;
-      data.description = meta.desc;
-      data.url = canonical;
-      data.inLanguage = lang;
+    } else if (data['@type'] === 'WebPage'
+      || (type === 'home' && ['Organization', 'WebSite'].includes(data['@type']))) {
+      // superseded by the shared entity graph appended below
+      $(s).remove();
+      continue;
     } else if (data['@type'] === 'BreadcrumbList') {
       data.itemListElement = type === 'landing'
         ? [
@@ -905,16 +961,11 @@ function rebuildJsonLd($, type, lang, meta, canonical) {
     } else if (data['@type'] === 'HowTo' && meta.howTo) {
       data.name = meta.howTo.name;
       data.step = meta.howTo.steps.map(s => ({ '@type': 'HowToStep', name: s.name, text: s.text }));
-    } else if (data['@type'] === 'Organization' && type === 'home') {
-      data.url = SITE + '/';
-    } else if (data['@type'] === 'WebSite' && type === 'home') {
-      data.url = canonical;
-      data.inLanguage = lang;
     } else if (data['@type'] === 'ItemList' && type === 'home') {
       data.itemListElement = [
         {
           '@type': 'ListItem', position: 1,
-          item: { '@type': 'SoftwareApplication', name: 'CNDWN', url: SITE + landingPath[lang], applicationCategory: 'LifestyleApplication' },
+          item: { '@type': 'SoftwareApplication', '@id': APP_ID, name: 'CNDWN', url: SITE + landingPath[lang], applicationCategory: 'LifestyleApplication' },
         },
         {
           '@type': 'ListItem', position: 2,
@@ -924,6 +975,9 @@ function rebuildJsonLd($, type, lang, meta, canonical) {
     }
     $(s).text('\n' + JSON.stringify(data, null, 2) + '\n');
   }
+
+  $('head').append(
+    '<script type="application/ld+json">\n' + JSON.stringify(entityGraph(type, lang, meta, canonical), null, 2) + '\n</script>\n');
 }
 
 // One output per (type, lang): the destination file is always <path>/index.html,
@@ -948,18 +1002,6 @@ console.log(`Done. Regenerated ${OUTPUTS.length} pages from tools/templates/.`);
 
 // ---- sitemap.xml: generated from the same pathFor/LANGS data so every URL
 // cluster always lists a full, reciprocal set of hreflang alternates. ----
-const SITEMAP_META = {
-  home: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 1.0, prioritySecondary: 0.9, image: 'https://schillan.com/og-image.png' },
-  landing: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.9, prioritySecondary: 0.8, image: 'https://schillan.com/cndwn/og-image.png' },
-  privacy: { lastmod: '2026-06-25', changefreq: 'yearly', priority: 0.5, prioritySecondary: 0.5 },
-  bestApp: { lastmod: '2026-07-07', changefreq: 'monthly', priority: 0.8, prioritySecondary: 0.7 },
-  widgetGuide: { lastmod: '2026-07-07', changefreq: 'monthly', priority: 0.8, prioritySecondary: 0.7 },
-  widgetHowTo: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.7, prioritySecondary: 0.6 },
-  liveActivities: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.7, prioritySecondary: 0.6 },
-  vacationCountdown: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
-  icloudSync: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
-  weddingCountdown: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
-};
 
 function sitemapUrlBlock(type, lang) {
   const m = SITEMAP_META[type];

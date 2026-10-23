@@ -84,15 +84,15 @@
     "priceCurrency": "USD"
   },
   "author": {
-    "@type": "Person",
-    "name": "Konstantin Schillhahn",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -113,7 +113,15 @@
       "name": "CNDWN est-elle vraiment gratuite ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui. CNDWN est la première app de compte à rebours à offrir toutes ses fonctionnalités gratuitement — comptes à rebours, compteurs de jours, barres de progression, widgets, Activités en direct, synchronisation iCloud, couleurs personnalisées et bien plus. Sans publicité ni tracker."
+        "text": "Oui. Toutes les fonctionnalités de CNDWN sont gratuites — comptes à rebours, compteurs de jours, barres de progression, tous les widgets, Activités en direct, synchronisation iCloud, couleurs personnalisées et bien plus. Aucun achat intégré, aucun abonnement, aucune publicité ni aucun tracker. Beaucoup d'autres apps de compte à rebours font payer les widgets ou la synchronisation ; pas CNDWN."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "En quoi CNDWN se distingue-t-elle des autres apps de compte à rebours ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beaucoup d'apps de compte à rebours réservent les widgets de l'écran verrouillé, les widgets à plusieurs événements, la synchronisation iCloud ou les Activités en direct à un abonnement ou à un achat unique. CNDWN les inclut tous gratuitement et ne propose aucun achat intégré. Elle réunit aussi comptes à rebours, compteurs de jours et barres de progression dans une seule app, prend en charge StandBy, importe les événements de Calendrier et Rappels et fonctionne sur iPhone, iPad, Mac et Apple Watch."
       }
     },
     {
@@ -473,6 +481,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/fr/#webpage",
+      "url": "https://schillan.com/cndwn/fr/",
+      "name": "CNDWN — App de compte à rebours pour iPhone et Mac",
+      "description": "Comptez les jours avant anniversaires et voyages avec widgets, Activités en direct et iCloud. Toutes les fonctions gratuites.",
+      "inLanguage": "fr",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -519,7 +577,7 @@
     <p class="sub">
       
       
-      <span lang="fr">De magnifiques comptes à rebours, compteurs de jours et barres de progression pour anniversaires, fêtes, voyages et échéances — directement sur votre écran d'accueil, écran verrouillé et StandBy. La première app de compte à rebours qui offre toutes ses fonctionnalités gratuitement.</span>
+      <span lang="fr">De magnifiques comptes à rebours, compteurs de jours et barres de progression pour anniversaires, fêtes, voyages et échéances — directement sur votre écran d'accueil, écran verrouillé et StandBy. Toutes les fonctionnalités sont gratuites — y compris la synchronisation iCloud, les Activités en direct et tous les widgets. Sans achats intégrés ni publicité.</span>
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
@@ -767,7 +825,11 @@
       </details>
       <details>
         <summary><span lang="fr">CNDWN est-elle vraiment gratuite ?</span></summary>
-        <p><span lang="fr">Oui. CNDWN est la première app de compte à rebours à offrir toutes ses fonctionnalités gratuitement — comptes à rebours, compteurs de jours, barres de progression, widgets, Activités en direct, synchronisation iCloud, couleurs personnalisées et bien plus. Sans publicité ni tracker.</span></p>
+        <p><span lang="fr">Oui. Toutes les fonctionnalités de CNDWN sont gratuites — comptes à rebours, compteurs de jours, barres de progression, tous les widgets, Activités en direct, synchronisation iCloud, couleurs personnalisées et bien plus. Aucun achat intégré, aucun abonnement, aucune publicité ni aucun tracker. Beaucoup d'autres apps de compte à rebours font payer les widgets ou la synchronisation ; pas CNDWN.</span></p>
+      </details>
+      <details>
+        <summary><span lang="fr">En quoi CNDWN se distingue-t-elle des autres apps de compte à rebours ?</span></summary>
+        <p><span lang="fr">Beaucoup d'apps de compte à rebours réservent les widgets de l'écran verrouillé, les widgets à plusieurs événements, la synchronisation iCloud ou les Activités en direct à un abonnement ou à un achat unique. CNDWN les inclut tous gratuitement et ne propose aucun achat intégré. Elle réunit aussi comptes à rebours, compteurs de jours et barres de progression dans une seule app, prend en charge StandBy, importe les événements de Calendrier et Rappels et fonctionne sur iPhone, iPad, Mac et Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="fr">Sur quels appareils CNDWN fonctionne-t-elle ?</span></summary>

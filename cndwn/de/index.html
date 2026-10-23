@@ -84,15 +84,15 @@
     "priceCurrency": "USD"
   },
   "author": {
-    "@type": "Person",
-    "name": "Konstantin Schillhahn",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -113,7 +113,15 @@
       "name": "Ist CNDWN wirklich gratis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. CNDWN ist die erste Countdown-App, die dir alle Funktionen gratis gibt — Countdowns, Countups, Fortschrittsbalken, Widgets, Live-Aktivitäten, iCloud-Sync, eigene Farben und mehr. Ohne Werbung, ohne Tracker."
+        "text": "Ja. Jede Funktion in CNDWN ist gratis — Countdowns, Countups, Fortschrittsbalken, alle Widgets, Live-Aktivitäten, iCloud-Sync, eigene Farben und mehr. Es gibt keine In-App-Käufe, kein Abo, keine Werbung und keine Tracker. Viele andere Countdown-Apps verlangen für Widgets oder Sync extra Geld — CNDWN nicht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was unterscheidet CNDWN von anderen Countdown-Apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Viele Countdown-Apps sperren Sperrbildschirm-Widgets, Widgets mit mehreren Ereignissen, iCloud-Sync oder Live-Aktivitäten hinter einem Abo oder einem einmaligen Upgrade. CNDWN enthält all das gratis und hat überhaupt keine In-App-Käufe. Außerdem vereint CNDWN Countdowns, Countups und Fortschrittsbalken in einer App, unterstützt StandBy, importiert Ereignisse aus Kalender und Erinnerungen und läuft auf iPhone, iPad, Mac und Apple Watch."
       }
     },
     {
@@ -473,6 +481,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/de/#webpage",
+      "url": "https://schillan.com/cndwn/de/",
+      "name": "CNDWN — Countdown-App für iPhone, iPad & Mac",
+      "description": "Zähle herunter zu Geburtstagen und Reisen — mit Widgets, Live-Aktivitäten und iCloud-Sync. Alle Funktionen gratis, keine Werbung.",
+      "inLanguage": "de",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -518,7 +576,7 @@
     </h1>
     <p class="sub">
       
-      <span lang="de">Schöne Countdowns, Countups und Fortschrittsbalken für Geburtstage, Feiertage, Reisen und Deadlines — direkt auf Home-Bildschirm, Sperrbildschirm und StandBy. Die erste Countdown-App mit allen Funktionen gratis.</span>
+      <span lang="de">Schöne Countdowns, Countups und Fortschrittsbalken für Geburtstage, Feiertage, Reisen und Deadlines — direkt auf Home-Bildschirm, Sperrbildschirm und StandBy. Alle Funktionen gratis — auch iCloud-Sync, Live-Aktivitäten und alle Widgets. Keine In-App-Käufe, keine Werbung.</span>
       
     </p>
     <div class="cta-row">
@@ -767,7 +825,11 @@
       </details>
       <details>
         <summary><span lang="de">Ist CNDWN wirklich gratis?</span></summary>
-        <p><span lang="de">Ja. CNDWN ist die erste Countdown-App, die dir alle Funktionen gratis gibt — Countdowns, Countups, Fortschrittsbalken, Widgets, Live-Aktivitäten, iCloud-Sync, eigene Farben und mehr. Ohne Werbung, ohne Tracker.</span></p>
+        <p><span lang="de">Ja. Jede Funktion in CNDWN ist gratis — Countdowns, Countups, Fortschrittsbalken, alle Widgets, Live-Aktivitäten, iCloud-Sync, eigene Farben und mehr. Es gibt keine In-App-Käufe, kein Abo, keine Werbung und keine Tracker. Viele andere Countdown-Apps verlangen für Widgets oder Sync extra Geld — CNDWN nicht.</span></p>
+      </details>
+      <details>
+        <summary><span lang="de">Was unterscheidet CNDWN von anderen Countdown-Apps?</span></summary>
+        <p><span lang="de">Viele Countdown-Apps sperren Sperrbildschirm-Widgets, Widgets mit mehreren Ereignissen, iCloud-Sync oder Live-Aktivitäten hinter einem Abo oder einem einmaligen Upgrade. CNDWN enthält all das gratis und hat überhaupt keine In-App-Käufe. Außerdem vereint CNDWN Countdowns, Countups und Fortschrittsbalken in einer App, unterstützt StandBy, importiert Ereignisse aus Kalender und Erinnerungen und läuft auf iPhone, iPad, Mac und Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="de">Auf welchen Geräten läuft CNDWN?</span></summary>

@@ -84,15 +84,15 @@
     "priceCurrency": "USD"
   },
   "author": {
-    "@type": "Person",
-    "name": "Konstantin Schillhahn",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -113,7 +113,15 @@
       "name": "Is CNDWN really free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. CNDWN is the first countdown app that gives you every feature for free — countdowns, countups, progress bars, widgets, Live Activities, iCloud sync, custom colors and more. There are no ads and no trackers."
+        "text": "Yes. Every feature in CNDWN is free — countdowns, countups, progress bars, all widgets, Live Activities, iCloud sync, custom colors and more. There are no in-app purchases, no subscription, no ads and no trackers. Many other countdown apps charge extra for widgets or sync; CNDWN does not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is CNDWN different from other countdown apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many countdown apps lock Lock Screen widgets, multi-event widgets, iCloud sync or Live Activities behind a subscription or a one-time upgrade. CNDWN includes all of them for free and has no in-app purchases at all. It also combines countdowns, countups and progress bars in one app, supports StandBy, imports events from Calendar and Reminders, and runs on iPhone, iPad, Mac and Apple Watch."
       }
     },
     {
@@ -473,6 +481,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/#webpage",
+      "url": "https://schillan.com/cndwn/",
+      "name": "CNDWN — Countdown & Countup App for iPhone & Mac",
+      "description": "Track birthdays, trips and deadlines with widgets, Live Activities and iCloud sync. Every feature free — no ads, no trackers.",
+      "inLanguage": "en",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -517,7 +575,7 @@
       
     </h1>
     <p class="sub">
-      <span lang="en">Beautiful countdowns, countups and progress bars for birthdays, holidays, trips and deadlines — right on your Home Screen, Lock Screen and StandBy. The first countdown app with every feature free.</span>
+      <span lang="en">Beautiful countdowns, countups and progress bars for birthdays, holidays, trips and deadlines — right on your Home Screen, Lock Screen and StandBy. Every feature is free — including iCloud sync, Live Activities and every widget. No in-app purchases, no ads.</span>
       
       
     </p>
@@ -767,7 +825,11 @@
       </details>
       <details>
         <summary><span lang="en">Is CNDWN really free?</span></summary>
-        <p><span lang="en">Yes. CNDWN is the first countdown app that gives you every feature for free — countdowns, countups, progress bars, widgets, Live Activities, iCloud sync, custom colors and more. There are no ads and no trackers.</span></p>
+        <p><span lang="en">Yes. Every feature in CNDWN is free — countdowns, countups, progress bars, all widgets, Live Activities, iCloud sync, custom colors and more. There are no in-app purchases, no subscription, no ads and no trackers. Many other countdown apps charge extra for widgets or sync; CNDWN does not.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en">How is CNDWN different from other countdown apps?</span></summary>
+        <p><span lang="en">Many countdown apps lock Lock Screen widgets, multi-event widgets, iCloud sync or Live Activities behind a subscription or a one-time upgrade. CNDWN includes all of them for free and has no in-app purchases at all. It also combines countdowns, countups and progress bars in one app, supports StandBy, imports events from Calendar and Reminders, and runs on iPhone, iPad, Mac and Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="en">Which devices does CNDWN work on?</span></summary>

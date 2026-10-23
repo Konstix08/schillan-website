@@ -84,15 +84,15 @@
     "priceCurrency": "USD"
   },
   "author": {
-    "@type": "Person",
-    "name": "Konstantin Schillhahn",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -113,7 +113,15 @@
       "name": "CNDWN è davvero gratuita?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sì. CNDWN è la prima app di conto alla rovescia a offrire tutte le funzionalità gratuitamente — conto alla rovescia, conteggi crescenti, barre di progresso, widget, Attività Live, sincronizzazione iCloud, colori personalizzati e altro ancora. Senza pubblicità né tracciamento."
+        "text": "Sì. Tutte le funzioni di CNDWN sono gratuite — conto alla rovescia, conteggi crescenti, barre di progresso, tutti i widget, Attività Live, sincronizzazione iCloud, colori personalizzati e altro ancora. Nessun acquisto in-app, nessun abbonamento, nessuna pubblicità e nessun tracciamento. Molte altre app di conto alla rovescia fanno pagare a parte widget o sincronizzazione; CNDWN no."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "In cosa CNDWN è diversa dalle altre app di conto alla rovescia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Molte app di conto alla rovescia riservano i widget della schermata di Blocco, i widget con più eventi, la sincronizzazione iCloud o le Attività Live a un abbonamento o a un acquisto una tantum. CNDWN li include tutti gratuitamente e non ha alcun acquisto in-app. Inoltre riunisce conto alla rovescia, conteggi crescenti e barre di progresso in un'unica app, supporta StandBy, importa eventi da Calendario e Promemoria e funziona su iPhone, iPad, Mac e Apple Watch."
       }
     },
     {
@@ -473,6 +481,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/it/#webpage",
+      "url": "https://schillan.com/cndwn/it/",
+      "name": "CNDWN — App di conto alla rovescia per iPhone e Mac",
+      "description": "Conto alla rovescia per compleanni e viaggi con widget, Attività Live e sync iCloud. Tutte le funzioni gratuite, senza pubblicità.",
+      "inLanguage": "it",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -519,7 +577,7 @@
     <p class="sub">
       
       
-      <span lang="it">Splendidi conto alla rovescia, conteggi crescenti e barre di progresso per compleanni, feste, viaggi e scadenze — direttamente sulla schermata Home, sulla schermata di Blocco e su StandBy. La prima app di conto alla rovescia con tutte le funzioni gratuite.</span>
+      <span lang="it">Splendidi conto alla rovescia, conteggi crescenti e barre di progresso per compleanni, feste, viaggi e scadenze — direttamente sulla schermata Home, sulla schermata di Blocco e su StandBy. Tutte le funzioni sono gratuite — anche la sincronizzazione iCloud, le Attività Live e tutti i widget. Nessun acquisto in-app, nessuna pubblicità.</span>
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
@@ -767,7 +825,11 @@
       </details>
       <details>
         <summary><span lang="it">CNDWN è davvero gratuita?</span></summary>
-        <p><span lang="it">Sì. CNDWN è la prima app di conto alla rovescia a offrire tutte le funzionalità gratuitamente — conto alla rovescia, conteggi crescenti, barre di progresso, widget, Attività Live, sincronizzazione iCloud, colori personalizzati e altro ancora. Senza pubblicità né tracciamento.</span></p>
+        <p><span lang="it">Sì. Tutte le funzioni di CNDWN sono gratuite — conto alla rovescia, conteggi crescenti, barre di progresso, tutti i widget, Attività Live, sincronizzazione iCloud, colori personalizzati e altro ancora. Nessun acquisto in-app, nessun abbonamento, nessuna pubblicità e nessun tracciamento. Molte altre app di conto alla rovescia fanno pagare a parte widget o sincronizzazione; CNDWN no.</span></p>
+      </details>
+      <details>
+        <summary><span lang="it">In cosa CNDWN è diversa dalle altre app di conto alla rovescia?</span></summary>
+        <p><span lang="it">Molte app di conto alla rovescia riservano i widget della schermata di Blocco, i widget con più eventi, la sincronizzazione iCloud o le Attività Live a un abbonamento o a un acquisto una tantum. CNDWN li include tutti gratuitamente e non ha alcun acquisto in-app. Inoltre riunisce conto alla rovescia, conteggi crescenti e barre di progresso in un'unica app, supporta StandBy, importa eventi da Calendario e Promemoria e funziona su iPhone, iPad, Mac e Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="it">Su quali dispositivi funziona CNDWN?</span></summary>

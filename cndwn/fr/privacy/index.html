@@ -191,6 +191,79 @@
   footer.site a:hover { color: var(--text); }
   footer.site .brand { font-size: 16px; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://schillan.com/cndwn/#app",
+      "name": "CNDWN",
+      "alternateName": "CNDWN – Compte à rebours",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS",
+      "url": "https://schillan.com/cndwn/fr/",
+      "sameAs": [
+        "https://apps.apple.com/app/id6455257754"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@id": "https://schillan.com/#founder"
+      },
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/fr/privacy/#webpage",
+      "url": "https://schillan.com/cndwn/fr/privacy/",
+      "name": "CNDWN — Politique de confidentialité",
+      "description": "Politique de confidentialité de CNDWN (RGPD). Aucune publicité ni tracker : vos comptes à rebours restent sur votre appareil et votre iCloud.",
+      "inLanguage": "fr",
+      "dateModified": "2026-06-25",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

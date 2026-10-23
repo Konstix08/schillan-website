@@ -84,15 +84,15 @@
     "priceCurrency": "USD"
   },
   "author": {
-    "@type": "Person",
-    "name": "Konstantin Schillhahn",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -113,7 +113,15 @@
       "name": "CNDWNは本当に無料ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はい。CNDWNは、カウントダウン、カウントアップ、プログレスバー、ウィジェット、ライブアクティビティ、iCloud同期、カスタムカラーなど、すべての機能を無料で提供する初のカウントダウンアプリです。広告もトラッキングもありません。"
+        "text": "はい。カウントダウン、カウントアップ、プログレスバー、すべてのウィジェット、ライブアクティビティ、iCloud同期、カスタムカラーなど、CNDWNの機能はすべて無料です。App内課金、サブスクリプション、広告、トラッキングは一切ありません。ウィジェットや同期を有料にしているカウントダウンアプリは多いですが、CNDWNは違います。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "CNDWNはほかのカウントダウンアプリと何が違いますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多くのカウントダウンアプリは、ロック画面ウィジェット、複数イベントのウィジェット、iCloud同期、ライブアクティビティをサブスクリプションや買い切りのアップグレードでしか使えません。CNDWNではそれらがすべて無料で、App内課金は一切ありません。さらに、カウントダウン・カウントアップ・プログレスバーをひとつのアプリで使え、StandByに対応し、カレンダーやリマインダーからイベントを読み込め、iPhone、iPad、Mac、Apple Watchで動作します。"
       }
     },
     {
@@ -473,6 +481,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/ja/#webpage",
+      "url": "https://schillan.com/cndwn/ja/",
+      "name": "CNDWN — カウントダウンアプリ",
+      "description": "誕生日や旅行までをウィジェットとライブアクティビティでカウントダウン。全機能無料、広告なし。",
+      "inLanguage": "ja",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -519,7 +577,7 @@
     <p class="sub">
       
       
-      <span lang="ja">誕生日、記念日、旅行、締め切りまでの日数を、美しいカウントダウン・カウントアップ・プログレスバーで。ホーム画面、ロック画面、StandByにそのまま表示。すべての機能が無料で使える、初のカウントダウンアプリです。</span>
+      <span lang="ja">誕生日、記念日、旅行、締め切りまでの日数を、美しいカウントダウン・カウントアップ・プログレスバーで。ホーム画面、ロック画面、StandByにそのまま表示。iCloud同期、ライブアクティビティ、すべてのウィジェットを含む全機能が無料。App内課金も広告もありません。</span>
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
@@ -767,7 +825,11 @@
       </details>
       <details>
         <summary><span lang="ja">CNDWNは本当に無料ですか？</span></summary>
-        <p><span lang="ja">はい。CNDWNは、カウントダウン、カウントアップ、プログレスバー、ウィジェット、ライブアクティビティ、iCloud同期、カスタムカラーなど、すべての機能を無料で提供する初のカウントダウンアプリです。広告もトラッキングもありません。</span></p>
+        <p><span lang="ja">はい。カウントダウン、カウントアップ、プログレスバー、すべてのウィジェット、ライブアクティビティ、iCloud同期、カスタムカラーなど、CNDWNの機能はすべて無料です。App内課金、サブスクリプション、広告、トラッキングは一切ありません。ウィジェットや同期を有料にしているカウントダウンアプリは多いですが、CNDWNは違います。</span></p>
+      </details>
+      <details>
+        <summary><span lang="ja">CNDWNはほかのカウントダウンアプリと何が違いますか？</span></summary>
+        <p><span lang="ja">多くのカウントダウンアプリは、ロック画面ウィジェット、複数イベントのウィジェット、iCloud同期、ライブアクティビティをサブスクリプションや買い切りのアップグレードでしか使えません。CNDWNではそれらがすべて無料で、App内課金は一切ありません。さらに、カウントダウン・カウントアップ・プログレスバーをひとつのアプリで使え、StandByに対応し、カレンダーやリマインダーからイベントを読み込め、iPhone、iPad、Mac、Apple Watchで動作します。</span></p>
       </details>
       <details>
         <summary><span lang="ja">CNDWNはどのデバイスで使えますか？</span></summary>

@@ -23,14 +23,14 @@
 
 # CNDWN
 
-> CNDWN is a privacy-first countdown and countup app for Apple devices (iPhone, iPad, Mac and Apple Watch). It lets people count down to birthdays, holidays, trips, deadlines and any important date — or count up since a past moment — with progress bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, iCloud sync, custom colors, calendar and reminders import, Handoff and sharing. It is the first countdown app that offers every feature for free, with no ads and no trackers.
+> CNDWN is a privacy-first countdown and countup app for Apple devices (iPhone, iPad, Mac and Apple Watch). It lets people count down to birthdays, holidays, trips, deadlines and any important date — or count up since a past moment — with progress bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, iCloud sync, custom colors, calendar and reminders import, Handoff and sharing. Every feature is free — including iCloud sync, Live Activities and all widgets — with no in-app purchases, no subscription, no ads and no trackers.
 
 ## Key facts
 
 - **Name:** CNDWN (App Store title: "CNDWN – Countdown Timer Widget"; localized as "CNDWN – Cuenta Regresiva", "CNDWN – Compte à rebours", "CNDWN – Conto alla Rovescia" and "CNDWN – Contagem Regressiva") — a countdown & countup app
 - **Platforms:** iPhone, iPad, Mac, Apple Watch (requires iOS 18.0 or later)
 - **Category:** Lifestyle
-- **Price:** Free — every feature included, no in-app purchases required, no ads
+- **Price:** Free — every feature included (also iCloud sync, Live Activities and all widgets); no in-app purchases at all, no subscription, no ads
 - **Developer:** Konstantin Schillhahn (Schillan) — the seller name on the App Store
 - **Languages:** English, German, Spanish, French, Italian, Japanese, Portuguese, Chinese (Simplified)
 - **Rating:** 4.6 / 5 average from 63 ratings across all App Store countries (October 2026); ratings are shown per country on the App Store, e.g. 4.7 from 25 ratings in Germany and 4.3 from 12 in the United States

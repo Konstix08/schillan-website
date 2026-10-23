@@ -84,15 +84,15 @@
     "priceCurrency": "USD"
   },
   "author": {
-    "@type": "Person",
-    "name": "Konstantin Schillhahn",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -113,7 +113,15 @@
       "name": "O CNDWN é realmente gratuito?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. O CNDWN é a primeira app de contagem decrescente que oferece todas as funcionalidades gratuitamente — contagens decrescentes, crescentes, barras de progresso, widgets, Atividades em Direto, sincronização iCloud, cores personalizadas e muito mais. Sem publicidade e sem rastreadores."
+        "text": "Sim. Todas as funcionalidades do CNDWN são gratuitas — contagens decrescentes, crescentes, barras de progresso, todos os widgets, Atividades em Direto, sincronização iCloud, cores personalizadas e muito mais. Não há compras na app, nem subscrição, nem publicidade, nem rastreadores. Muitas outras apps de contagem decrescente cobram à parte pelos widgets ou pela sincronização; o CNDWN não."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Em que é que o CNDWN é diferente de outras apps de contagem decrescente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Muitas apps de contagem decrescente reservam os widgets do ecrã bloqueado, os widgets com vários eventos, a sincronização iCloud ou as Atividades em Direto para uma subscrição ou uma compra única. O CNDWN inclui tudo isso gratuitamente e não tem qualquer compra na app. Além disso, junta contagens decrescentes, crescentes e barras de progresso numa só app, suporta o StandBy, importa eventos do Calendário e dos Lembretes e funciona em iPhone, iPad, Mac e Apple Watch."
       }
     },
     {
@@ -473,6 +481,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/pt/#webpage",
+      "url": "https://schillan.com/cndwn/pt/",
+      "name": "CNDWN — App de contagem decrescente para iPhone e Mac",
+      "description": "Contagem decrescente para aniversários e viagens com widgets, Atividades em Direto e sincronização iCloud. Tudo gratuito, sem publicidade.",
+      "inLanguage": "pt",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -519,7 +577,7 @@
     <p class="sub">
       
       
-      <span lang="pt">Belas contagens decrescentes, crescentes e barras de progresso para aniversários, feriados, viagens e prazos — no teu ecrã principal, no ecrã bloqueado e no StandBy. A primeira app de contagem decrescente com todas as funcionalidades gratuitas.</span>
+      <span lang="pt">Belas contagens decrescentes, crescentes e barras de progresso para aniversários, feriados, viagens e prazos — no teu ecrã principal, no ecrã bloqueado e no StandBy. Todas as funcionalidades são gratuitas — incluindo a sincronização iCloud, as Atividades em Direto e todos os widgets. Sem compras na app nem publicidade.</span>
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
@@ -767,7 +825,11 @@
       </details>
       <details>
         <summary><span lang="pt">O CNDWN é realmente gratuito?</span></summary>
-        <p><span lang="pt">Sim. O CNDWN é a primeira app de contagem decrescente que oferece todas as funcionalidades gratuitamente — contagens decrescentes, crescentes, barras de progresso, widgets, Atividades em Direto, sincronização iCloud, cores personalizadas e muito mais. Sem publicidade e sem rastreadores.</span></p>
+        <p><span lang="pt">Sim. Todas as funcionalidades do CNDWN são gratuitas — contagens decrescentes, crescentes, barras de progresso, todos os widgets, Atividades em Direto, sincronização iCloud, cores personalizadas e muito mais. Não há compras na app, nem subscrição, nem publicidade, nem rastreadores. Muitas outras apps de contagem decrescente cobram à parte pelos widgets ou pela sincronização; o CNDWN não.</span></p>
+      </details>
+      <details>
+        <summary><span lang="pt">Em que é que o CNDWN é diferente de outras apps de contagem decrescente?</span></summary>
+        <p><span lang="pt">Muitas apps de contagem decrescente reservam os widgets do ecrã bloqueado, os widgets com vários eventos, a sincronização iCloud ou as Atividades em Direto para uma subscrição ou uma compra única. O CNDWN inclui tudo isso gratuitamente e não tem qualquer compra na app. Além disso, junta contagens decrescentes, crescentes e barras de progresso numa só app, suporta o StandBy, importa eventos do Calendário e dos Lembretes e funciona em iPhone, iPad, Mac e Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="pt">Em que dispositivos funciona o CNDWN?</span></summary>

@@ -53,29 +53,8 @@
 <link rel="apple-touch-icon" href="/img/favicon.svg">
 
 <!-- Structured data for search engines & AI assistants -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Schillan",
-  "url": "https://schillan.com/",
-  "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
-  "founder": {
-    "@type": "Person",
-    "name": "Konstantin Schillhahn"
-  },
-  "sameAs": []
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Schillan",
-  "url": "https://schillan.com/pt/",
-  "inLanguage": "pt"
-}
-</script>
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,6 +66,7 @@
       "position": 1,
       "item": {
         "@type": "SoftwareApplication",
+        "@id": "https://schillan.com/cndwn/#app",
         "name": "CNDWN",
         "url": "https://schillan.com/cndwn/pt/",
         "applicationCategory": "LifestyleApplication"
@@ -317,6 +297,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/pt/#webpage",
+      "url": "https://schillan.com/pt/",
+      "name": "Schillan — Estúdio indie de apps Apple",
+      "description": "Estúdio individual de apps Apple que respeitam a privacidade. Criador do CNDWN e do TerraGuessr. Sem publicidade, sem rastreadores.",
+      "inLanguage": "pt",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

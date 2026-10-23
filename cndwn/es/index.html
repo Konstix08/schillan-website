@@ -84,15 +84,15 @@
     "priceCurrency": "USD"
   },
   "author": {
-    "@type": "Person",
-    "name": "Konstantin Schillhahn",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -113,7 +113,15 @@
       "name": "¿CNDWN es realmente gratis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. CNDWN es la primera app de cuenta atrás que te da todas las funciones gratis — cuentas atrás, adelante, barras de progreso, widgets, actividades en vivo, sincronización con iCloud, colores personalizados y más. Sin anuncios ni rastreadores."
+        "text": "Sí. Todas las funciones de CNDWN son gratis — cuentas atrás, adelante, barras de progreso, todos los widgets, actividades en vivo, sincronización con iCloud, colores personalizados y más. No hay compras dentro de la app, ni suscripción, ni anuncios, ni rastreadores. Muchas otras apps de cuenta atrás cobran aparte por los widgets o la sincronización; CNDWN no."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué se diferencia CNDWN de otras apps de cuenta atrás?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Muchas apps de cuenta atrás bloquean los widgets de la pantalla de bloqueo, los widgets con varios eventos, la sincronización con iCloud o las actividades en vivo tras una suscripción o un pago único. CNDWN los incluye todos gratis y no tiene ninguna compra dentro de la app. Además, combina cuentas atrás, adelante y barras de progreso en una sola app, es compatible con StandBy, importa eventos de Calendario y Recordatorios y funciona en iPhone, iPad, Mac y Apple Watch."
       }
     },
     {
@@ -473,6 +481,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/es/#webpage",
+      "url": "https://schillan.com/cndwn/es/",
+      "name": "CNDWN — App de cuenta atrás para iPhone y Mac",
+      "description": "Cuenta atrás hacia cumpleaños y viajes con widgets, actividades en vivo y sincronización iCloud. Todo gratis, sin anuncios.",
+      "inLanguage": "es",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -519,7 +577,7 @@
     <p class="sub">
       
       
-      <span lang="es">Bonitas cuentas atrás, cuentas hacia delante y barras de progreso para cumpleaños, vacaciones, viajes y fechas límite — en tu pantalla de inicio, pantalla de bloqueo y StandBy. La primera app de cuenta atrás con todas las funciones gratis.</span>
+      <span lang="es">Bonitas cuentas atrás, cuentas hacia delante y barras de progreso para cumpleaños, vacaciones, viajes y fechas límite — en tu pantalla de inicio, pantalla de bloqueo y StandBy. Todas las funciones gratis — también la sincronización con iCloud, las actividades en vivo y todos los widgets. Sin compras dentro de la app ni anuncios.</span>
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
@@ -767,7 +825,11 @@
       </details>
       <details>
         <summary><span lang="es">¿CNDWN es realmente gratis?</span></summary>
-        <p><span lang="es">Sí. CNDWN es la primera app de cuenta atrás que te da todas las funciones gratis — cuentas atrás, adelante, barras de progreso, widgets, actividades en vivo, sincronización con iCloud, colores personalizados y más. Sin anuncios ni rastreadores.</span></p>
+        <p><span lang="es">Sí. Todas las funciones de CNDWN son gratis — cuentas atrás, adelante, barras de progreso, todos los widgets, actividades en vivo, sincronización con iCloud, colores personalizados y más. No hay compras dentro de la app, ni suscripción, ni anuncios, ni rastreadores. Muchas otras apps de cuenta atrás cobran aparte por los widgets o la sincronización; CNDWN no.</span></p>
+      </details>
+      <details>
+        <summary><span lang="es">¿En qué se diferencia CNDWN de otras apps de cuenta atrás?</span></summary>
+        <p><span lang="es">Muchas apps de cuenta atrás bloquean los widgets de la pantalla de bloqueo, los widgets con varios eventos, la sincronización con iCloud o las actividades en vivo tras una suscripción o un pago único. CNDWN los incluye todos gratis y no tiene ninguna compra dentro de la app. Además, combina cuentas atrás, adelante y barras de progreso en una sola app, es compatible con StandBy, importa eventos de Calendario y Recordatorios y funciona en iPhone, iPad, Mac y Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="es">¿En qué dispositivos funciona CNDWN?</span></summary>
