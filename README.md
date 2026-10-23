@@ -20,7 +20,8 @@ sits under `/<lang>/`:
 
 The guide slugs are `best-countdown-app-iphone`, `countdown-widget-ios`,
 `how-to-add-countdown-widget`, `countdown-live-activities`,
-`vacation-countdown`, `countdown-icloud-sync` and `wedding-countdown`. The
+`vacation-countdown`, `countdown-icloud-sync`, `wedding-countdown` and
+`countdown-app-comparison`. The
 authoritative list of languages, page types and URLs is `LANGS` + the `*Path`
 maps at the top of `tools/build-i18n.mjs`.
 

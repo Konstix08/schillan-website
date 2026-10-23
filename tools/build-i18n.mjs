@@ -15,7 +15,8 @@
  *
  *   languages:  en (at the bare path) + de, es, fr, ja, it, pt (under /<lang>/)
  *   page types: home, landing, privacy, bestApp, widgetGuide, widgetHowTo,
- *               liveActivities, vacationCountdown, icloudSync, weddingCountdown
+ *               liveActivities, vacationCountdown, icloudSync, weddingCountdown,
+ *               comparison
  *
  *   e.g. /  /de/  /pt/ … and /cndwn/privacy/  /cndwn/de/privacy/  /cndwn/pt/privacy/ …
  */
@@ -42,6 +43,7 @@ const widgetHowToPath = { en: '/cndwn/how-to-add-countdown-widget/', de: '/cndwn
 const liveActivitiesPath = { en: '/cndwn/countdown-live-activities/', de: '/cndwn/de/countdown-live-activities/', es: '/cndwn/es/countdown-live-activities/', fr: '/cndwn/fr/countdown-live-activities/', ja: '/cndwn/ja/countdown-live-activities/', it: '/cndwn/it/countdown-live-activities/', pt: '/cndwn/pt/countdown-live-activities/' };
 const vacationCountdownPath = { en: '/cndwn/vacation-countdown/', de: '/cndwn/de/vacation-countdown/', es: '/cndwn/es/vacation-countdown/', fr: '/cndwn/fr/vacation-countdown/', ja: '/cndwn/ja/vacation-countdown/', it: '/cndwn/it/vacation-countdown/', pt: '/cndwn/pt/vacation-countdown/' };
 const icloudSyncPath = { en: '/cndwn/countdown-icloud-sync/', de: '/cndwn/de/countdown-icloud-sync/', es: '/cndwn/es/countdown-icloud-sync/', fr: '/cndwn/fr/countdown-icloud-sync/', ja: '/cndwn/ja/countdown-icloud-sync/', it: '/cndwn/it/countdown-icloud-sync/', pt: '/cndwn/pt/countdown-icloud-sync/' };
+const comparisonPath = { en: '/cndwn/countdown-app-comparison/', de: '/cndwn/de/countdown-app-comparison/', es: '/cndwn/es/countdown-app-comparison/', fr: '/cndwn/fr/countdown-app-comparison/', ja: '/cndwn/ja/countdown-app-comparison/', it: '/cndwn/it/countdown-app-comparison/', pt: '/cndwn/pt/countdown-app-comparison/' };
 const weddingCountdownPath = { en: '/cndwn/wedding-countdown/', de: '/cndwn/de/wedding-countdown/', es: '/cndwn/es/wedding-countdown/', fr: '/cndwn/fr/wedding-countdown/', ja: '/cndwn/ja/wedding-countdown/', it: '/cndwn/it/wedding-countdown/', pt: '/cndwn/pt/wedding-countdown/' };
 // The app's localized App Store titles (apps.apple.com/<country>/app/id6455257754),
 // used as the SoftwareApplication alternateName so it matches the store listing.
@@ -58,7 +60,7 @@ const homePath = { en: '/', de: '/de/', es: '/es/', fr: '/fr/', ja: '/ja/', it: 
 const pathFor = {
   landing: landingPath, privacy: privacyPath, bestApp: bestAppPath, widgetGuide: widgetGuidePath,
   widgetHowTo: widgetHowToPath, liveActivities: liveActivitiesPath, vacationCountdown: vacationCountdownPath,
-  icloudSync: icloudSyncPath, weddingCountdown: weddingCountdownPath, home: homePath,
+  icloudSync: icloudSyncPath, weddingCountdown: weddingCountdownPath, comparison: comparisonPath, home: homePath,
 };
 
 const META = {
@@ -661,6 +663,43 @@ const META = {
       breadcrumbName: "Contagem decrescente para o casamento",
     },
   },
+  comparison: {
+    en: {
+      title: "CNDWN vs NanoCount vs Countdown vs Countdown Star (2026)",
+      desc: "Which countdown app is really free? Widgets, iCloud sync, ads and in-app purchases compared across four iPhone apps, checked on the App Store.",
+      breadcrumbName: "Countdown app comparison",
+    },
+    de: {
+      title: "CNDWN vs. NanoCount vs. Countdown vs. Countdown Star (2026)",
+      desc: "Welche Countdown-App ist wirklich gratis? Widgets, iCloud-Sync, Werbung und In-App-Käufe von vier iPhone-Apps im Vergleich.",
+      breadcrumbName: "Countdown-Apps im Vergleich",
+    },
+    es: {
+      title: "CNDWN vs NanoCount vs Countdown vs Countdown Star (2026)",
+      desc: "¿Qué app de cuenta atrás es realmente gratis? Widgets, iCloud, anuncios y compras dentro de la app de cuatro apps para iPhone, comparados.",
+      breadcrumbName: "Comparativa de apps de cuenta atrás",
+    },
+    fr: {
+      title: "CNDWN vs NanoCount vs Countdown vs Countdown Star (2026)",
+      desc: "Quelle app de compte à rebours est vraiment gratuite ? Widgets, iCloud, publicité et achats intégrés de quatre apps iPhone comparés.",
+      breadcrumbName: "Comparatif d'apps de compte à rebours",
+    },
+    ja: {
+      title: "CNDWN・NanoCount・Countdown・Countdown Star 比較(2026)",
+      desc: "本当に無料のカウントダウンアプリは?iPhone向け4アプリのウィジェット、iCloud同期、広告、App内課金をApp Storeで確認して比較。",
+      breadcrumbName: "カウントダウンアプリ比較",
+    },
+    it: {
+      title: "CNDWN vs NanoCount vs Countdown vs Countdown Star (2026)",
+      desc: "Quale app di conto alla rovescia è davvero gratuita? Widget, iCloud, pubblicità e acquisti in-app di quattro app per iPhone a confronto.",
+      breadcrumbName: "Confronto app di conto alla rovescia",
+    },
+    pt: {
+      title: "CNDWN vs NanoCount vs Countdown vs Countdown Star (2026)",
+      desc: "Qual app de contagem decrescente é mesmo gratuita? Widgets, iCloud, anúncios e compras na app de quatro apps para iPhone comparados.",
+      breadcrumbName: "Comparação de apps de contagem decrescente",
+    },
+  },
   home: {
     en: {
       title: "Schillan — Indie Apple App Studio (Konstantin Schillhahn)",
@@ -719,6 +758,7 @@ const SITEMAP_META = {
   vacationCountdown: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
   icloudSync: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
   weddingCountdown: { lastmod: '2026-07-08', changefreq: 'monthly', priority: 0.6, prioritySecondary: 0.5 },
+  comparison: { lastmod: '2026-10-23', changefreq: 'monthly', priority: 0.8, prioritySecondary: 0.7 },
 };
 
 // One entity graph shared by every page: the same @ids for the studio, its
@@ -818,6 +858,7 @@ const TEMPLATE_FILES = {
   vacationCountdown: 'vacation-countdown.html',
   icloudSync: 'countdown-icloud-sync.html',
   weddingCountdown: 'wedding-countdown.html',
+  comparison: 'countdown-app-comparison.html',
   home: 'home.html',
 };
 const SHARED_CSS = fs.readFileSync(path.join(ROOT, 'tools', 'templates', 'shared.css'), 'utf8');

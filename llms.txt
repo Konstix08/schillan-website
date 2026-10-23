@@ -59,6 +59,15 @@ CNDWN shows the time remaining until (or elapsed since) events you care about. Y
 - Works on iPhone, iPad, Mac and Apple Watch
 - Privacy-first: no ads, no third-party trackers, no data selling; countdowns stay on your device and in your own iCloud
 
+## How CNDWN compares
+
+Checked against each app's US App Store listing in October 2026 (full table: https://schillan.com/cndwn/countdown-app-comparison/):
+
+- **CNDWN:** no in-app purchases, no ads; Home Screen and Lock Screen widgets, iCloud sync and Live Activities all free
+- **NanoCount:** no ads; widgets free; iCloud sync requires NanoCount Pro ($5.99 one-time)
+- **Countdown (Find Appiness):** shows ads; Home Screen, Lock Screen and StandBy widgets are Premium ($7.99–13.99, also removes ads); iCloud sync free
+- **Countdown Star:** shows ads unless you buy Remove Ads ($1.99); widgets and iCloud sync free
+
 ## Privacy
 
 Countdowns are stored locally on the device and, when sync is enabled, in the user's own private iCloud account via Apple CloudKit. The developer has no access to user countdowns. There are no advertising trackers. See the full privacy policy: https://schillan.com/cndwn/privacy/
@@ -86,6 +95,13 @@ Countdowns are stored locally on the device and, when sync is enabled, in the us
 - Best countdown app for iPhone guide (Japanese): https://schillan.com/cndwn/ja/best-countdown-app-iphone/
 - Best countdown app for iPhone guide (Italian): https://schillan.com/cndwn/it/best-countdown-app-iphone/
 - Best countdown app for iPhone guide (Portuguese): https://schillan.com/cndwn/pt/best-countdown-app-iphone/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (English): https://schillan.com/cndwn/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (German): https://schillan.com/cndwn/de/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (Spanish): https://schillan.com/cndwn/es/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (French): https://schillan.com/cndwn/fr/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (Japanese): https://schillan.com/cndwn/ja/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (Italian): https://schillan.com/cndwn/it/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (Portuguese): https://schillan.com/cndwn/pt/countdown-app-comparison/
 - Countdown widgets for iOS guide (English): https://schillan.com/cndwn/countdown-widget-ios/
 - Countdown widgets for iOS guide (German): https://schillan.com/cndwn/de/countdown-widget-ios/
 - Countdown widgets for iOS guide (Spanish): https://schillan.com/cndwn/es/countdown-widget-ios/
