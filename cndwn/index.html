@@ -58,8 +58,8 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "CNDWN",
-  "alternateName": "CNDWN - Event Countdown",
-  "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS",
+  "alternateName": "CNDWN – Countdown Timer Widget",
+  "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS, tvOS, visionOS",
   "applicationCategory": "LifestyleApplication",
   "description": "Track birthdays, trips and deadlines with widgets, Live Activities and iCloud sync. Every feature free — no ads, no trackers.",
   "url": "https://schillan.com/cndwn/",
@@ -73,33 +73,32 @@
     "Home, Lock Screen & StandBy widgets",
     "Live Activities",
     "iCloud sync",
-    "Custom colors",
+    "Colors, gradients & photos",
     "Import from Calendar & Reminders",
-    "Notifications",
-    "Share & Handoff"
+    "Custom notifications",
+    "Share by link, QR code, image & Instagram",
+    "Repeating countdowns",
+    "Apple Watch & Apple TV",
+    "Siri, Shortcuts & Spotlight",
+    "Display styles",
+    "Archive & reset",
+    "Emoji & Dark Mode"
   ],
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "13",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "author": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -120,7 +119,15 @@
       "name": "Is CNDWN really free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. CNDWN is the first countdown app that gives you every feature for free — countdowns, countups, progress bars, widgets, Live Activities, iCloud sync, custom colors and more. There are no ads and no trackers."
+        "text": "Yes. Every feature in CNDWN is free — countdowns, countups, progress bars, all widgets, Live Activities, iCloud sync, custom colors and more. There are no in-app purchases, no subscription, no ads and no trackers. Many other countdown apps charge extra for widgets or sync; CNDWN does not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is CNDWN different from other countdown apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many countdown apps lock Lock Screen widgets, multi-event widgets, iCloud sync or Live Activities behind a subscription or a one-time upgrade. CNDWN includes all of them for free and has no in-app purchases at all. It also combines countdowns, countups and progress bars in one app, supports StandBy, imports events from Calendar and Reminders, and runs on iPhone, iPad, Mac and Apple Watch."
       }
     },
     {
@@ -128,7 +135,7 @@
       "name": "Which devices does CNDWN work on?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CNDWN works on iPhone, iPad, Mac and Apple Watch and requires iOS 18.0 or later. Your countdowns sync automatically across all of your Apple devices through your own iCloud account, and Handoff lets you pick up where you left off."
+        "text": "CNDWN works on iPhone, iPad, Mac, Apple Watch (with complications), Apple TV and Apple Vision Pro, and requires iOS 18.0 or later. Your countdowns sync automatically across all of your Apple devices through your own iCloud account, and Handoff lets you pick up where you left off."
       }
     },
     {
@@ -198,14 +205,14 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "CNDWN",
-      "item": "https://schillan.com/cndwn/"
+      "name": "Schillan",
+      "item": "https://schillan.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Privacy Policy",
-      "item": "https://schillan.com/cndwn/privacy/"
+      "name": "CNDWN",
+      "item": "https://schillan.com/cndwn/"
     }
   ]
 }
@@ -480,6 +487,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/#webpage",
+      "url": "https://schillan.com/cndwn/",
+      "name": "CNDWN — Countdown & Countup App for iPhone & Mac",
+      "description": "Track birthdays, trips and deadlines with widgets, Live Activities and iCloud sync. Every feature free — no ads, no trackers.",
+      "inLanguage": "en",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -524,7 +581,7 @@
       
     </h1>
     <p class="sub">
-      <span lang="en">Beautiful countdowns, countups and progress bars for birthdays, holidays, trips and deadlines — right on your Home Screen, Lock Screen and StandBy. The first countdown app with every feature free.</span>
+      <span lang="en">Beautiful countdowns, countups and progress bars for birthdays, holidays, trips and deadlines — right on your Home Screen, Lock Screen and StandBy. Every feature is free — including iCloud sync, Live Activities and every widget. No in-app purchases, no ads.</span>
       
       
     </p>
@@ -536,8 +593,8 @@
       </a>
       <a class="ghost-btn" href="#features"><span lang="en">See features</span></a>
     </div>
-    <p class="platform-note">iPhone · iPad · Mac · Apple Watch · <span lang="en">Requires iOS 18</span></p>
-    <p class="rating-note"><span class="stars">★★★★★</span> <span lang="en">4.8 on the App Store · Free</span></p>
+    <p class="platform-note">iPhone · iPad · Mac · Apple Watch · Apple TV · Vision Pro · <span lang="en">Requires iOS 18</span></p>
+    <p class="rating-note"><span class="stars">★★★★★</span> <span lang="en">4.6 on the App Store · 63 ratings worldwide · Free</span></p>
 
     <div class="devices">
       <img class="shot" src="/cndwn/img/phone-1.webp" width="660" height="1351" alt="CNDWN countdown list on iPhone showing Graduation, Super Bowl, Birthday and Holiday countdowns">
@@ -563,7 +620,7 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M21 3v6h-6"></path></svg></div>
         <h3><span lang="en">Progress bars</span></h3>
-        <p><span lang="en">Track long-term goals like a vacation, a semester, a pregnancy, a fitness milestone or a project deadline with a clean circular progress ring.</span></p>
+        <p><span lang="en">Track long-term goals like a vacation, a semester, a pregnancy or a project deadline as a progress ring or a progress bar.</span></p>
       </div>
 
       <div class="feature">
@@ -581,13 +638,13 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17a4 4 0 0 1 0-8 5.5 5.5 0 0 1 10.5-1.5A4.5 4.5 0 0 1 18 17z"></path></svg></div>
         <h3><span lang="en">iCloud sync</span></h3>
-        <p><span lang="en">Your countdowns follow you across iPhone, iPad, Mac and Apple Watch — automatically, through your own iCloud.</span></p>
+        <p><span lang="en">Your countdowns follow you across iPhone, iPad, Mac, Apple Watch and Apple TV — automatically, through your own iCloud.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="17" cy="14" r="2.5"></circle><circle cx="9" cy="18" r="2.5"></circle><path d="M12 3a9 9 0 1 0 9 9"></path></svg></div>
-        <h3><span lang="en">Custom colors</span></h3>
-        <p><span lang="en">Give every countdown its own color so your most important dates are easy to spot at a glance.</span></p>
+        <h3><span lang="en">Colors, gradients &amp; photos</span></h3>
+        <p><span lang="en">Give every countdown its own look: a color, a gradient or one of your own photos as its background, so your most important dates stand out at a glance.</span></p>
       </div>
 
       <div class="feature">
@@ -598,16 +655,46 @@
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg></div>
-        <h3><span lang="en">Notifications</span></h3>
-        <p><span lang="en">Optional reminders — an hour, ten minutes or a minute before the end — so a countdown never slips by unnoticed.</span></p>
+        <h3><span lang="en">Custom notifications</span></h3>
+        <p><span lang="en">Decide when you get reminded — an hour, ten minutes or a minute before the end, for example — so a countdown never slips by unnoticed.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg></div>
-        <h3><span lang="en">Share &amp; Handoff</span></h3>
-        <p><span lang="en">Share a countdown with friends and family, and hand it off seamlessly from one Apple device to the next.</span></p>
+        <h3><span lang="en">Share by link, QR code, image &amp; Instagram</span></h3>
+        <p><span lang="en">Send a countdown to friends by link or QR code, save it as a designed image, or post it straight to Instagram. Handoff lets you pick up where you left off on your other Apple devices.</span></p>
       </div>
 
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg></div>
+        <h3><span lang="en">Repeating countdowns</span></h3>
+        <p><span lang="en">Birthdays, anniversaries and other recurring events start over automatically once the day has passed. Set them up once and never again.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="2"></rect><path d="M6 18h6"></path><rect x="17" y="8" width="5" height="9" rx="1.5"></rect></svg></div>
+        <h3><span lang="en">Apple Watch &amp; Apple TV</span></h3>
+        <p><span lang="en">Keep your countdowns on your wrist with the Apple Watch app and complications on your watch face, and on the big screen with the Apple TV app.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 5.3L19.5 10.5l-5.3 2.2L12 18l-2.2-5.3L4.5 10.5l5.3-2.2z"></path><path d="M19 17v4M17 19h4"></path></svg></div>
+        <h3><span lang="en">Siri, Shortcuts &amp; Spotlight</span></h3>
+        <p><span lang="en">Use CNDWN with Siri and in your own automations in the Shortcuts app, and find any countdown instantly with Spotlight search.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="4"></circle><rect x="13" y="4" width="8" height="6" rx="1.5"></rect><path d="M3 16h18M3 20h11"></path></svg></div>
+        <h3><span lang="en">Display styles</span></h3>
+        <p><span lang="en">Choose how each countdown, count-up or progress is shown — from a big day count to the exact time down to the second.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"></rect><path d="M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"></path><path d="M10 13h4"></path></svg></div>
+        <h3><span lang="en">Archive &amp; reset</span></h3>
+        <p><span lang="en">Archive countdowns that are over to keep your list tidy, and reset a count-up with one tap — perfect for restarting a streak.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 14.5s1.3 2 3.5 2 3.5-2 3.5-2"></path><path d="M9 9h.01M15 9h.01"></path></svg></div>
+        <h3><span lang="en">Emoji &amp; Dark Mode</span></h3>
+        <p><span lang="en">Pick an emoji for every countdown from a large, recently expanded collection — and enjoy a design that looks great in Light and Dark Mode.</span></p>
+      </div>
     </div>
   </div>
 </section>
@@ -684,14 +771,15 @@
     </div>
     <div class="about-card">
       <dl class="about-grid">
-        <div><dt><span lang="en">Developer</span></dt><dd>Schillan</dd></div>
-        <div><dt><span lang="en">Platform</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
+        <div><dt><span lang="en">Developer</span></dt><dd>Konstantin Schillhahn (Schillan)</dd></div>
+        <div><dt><span lang="en">App Store name</span></dt><dd><span lang="en">CNDWN – Countdown Timer Widget</span></dd></div>
+        <div><dt><span lang="en">Platform</span></dt><dd>iPhone, iPad, Mac, Apple Watch, Apple TV, Apple Vision Pro</dd></div>
         <div><dt><span lang="en">Category</span></dt><dd><span lang="en">Lifestyle / Productivity</span></dd></div>
         <div><dt><span lang="en">Requires</span></dt><dd>iOS 18+</dd></div>
         <div><dt><span lang="en">Pricing</span></dt><dd><span lang="en">Free — every feature included</span></dd></div>
         <div><dt><span lang="en">Privacy</span></dt><dd><span lang="en">No ads, no trackers, your own iCloud</span></dd></div>
-        <div><dt><span lang="en">Languages</span></dt><dd>EN, DE, ES, FR, JA, ZH</dd></div>
-        <div><dt><span lang="en">Rating</span></dt><dd><span lang="en">4.8 / 5 on the App Store</span></dd></div>
+        <div><dt><span lang="en">Languages</span></dt><dd>EN, DE, ES, FR, IT, JA, PT, ZH</dd></div>
+        <div><dt><span lang="en">Rating</span></dt><dd><span lang="en">4.6 / 5 from 63 ratings across all App Store countries (October 2026)</span></dd></div>
       </dl>
     </div>
   </div>
@@ -711,6 +799,20 @@
         <h3><span lang="en">Best countdown app for iPhone</span></h3>
         <p><span lang="en">What to look for in a countdown app, and why CNDWN checks every box.</span></p>
         <span class="go"><span lang="en">Read guide →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/countdowns/">
+        <span class="tag"><span lang="en">Live</span></span>
+        <h3><span lang="en">How many days until…?</span></h3>
+        <p><span lang="en">Live countdowns to Christmas, Easter, the seasons and more, plus a days calculator.</span></p>
+        <span class="go"><span lang="en">See countdowns →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/countdown-app-comparison/">
+        <span class="tag"><span lang="en">Comparison</span></span>
+        <h3><span lang="en">Countdown apps compared</span></h3>
+        <p><span lang="en">CNDWN, NanoCount, Countdown and Countdown Star: what is free, what costs extra and where you see ads.</span></p>
+        <span class="go"><span lang="en">See comparison →</span></span>
       </a>
 
       <a class="guide-card" href="/cndwn/countdown-widget-ios/">
@@ -773,11 +875,15 @@
       </details>
       <details>
         <summary><span lang="en">Is CNDWN really free?</span></summary>
-        <p><span lang="en">Yes. CNDWN is the first countdown app that gives you every feature for free — countdowns, countups, progress bars, widgets, Live Activities, iCloud sync, custom colors and more. There are no ads and no trackers.</span></p>
+        <p><span lang="en">Yes. Every feature in CNDWN is free — countdowns, countups, progress bars, all widgets, Live Activities, iCloud sync, custom colors and more. There are no in-app purchases, no subscription, no ads and no trackers. Many other countdown apps charge extra for widgets or sync; CNDWN does not.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en">How is CNDWN different from other countdown apps?</span></summary>
+        <p><span lang="en">Many countdown apps lock Lock Screen widgets, multi-event widgets, iCloud sync or Live Activities behind a subscription or a one-time upgrade. CNDWN includes all of them for free and has no in-app purchases at all. It also combines countdowns, countups and progress bars in one app, supports StandBy, imports events from Calendar and Reminders, and runs on iPhone, iPad, Mac and Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="en">Which devices does CNDWN work on?</span></summary>
-        <p><span lang="en">CNDWN works on iPhone, iPad, Mac and Apple Watch and requires iOS 18.0 or later. Your countdowns sync automatically across all of your Apple devices through your own iCloud account, and Handoff lets you pick up where you left off.</span></p>
+        <p><span lang="en">CNDWN works on iPhone, iPad, Mac, Apple Watch (with complications), Apple TV and Apple Vision Pro, and requires iOS 18.0 or later. Your countdowns sync automatically across all of your Apple devices through your own iCloud account, and Handoff lets you pick up where you left off.</span></p>
       </details>
       <details>
         <summary><span lang="en">What's the difference between a countdown, a countup and a progress bar?</span></summary>

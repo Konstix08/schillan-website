@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /tools/
+Disallow: /cndwn/embed/
 
 # AI assistants & answer engines are explicitly welcome
 User-agent: GPTBot

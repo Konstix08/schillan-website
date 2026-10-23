@@ -58,8 +58,8 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "CNDWN",
-  "alternateName": "CNDWN - Event Countdown",
-  "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS",
+  "alternateName": "CNDWN – Contagem Regressiva",
+  "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS, tvOS, visionOS",
   "applicationCategory": "LifestyleApplication",
   "description": "Contagem decrescente para aniversários e viagens com widgets, Atividades em Direto e sincronização iCloud. Tudo gratuito, sem publicidade.",
   "url": "https://schillan.com/cndwn/pt/",
@@ -73,33 +73,32 @@
     "Widgets para ecrã principal, ecrã bloqueado e StandBy",
     "Atividades em Direto",
     "Sincronização iCloud",
-    "Cores personalizadas",
+    "Cores, gradientes e fotos",
     "Importação do Calendário e dos Lembretes",
-    "Notificações",
-    "Partilha e Handoff"
+    "Notificações personalizadas",
+    "Partilha por ligação, QR code, imagem e Instagram",
+    "Contagens repetidas",
+    "Apple Watch e Apple TV",
+    "Siri, Atalhos e Spotlight",
+    "Estilos de apresentação",
+    "Arquivo e reposição",
+    "Emojis e modo escuro"
   ],
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "13",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "author": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -120,7 +119,15 @@
       "name": "O CNDWN é realmente gratuito?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. O CNDWN é a primeira app de contagem decrescente que oferece todas as funcionalidades gratuitamente — contagens decrescentes, crescentes, barras de progresso, widgets, Atividades em Direto, sincronização iCloud, cores personalizadas e muito mais. Sem publicidade e sem rastreadores."
+        "text": "Sim. Todas as funcionalidades do CNDWN são gratuitas — contagens decrescentes, crescentes, barras de progresso, todos os widgets, Atividades em Direto, sincronização iCloud, cores personalizadas e muito mais. Não há compras na app, nem subscrição, nem publicidade, nem rastreadores. Muitas outras apps de contagem decrescente cobram à parte pelos widgets ou pela sincronização; o CNDWN não."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Em que é que o CNDWN é diferente de outras apps de contagem decrescente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Muitas apps de contagem decrescente reservam os widgets do ecrã bloqueado, os widgets com vários eventos, a sincronização iCloud ou as Atividades em Direto para uma subscrição ou uma compra única. O CNDWN inclui tudo isso gratuitamente e não tem qualquer compra na app. Além disso, junta contagens decrescentes, crescentes e barras de progresso numa só app, suporta o StandBy, importa eventos do Calendário e dos Lembretes e funciona em iPhone, iPad, Mac e Apple Watch."
       }
     },
     {
@@ -128,7 +135,7 @@
       "name": "Em que dispositivos funciona o CNDWN?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O CNDWN funciona em iPhone, iPad, Mac e Apple Watch e requer iOS 18.0 ou posterior. As tuas contagens sincronizam-se automaticamente em todos os teus dispositivos Apple através da tua própria conta iCloud, e o Handoff permite-te continuar exatamente onde ficaste."
+        "text": "O CNDWN funciona em iPhone, iPad, Mac, Apple Watch (com complicações), Apple TV e Apple Vision Pro, e requer iOS 18.0 ou posterior. As tuas contagens sincronizam-se automaticamente em todos os teus dispositivos Apple através da tua própria conta iCloud, e o Handoff permite-te continuar exatamente onde ficaste."
       }
     },
     {
@@ -152,7 +159,7 @@
       "name": "Posso criar uma contagem decrescente a partir do meu calendário ou dos lembretes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Com a tua autorização, o CNDWN pode ler eventos do Calendário e dos Lembretes, para transformares qualquer evento numa contagem decrescente com dois toques. Estes dados são processados no teu dispositivo e nunca são enviados à desenvolvedora."
+        "text": "Sim. Com a tua autorização, o CNDWN pode ler eventos do Calendário e dos Lembretes, para transformares qualquer evento numa contagem decrescente com dois toques. Estes dados são processados no teu dispositivo e nunca são enviados ao desenvolvedor."
       }
     },
     {
@@ -184,7 +191,7 @@
       "name": "O CNDWN respeita a privacidade? Recolhe os meus dados?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim, o CNDWN põe a privacidade em primeiro lugar. As tuas contagens são guardadas no teu dispositivo e, se ativares a sincronização, na tua própria conta iCloud privada. O CNDWN não tem publicidade, não tem rastreadores de terceiros e não vende os teus dados. A desenvolvedora não tem acesso às tuas contagens. Consulta a Política de Privacidade."
+        "text": "Sim, o CNDWN põe a privacidade em primeiro lugar. As tuas contagens são guardadas no teu dispositivo e, se ativares a sincronização, na tua própria conta iCloud privada. O CNDWN não tem publicidade, não tem rastreadores de terceiros e não vende os teus dados. O desenvolvedor não tem acesso às tuas contagens. Consulta a Política de Privacidade."
       }
     }
   ]
@@ -198,14 +205,14 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "CNDWN",
-      "item": "https://schillan.com/cndwn/pt/"
+      "name": "Schillan",
+      "item": "https://schillan.com/pt/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Política de Privacidade",
-      "item": "https://schillan.com/cndwn/pt/privacy/"
+      "name": "CNDWN",
+      "item": "https://schillan.com/cndwn/pt/"
     }
   ]
 }
@@ -480,6 +487,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/pt/#webpage",
+      "url": "https://schillan.com/cndwn/pt/",
+      "name": "CNDWN — App de contagem decrescente para iPhone e Mac",
+      "description": "Contagem decrescente para aniversários e viagens com widgets, Atividades em Direto e sincronização iCloud. Tudo gratuito, sem publicidade.",
+      "inLanguage": "pt",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -526,7 +583,7 @@
     <p class="sub">
       
       
-      <span lang="pt">Belas contagens decrescentes, crescentes e barras de progresso para aniversários, feriados, viagens e prazos — no teu ecrã principal, no ecrã bloqueado e no StandBy. A primeira app de contagem decrescente com todas as funcionalidades gratuitas.</span>
+      <span lang="pt">Belas contagens decrescentes, crescentes e barras de progresso para aniversários, feriados, viagens e prazos — no teu ecrã principal, no ecrã bloqueado e no StandBy. Todas as funcionalidades são gratuitas — incluindo a sincronização iCloud, as Atividades em Direto e todos os widgets. Sem compras na app nem publicidade.</span>
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
@@ -536,8 +593,8 @@
       </a>
       <a class="ghost-btn" href="#features"><span lang="pt">Ver funcionalidades</span></a>
     </div>
-    <p class="platform-note">iPhone · iPad · Mac · Apple Watch · <span lang="pt">Requer iOS 18</span></p>
-    <p class="rating-note"><span class="stars">★★★★★</span> <span lang="pt">4,8 na App Store · Gratuita</span></p>
+    <p class="platform-note">iPhone · iPad · Mac · Apple Watch · Apple TV · Vision Pro · <span lang="pt">Requer iOS 18</span></p>
+    <p class="rating-note"><span class="stars">★★★★★</span> <span lang="pt">4,6 na App Store · 63 avaliações em todo o mundo · Gratuita</span></p>
 
     <div class="devices">
       <img class="shot" src="/cndwn/img/phone-1.webp" width="660" height="1351" alt="CNDWN countdown list on iPhone showing Graduation, Super Bowl, Birthday and Holiday countdowns">
@@ -563,7 +620,7 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M21 3v6h-6"></path></svg></div>
         <h3><span lang="pt">Barras de progresso</span></h3>
-        <p><span lang="pt">Acompanha objetivos de longo prazo como umas férias, um semestre, uma gravidez, uma meta desportiva ou o prazo de um projeto com um elegante anel de progresso circular.</span></p>
+        <p><span lang="pt">Acompanha objetivos de longo prazo como umas férias, um semestre, uma gravidez ou um prazo como anel ou barra de progresso.</span></p>
       </div>
 
       <div class="feature">
@@ -581,13 +638,13 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17a4 4 0 0 1 0-8 5.5 5.5 0 0 1 10.5-1.5A4.5 4.5 0 0 1 18 17z"></path></svg></div>
         <h3><span lang="pt">Sincronização iCloud</span></h3>
-        <p><span lang="pt">As tuas contagens acompanham-te no iPhone, iPad, Mac e Apple Watch — automaticamente, através da tua própria iCloud.</span></p>
+        <p><span lang="pt">As tuas contagens acompanham-te no iPhone, iPad, Mac, Apple Watch e Apple TV — automaticamente, através da tua própria iCloud.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="17" cy="14" r="2.5"></circle><circle cx="9" cy="18" r="2.5"></circle><path d="M12 3a9 9 0 1 0 9 9"></path></svg></div>
-        <h3><span lang="pt">Cores personalizadas</span></h3>
-        <p><span lang="pt">Dá a cada contagem a sua própria cor, para reconheceres as datas mais importantes num relance.</span></p>
+        <h3><span lang="pt">Cores, gradientes e fotos</span></h3>
+        <p><span lang="pt">Dá a cada contagem o seu próprio estilo: uma cor, um gradiente ou uma foto tua como fundo, para reconheceres as datas mais importantes num relance.</span></p>
       </div>
 
       <div class="feature">
@@ -598,16 +655,46 @@
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg></div>
-        <h3><span lang="pt">Notificações</span></h3>
-        <p><span lang="pt">Avisos opcionais — uma hora, dez minutos ou um minuto antes do fim — para que nenhuma contagem passe despercebida.</span></p>
+        <h3><span lang="pt">Notificações personalizadas</span></h3>
+        <p><span lang="pt">Decide quando queres ser avisado — por exemplo, uma hora, dez minutos ou um minuto antes do fim — para que nenhuma contagem passe despercebida.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg></div>
-        <h3><span lang="pt">Partilha e Handoff</span></h3>
-        <p><span lang="pt">Partilha uma contagem decrescente com amigos e família, e continua sem interrupções de um dispositivo Apple para o seguinte.</span></p>
+        <h3><span lang="pt">Partilha por ligação, QR code, imagem e Instagram</span></h3>
+        <p><span lang="pt">Envia uma contagem aos amigos por ligação ou QR code, guarda-a como imagem com design ou publica-a diretamente no Instagram. Com o Handoff continuas nos teus outros dispositivos Apple.</span></p>
       </div>
 
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg></div>
+        <h3><span lang="pt">Contagens repetidas</span></h3>
+        <p><span lang="pt">Aniversários, datas especiais e outros eventos recorrentes recomeçam sozinhos quando o dia passa. Crias uma vez e pronto.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="2"></rect><path d="M6 18h6"></path><rect x="17" y="8" width="5" height="9" rx="1.5"></rect></svg></div>
+        <h3><span lang="pt">Apple Watch e Apple TV</span></h3>
+        <p><span lang="pt">Tem as tuas contagens no pulso com a app para Apple Watch e as complicações no mostrador, e no ecrã grande com a app para Apple TV.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 5.3L19.5 10.5l-5.3 2.2L12 18l-2.2-5.3L4.5 10.5l5.3-2.2z"></path><path d="M19 17v4M17 19h4"></path></svg></div>
+        <h3><span lang="pt">Siri, Atalhos e Spotlight</span></h3>
+        <p><span lang="pt">Usa o CNDWN com a Siri e nas tuas automatizações da app Atalhos, e encontra qualquer contagem num instante com a pesquisa Spotlight.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="4"></circle><rect x="13" y="4" width="8" height="6" rx="1.5"></rect><path d="M3 16h18M3 20h11"></path></svg></div>
+        <h3><span lang="pt">Estilos de apresentação</span></h3>
+        <p><span lang="pt">Escolhe como cada contagem decrescente, crescente ou progresso é apresentada — do número de dias em grande ao tempo exato ao segundo.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"></rect><path d="M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"></path><path d="M10 13h4"></path></svg></div>
+        <h3><span lang="pt">Arquivo e reposição</span></h3>
+        <p><span lang="pt">Arquiva as contagens que já terminaram para manter a lista arrumada e repõe uma contagem crescente com um toque — ideal para recomeçar uma série.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 14.5s1.3 2 3.5 2 3.5-2 3.5-2"></path><path d="M9 9h.01M15 9h.01"></path></svg></div>
+        <h3><span lang="pt">Emojis e modo escuro</span></h3>
+        <p><span lang="pt">Escolhe um emoji para cada contagem de uma grande coleção acabada de alargar, com um design bonito no modo claro e escuro.</span></p>
+      </div>
     </div>
   </div>
 </section>
@@ -664,7 +751,7 @@
   <div class="wrap">
     <div class="privacy-banner">
       <h2><span lang="pt">As tuas contagens só a ti dizem respeito</span></h2>
-      <p><span lang="pt">O CNDWN mantém os teus dados no teu dispositivo e na tua conta iCloud pessoal. Não há rastreadores publicitários, não há perfis de análise vendidos a ninguém, e a desenvolvedora não consegue ver as tuas contagens.</span></p>
+      <p><span lang="pt">O CNDWN mantém os teus dados no teu dispositivo e na tua conta iCloud pessoal. Não há rastreadores publicitários, não há perfis de análise vendidos a ninguém, e o desenvolvedor não consegue ver as tuas contagens.</span></p>
       <div class="privacy-pills">
         <span><span lang="pt">Sem publicidade</span></span>
         <span><span lang="pt">Sem rastreadores</span></span>
@@ -684,14 +771,15 @@
     </div>
     <div class="about-card">
       <dl class="about-grid">
-        <div><dt><span lang="pt">Desenvolvedora</span></dt><dd>Schillan</dd></div>
-        <div><dt><span lang="pt">Plataforma</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
+        <div><dt><span lang="pt">Desenvolvedor</span></dt><dd>Konstantin Schillhahn (Schillan)</dd></div>
+        <div><dt><span lang="pt">Nome na App Store</span></dt><dd><span lang="pt">CNDWN – Contagem Regressiva</span></dd></div>
+        <div><dt><span lang="pt">Plataforma</span></dt><dd>iPhone, iPad, Mac, Apple Watch, Apple TV, Apple Vision Pro</dd></div>
         <div><dt><span lang="pt">Categoria</span></dt><dd><span lang="pt">Estilo de vida / Produtividade</span></dd></div>
         <div><dt><span lang="pt">Requer</span></dt><dd>iOS 18+</dd></div>
         <div><dt><span lang="pt">Preço</span></dt><dd><span lang="pt">Gratuita — todas as funcionalidades incluídas</span></dd></div>
         <div><dt><span lang="pt">Privacidade</span></dt><dd><span lang="pt">Sem publicidade, sem rastreadores, a tua própria iCloud</span></dd></div>
-        <div><dt><span lang="pt">Idiomas</span></dt><dd>EN, DE, ES, FR, JA, ZH</dd></div>
-        <div><dt><span lang="pt">Avaliação</span></dt><dd><span lang="pt">4,8 / 5 na App Store</span></dd></div>
+        <div><dt><span lang="pt">Idiomas</span></dt><dd>EN, DE, ES, FR, IT, JA, PT, ZH</dd></div>
+        <div><dt><span lang="pt">Avaliação</span></dt><dd><span lang="pt">4,6 / 5 em 63 avaliações em todos os países da App Store (outubro de 2026)</span></dd></div>
       </dl>
     </div>
   </div>
@@ -711,6 +799,20 @@
         <h3><span lang="pt">Melhor app de contagem decrescente para iPhone</span></h3>
         <p><span lang="pt">O que procurar numa app de contagem decrescente, e porque o CNDWN cumpre todos os requisitos.</span></p>
         <span class="go"><span lang="pt">Ler o guia →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/pt/countdowns/">
+        <span class="tag"><span lang="pt">Em direto</span></span>
+        <h3><span lang="pt">Quantos dias faltam para…?</span></h3>
+        <p><span lang="pt">Contagens em direto para o Natal, a Páscoa, as estações e mais, e uma calculadora de dias.</span></p>
+        <span class="go"><span lang="pt">Ver contagens →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/pt/countdown-app-comparison/">
+        <span class="tag"><span lang="pt">Comparação</span></span>
+        <h3><span lang="pt">Apps de contagem decrescente comparadas</span></h3>
+        <p><span lang="pt">CNDWN, NanoCount, Countdown e Countdown Star: o que é grátis, o que custa extra e onde aparecem anúncios.</span></p>
+        <span class="go"><span lang="pt">Ver comparação →</span></span>
       </a>
 
       <a class="guide-card" href="/cndwn/pt/countdown-widget-ios/">
@@ -773,11 +875,15 @@
       </details>
       <details>
         <summary><span lang="pt">O CNDWN é realmente gratuito?</span></summary>
-        <p><span lang="pt">Sim. O CNDWN é a primeira app de contagem decrescente que oferece todas as funcionalidades gratuitamente — contagens decrescentes, crescentes, barras de progresso, widgets, Atividades em Direto, sincronização iCloud, cores personalizadas e muito mais. Sem publicidade e sem rastreadores.</span></p>
+        <p><span lang="pt">Sim. Todas as funcionalidades do CNDWN são gratuitas — contagens decrescentes, crescentes, barras de progresso, todos os widgets, Atividades em Direto, sincronização iCloud, cores personalizadas e muito mais. Não há compras na app, nem subscrição, nem publicidade, nem rastreadores. Muitas outras apps de contagem decrescente cobram à parte pelos widgets ou pela sincronização; o CNDWN não.</span></p>
+      </details>
+      <details>
+        <summary><span lang="pt">Em que é que o CNDWN é diferente de outras apps de contagem decrescente?</span></summary>
+        <p><span lang="pt">Muitas apps de contagem decrescente reservam os widgets do ecrã bloqueado, os widgets com vários eventos, a sincronização iCloud ou as Atividades em Direto para uma subscrição ou uma compra única. O CNDWN inclui tudo isso gratuitamente e não tem qualquer compra na app. Além disso, junta contagens decrescentes, crescentes e barras de progresso numa só app, suporta o StandBy, importa eventos do Calendário e dos Lembretes e funciona em iPhone, iPad, Mac e Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="pt">Em que dispositivos funciona o CNDWN?</span></summary>
-        <p><span lang="pt">O CNDWN funciona em iPhone, iPad, Mac e Apple Watch e requer iOS 18.0 ou posterior. As tuas contagens sincronizam-se automaticamente em todos os teus dispositivos Apple através da tua própria conta iCloud, e o Handoff permite-te continuar exatamente onde ficaste.</span></p>
+        <p><span lang="pt">O CNDWN funciona em iPhone, iPad, Mac, Apple Watch (com complicações), Apple TV e Apple Vision Pro, e requer iOS 18.0 ou posterior. As tuas contagens sincronizam-se automaticamente em todos os teus dispositivos Apple através da tua própria conta iCloud, e o Handoff permite-te continuar exatamente onde ficaste.</span></p>
       </details>
       <details>
         <summary><span lang="pt">Qual é a diferença entre uma contagem decrescente, uma contagem crescente e uma barra de progresso?</span></summary>
@@ -789,7 +895,7 @@
       </details>
       <details>
         <summary><span lang="pt">Posso criar uma contagem decrescente a partir do meu calendário ou dos lembretes?</span></summary>
-        <p><span lang="pt">Sim. Com a tua autorização, o CNDWN pode ler eventos do Calendário e dos Lembretes, para transformares qualquer evento numa contagem decrescente com dois toques. Estes dados são processados no teu dispositivo e nunca são enviados à desenvolvedora.</span></p>
+        <p><span lang="pt">Sim. Com a tua autorização, o CNDWN pode ler eventos do Calendário e dos Lembretes, para transformares qualquer evento numa contagem decrescente com dois toques. Estes dados são processados no teu dispositivo e nunca são enviados ao desenvolvedor.</span></p>
       </details>
       <details>
         <summary><span lang="pt">Para que ocasiões posso usar o CNDWN?</span></summary>
@@ -805,7 +911,7 @@
       </details>
       <details>
         <summary><span lang="pt">O CNDWN respeita a privacidade? Recolhe os meus dados?</span></summary>
-        <p><span lang="pt">Sim, o CNDWN põe a privacidade em primeiro lugar. As tuas contagens são guardadas no teu dispositivo e, se ativares a sincronização, na tua própria conta iCloud privada. O CNDWN não tem publicidade, não tem rastreadores de terceiros e não vende os teus dados. A desenvolvedora não tem acesso às tuas contagens. Consulta a </span><a href="/cndwn/pt/privacy/"><span lang="pt">Política de Privacidade</span></a>.</p>
+        <p><span lang="pt">Sim, o CNDWN põe a privacidade em primeiro lugar. As tuas contagens são guardadas no teu dispositivo e, se ativares a sincronização, na tua própria conta iCloud privada. O CNDWN não tem publicidade, não tem rastreadores de terceiros e não vende os teus dados. O desenvolvedor não tem acesso às tuas contagens. Consulta a </span><a href="/cndwn/pt/privacy/"><span lang="pt">Política de Privacidade</span></a>.</p>
       </details>
     </div>
   </div>

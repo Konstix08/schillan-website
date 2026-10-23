@@ -50,21 +50,7 @@
 <link rel="apple-touch-icon" href="/cndwn/img/app-icon.png">
 
 <!-- Structured data for search engines & AI assistants -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Sincronizar contagens entre os teus dispositivos — CNDWN",
-  "description": "Como sincronizar automaticamente as tuas contagens em iPhone, iPad, Mac e Apple Watch com o CNDWN e a tua própria conta iCloud privada.",
-  "url": "https://schillan.com/cndwn/pt/countdown-icloud-sync/",
-  "inLanguage": "pt",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "CNDWN",
-    "url": "https://schillan.com/cndwn/"
-  }
-}
-</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -132,7 +118,7 @@
       "name": "Os dados das minhas contagens sincronizadas são privados?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. As tuas contagens sincronizam-se através da tua própria conta iCloud privada. A desenvolvedora não tem qualquer acesso aos teus dados — não há publicidade nem rastreadores."
+        "text": "Sim. As tuas contagens sincronizam-se através da tua própria conta iCloud privada. O desenvolvedor não tem qualquer acesso aos teus dados — não há publicidade nem rastreadores."
       }
     },
     {
@@ -348,6 +334,79 @@ footer.site a:hover { color: var(--text); }
   .final-cta h2 { font-size: clamp(26px, 4.4vw, 38px); letter-spacing: -0.02em; margin: 0 0 16px; }
   .final-cta p { color: var(--muted); font-size: 18px; margin: 0 auto 28px; max-width: 42ch; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://schillan.com/cndwn/#app",
+      "name": "CNDWN",
+      "alternateName": "CNDWN – Contagem Regressiva",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS, tvOS, visionOS",
+      "url": "https://schillan.com/cndwn/pt/",
+      "sameAs": [
+        "https://apps.apple.com/app/id6455257754"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@id": "https://schillan.com/#founder"
+      },
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/pt/countdown-icloud-sync/#webpage",
+      "url": "https://schillan.com/cndwn/pt/countdown-icloud-sync/",
+      "name": "Sincronizar contagens entre os teus dispositivos — CNDWN",
+      "description": "Como sincronizar automaticamente as tuas contagens em iPhone, iPad, Mac e Apple Watch com o CNDWN e a tua própria conta iCloud privada.",
+      "inLanguage": "pt",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -481,7 +540,7 @@ footer.site a:hover { color: var(--text); }
       
       
       
-      <span lang="pt">A sincronização acontece através da tua própria conta iCloud privada — a desenvolvedora nunca vê as tuas contagens, e não há publicidade nem rastreadores envolvidos. Lê a </span><a href="/cndwn/pt/privacy/"><span lang="pt">Política de Privacidade</span></a>. <span lang="pt">Queres a tua contagem sincronizada também no ecrã principal? Vê como </span><a href="/cndwn/pt/how-to-add-countdown-widget/"><span lang="pt">adicionar um widget de contagem decrescente</span></a>.
+      <span lang="pt">A sincronização acontece através da tua própria conta iCloud privada — o desenvolvedor nunca vê as tuas contagens, e não há publicidade nem rastreadores envolvidos. Lê a </span><a href="/cndwn/pt/privacy/"><span lang="pt">Política de Privacidade</span></a>. <span lang="pt">Queres a tua contagem sincronizada também no ecrã principal? Vê como </span><a href="/cndwn/pt/how-to-add-countdown-widget/"><span lang="pt">adicionar um widget de contagem decrescente</span></a>.
     </p>
   </div>
 
@@ -494,7 +553,7 @@ footer.site a:hover { color: var(--text); }
       </details>
       <details>
         <summary><span lang="pt">Os dados das minhas contagens sincronizadas são privados?</span></summary>
-        <p><span lang="pt">Sim. As tuas contagens sincronizam-se através da tua própria conta iCloud privada. A desenvolvedora não tem qualquer acesso aos teus dados — não há publicidade nem rastreadores.</span></p>
+        <p><span lang="pt">Sim. As tuas contagens sincronizam-se através da tua própria conta iCloud privada. O desenvolvedor não tem qualquer acesso aos teus dados — não há publicidade nem rastreadores.</span></p>
       </details>
       <details>
         <summary><span lang="pt">O CNDWN sincroniza com o Apple Watch?</span></summary>

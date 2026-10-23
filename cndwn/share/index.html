@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CNDWN — Opening your shared countdown…</title>
-<meta name="description" content="Opening your shared CNDWN countdown in the app.">
+<title>CNDWN — A countdown was shared with you</title>
+<meta name="description" content="Someone shared a countdown with you. See it live here or open it in CNDWN.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#5b6cff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
@@ -19,6 +19,8 @@
     --accent: #5b6cff;
     --accent-2: #9b5bff;
     --border: #e3e3e8;
+    --track: #e9e9ee;
+    --c: #5b6cff;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -29,6 +31,7 @@
       --accent: #7d8bff;
       --accent-2: #b885ff;
       --border: #26262e;
+      --track: #2a2a33;
     }
   }
   * { box-sizing: border-box; }
@@ -46,49 +49,167 @@
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
-  .mark {
-    width: 64px; height: 64px; border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  .label { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  .card {
+    width: 100%; max-width: 360px; background: var(--card); border: 1px solid var(--border); border-radius: 26px;
+    padding: 26px 24px 24px; box-shadow: 0 18px 50px rgba(0,0,0,0.10); position: relative; overflow: hidden;
   }
-  h1 { font-size: 22px; letter-spacing: -0.01em; margin: 0; }
+  .card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 6px; background: var(--c); }
+  .emoji { font-size: 46px; line-height: 1; }
+  h1 { font-size: 24px; letter-spacing: -0.01em; margin: 10px 0 14px; overflow-wrap: anywhere; }
+  .big { font-size: 64px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .unit { font-size: 20px; font-weight: 700; margin-left: 6px; }
+  .clock { color: var(--muted); font-variant-numeric: tabular-nums; margin-top: 8px; }
+  .when { font-weight: 600; margin-top: 6px; }
+  .ring { width: 150px; height: 150px; margin: 0 auto 6px; position: relative; }
+  .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+  .ring .pct { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .bar { height: 18px; border-radius: 999px; background: var(--track); overflow: hidden; margin: 6px 0 10px; }
+  .bar > div { height: 100%; border-radius: 999px; background: var(--c); }
+  .bar-pct { font-size: 30px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .open {
+    display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;
+    padding: 14px 26px; border-radius: 14px;
+  }
   p { font-size: 15.5px; color: var(--muted); max-width: 34ch; margin: 0; line-height: 1.5; }
-  .spinner {
-    width: 22px; height: 22px; border-radius: 50%;
-    border: 3px solid var(--border); border-top-color: var(--accent);
-    animation: spin 0.8s linear infinite;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .badge-link { display: inline-flex; margin-top: 6px; transition: transform 0.18s ease, opacity 0.18s ease; }
+  .badge-link { display: inline-flex; transition: transform 0.18s ease, opacity 0.18s ease; }
   .badge-link:hover { transform: translateY(-1px); opacity: 0.9; }
   .badge-link img { height: 50px; width: auto; display: block; }
+  .mark { width: 28px; height: 28px; border-radius: 7px; vertical-align: middle; margin-right: 6px; }
+  .brand { font-weight: 800; letter-spacing: 0.14em; color: var(--text); text-decoration: none; font-size: 15px; }
+  [hidden] { display: none !important; }
 </style>
-
-<script>
-  function openApp() {
-    const params = new URLSearchParams(window.location.search);
-    const data = params.get('data');
-
-    let decodedData;
-    try {
-      decodedData = decodeURIComponent(data);
-    } catch (error) {
-      console.error('Error decoding the URL:', error);
-      return;
-    }
-
-    const appUrl = `cndwn://share?data=${encodeURIComponent(decodedData)}`;
-    window.location.href = appUrl;
-  }
-
-  window.onload = openApp;
-</script>
 </head>
 <body>
-  <img class="mark" src="/cndwn/img/app-icon.png" width="64" height="64" alt="CNDWN app icon">
-  <div class="spinner" aria-hidden="true"></div>
-  <h1>Opening your countdown…</h1>
-  <p>If CNDWN doesn't open automatically, get it from the App Store below.</p>
-  <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=share&amp;mt=8" target="_blank" rel="noopener" aria-label="Download CNDWN on the App Store">
-    <img src="/cndwn/img/appstore-en.svg" alt="Download on the App Store">
+  <p class="label" id="label">Shared with you</p>
+  <div class="card" id="card" hidden>
+    <div class="emoji" id="emoji" aria-hidden="true"></div>
+    <h1 id="name"></h1>
+    <div id="count" hidden>
+      <div><span class="big" id="days">–</span><span class="unit" id="unit"></span></div>
+      <div class="clock" id="clock"></div>
+    </div>
+    <div id="ring" class="ring" hidden>
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="52" fill="none" stroke="var(--track)" stroke-width="14"></circle>
+        <circle id="ring-arc" cx="60" cy="60" r="52" fill="none" stroke="var(--c)" stroke-width="14" stroke-linecap="round" stroke-dasharray="326.73" stroke-dashoffset="326.73"></circle>
+      </svg>
+      <div class="pct" id="ring-pct"></div>
+    </div>
+    <div id="bar" hidden>
+      <div class="bar-pct" id="bar-pct"></div>
+      <div class="bar"><div id="bar-fill" style="width:0"></div></div>
+    </div>
+    <div class="when" id="when"></div>
+  </div>
+  <p id="invalid" hidden></p>
+  <a class="open" id="open" href="#" hidden>Open in CNDWN</a>
+  <p id="make">Create your own countdowns with widgets and Live Activities. Free, no ads.</p>
+  <a class="badge-link" id="store" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=share&amp;mt=8" target="_blank" rel="noopener" aria-label="Download CNDWN on the App Store">
+    <img id="store-img" src="/cndwn/img/appstore-en.svg" alt="Download on the App Store">
   </a>
+  <a class="brand" id="home" href="/cndwn/"><img class="mark" src="/cndwn/img/app-icon.png" alt="">CNDWN</a>
+
+<script>
+/*
+ * Share links from the app look like /cndwn/share/?data=<url-encoded JSON>:
+ *   { name, emoji, color: "EB512E", startDate, endDate (ISO), countup,
+ *     showAsProgressView, preferredView (11 = bar, otherwise ring), invertedProgress }
+ * The page shows a live preview of that countdown or progress, tries to open
+ * it in the app (cndwn://share?data=…) and offers the App Store otherwise.
+ */
+(function () {
+  var T = {
+    en: { label: 'Shared with you', open: 'Open in CNDWN', until: 'until {date}', since: 'since {date}', done: 'Done! 🎉', make: 'Create your own countdowns with widgets and Live Activities. Free, no ads.', invalid: 'This share link is incomplete. You can still get CNDWN below.', day: 'day', days: 'days', alt: 'Download on the App Store' },
+    de: { label: 'Mit dir geteilt', open: 'In CNDWN öffnen', until: 'bis {date}', since: 'seit {date}', done: 'Geschafft! 🎉', make: 'Erstelle deine eigenen Countdowns mit Widgets und Live-Aktivitäten. Gratis, ohne Werbung.', invalid: 'Dieser Link ist unvollständig. CNDWN kannst du trotzdem unten laden.', day: 'Tag', days: 'Tage', alt: 'Laden im App Store' },
+    es: { label: 'Compartido contigo', open: 'Abrir en CNDWN', until: 'hasta el {date}', since: 'desde el {date}', done: '¡Conseguido! 🎉', make: 'Crea tus propias cuentas atrás con widgets y actividades en vivo. Gratis y sin anuncios.', invalid: 'Este enlace está incompleto. Aun así puedes descargar CNDWN abajo.', day: 'día', days: 'días', alt: 'Consíguelo en el App Store' },
+    fr: { label: 'Partagé avec vous', open: 'Ouvrir dans CNDWN', until: "jusqu'au {date}", since: 'depuis le {date}', done: "C'est fait ! 🎉", make: 'Créez vos propres comptes à rebours avec widgets et Activités en direct. Gratuit, sans publicité.', invalid: 'Ce lien est incomplet. Vous pouvez quand même télécharger CNDWN ci-dessous.', day: 'jour', days: 'jours', alt: "Télécharger dans l'App Store" },
+    ja: { label: 'あなたに共有されました', open: 'CNDWNで開く', until: '{date}まで', since: '{date}から', done: '達成!🎉', make: 'ウィジェットやライブアクティビティで自分だけのカウントダウンを。無料・広告なし。', invalid: 'このリンクは不完全です。下からCNDWNを入手できます。', day: '日', days: '日', alt: 'App Storeからダウンロード' },
+    it: { label: 'Condiviso con te', open: 'Apri in CNDWN', until: 'fino a {date}', since: 'da {date}', done: 'Fatto! 🎉', make: 'Crea i tuoi conti alla rovescia con widget e Attività Live. Gratis, senza pubblicità.', invalid: 'Questo link è incompleto. Puoi comunque scaricare CNDWN qui sotto.', day: 'giorno', days: 'giorni', alt: 'Scarica su App Store' },
+    pt: { label: 'Partilhado contigo', open: 'Abrir no CNDWN', until: 'até {date}', since: 'desde {date}', done: 'Concluído! 🎉', make: 'Cria as tuas próprias contagens com widgets e Atividades em Direto. Grátis, sem anúncios.', invalid: 'Esta ligação está incompleta. Podes descarregar o CNDWN abaixo.', day: 'dia', days: 'dias', alt: 'Descarregar na App Store' }
+  };
+  var lang = (navigator.language || 'en').slice(0, 2).toLowerCase();
+  if (!T[lang]) lang = 'en';
+  var t = T[lang];
+  var $ = function (id) { return document.getElementById(id); };
+  function f(tpl, v) { return tpl.replace(/\{(\w+)\}/g, function (m, k) { return k in v ? v[k] : m; }); }
+
+  document.documentElement.lang = lang;
+  $('label').textContent = t.label;
+  $('open').textContent = t.open;
+  $('make').textContent = t.make;
+  $('store-img').src = '/cndwn/img/appstore-' + lang + '.svg';
+  $('store-img').alt = t.alt;
+  $('home').href = lang === 'en' ? '/cndwn/' : '/cndwn/' + lang + '/';
+
+  // Hand the value to the app exactly as it appears in the query string: it is
+  // already encoded the way the app expects, and re-encoding would corrupt
+  // names containing "%" or "+". Try it on load (as before); the button and
+  // the preview stay as the fallback.
+  var dataMatch = /[?&]data=([^&]*)/.exec(location.search);
+  if (dataMatch) {
+    $('open').href = 'cndwn://share?data=' + dataMatch[1];
+    $('open').hidden = false;
+    window.addEventListener('load', function () { location.href = $('open').href; });
+  }
+
+  // The app double-encodes the JSON; decode until it parses.
+  var raw = new URLSearchParams(location.search).get('data') || '';
+  var item = null;
+  for (var i = 0; i < 3 && !item; i++) {
+    try { item = JSON.parse(raw); } catch (e) {
+      try { var next = decodeURIComponent(raw); if (next === raw) break; raw = next; } catch (e2) { break; }
+    }
+  }
+  var end = item && new Date(item.endDate);
+  if (!item || typeof item !== 'object' || isNaN(end)) {
+    $('invalid').textContent = t.invalid;
+    $('invalid').hidden = false;
+    return;
+  }
+
+
+  var start = new Date(item.startDate);
+  var color = /^[0-9a-f]{6}$/i.test(item.color || '') ? '#' + item.color : null;
+  if (color) {
+    // very light colors (e.g. white) would vanish on a light card
+    var n = parseInt(item.color, 16), lum = (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255;
+    if (lum > 0.85 && !matchMedia('(prefers-color-scheme: dark)').matches) color = '#8e8e93';
+    document.documentElement.style.setProperty('--c', color);
+  }
+  $('emoji').textContent = item.emoji || '';
+  $('name').textContent = item.name || '';
+  document.title = (item.emoji ? item.emoji + ' ' : '') + (item.name || 'Countdown') + ' · CNDWN';
+  $('card').hidden = false;
+
+  var fmt = new Intl.DateTimeFormat(lang, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+  var progress = item.showAsProgressView && !isNaN(start) && end > start;
+  var bar = progress && item.preferredView === 11;
+  if (progress) $(bar ? 'bar' : 'ring').hidden = false; else $('count').hidden = false;
+
+  function tick() {
+    var now = new Date();
+    if (progress) {
+      var p = Math.min(1, Math.max(0, (now - start) / (end - start)));
+      if (item.invertedProgress) p = 1 - p;
+      var label = (Math.floor(p * 1000) / 10).toLocaleString(lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+      if (bar) { $('bar-fill').style.width = (p * 100) + '%'; $('bar-pct').textContent = label; }
+      else { $('ring-arc').setAttribute('stroke-dashoffset', String(326.73 * (1 - p))); $('ring-pct').textContent = label; }
+    }
+    var ms = end - now, past = ms <= 0;
+    var shown = past && item.countup ? -ms : Math.max(0, ms);
+    var days = Math.floor(shown / 864e5);
+    if (!progress) {
+      $('days').textContent = past && !item.countup ? '🎉' : days.toLocaleString(lang);
+      $('unit').textContent = past && !item.countup ? '' : (days === 1 ? t.day : t.days);
+      var h = Math.floor(shown / 36e5) % 24, m = Math.floor(shown / 6e4) % 60, s = Math.floor(shown / 1e3) % 60;
+      $('clock').textContent = past && !item.countup ? '' : h + 'h ' + ('0' + m).slice(-2) + 'm ' + ('0' + s).slice(-2) + 's';
+    }
+    $('when').textContent = past ? (item.countup ? f(t.since, { date: fmt.format(end) }) : t.done) : f(t.until, { date: fmt.format(end) });
+  }
+  tick();
+  setInterval(tick, 1000);
+
+})();
+</script>
 </body></html>

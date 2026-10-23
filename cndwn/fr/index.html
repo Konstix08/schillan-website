@@ -58,8 +58,8 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "CNDWN",
-  "alternateName": "CNDWN - Event Countdown",
-  "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS",
+  "alternateName": "CNDWN – Compte à rebours",
+  "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS, tvOS, visionOS",
   "applicationCategory": "LifestyleApplication",
   "description": "Comptez les jours avant anniversaires et voyages avec widgets, Activités en direct et iCloud. Toutes les fonctions gratuites.",
   "url": "https://schillan.com/cndwn/fr/",
@@ -73,33 +73,32 @@
     "Widgets écran d'accueil, écran verrouillé et StandBy",
     "Activités en direct",
     "Synchronisation iCloud",
-    "Couleurs personnalisées",
+    "Couleurs, dégradés et photos",
     "Importer depuis Calendrier et Rappels",
-    "Notifications",
-    "Partage et Handoff"
+    "Notifications personnalisées",
+    "Partage par lien, QR code, image et Instagram",
+    "Comptes à rebours récurrents",
+    "Apple Watch et Apple TV",
+    "Siri, Raccourcis et Spotlight",
+    "Styles d'affichage",
+    "Archives et remise à zéro",
+    "Emojis et mode sombre"
   ],
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "13",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "author": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -120,7 +119,15 @@
       "name": "CNDWN est-elle vraiment gratuite ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui. CNDWN est la première app de compte à rebours à offrir toutes ses fonctionnalités gratuitement — comptes à rebours, compteurs de jours, barres de progression, widgets, Activités en direct, synchronisation iCloud, couleurs personnalisées et bien plus. Sans publicité ni tracker."
+        "text": "Oui. Toutes les fonctionnalités de CNDWN sont gratuites — comptes à rebours, compteurs de jours, barres de progression, tous les widgets, Activités en direct, synchronisation iCloud, couleurs personnalisées et bien plus. Aucun achat intégré, aucun abonnement, aucune publicité ni aucun tracker. Beaucoup d'autres apps de compte à rebours font payer les widgets ou la synchronisation ; pas CNDWN."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "En quoi CNDWN se distingue-t-elle des autres apps de compte à rebours ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beaucoup d'apps de compte à rebours réservent les widgets de l'écran verrouillé, les widgets à plusieurs événements, la synchronisation iCloud ou les Activités en direct à un abonnement ou à un achat unique. CNDWN les inclut tous gratuitement et ne propose aucun achat intégré. Elle réunit aussi comptes à rebours, compteurs de jours et barres de progression dans une seule app, prend en charge StandBy, importe les événements de Calendrier et Rappels et fonctionne sur iPhone, iPad, Mac et Apple Watch."
       }
     },
     {
@@ -128,7 +135,7 @@
       "name": "Sur quels appareils CNDWN fonctionne-t-elle ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CNDWN fonctionne sur iPhone, iPad, Mac et Apple Watch et nécessite iOS 18.0 ou version ultérieure. Vos comptes à rebours se synchronisent automatiquement sur tous vos appareils Apple via votre propre compte iCloud, et Handoff vous permet de reprendre exactement là où vous en étiez."
+        "text": "CNDWN fonctionne sur iPhone, iPad, Mac, Apple Watch (avec complications), Apple TV et Apple Vision Pro, et nécessite iOS 18.0 ou version ultérieure. Vos comptes à rebours se synchronisent automatiquement sur tous vos appareils Apple via votre propre compte iCloud, et Handoff vous permet de reprendre exactement là où vous en étiez."
       }
     },
     {
@@ -198,14 +205,14 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "CNDWN",
-      "item": "https://schillan.com/cndwn/fr/"
+      "name": "Schillan",
+      "item": "https://schillan.com/fr/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Politique de confidentialité",
-      "item": "https://schillan.com/cndwn/fr/privacy/"
+      "name": "CNDWN",
+      "item": "https://schillan.com/cndwn/fr/"
     }
   ]
 }
@@ -480,6 +487,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/fr/#webpage",
+      "url": "https://schillan.com/cndwn/fr/",
+      "name": "CNDWN — App de compte à rebours pour iPhone et Mac",
+      "description": "Comptez les jours avant anniversaires et voyages avec widgets, Activités en direct et iCloud. Toutes les fonctions gratuites.",
+      "inLanguage": "fr",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -526,7 +583,7 @@
     <p class="sub">
       
       
-      <span lang="fr">De magnifiques comptes à rebours, compteurs de jours et barres de progression pour anniversaires, fêtes, voyages et échéances — directement sur votre écran d'accueil, écran verrouillé et StandBy. La première app de compte à rebours qui offre toutes ses fonctionnalités gratuitement.</span>
+      <span lang="fr">De magnifiques comptes à rebours, compteurs de jours et barres de progression pour anniversaires, fêtes, voyages et échéances — directement sur votre écran d'accueil, écran verrouillé et StandBy. Toutes les fonctionnalités sont gratuites — y compris la synchronisation iCloud, les Activités en direct et tous les widgets. Sans achats intégrés ni publicité.</span>
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
@@ -536,8 +593,8 @@
       </a>
       <a class="ghost-btn" href="#features"><span lang="fr">Voir les fonctionnalités</span></a>
     </div>
-    <p class="platform-note">iPhone · iPad · Mac · Apple Watch · <span lang="fr">Nécessite iOS 18</span></p>
-    <p class="rating-note"><span class="stars">★★★★★</span> <span lang="fr">4,8 sur l'App Store · Gratuit</span></p>
+    <p class="platform-note">iPhone · iPad · Mac · Apple Watch · Apple TV · Vision Pro · <span lang="fr">Nécessite iOS 18</span></p>
+    <p class="rating-note"><span class="stars">★★★★★</span> <span lang="fr">4,6 sur l'App Store · 63 notes dans le monde · Gratuit</span></p>
 
     <div class="devices">
       <img class="shot" src="/cndwn/img/phone-1.webp" width="660" height="1351" alt="CNDWN countdown list on iPhone showing Graduation, Super Bowl, Birthday and Holiday countdowns">
@@ -563,7 +620,7 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M21 3v6h-6"></path></svg></div>
         <h3><span lang="fr">Barres de progression</span></h3>
-        <p><span lang="fr">Suivez vos objectifs à long terme — vacances, semestre, grossesse, étape sportive ou échéance de projet — grâce à un élégant anneau de progression circulaire.</span></p>
+        <p><span lang="fr">Suivez vos objectifs à long terme — vacances, semestre, grossesse ou échéance de projet — sous forme d'anneau ou de barre de progression.</span></p>
       </div>
 
       <div class="feature">
@@ -581,13 +638,13 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17a4 4 0 0 1 0-8 5.5 5.5 0 0 1 10.5-1.5A4.5 4.5 0 0 1 18 17z"></path></svg></div>
         <h3><span lang="fr">Synchronisation iCloud</span></h3>
-        <p><span lang="fr">Vos comptes à rebours vous suivent sur iPhone, iPad, Mac et Apple Watch — automatiquement, via votre propre iCloud.</span></p>
+        <p><span lang="fr">Vos comptes à rebours vous suivent sur iPhone, iPad, Mac, Apple Watch et Apple TV — automatiquement, via votre propre iCloud.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="17" cy="14" r="2.5"></circle><circle cx="9" cy="18" r="2.5"></circle><path d="M12 3a9 9 0 1 0 9 9"></path></svg></div>
-        <h3><span lang="fr">Couleurs personnalisées</span></h3>
-        <p><span lang="fr">Donnez à chaque compte à rebours sa propre couleur pour repérer vos dates les plus importantes en un coup d'œil.</span></p>
+        <h3><span lang="fr">Couleurs, dégradés et photos</span></h3>
+        <p><span lang="fr">Donnez à chaque compte à rebours son propre style : une couleur, un dégradé ou l'une de vos photos en arrière-plan, pour repérer vos dates importantes en un coup d'œil.</span></p>
       </div>
 
       <div class="feature">
@@ -598,16 +655,46 @@
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg></div>
-        <h3><span lang="fr">Notifications</span></h3>
-        <p><span lang="fr">Des rappels facultatifs — une heure, dix minutes ou une minute avant la fin — pour qu'aucun compte à rebours ne passe inaperçu.</span></p>
+        <h3><span lang="fr">Notifications personnalisées</span></h3>
+        <p><span lang="fr">Choisissez quand vous êtes prévenu — par exemple une heure, dix minutes ou une minute avant la fin — pour qu'aucun compte à rebours ne passe inaperçu.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg></div>
-        <h3><span lang="fr">Partage et Handoff</span></h3>
-        <p><span lang="fr">Partagez un compte à rebours avec vos proches, et passez sans effort d'un appareil Apple à l'autre grâce à Handoff.</span></p>
+        <h3><span lang="fr">Partage par lien, QR code, image et Instagram</span></h3>
+        <p><span lang="fr">Envoyez un compte à rebours à vos amis par lien ou QR code, enregistrez-le en image mise en forme ou publiez-le directement sur Instagram. Handoff vous permet de continuer sur vos autres appareils Apple.</span></p>
       </div>
 
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg></div>
+        <h3><span lang="fr">Comptes à rebours récurrents</span></h3>
+        <p><span lang="fr">Anniversaires, fêtes et autres événements récurrents repartent automatiquement une fois le jour passé. À créer une seule fois.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="2"></rect><path d="M6 18h6"></path><rect x="17" y="8" width="5" height="9" rx="1.5"></rect></svg></div>
+        <h3><span lang="fr">Apple Watch et Apple TV</span></h3>
+        <p><span lang="fr">Gardez vos comptes à rebours au poignet avec l'app Apple Watch et ses complications sur le cadran, et sur grand écran avec l'app Apple TV.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 5.3L19.5 10.5l-5.3 2.2L12 18l-2.2-5.3L4.5 10.5l5.3-2.2z"></path><path d="M19 17v4M17 19h4"></path></svg></div>
+        <h3><span lang="fr">Siri, Raccourcis et Spotlight</span></h3>
+        <p><span lang="fr">Utilisez CNDWN avec Siri et dans vos propres automatisations de l'app Raccourcis, et retrouvez n'importe quel compte à rebours avec la recherche Spotlight.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="4"></circle><rect x="13" y="4" width="8" height="6" rx="1.5"></rect><path d="M3 16h18M3 20h11"></path></svg></div>
+        <h3><span lang="fr">Styles d'affichage</span></h3>
+        <p><span lang="fr">Choisissez comment s'affiche chaque compte à rebours, compteur ou progression — du grand nombre de jours au temps exact à la seconde près.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"></rect><path d="M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"></path><path d="M10 13h4"></path></svg></div>
+        <h3><span lang="fr">Archives et remise à zéro</span></h3>
+        <p><span lang="fr">Archivez les comptes à rebours terminés pour garder une liste claire, et remettez un compteur à zéro d'un simple toucher — idéal pour relancer une série.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 14.5s1.3 2 3.5 2 3.5-2 3.5-2"></path><path d="M9 9h.01M15 9h.01"></path></svg></div>
+        <h3><span lang="fr">Emojis et mode sombre</span></h3>
+        <p><span lang="fr">Choisissez un emoji pour chaque compte à rebours parmi une large collection récemment enrichie, avec un design soigné en mode clair comme en mode sombre.</span></p>
+      </div>
     </div>
   </div>
 </section>
@@ -684,14 +771,15 @@
     </div>
     <div class="about-card">
       <dl class="about-grid">
-        <div><dt><span lang="fr">Développeur</span></dt><dd>Schillan</dd></div>
-        <div><dt><span lang="fr">Plateforme</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
+        <div><dt><span lang="fr">Développeur</span></dt><dd>Konstantin Schillhahn (Schillan)</dd></div>
+        <div><dt><span lang="fr">Nom sur l'App Store</span></dt><dd><span lang="fr">CNDWN – Compte à rebours</span></dd></div>
+        <div><dt><span lang="fr">Plateforme</span></dt><dd>iPhone, iPad, Mac, Apple Watch, Apple TV, Apple Vision Pro</dd></div>
         <div><dt><span lang="fr">Catégorie</span></dt><dd><span lang="fr">Style de vie / Productivité</span></dd></div>
         <div><dt><span lang="fr">Configuration requise</span></dt><dd>iOS 18+</dd></div>
         <div><dt><span lang="fr">Tarif</span></dt><dd><span lang="fr">Gratuit — toutes les fonctionnalités incluses</span></dd></div>
         <div><dt><span lang="fr">Confidentialité</span></dt><dd><span lang="fr">Aucune publicité, aucun tracker, votre propre iCloud</span></dd></div>
-        <div><dt><span lang="fr">Langues</span></dt><dd>EN, DE, ES, FR, JA, ZH</dd></div>
-        <div><dt><span lang="fr">Note</span></dt><dd><span lang="fr">4,8 / 5 sur l'App Store</span></dd></div>
+        <div><dt><span lang="fr">Langues</span></dt><dd>EN, DE, ES, FR, IT, JA, PT, ZH</dd></div>
+        <div><dt><span lang="fr">Note</span></dt><dd><span lang="fr">4,6 / 5 sur 63 notes dans tous les pays de l'App Store (octobre 2026)</span></dd></div>
       </dl>
     </div>
   </div>
@@ -711,6 +799,20 @@
         <h3><span lang="fr">Meilleure app de compte à rebours pour iPhone</span></h3>
         <p><span lang="fr">Ce qu'il faut rechercher dans une app de compte à rebours, et pourquoi CNDWN coche toutes les cases.</span></p>
         <span class="go"><span lang="fr">Lire le guide →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/fr/countdowns/">
+        <span class="tag"><span lang="fr">En direct</span></span>
+        <h3><span lang="fr">Combien de jours avant… ?</span></h3>
+        <p><span lang="fr">Comptes à rebours en direct avant Noël, Pâques, les saisons et plus, et un calculateur de jours.</span></p>
+        <span class="go"><span lang="fr">Voir les comptes à rebours →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/fr/countdown-app-comparison/">
+        <span class="tag"><span lang="fr">Comparatif</span></span>
+        <h3><span lang="fr">Apps de compte à rebours comparées</span></h3>
+        <p><span lang="fr">CNDWN, NanoCount, Countdown et Countdown Star : ce qui est gratuit, ce qui est payant et où s'affiche la publicité.</span></p>
+        <span class="go"><span lang="fr">Voir le comparatif →</span></span>
       </a>
 
       <a class="guide-card" href="/cndwn/fr/countdown-widget-ios/">
@@ -773,11 +875,15 @@
       </details>
       <details>
         <summary><span lang="fr">CNDWN est-elle vraiment gratuite ?</span></summary>
-        <p><span lang="fr">Oui. CNDWN est la première app de compte à rebours à offrir toutes ses fonctionnalités gratuitement — comptes à rebours, compteurs de jours, barres de progression, widgets, Activités en direct, synchronisation iCloud, couleurs personnalisées et bien plus. Sans publicité ni tracker.</span></p>
+        <p><span lang="fr">Oui. Toutes les fonctionnalités de CNDWN sont gratuites — comptes à rebours, compteurs de jours, barres de progression, tous les widgets, Activités en direct, synchronisation iCloud, couleurs personnalisées et bien plus. Aucun achat intégré, aucun abonnement, aucune publicité ni aucun tracker. Beaucoup d'autres apps de compte à rebours font payer les widgets ou la synchronisation ; pas CNDWN.</span></p>
+      </details>
+      <details>
+        <summary><span lang="fr">En quoi CNDWN se distingue-t-elle des autres apps de compte à rebours ?</span></summary>
+        <p><span lang="fr">Beaucoup d'apps de compte à rebours réservent les widgets de l'écran verrouillé, les widgets à plusieurs événements, la synchronisation iCloud ou les Activités en direct à un abonnement ou à un achat unique. CNDWN les inclut tous gratuitement et ne propose aucun achat intégré. Elle réunit aussi comptes à rebours, compteurs de jours et barres de progression dans une seule app, prend en charge StandBy, importe les événements de Calendrier et Rappels et fonctionne sur iPhone, iPad, Mac et Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="fr">Sur quels appareils CNDWN fonctionne-t-elle ?</span></summary>
-        <p><span lang="fr">CNDWN fonctionne sur iPhone, iPad, Mac et Apple Watch et nécessite iOS 18.0 ou version ultérieure. Vos comptes à rebours se synchronisent automatiquement sur tous vos appareils Apple via votre propre compte iCloud, et Handoff vous permet de reprendre exactement là où vous en étiez.</span></p>
+        <p><span lang="fr">CNDWN fonctionne sur iPhone, iPad, Mac, Apple Watch (avec complications), Apple TV et Apple Vision Pro, et nécessite iOS 18.0 ou version ultérieure. Vos comptes à rebours se synchronisent automatiquement sur tous vos appareils Apple via votre propre compte iCloud, et Handoff vous permet de reprendre exactement là où vous en étiez.</span></p>
       </details>
       <details>
         <summary><span lang="fr">Quelle est la différence entre un compte à rebours, un compteur de jours et une barre de progression ?</span></summary>

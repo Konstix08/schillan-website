@@ -2,7 +2,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schillan — Estudio indie de apps para Apple</title>
-<meta name="description" content="Estudio de una persona: apps para Apple centradas en la privacidad. Creadora de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.">
+<meta name="description" content="Estudio de una persona: apps para Apple centradas en la privacidad. Creador de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.">
 <meta name="robots" content="index, follow, max-image-preview:large"><!-- template only; generated pages are indexable -->
 <meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0c0c10" media="(prefers-color-scheme: dark)">
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="pt" href="https://schillan.com/pt/">
 <link rel="alternate" hreflang="x-default" href="https://schillan.com/">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="keywords" content="Schillan, Alexandra Schillhahn, indie iOS developer, Apple app developer, iPhone app studio, CNDWN, TerraGuessr, privacy-first apps, no ads no trackers">
+<meta name="keywords" content="Schillan, Konstantin Schillhahn, indie iOS developer, Apple app developer, iPhone app studio, CNDWN, TerraGuessr, privacy-first apps, no ads no trackers">
 
 <!-- hreflang: single URL per language, in-page language switch -->
 
@@ -27,8 +27,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Schillan">
-<meta property="og:title" content="Schillan — Desarrolladora indie de apps para Apple (Alexandra Schillhahn)">
-<meta property="og:description" content="Apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch, creadas por una sola persona. Creadora de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.">
+<meta property="og:title" content="Schillan — Desarrollador indie de apps para Apple (Konstantin Schillhahn)">
+<meta property="og:description" content="Apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch, creadas por una sola persona. Creador de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.">
 <meta property="og:url" content="https://schillan.com/es/">
 <meta property="og:image" content="https://schillan.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -45,37 +45,16 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Schillan — Desarrolladora indie de apps para Apple (Alexandra Schillhahn)">
-<meta name="twitter:description" content="Apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch, creadas por una sola persona. Creadora de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.">
+<meta name="twitter:title" content="Schillan — Desarrollador indie de apps para Apple (Konstantin Schillhahn)">
+<meta name="twitter:description" content="Apps centradas en la privacidad para iPhone, iPad, Mac y Apple Watch, creadas por una sola persona. Creador de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.">
 <meta name="twitter:image" content="https://schillan.com/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 <link rel="apple-touch-icon" href="/img/favicon.svg">
 
 <!-- Structured data for search engines & AI assistants -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Schillan",
-  "url": "https://schillan.com/",
-  "description": "Schillan is the one-person indie studio of Alexandra Schillhahn, building privacy-first apps for Apple platforms.",
-  "founder": {
-    "@type": "Person",
-    "name": "Alexandra Schillhahn"
-  },
-  "sameAs": []
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Schillan",
-  "url": "https://schillan.com/es/",
-  "inLanguage": "es"
-}
-</script>
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,6 +66,7 @@
       "position": 1,
       "item": {
         "@type": "SoftwareApplication",
+        "@id": "https://schillan.com/cndwn/#app",
         "name": "CNDWN",
         "url": "https://schillan.com/cndwn/es/",
         "applicationCategory": "LifestyleApplication"
@@ -317,6 +297,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/es/#webpage",
+      "url": "https://schillan.com/es/",
+      "name": "Schillan — Estudio indie de apps para Apple",
+      "description": "Estudio de una persona: apps para Apple centradas en la privacidad. Creador de CNDWN y TerraGuessr. Sin anuncios, sin rastreadores.",
+      "inLanguage": "es",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -363,7 +393,7 @@
     <p class="sub">
       
       
-      <span lang="es">Schillan es el estudio de una sola persona de Alexandra Schillhahn, que crea apps gratuitas y sin publicidad para iPhone, iPad, Mac y Apple Watch — entre ellas CNDWN y TerraGuessr.</span>
+      <span lang="es">Schillan es el estudio de una sola persona de Konstantin Schillhahn, que crea apps gratuitas y sin publicidad para iPhone, iPad, Mac y Apple Watch — entre ellas CNDWN y TerraGuessr.</span>
       
       
       
@@ -405,7 +435,7 @@
           </div>
         </div>
         <p class="desc"><span lang="es">Una app de cuenta atrás y adelante centrada en la privacidad para iPhone, iPad, Mac y Apple Watch — con widgets, actividades en vivo, sincronización con iCloud y todas las funciones gratis.</span></p>
-        <p class="rating-note"><span class="stars">★★★★★</span> <span lang="es">4,8 en la App Store · Gratis</span></p>
+        <p class="rating-note"><span class="stars">★★★★★</span> <span lang="es">4,6 en la App Store · 63 valoraciones en todo el mundo · Gratis</span></p>
         <div class="app-cta">
           <a class="ghost-btn" href="/cndwn/es/"><span lang="es">Ir a CNDWN</span></a>
           <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website-home&amp;mt=8" aria-label="Download CNDWN on the App Store">
@@ -448,7 +478,7 @@
     <p class="about-lede">
       
       
-      <span lang="es">Schillan es el estudio indie de Alexandra Schillhahn, una desarrolladora independiente que crea apps nativas para Apple que respetan la privacidad y el tiempo de las personas. Cada app llega sin anuncios ni rastreadores de terceros, con los datos guardados en el dispositivo o en tu propia iCloud siempre que sea posible.</span>
+      <span lang="es">Schillan es el estudio indie de Konstantin Schillhahn, un desarrollador independiente que crea apps nativas para Apple que respetan la privacidad y el tiempo de las personas. Cada app llega sin anuncios ni rastreadores de terceros, con los datos guardados en el dispositivo o en tu propia iCloud siempre que sea posible.</span>
       
       
       
@@ -456,7 +486,7 @@
     </p>
     <div class="about-card">
       <dl class="about-grid">
-        <div><dt><span lang="es">Fundadora</span></dt><dd>Alexandra Schillhahn</dd></div>
+        <div><dt><span lang="es">Fundador</span></dt><dd>Konstantin Schillhahn</dd></div>
         <div><dt><span lang="es">Enfoque</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
         <div><dt><span lang="es">Apps</span></dt><dd>CNDWN, TerraGuessr</dd></div>
         <div><dt><span lang="es">Filosofía</span></dt><dd><span lang="es">Sin anuncios, sin rastreadores, sin venta de datos</span></dd></div>

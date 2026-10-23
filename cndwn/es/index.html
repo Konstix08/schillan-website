@@ -58,8 +58,8 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "CNDWN",
-  "alternateName": "CNDWN - Event Countdown",
-  "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS",
+  "alternateName": "CNDWN – Cuenta Regresiva",
+  "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS, tvOS, visionOS",
   "applicationCategory": "LifestyleApplication",
   "description": "Cuenta atrás hacia cumpleaños y viajes con widgets, actividades en vivo y sincronización iCloud. Todo gratis, sin anuncios.",
   "url": "https://schillan.com/cndwn/es/",
@@ -73,33 +73,32 @@
     "Widgets de inicio, bloqueo y StandBy",
     "Actividades en vivo",
     "Sincronización con iCloud",
-    "Colores personalizados",
+    "Colores, degradados y fotos",
     "Importar de Calendario y Recordatorios",
-    "Notificaciones",
-    "Compartir y Handoff"
+    "Notificaciones a tu medida",
+    "Compartir por enlace, QR, imagen e Instagram",
+    "Cuentas atrás repetitivas",
+    "Apple Watch y Apple TV",
+    "Siri, Atajos y Spotlight",
+    "Estilos de visualización",
+    "Archivo y reinicio",
+    "Emojis y modo oscuro"
   ],
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "13",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "author": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
+    "@id": "https://schillan.com/#founder"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Schillan",
-    "url": "https://schillan.com/"
-  }
+    "@id": "https://schillan.com/#organization"
+  },
+  "@id": "https://schillan.com/cndwn/#app",
+  "sameAs": [
+    "https://apps.apple.com/app/id6455257754"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -120,7 +119,15 @@
       "name": "¿CNDWN es realmente gratis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. CNDWN es la primera app de cuenta atrás que te da todas las funciones gratis — cuentas atrás, adelante, barras de progreso, widgets, actividades en vivo, sincronización con iCloud, colores personalizados y más. Sin anuncios ni rastreadores."
+        "text": "Sí. Todas las funciones de CNDWN son gratis — cuentas atrás, adelante, barras de progreso, todos los widgets, actividades en vivo, sincronización con iCloud, colores personalizados y más. No hay compras dentro de la app, ni suscripción, ni anuncios, ni rastreadores. Muchas otras apps de cuenta atrás cobran aparte por los widgets o la sincronización; CNDWN no."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué se diferencia CNDWN de otras apps de cuenta atrás?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Muchas apps de cuenta atrás bloquean los widgets de la pantalla de bloqueo, los widgets con varios eventos, la sincronización con iCloud o las actividades en vivo tras una suscripción o un pago único. CNDWN los incluye todos gratis y no tiene ninguna compra dentro de la app. Además, combina cuentas atrás, adelante y barras de progreso en una sola app, es compatible con StandBy, importa eventos de Calendario y Recordatorios y funciona en iPhone, iPad, Mac y Apple Watch."
       }
     },
     {
@@ -128,7 +135,7 @@
       "name": "¿En qué dispositivos funciona CNDWN?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CNDWN funciona en iPhone, iPad, Mac y Apple Watch y requiere iOS 18.0 o posterior. Tus cuentas atrás se sincronizan automáticamente mediante tu iCloud, y con Handoff continúas donde lo dejaste."
+        "text": "CNDWN funciona en iPhone, iPad, Mac, Apple Watch (con complicaciones), Apple TV y Apple Vision Pro, y requiere iOS 18.0 o posterior. Tus cuentas atrás se sincronizan automáticamente mediante tu iCloud, y con Handoff continúas donde lo dejaste."
       }
     },
     {
@@ -198,14 +205,14 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "CNDWN",
-      "item": "https://schillan.com/cndwn/es/"
+      "name": "Schillan",
+      "item": "https://schillan.com/es/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Política de Privacidad",
-      "item": "https://schillan.com/cndwn/es/privacy/"
+      "name": "CNDWN",
+      "item": "https://schillan.com/cndwn/es/"
     }
   ]
 }
@@ -480,6 +487,56 @@
   footer.site a { color: var(--muted); }
   footer.site a:hover { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/es/#webpage",
+      "url": "https://schillan.com/cndwn/es/",
+      "name": "CNDWN — App de cuenta atrás para iPhone y Mac",
+      "description": "Cuenta atrás hacia cumpleaños y viajes con widgets, actividades en vivo y sincronización iCloud. Todo gratis, sin anuncios.",
+      "inLanguage": "es",
+      "dateModified": "2026-10-23",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -526,7 +583,7 @@
     <p class="sub">
       
       
-      <span lang="es">Bonitas cuentas atrás, cuentas hacia delante y barras de progreso para cumpleaños, vacaciones, viajes y fechas límite — en tu pantalla de inicio, pantalla de bloqueo y StandBy. La primera app de cuenta atrás con todas las funciones gratis.</span>
+      <span lang="es">Bonitas cuentas atrás, cuentas hacia delante y barras de progreso para cumpleaños, vacaciones, viajes y fechas límite — en tu pantalla de inicio, pantalla de bloqueo y StandBy. Todas las funciones gratis — también la sincronización con iCloud, las actividades en vivo y todos los widgets. Sin compras dentro de la app ni anuncios.</span>
     </p>
     <div class="cta-row">
       <a class="badge-link" href="https://apps.apple.com/app/apple-store/id6455257754?pt=126072150&amp;ct=website&amp;mt=8" aria-label="Download CNDWN on the App Store">
@@ -536,8 +593,8 @@
       </a>
       <a class="ghost-btn" href="#features"><span lang="es">Ver funciones</span></a>
     </div>
-    <p class="platform-note">iPhone · iPad · Mac · Apple Watch · <span lang="es">Requiere iOS 18</span></p>
-    <p class="rating-note"><span class="stars">★★★★★</span> <span lang="es">4,8 en la App Store · Gratis</span></p>
+    <p class="platform-note">iPhone · iPad · Mac · Apple Watch · Apple TV · Vision Pro · <span lang="es">Requiere iOS 18</span></p>
+    <p class="rating-note"><span class="stars">★★★★★</span> <span lang="es">4,6 en la App Store · 63 valoraciones en todo el mundo · Gratis</span></p>
 
     <div class="devices">
       <img class="shot" src="/cndwn/img/phone-1.webp" width="660" height="1351" alt="CNDWN countdown list on iPhone showing Graduation, Super Bowl, Birthday and Holiday countdowns">
@@ -563,7 +620,7 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M21 3v6h-6"></path></svg></div>
         <h3><span lang="es">Barras de progreso</span></h3>
-        <p><span lang="es">Sigue metas a largo plazo como unas vacaciones, un semestre, un embarazo, un hito de fitness o una fecha límite de proyecto con un anillo de progreso circular.</span></p>
+        <p><span lang="es">Sigue metas a largo plazo como unas vacaciones, un semestre, un embarazo o una fecha límite como anillo o barra de progreso.</span></p>
       </div>
 
       <div class="feature">
@@ -581,13 +638,13 @@
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17a4 4 0 0 1 0-8 5.5 5.5 0 0 1 10.5-1.5A4.5 4.5 0 0 1 18 17z"></path></svg></div>
         <h3><span lang="es">Sincronización con iCloud</span></h3>
-        <p><span lang="es">Tus cuentas atrás te siguen en iPhone, iPad, Mac y Apple Watch — automáticamente, con tu propio iCloud.</span></p>
+        <p><span lang="es">Tus cuentas atrás te siguen en iPhone, iPad, Mac, Apple Watch y Apple TV — automáticamente, con tu propio iCloud.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="17" cy="14" r="2.5"></circle><circle cx="9" cy="18" r="2.5"></circle><path d="M12 3a9 9 0 1 0 9 9"></path></svg></div>
-        <h3><span lang="es">Colores personalizados</span></h3>
-        <p><span lang="es">Da a cada cuenta atrás su propio color para reconocer tus fechas clave de un vistazo.</span></p>
+        <h3><span lang="es">Colores, degradados y fotos</span></h3>
+        <p><span lang="es">Dale a cada cuenta atrás su propio estilo: un color, un degradado o una foto tuya de fondo, para reconocer tus fechas clave de un vistazo.</span></p>
       </div>
 
       <div class="feature">
@@ -598,16 +655,46 @@
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg></div>
-        <h3><span lang="es">Notificaciones</span></h3>
-        <p><span lang="es">Recordatorios opcionales — una hora, diez minutos o un minuto antes del final — para no perderte ninguna cuenta atrás.</span></p>
+        <h3><span lang="es">Notificaciones a tu medida</span></h3>
+        <p><span lang="es">Decide cuándo quieres el aviso — por ejemplo, una hora, diez minutos o un minuto antes del final — para no perderte ninguna cuenta atrás.</span></p>
       </div>
 
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg></div>
-        <h3><span lang="es">Compartir y Handoff</span></h3>
-        <p><span lang="es">Comparte una cuenta atrás con amigos y familia, y pásala sin esfuerzo de un dispositivo Apple a otro con Handoff.</span></p>
+        <h3><span lang="es">Compartir por enlace, QR, imagen e Instagram</span></h3>
+        <p><span lang="es">Envía una cuenta atrás a tus amigos por enlace o código QR, guárdala como imagen con diseño o publícala directamente en Instagram. Con Handoff continúas en tus otros dispositivos Apple.</span></p>
       </div>
 
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg></div>
+        <h3><span lang="es">Cuentas atrás repetitivas</span></h3>
+        <p><span lang="es">Cumpleaños, aniversarios y otros eventos recurrentes vuelven a empezar solos cuando pasa el día. Créalos una vez y listo.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="2"></rect><path d="M6 18h6"></path><rect x="17" y="8" width="5" height="9" rx="1.5"></rect></svg></div>
+        <h3><span lang="es">Apple Watch y Apple TV</span></h3>
+        <p><span lang="es">Lleva tus cuentas atrás en la muñeca con la app de Apple Watch y las complicaciones en la esfera, y en la pantalla grande con la app de Apple TV.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 5.3L19.5 10.5l-5.3 2.2L12 18l-2.2-5.3L4.5 10.5l5.3-2.2z"></path><path d="M19 17v4M17 19h4"></path></svg></div>
+        <h3><span lang="es">Siri, Atajos y Spotlight</span></h3>
+        <p><span lang="es">Usa CNDWN con Siri y en tus propias automatizaciones de la app Atajos, y encuentra cualquier cuenta atrás al instante con Spotlight.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="4"></circle><rect x="13" y="4" width="8" height="6" rx="1.5"></rect><path d="M3 16h18M3 20h11"></path></svg></div>
+        <h3><span lang="es">Estilos de visualización</span></h3>
+        <p><span lang="es">Elige cómo se muestra cada cuenta atrás, cuenta adelante o progreso: desde el número de días hasta el tiempo exacto al segundo.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"></rect><path d="M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"></path><path d="M10 13h4"></path></svg></div>
+        <h3><span lang="es">Archivo y reinicio</span></h3>
+        <p><span lang="es">Archiva las cuentas atrás que ya terminaron para mantener la lista ordenada y reinicia una cuenta adelante con un toque, ideal para empezar una racha de nuevo.</span></p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 14.5s1.3 2 3.5 2 3.5-2 3.5-2"></path><path d="M9 9h.01M15 9h.01"></path></svg></div>
+        <h3><span lang="es">Emojis y modo oscuro</span></h3>
+        <p><span lang="es">Elige un emoji para cada cuenta atrás entre una gran colección recién ampliada, con un diseño que luce bien en modo claro y oscuro.</span></p>
+      </div>
     </div>
   </div>
 </section>
@@ -684,14 +771,15 @@
     </div>
     <div class="about-card">
       <dl class="about-grid">
-        <div><dt><span lang="es">Desarrollador</span></dt><dd>Schillan</dd></div>
-        <div><dt><span lang="es">Plataforma</span></dt><dd>iPhone, iPad, Mac, Apple Watch</dd></div>
+        <div><dt><span lang="es">Desarrollador</span></dt><dd>Konstantin Schillhahn (Schillan)</dd></div>
+        <div><dt><span lang="es">Nombre en la App Store</span></dt><dd><span lang="es">CNDWN – Cuenta Regresiva</span></dd></div>
+        <div><dt><span lang="es">Plataforma</span></dt><dd>iPhone, iPad, Mac, Apple Watch, Apple TV, Apple Vision Pro</dd></div>
         <div><dt><span lang="es">Categoría</span></dt><dd><span lang="es">Estilo de vida / Productividad</span></dd></div>
         <div><dt><span lang="es">Requiere</span></dt><dd>iOS 18+</dd></div>
         <div><dt><span lang="es">Precio</span></dt><dd><span lang="es">Gratis — todas las funciones incluidas</span></dd></div>
         <div><dt><span lang="es">Privacidad</span></dt><dd><span lang="es">Sin anuncios, sin rastreadores, tu propio iCloud</span></dd></div>
-        <div><dt><span lang="es">Idiomas</span></dt><dd>EN, DE, ES, FR, JA, ZH</dd></div>
-        <div><dt><span lang="es">Valoración</span></dt><dd><span lang="es">4,8 / 5 en la App Store</span></dd></div>
+        <div><dt><span lang="es">Idiomas</span></dt><dd>EN, DE, ES, FR, IT, JA, PT, ZH</dd></div>
+        <div><dt><span lang="es">Valoración</span></dt><dd><span lang="es">4,6 / 5 con 63 valoraciones en todos los países de la App Store (octubre de 2026)</span></dd></div>
       </dl>
     </div>
   </div>
@@ -711,6 +799,20 @@
         <h3><span lang="es">Mejor app de cuenta atrás para iPhone</span></h3>
         <p><span lang="es">Qué buscar en una app de cuenta atrás, y por qué CNDWN cumple todos los requisitos.</span></p>
         <span class="go"><span lang="es">Leer guía →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/es/countdowns/">
+        <span class="tag"><span lang="es">En directo</span></span>
+        <h3><span lang="es">¿Cuántos días faltan para…?</span></h3>
+        <p><span lang="es">Cuentas atrás en directo para Navidad, Pascua, las estaciones y más, y una calculadora de días.</span></p>
+        <span class="go"><span lang="es">Ver cuentas atrás →</span></span>
+      </a>
+
+      <a class="guide-card" href="/cndwn/es/countdown-app-comparison/">
+        <span class="tag"><span lang="es">Comparativa</span></span>
+        <h3><span lang="es">Apps de cuenta atrás comparadas</span></h3>
+        <p><span lang="es">CNDWN, NanoCount, Countdown y Countdown Star: qué es gratis, qué cuesta aparte y dónde hay anuncios.</span></p>
+        <span class="go"><span lang="es">Ver comparativa →</span></span>
       </a>
 
       <a class="guide-card" href="/cndwn/es/countdown-widget-ios/">
@@ -773,11 +875,15 @@
       </details>
       <details>
         <summary><span lang="es">¿CNDWN es realmente gratis?</span></summary>
-        <p><span lang="es">Sí. CNDWN es la primera app de cuenta atrás que te da todas las funciones gratis — cuentas atrás, adelante, barras de progreso, widgets, actividades en vivo, sincronización con iCloud, colores personalizados y más. Sin anuncios ni rastreadores.</span></p>
+        <p><span lang="es">Sí. Todas las funciones de CNDWN son gratis — cuentas atrás, adelante, barras de progreso, todos los widgets, actividades en vivo, sincronización con iCloud, colores personalizados y más. No hay compras dentro de la app, ni suscripción, ni anuncios, ni rastreadores. Muchas otras apps de cuenta atrás cobran aparte por los widgets o la sincronización; CNDWN no.</span></p>
+      </details>
+      <details>
+        <summary><span lang="es">¿En qué se diferencia CNDWN de otras apps de cuenta atrás?</span></summary>
+        <p><span lang="es">Muchas apps de cuenta atrás bloquean los widgets de la pantalla de bloqueo, los widgets con varios eventos, la sincronización con iCloud o las actividades en vivo tras una suscripción o un pago único. CNDWN los incluye todos gratis y no tiene ninguna compra dentro de la app. Además, combina cuentas atrás, adelante y barras de progreso en una sola app, es compatible con StandBy, importa eventos de Calendario y Recordatorios y funciona en iPhone, iPad, Mac y Apple Watch.</span></p>
       </details>
       <details>
         <summary><span lang="es">¿En qué dispositivos funciona CNDWN?</span></summary>
-        <p><span lang="es">CNDWN funciona en iPhone, iPad, Mac y Apple Watch y requiere iOS 18.0 o posterior. Tus cuentas atrás se sincronizan automáticamente mediante tu iCloud, y con Handoff continúas donde lo dejaste.</span></p>
+        <p><span lang="es">CNDWN funciona en iPhone, iPad, Mac, Apple Watch (con complicaciones), Apple TV y Apple Vision Pro, y requiere iOS 18.0 o posterior. Tus cuentas atrás se sincronizan automáticamente mediante tu iCloud, y con Handoff continúas donde lo dejaste.</span></p>
       </details>
       <details>
         <summary><span lang="es">¿Cuál es la diferencia entre cuenta atrás, adelante y barra de progreso?</span></summary>

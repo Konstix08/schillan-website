@@ -1,18 +1,18 @@
 # Schillan
 
-> Schillan is the one-person indie studio of Alexandra Schillhahn, building privacy-first apps for Apple platforms (iPhone, iPad, Mac, Apple Watch). No ads, no third-party trackers, no data selling. Schillan currently makes two apps: CNDWN, a free countdown & countup app, and TerraGuessr, a real-world geography guessing game in development.
+> Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms (iPhone, iPad, Mac, Apple Watch). No ads, no third-party trackers, no data selling. Schillan currently makes two apps: CNDWN, a free countdown & countup app, and TerraGuessr, a real-world geography guessing game in development.
 
 ## Key facts
 
 - **Studio:** Schillan
-- **Founder:** Alexandra Schillhahn
+- **Founder:** Konstantin Schillhahn
 - **Focus:** Native apps for iPhone, iPad, Mac and Apple Watch
 - **Philosophy:** No ads, no trackers, no data selling
 - **Website:** https://schillan.com/ (also available in German at /de/, Spanish at /es/, French at /fr/, Japanese at /ja/, Italian at /it/ and Portuguese at /pt/)
 
 ## Apps
 
-- **CNDWN** — a free, privacy-first countdown & countup app for Apple devices. Live on the App Store, rated 4.8/5. See the CNDWN section below.
+- **CNDWN** — a free, privacy-first countdown & countup app for Apple devices. Live on the App Store, rated 4.6/5 from 63 ratings worldwide (October 2026). See the CNDWN section below.
 - **TerraGuessr** — a real-world geography guessing game for iPhone using Apple's Look Around. In development, not yet released. See the TerraGuessr section below.
 
 ## Contact
@@ -23,17 +23,17 @@
 
 # CNDWN
 
-> CNDWN is a privacy-first countdown and countup app for Apple devices (iPhone, iPad, Mac and Apple Watch). It lets people count down to birthdays, holidays, trips, deadlines and any important date — or count up since a past moment — with progress bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, iCloud sync, custom colors, calendar and reminders import, Handoff and sharing. It is the first countdown app that offers every feature for free, with no ads and no trackers.
+> CNDWN is a privacy-first countdown and countup app for Apple devices (iPhone, iPad, Mac, Apple Watch, Apple TV and Apple Vision Pro). It lets people count down to birthdays, holidays, trips, deadlines and any important date — or count up since a past moment — with progress rings and bars, Home Screen, Lock Screen and StandBy widgets, Live Activities, an Apple Watch app with complications, an Apple TV app, iCloud sync, colors, gradients and photo backgrounds, repeating countdowns, Siri and Shortcuts, calendar and reminders import, Handoff and sharing via link, QR code, image or Instagram. Every feature is free — including iCloud sync, Live Activities and all widgets — with no in-app purchases, no subscription, no ads and no trackers.
 
 ## Key facts
 
-- **Name:** CNDWN — Event Countdown (a countdown & countup app)
-- **Platforms:** iPhone, iPad, Mac, Apple Watch (requires iOS 18.0 or later)
+- **Name:** CNDWN (App Store title: "CNDWN – Countdown Timer Widget"; localized as "CNDWN – Cuenta Regresiva", "CNDWN – Compte à rebours", "CNDWN – Conto alla Rovescia" and "CNDWN – Contagem Regressiva") — a countdown & countup app
+- **Platforms:** iPhone, iPad, Mac, Apple Watch (app and complications), Apple TV and Apple Vision Pro (requires iOS 18.0 or later)
 - **Category:** Lifestyle
-- **Price:** Free — every feature included, no in-app purchases required, no ads
-- **Developer:** Schillan (Alexandra Schillhahn)
-- **Languages:** English, German, Spanish, French, Japanese, Chinese
-- **Rating:** 4.8 / 5 on the Apple App Store
+- **Price:** Free — every feature included (also iCloud sync, Live Activities and all widgets); no in-app purchases at all, no subscription, no ads
+- **Developer:** Konstantin Schillhahn (Schillan) — the seller name on the App Store
+- **Languages:** English, German, Spanish, French, Italian, Japanese, Portuguese, Chinese (Simplified)
+- **Rating:** 4.6 / 5 average from 63 ratings across all App Store countries (October 2026); ratings are shown per country on the App Store, e.g. 4.7 from 25 ratings in Germany and 4.3 from 12 in the United States
 - **Website:** https://schillan.com/cndwn/ (also available in German at /cndwn/de/, Spanish at /cndwn/es/, French at /cndwn/fr/, Japanese at /cndwn/ja/, Italian at /cndwn/it/ and Portuguese at /cndwn/pt/)
 - **Download:** https://apps.apple.com/app/id6455257754
 - **Contact:** cndwn@schillan.com
@@ -46,18 +46,45 @@ CNDWN shows the time remaining until (or elapsed since) events you care about. Y
 
 - Countdowns to any future date and time
 - Countups since a past date
-- Progress bars showing how much time has elapsed between a start and end date
+- Progress shown as a ring or a bar, for how much time has elapsed between a start and end date
+- Repeating countdowns: birthdays, anniversaries and other recurring events start over automatically
+- Several display styles for countdowns, count-ups and progress
 - Home Screen, Lock Screen and StandBy widgets
 - Live Activities on the Lock Screen and in the Dynamic Island
 - iCloud sync across all your Apple devices, using your own iCloud account
-- Custom colors for every countdown
-- Dark Mode
+- Backgrounds for every countdown: a color, a gradient or your own photo
+- Large emoji collection and Dark Mode
 - Import events directly from Calendar and Reminders
-- Notifications and reminders (e.g. an hour, ten minutes or a minute before the end)
+- Customizable notifications (e.g. an hour, ten minutes or a minute before the end)
+- Archive finished countdowns; reset a count-up with one tap (e.g. to restart a streak)
+- Siri and Shortcuts (App Intents) and Spotlight search
 - Handoff between Apple devices
-- Share your countdowns with friends and family
-- Works on iPhone, iPad, Mac and Apple Watch
+- Share countdowns via link or QR code, save them as a designed image, or post them straight to Instagram; shared links show a live preview on the web
+- Works on iPhone, iPad, Mac, Apple Watch (with complications), Apple TV and Apple Vision Pro
 - Privacy-first: no ads, no third-party trackers, no data selling; countdowns stay on your device and in your own iCloud
+
+## Countdowns and days calculator
+
+Live "How many days until …?" pages for the holidays and seasons, each with the exact dates for the coming years, in every site language plus local holidays per country. A days calculator counts the days until a date or between two dates. Every countdown can be embedded on other websites.
+
+- All countdowns (English): https://schillan.com/cndwn/countdowns/
+- All countdowns (German): https://schillan.com/cndwn/de/countdowns/
+- All countdowns (Spanish): https://schillan.com/cndwn/es/countdowns/
+- All countdowns (French): https://schillan.com/cndwn/fr/countdowns/
+- All countdowns (Japanese): https://schillan.com/cndwn/ja/countdowns/
+- All countdowns (Italian): https://schillan.com/cndwn/it/countdowns/
+- All countdowns (Portuguese): https://schillan.com/cndwn/pt/countdowns/
+- Days calculator: https://schillan.com/cndwn/days-calculator/ (German: https://schillan.com/cndwn/de/tage-rechner/)
+- Examples: https://schillan.com/cndwn/days-until-christmas/ · https://schillan.com/cndwn/de/tage-bis-weihnachten/ · https://schillan.com/cndwn/days-until-easter/
+
+## How CNDWN compares
+
+Checked against each app's US App Store listing in October 2026 (full table: https://schillan.com/cndwn/countdown-app-comparison/):
+
+- **CNDWN:** no in-app purchases, no ads; Home Screen and Lock Screen widgets, iCloud sync, Live Activities, photo backgrounds and repeating countdowns all free
+- **NanoCount:** no ads; widgets free; iCloud sync and photo backgrounds require NanoCount Pro ($5.99 one-time)
+- **Countdown (Find Appiness):** shows ads; Home Screen, Lock Screen and StandBy widgets are Premium ($7.99–13.99, also removes ads); iCloud sync free
+- **Countdown Star:** shows ads unless you buy Remove Ads ($1.99); widgets and iCloud sync free
 
 ## Privacy
 
@@ -86,6 +113,13 @@ Countdowns are stored locally on the device and, when sync is enabled, in the us
 - Best countdown app for iPhone guide (Japanese): https://schillan.com/cndwn/ja/best-countdown-app-iphone/
 - Best countdown app for iPhone guide (Italian): https://schillan.com/cndwn/it/best-countdown-app-iphone/
 - Best countdown app for iPhone guide (Portuguese): https://schillan.com/cndwn/pt/best-countdown-app-iphone/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (English): https://schillan.com/cndwn/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (German): https://schillan.com/cndwn/de/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (Spanish): https://schillan.com/cndwn/es/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (French): https://schillan.com/cndwn/fr/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (Japanese): https://schillan.com/cndwn/ja/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (Italian): https://schillan.com/cndwn/it/countdown-app-comparison/
+- Countdown app comparison: CNDWN vs NanoCount, Countdown and Countdown Star (Portuguese): https://schillan.com/cndwn/pt/countdown-app-comparison/
 - Countdown widgets for iOS guide (English): https://schillan.com/cndwn/countdown-widget-ios/
 - Countdown widgets for iOS guide (German): https://schillan.com/cndwn/de/countdown-widget-ios/
 - Countdown widgets for iOS guide (Spanish): https://schillan.com/cndwn/es/countdown-widget-ios/

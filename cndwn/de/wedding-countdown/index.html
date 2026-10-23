@@ -50,21 +50,7 @@
 <link rel="apple-touch-icon" href="/cndwn/img/app-icon.png">
 
 <!-- Structured data for search engines & AI assistants -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Hochzeits-Countdown: Zähl herunter zur Hochzeit — CNDWN",
-  "description": "So richtest du einen Hochzeits-Countdown mit CNDWN ein — eigene Farben, Fortschrittsbalken und Teilen mit Partner und Gästen.",
-  "url": "https://schillan.com/cndwn/de/wedding-countdown/",
-  "inLanguage": "de",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "CNDWN",
-    "url": "https://schillan.com/cndwn/"
-  }
-}
-</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -310,6 +296,79 @@ footer.site a:hover { color: var(--text); }
   .final-cta h2 { font-size: clamp(26px, 4.4vw, 38px); letter-spacing: -0.02em; margin: 0 0 16px; }
   .final-cta p { color: var(--muted); font-size: 18px; margin: 0 auto 28px; max-width: 42ch; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://schillan.com/#organization",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "description": "Schillan is the one-person indie studio of Konstantin Schillhahn, building privacy-first apps for Apple platforms.",
+      "founder": {
+        "@id": "https://schillan.com/#founder"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://schillan.com/#founder",
+      "name": "Konstantin Schillhahn",
+      "url": "https://schillan.com/",
+      "sameAs": [
+        "https://apps.apple.com/developer/konstantin-schillhahn/id1672847616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://schillan.com/#website",
+      "name": "Schillan",
+      "url": "https://schillan.com/",
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://schillan.com/cndwn/#app",
+      "name": "CNDWN",
+      "alternateName": "CNDWN – Countdown Timer Widget",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS 18.0 or later, iPadOS, macOS, watchOS, tvOS, visionOS",
+      "url": "https://schillan.com/cndwn/de/",
+      "sameAs": [
+        "https://apps.apple.com/app/id6455257754"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@id": "https://schillan.com/#founder"
+      },
+      "publisher": {
+        "@id": "https://schillan.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://schillan.com/cndwn/de/wedding-countdown/#webpage",
+      "url": "https://schillan.com/cndwn/de/wedding-countdown/",
+      "name": "Hochzeits-Countdown: Zähl herunter zur Hochzeit — CNDWN",
+      "description": "So richtest du einen Hochzeits-Countdown mit CNDWN ein — eigene Farben, Fortschrittsbalken und Teilen mit Partner und Gästen.",
+      "inLanguage": "de",
+      "dateModified": "2026-07-08",
+      "isPartOf": {
+        "@id": "https://schillan.com/#website"
+      },
+      "about": {
+        "@id": "https://schillan.com/cndwn/#app"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
